@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+$LOAD_PATH.unshift 'lib'
+
+require 'rdf2marc'
+
+unless ARGV.length == 1
+  puts "Usage: rdf2model <ttl file>"
+  exit(false)
+end
+
+graph = RDF::Repository.load(ARGV[0])
+
+record_model = Rdf2marc::Rdf2model.to_model(graph)
+puts JSON.pretty_generate(record_model.to_h)

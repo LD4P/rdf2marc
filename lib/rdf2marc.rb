@@ -7,6 +7,8 @@ require 'marc'
 require 'sparql'
 require 'linkeddata'
 require 'byebug'
+require 'hash'
+require 'active_support/core_ext/hash'
 
 loader = Zeitwerk::Loader.new
 loader.push_dir(File.absolute_path("#{__FILE__}/.."))

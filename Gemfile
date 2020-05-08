@@ -2,6 +2,7 @@
 
 source 'https://rubygems.org'
 
+gem 'activesupport'
 gem 'byebug'
 gem 'dry-struct'
 gem 'dry-types'

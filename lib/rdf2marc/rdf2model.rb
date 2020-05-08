@@ -1,25 +1,36 @@
 module Rdf2marc
   module Rdf2model
-    NAMESPACES = {
-        sinopia: 'http://sinopia.io/vocabulary/'
-    }
+    def self.to_model(instance_graph, work_graph)
+      # In merge, instance trumps work
+      instance_params = generate_instance(instance_graph)
+      puts "instance: #{instance_params}"
+      work_params = generate_work(work_graph)
+      puts "work: #{work_params}"
+      record_params = work_params.deep_merge(instance_params).deep_compact
+      Rdf2marc::Models::Record.new(record_params)
+    end
 
-    def self.to_model(graph)
-      query = <<-SPARQL
-SELECT ?solut
-WHERE
-{ 
-  ?x sinopia:hasResourceTemplate ?solut .
-}
-      SPARQL
-      resource_template = Sparql.new(graph, NAMESPACES).query_first(query)
-      clazz = case resource_template
+    def self.generate_instance(graph)
+      graph_helper = GraphHelper.new(graph)
+      clazz = case graph_helper.resource_template
               when *MonographInstance::RESOURCE_TEMPLATES
                 MonographInstance
               else
                 raise 'Unknown resource template or resource template not found'
               end
-      clazz.new(graph).generate
+      clazz.new(graph, graph_helper.uri).generate
     end
+
+    def self.generate_work(graph)
+      graph_helper = GraphHelper.new(graph)
+      clazz = case graph_helper.resource_template
+              when *MonographWork::RESOURCE_TEMPLATES
+                MonographWork
+              else
+                raise 'Unknown resource template or resource template not found'
+              end
+      clazz.new(graph, graph_helper.uri).generate
+    end
+
   end
 end

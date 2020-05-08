@@ -1,8 +1,8 @@
 module Rdf2marc
   module Rdf2model
-    class MonographInstance
+    class MonographWork
       RESOURCE_TEMPLATES = [
-          'ld4p:RT:bf2:Monograph:Instance:Un-nested'
+          'ld4p:RT:bf2:Monograph:Work:Un-nested'
       ]
 
       def initialize(graph, resource_uri)
@@ -23,11 +23,9 @@ module Rdf2marc
 
       def title_statement
         {
-            title: sparql.path_first(['bf:title', 'bf:mainTitle']),
-            remainder_of_title: sparql.path_first(['bf:title', 'bf:subtitle'])
+            medium: sparql.path_first(['bf:genreForm', 'rdfs:label']),
         }
       end
-
     end
   end
 end

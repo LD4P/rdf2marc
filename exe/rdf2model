@@ -6,12 +6,13 @@ $LOAD_PATH.unshift 'lib'
 
 require 'rdf2marc'
 
-unless ARGV.length == 1
-  puts "Usage: rdf2model <ttl file>"
+unless ARGV.length == 2
+  puts "Usage: rdf2model <instance ttl file> <work ttl file>"
   exit(false)
 end
 
-graph = RDF::Repository.load(ARGV[0])
+instance_graph = RDF::Repository.load(ARGV[0])
+work_graph = RDF::Repository.load(ARGV[1])
 
-record_model = Rdf2marc::Rdf2model.to_model(graph)
+record_model = Rdf2marc::Rdf2model.to_model(instance_graph, work_graph)
 puts JSON.pretty_generate(record_model.to_h)

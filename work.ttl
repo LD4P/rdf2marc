@@ -1,0 +1,33 @@
+<https://trellis.stage.sinopia.io/repository/stanford/c415fd11-b17f-47fb-8a70-f717eee9e09e> <http://id.loc.gov/ontologies/bibframe/classification> _:b1_c14n1;
+    <http://id.loc.gov/ontologies/bibframe/content> <http://id.loc.gov/vocabulary/contentTypes/txt>;
+    <http://id.loc.gov/ontologies/bibframe/contribution> _:b1_c14n3;
+    <http://id.loc.gov/ontologies/bibframe/genreForm> <http://id.loc.gov/authorities/genreForms/gf2014026280>;
+    <http://id.loc.gov/ontologies/bibframe/geographicCoverage> <http://id.loc.gov/authorities/names/n81097141>;
+    <http://id.loc.gov/ontologies/bibframe/hasInstance> <https://trellis.stage.sinopia.io/repository/stanford/2f5ec44d-2eab-4f56-b9f0-35569b26484f>, <https://trellis.stage.sinopia.io/repository/stanford/c5a0af75-3d77-4c0e-8532-21f025117e0a>;
+    <http://id.loc.gov/ontologies/bibframe/language> <http://id.loc.gov/vocabulary/languages/eng>;
+    <http://id.loc.gov/ontologies/bibframe/originDate> "2006"@eng;
+    <http://id.loc.gov/ontologies/bibframe/originPlace> <http://id.loc.gov/authorities/names/n82068148>;
+    <http://id.loc.gov/ontologies/bibframe/subject> <http://id.loc.gov/authorities/names/n81097141>, <http://id.loc.gov/authorities/names/n86717637>;
+    <http://id.loc.gov/ontologies/bibframe/title> _:b1_c14n0;
+    <http://sinopia.io/vocabulary/hasResourceTemplate> "ld4p:RT:bf2:Monograph:Work:Un-nested";
+    a <http://id.loc.gov/ontologies/bibframe/Work>.
+<http://id.loc.gov/authorities/genreForms/gf2014026280> <http://www.w3.org/2000/01/rdf-schema#label> "Detective and mystery fiction".
+<http://id.loc.gov/authorities/names/n81097141> <http://www.w3.org/2000/01/rdf-schema#label> "http://id.loc.gov/authorities/names/n81097141".
+<http://id.loc.gov/authorities/names/n82068148> <http://www.w3.org/2000/01/rdf-schema#label> "England".
+<http://id.loc.gov/authorities/names/n85039474> <http://www.w3.org/2000/01/rdf-schema#label> "Cleeves, Ann".
+<http://id.loc.gov/authorities/names/n86717637> <http://www.w3.org/2000/01/rdf-schema#label> "Fiction".
+<http://id.loc.gov/vocabulary/contentTypes/txt> <http://www.w3.org/2000/01/rdf-schema#label> "text".
+<http://id.loc.gov/vocabulary/languages/eng> <http://www.w3.org/2000/01/rdf-schema#label> "English".
+<http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2000/01/rdf-schema#label> "Author".
+<https://trellis.stage.sinopia.io/repository/stanford/2f5ec44d-2eab-4f56-b9f0-35569b26484f> <http://www.w3.org/2000/01/rdf-schema#label> "https://trellis.stage.sinopia.io/repository/stanford/2f5ec44d-2eab-4f56-b9f0-35569b26484f".
+<https://trellis.stage.sinopia.io/repository/stanford/c5a0af75-3d77-4c0e-8532-21f025117e0a> <http://www.w3.org/2000/01/rdf-schema#label> "https://trellis.stage.sinopia.io/repository/stanford/c5a0af75-3d77-4c0e-8532-21f025117e0a".
+_:b1_c14n0 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Raven black"@eng;
+    a <http://id.loc.gov/ontologies/bibframe/Title>.
+_:b1_c14n1 <http://id.loc.gov/ontologies/bibframe/classificationPortion> "PR6053.L45"@eng;
+    <http://id.loc.gov/ontologies/bibframe/itemPortion> "R38 2006"@eng;
+    a <http://id.loc.gov/ontologies/bibframe/ClassificationLcc>.
+_:b1_c14n2 a <http://id.loc.gov/ontologies/bibframe/Person>;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://id.loc.gov/authorities/names/n85039474>.
+_:b1_c14n3 <http://id.loc.gov/ontologies/bibframe/agent> _:b1_c14n2;
+    <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>;
+    a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>.

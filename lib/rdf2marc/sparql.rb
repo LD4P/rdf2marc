@@ -12,10 +12,25 @@ module Rdf2marc
     end
 
     def query_first(sparql, var_name: 'solut')
-      solution = query(sparql)
-      return nil if solution.empty?
+      solutions = query(sparql)
+      return nil if solutions.empty?
 
-      solution.first[var_name.to_sym].value
+      solutions.first[var_name.to_sym]
+    end
+
+    def query_first_literal(sparql, var_name: 'solut')
+      to_literal(query_first(sparql, var_name: var_name))
+    end
+
+    def query_all(sparql, var_name: 'solut')
+      solutions = query(sparql)
+      return nil if solutions.empty?
+
+      solutions.map { |solution| solution[var_name.to_sym] }
+    end
+
+    def query_all_literal(sparql, var_name: 'solut')
+      to_literals(query_all(sparql, var_name: var_name))
     end
 
     def query(sparql)
@@ -23,21 +38,23 @@ module Rdf2marc
     end
 
     def path_first(path, subject_uri: nil)
-      subj = subject_uri ? "<#{subject_uri}>" : "var0"
-      where_str = path.map.with_index do |predicate, index|
-        obj = "var#{index+1}"
-        clause = "?#{subj} #{predicate} ?#{obj} ."
-        subj = obj
-        clause
-      end
-      query = <<-SPARQL
-SELECT ?#{subj}
-WHERE
-{ 
-  #{where_str.join("\n")}
-}
-      SPARQL
-      query_first(query, var_name: subj)
+      query_string, subj = query_string_for_path(path, subject_uri: subject_uri)
+      query_first(query_string, var_name: subj)
+    end
+
+    def path_first_literal(path, subject_uri: nil)
+      query_string, subj = query_string_for_path(path, subject_uri: subject_uri)
+      query_first_literal(query_string, var_name: subj)
+    end
+
+    def path_all(path, subject_uri: nil)
+      query_string, subj = query_string_for_path(path, subject_uri: subject_uri)
+      query_all(query_string, var_name: subj)
+    end
+
+    def path_all_literal(path, subject_uri: nil)
+      query_string, subj = query_string_for_path(path, subject_uri: subject_uri)
+      query_all_literal(query_string, var_name: subj)
     end
 
     private
@@ -48,5 +65,37 @@ WHERE
       namespaces_str = namespaces.map { |prefix, uri| "PREFIX #{prefix}: <#{uri}>"}.join("\n")
       "#{namespaces_str}\n#{sparql}"
     end
+
+    def query_string_for_path(path, subject_uri: nil)
+      subj = subject_uri ? "<#{subject_uri}>" : "var0"
+      where_str = path.map.with_index do |predicate, index|
+        obj = "var#{index+1}"
+        clause = "?#{subj} #{predicate} ?#{obj} ."
+        subj = obj
+        clause
+      end
+      query_string = <<-SPARQL
+SELECT ?#{subj}
+WHERE
+{ 
+  #{where_str.join("\n")}
+}
+      SPARQL
+      [query_string, subj]
+    end
+
+    def to_literal(term)
+      return nil if term.nil?
+
+      raise 'Not a literal' unless term.is_a?(RDF::Literal)
+      term.value
+    end
+
+    def to_literals(terms)
+      return nil if terms.nil?
+
+      terms.map { |term| to_literal(term)}
+    end
+
   end
 end

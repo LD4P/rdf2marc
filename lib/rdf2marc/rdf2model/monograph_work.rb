@@ -8,7 +8,8 @@ module Rdf2marc
       def initialize(graph, resource_uri)
         @graph = graph
         @resource_uri = resource_uri
-        @sparql = Sparql.new(graph)
+        @resource_term = RDF::URI.new(resource_uri)
+        @query = GraphQuery.new(graph)
       end
 
       def generate
@@ -19,11 +20,11 @@ module Rdf2marc
 
       private
 
-      attr_reader :graph, :sparql, :resource_uri
+      attr_reader :graph, :query, :resource_uri, :resource_term
 
       def title_statement
         {
-            medium: sparql.path_first(['bf:genreForm', 'rdfs:label']),
+            medium: query.path_first_literal([BF.genreForm, RDF::RDFS.label], subject_term: resource_term),
         }
       end
     end

@@ -15,6 +15,7 @@ module Rdf2marc
       def generate
         {
             leader: leader,
+            control_number: control_number,
             translated_titles: translated_titles,
             title_statement: title_statement,
             variant_titles: variant_titles,
@@ -27,12 +28,12 @@ module Rdf2marc
       attr_reader :graph, :sparql, :resource_uri, :query, :resource_term
 
       def leader
-        # Record may contain multiple bf:AdminMetadata. Only using one and which is selected is indeterminate.
-        admin_metadata_term = query.path_first([[BF.adminMetadata, BF.AdminMetadata]], subject_term: resource_term)
         return nil if admin_metadata_term.nil?
         {
             record_status: query.path_first_literal([[BF.status, BF.Status], BF.code], subject_term: admin_metadata_term),
-            bibliographic_level: bibliographic_level
+            bibliographic_level: bibliographic_level,
+            encoding_level: encoding_level,
+            cataloging_form: cataloging_form
         }
       end
 
@@ -119,6 +120,53 @@ module Rdf2marc
         end
       end
 
+      def encoding_level
+        encoding_level_term = query.path_first([BFLC.encodingLevel], subject_term: admin_metadata_term)
+        case encoding_level_term
+        when LC_VOCAB['menclvl/3']
+          'abbreviated'
+        when LC_VOCAB['menclvl/4']
+          'core'
+        when LC_VOCAB['menclvl/f']
+          'full'
+        when LC_VOCAB['menclvl/1']
+          'full_not_examined'
+        when LC_VOCAB['menclvl/7']
+          'minimum'
+        when LC_VOCAB['menclvl/5']
+          'partial'
+        when LC_VOCAB['menclvl/8']
+          'prepublication'
+        else
+          nil
+        end
+      end
+
+      def cataloging_form
+        # Can be more than one, but only using first.
+        description_convention_term = query.path_first([BF.descriptionConventions], subject_term: admin_metadata_term)
+        case description_convention_term
+        when LC_VOCAB['descriptionConventions/aacr']
+          'aacr2'
+        when LC_VOCAB['descriptionConventions/isbd']
+          'isbd'
+        else
+          nil
+        end
+      end
+
+      def admin_metadata_term
+        # Record may contain multiple bf:AdminMetadata. Only using one and which is selected is indeterminate.
+        @admin_metadat_term ||= query.path_first([[BF.adminMetadata, BF.AdminMetadata]], subject_term: resource_term)
+      end
+
+      def control_number
+        return nil if admin_metadata_term.nil?
+
+        {
+          control_number: query.path_first_literal([[BF.identifiedBy, BF.Local], [RDF::RDFV.value]], subject_term: admin_metadata_term)
+        }
+      end
     end
   end
 end

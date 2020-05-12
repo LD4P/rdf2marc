@@ -12,6 +12,10 @@ module Rdf2marc
         marc_record.leader[5] = model.record_status
         marc_record.leader[6] = type_of_record
         marc_record.leader[7] = bibliographic_level
+        marc_record.leader[8] = 'a' if model.archival
+        marc_record.leader[9] = 'a'
+        marc_record.leader[17] = encoding_level
+        marc_record.leader[18] = cataloging_form
       end
 
       private
@@ -72,6 +76,51 @@ module Rdf2marc
         end
       end
 
+      def encoding_level
+        case model.encoding_level
+        when 'full'
+          ' '
+        when 'full_not_examined'
+          '1'
+        when 'less_full_not_examined'
+          '2'
+        when 'abbreviated'
+          '3'
+        when 'core'
+          '4'
+        when 'partial'
+          '5'
+        when 'minimum'
+          '7'
+        when 'prepublication'
+          '8'
+        when 'unknown'
+          'u'
+        when 'not_applicable'
+          'z'
+        else
+          raise 'unexpected encoding level'
+        end
+      end
+
+      def cataloging_form
+        case model.cataloging_form
+        when 'non_isbd'
+          ' '
+        when 'aacr2'
+          'a'
+        when 'isbd_no_punctuation'
+          'c'
+        when 'isbd'
+          'i'
+        when 'non_isbd_no_punctuation'
+          'n'
+        when 'unknown'
+          'u'
+        else
+          raise 'unexpected cataloging form'
+        end
+      end
     end
   end
 end

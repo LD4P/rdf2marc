@@ -2,6 +2,7 @@ module Rdf2marc
   BF = RDF::Vocabulary.new('http://id.loc.gov/ontologies/bibframe/')
   SINOPIA = RDF::Vocabulary.new('http://sinopia.io/vocabulary/')
   LC_VOCAB = RDF::Vocabulary.new('http://id.loc.gov/vocabulary/')
+  BFLC = RDF::Vocabulary.new('http://id.loc.gov/ontologies/bflc/')
   class GraphQuery
     QueryPart = Struct.new(:pred, :class)
 

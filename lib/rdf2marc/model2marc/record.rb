@@ -10,6 +10,7 @@ module Rdf2marc
       def marc_record
         @marc_record ||= MARC::Record.new.tap do |marc_record|
           Leader.new(marc_record, record_model.leader).generate
+          add_field(ControlField001, record_model.control_number, marc_record)
           add_repeating_field(Field242, record_model.translated_titles, marc_record)
           add_field(Field245, record_model.title_statement, marc_record)
           add_repeating_field(Field246, record_model.variant_titles, marc_record)

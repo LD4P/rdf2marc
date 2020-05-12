@@ -5,10 +5,15 @@ module Rdf2marc
     class Leader < Struct
       TYPES = ['language_material', 'notated_music', 'manuscript_notated_music', 'cartographic', 'projected_medium', 'nonmusical_sound_recording', 'musical_sound_recording', '2d_nonprojectable_graphic', 'computer_file', 'kit', 'mixed_materials', '3d', 'manuscript']
       BIBLIOGRAPHIC_LEVELS = ['monographic_component', 'serial_component', 'collection', 'subunit', 'integrating_resource', 'item', 'serial']
+      ENCODING_LEVELS = ['full', 'full_not_examined', 'less_full_not_examined', 'abbreviated', 'core', 'partial', 'minimum', 'prepublication', 'unknown', 'not_applicable']
+      CATALOGING_FORMS = ['non_isbd', 'aacr2', 'isbd_no_punctuation', 'isbd', 'non_isbd_no_punctuation', 'unknown']
       attribute :record_status, Types::String.default('n').enum('a', 'c', 'd', 'n', 'p')
       # Not clear where to map this from.
       attribute :type, Types::String.default('language_material').enum(*TYPES)
       attribute :bibliographic_level, Types::String.default('item').enum(*BIBLIOGRAPHIC_LEVELS)
+      attribute :archival, Types::Bool.default(false)
+      attribute :encoding_level, Types::String.default('unknown').enum(*ENCODING_LEVELS)
+      attribute :cataloging_form, Types::String.default('unknown').enum(*CATALOGING_FORMS)
     end
   end
 end

@@ -2,7 +2,9 @@ module Rdf2marc
   module Models
     class Record < Struct
       attribute :leader, Leader
-      attribute? :control_number, ControlNumber
+      attribute? :control_number, Types::String
+      attribute? :control_number_id, Types::String
+      attribute? :latest_transaction, Types::DateTime
       attribute? :translated_titles, Types::Array.of(TranslatedTitle)
       attribute? :title_statement, TitleStatement
       attribute? :variant_titles, Types::Array.of(VariantTitle)

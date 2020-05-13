@@ -16,6 +16,8 @@ module Rdf2marc
         {
             leader: leader,
             control_number: control_number,
+            control_number_id: control_number_id,
+            latest_transaction: latest_transaction,
             translated_titles: translated_titles,
             title_statement: title_statement,
             variant_titles: variant_titles,
@@ -162,10 +164,22 @@ module Rdf2marc
 
       def control_number
         return nil if admin_metadata_term.nil?
+        query.path_first_literal([[BF.identifiedBy, BF.Local], [RDF::RDFV.value]], subject_term: admin_metadata_term)
+      end
 
-        {
-          control_number: query.path_first_literal([[BF.identifiedBy, BF.Local], [RDF::RDFV.value]], subject_term: admin_metadata_term)
-        }
+      def control_number_id
+        return nil if admin_metadata_term.nil?
+        # Can be multiple but only using first.
+        source_term = query.path_first([BF.source], subject_term: admin_metadata_term)
+        return nil if source_term.nil?
+        source_term.value.delete_prefix('http://id.loc.gov/vocabulary/organizations/')
+      end
+
+      def latest_transaction
+        return nil if admin_metadata_term.nil?
+        date_literal = query.path_first_literal([BF.changeDate], subject_term: admin_metadata_term)
+        return nil if date_literal.nil?
+        DateTime.iso8601(date_literal)
       end
     end
   end

@@ -1,8 +1,8 @@
-<https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95d0-492a-a300-050a40895b74> <http://id.loc.gov/ontologies/bibframe/adminMetadata> _:b9_c14n10;
+<https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95d0-492a-a300-050a40895b74> <http://id.loc.gov/ontologies/bibframe/adminMetadata> _:b4_c14n0;
     <http://id.loc.gov/ontologies/bibframe/carrier> <http://id.loc.gov/vocabulary/carriers/nc>;
     <http://id.loc.gov/ontologies/bibframe/issuance> <http://id.loc.gov/vocabulary/issuance/intg>;
     <http://id.loc.gov/ontologies/bibframe/media> <http://id.loc.gov/vocabulary/mediaTypes/n>;
-    <http://id.loc.gov/ontologies/bibframe/title> _:b9_c14n0, _:b9_c14n2, _:b9_c14n3, _:b9_c14n4, _:b9_c14n6, _:b9_c14n7, _:b9_c14n8, _:b9_c14n9;
+    <http://id.loc.gov/ontologies/bibframe/title> _:b4_c14n1, _:b4_c14n10, _:b4_c14n3, _:b4_c14n4, _:b4_c14n5, _:b4_c14n7, _:b4_c14n8, _:b4_c14n9;
     <http://sinopia.io/vocabulary/hasResourceTemplate> "ld4p:RT:bf2:Monograph:Instance:Un-nested";
     a <http://id.loc.gov/ontologies/bibframe/Instance>.
 <http://id.loc.gov/vocabulary/carriers/nc> <http://www.w3.org/2000/01/rdf-schema#label> "volume".
@@ -11,39 +11,41 @@
 <http://id.loc.gov/vocabulary/languages/eng> <http://www.w3.org/2000/01/rdf-schema#label> "English".
 <http://id.loc.gov/vocabulary/mediaTypes/n> <http://www.w3.org/2000/01/rdf-schema#label> "unmediated".
 <http://id.loc.gov/vocabulary/menclvl/5> <http://www.w3.org/2000/01/rdf-schema#label> "preliminary".
-_:b9_c14n0 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Instance2, main title"@eng;
-    a <http://id.loc.gov/ontologies/bibframe/Title>.
-_:b9_c14n1 <http://id.loc.gov/ontologies/bibframe/code> "n"@eng;
-    a <http://id.loc.gov/ontologies/bibframe/Status>.
-_:b9_c14n10 <http://id.loc.gov/ontologies/bflc/encodingLevel> <http://id.loc.gov/vocabulary/menclvl/5>;
+_:b4_c14n0 <http://id.loc.gov/ontologies/bflc/encodingLevel> <http://id.loc.gov/vocabulary/menclvl/5>;
+    <http://id.loc.gov/ontologies/bibframe/changeDate> "2008-12-23T09:50:49"@eng;
     <http://id.loc.gov/ontologies/bibframe/descriptionConventions> <http://id.loc.gov/vocabulary/descriptionConventions/isbd>;
     <http://id.loc.gov/ontologies/bibframe/descriptionLanguage> <http://id.loc.gov/vocabulary/languages/eng>;
-    <http://id.loc.gov/ontologies/bibframe/identifiedBy> _:b9_c14n5;
-    <http://id.loc.gov/ontologies/bibframe/status> _:b9_c14n1;
+    <http://id.loc.gov/ontologies/bibframe/identifiedBy> _:b4_c14n6;
+    <http://id.loc.gov/ontologies/bibframe/source> <http://id.loc.gov/vocabulary/organizations/cst>;
+    <http://id.loc.gov/ontologies/bibframe/status> _:b4_c14n2;
     a <http://id.loc.gov/ontologies/bibframe/AdminMetadata>.
-_:b9_c14n2 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Variant1, title"@eng;
-    <http://id.loc.gov/ontologies/bibframe/partName> "Variant1, part name1"@eng, "Variant1, part name2"@eng;
-    <http://id.loc.gov/ontologies/bibframe/variantType> "caption"@eng;
-    a <http://id.loc.gov/ontologies/bibframe/VariantTitle>.
-_:b9_c14n3 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Former variant1"@eng;
-    <http://id.loc.gov/ontologies/bibframe/variantType> "former"@eng;
-    a <http://id.loc.gov/ontologies/bibframe/VariantTitle>.
-_:b9_c14n4 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Variant2, title"@eng;
-    a <http://id.loc.gov/ontologies/bibframe/VariantTitle>.
-_:b9_c14n5 a <http://id.loc.gov/ontologies/bibframe/Local>;
-    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "1457626"@eng.
-_:b9_c14n6 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Parallel2, title"@eng;
-    a <http://id.loc.gov/ontologies/bibframe/ParallelTitle>.
-_:b9_c14n7 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Translated variant1"@eng;
-    <http://id.loc.gov/ontologies/bibframe/variantType> "translated"@eng;
-    a <http://id.loc.gov/ontologies/bibframe/VariantTitle>.
-_:b9_c14n8 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Parallel1, title"@eng;
-    <http://id.loc.gov/ontologies/bibframe/partName> "Parallel1, part name1"@eng, "Parallel1, part name2"@eng;
-    <http://id.loc.gov/ontologies/bibframe/partNumber> "Parallel1, part number1"@eng, "Parallel1, part number2"@eng;
-    <http://id.loc.gov/ontologies/bibframe/subtitle> "Parallel1, subtitle"@eng;
-    a <http://id.loc.gov/ontologies/bibframe/ParallelTitle>.
-_:b9_c14n9 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Instance1, main title"@eng;
+_:b4_c14n1 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Instance2, main title"@eng;
+    a <http://id.loc.gov/ontologies/bibframe/Title>.
+_:b4_c14n10 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Instance1, main title"@eng;
     <http://id.loc.gov/ontologies/bibframe/partName> "Instance1, part name1"@eng, "Instance1, part name2"@eng;
     <http://id.loc.gov/ontologies/bibframe/partNumber> "Instance1, part number1"@eng, "Instance1, part number2"@eng;
     <http://id.loc.gov/ontologies/bibframe/subtitle> "Instance1, subtitle"@eng;
     a <http://id.loc.gov/ontologies/bibframe/Title>.
+_:b4_c14n2 <http://id.loc.gov/ontologies/bibframe/code> "n"@eng;
+    a <http://id.loc.gov/ontologies/bibframe/Status>.
+_:b4_c14n3 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Variant1, title"@eng;
+    <http://id.loc.gov/ontologies/bibframe/partName> "Variant1, part name1"@eng, "Variant1, part name2"@eng;
+    <http://id.loc.gov/ontologies/bibframe/variantType> "caption"@eng;
+    a <http://id.loc.gov/ontologies/bibframe/VariantTitle>.
+_:b4_c14n4 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Former variant1"@eng;
+    <http://id.loc.gov/ontologies/bibframe/variantType> "former"@eng;
+    a <http://id.loc.gov/ontologies/bibframe/VariantTitle>.
+_:b4_c14n5 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Variant2, title"@eng;
+    a <http://id.loc.gov/ontologies/bibframe/VariantTitle>.
+_:b4_c14n6 a <http://id.loc.gov/ontologies/bibframe/Local>;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "1457626"@eng.
+_:b4_c14n7 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Parallel2, title"@eng;
+    a <http://id.loc.gov/ontologies/bibframe/ParallelTitle>.
+_:b4_c14n8 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Translated variant1"@eng;
+    <http://id.loc.gov/ontologies/bibframe/variantType> "translated"@eng;
+    a <http://id.loc.gov/ontologies/bibframe/VariantTitle>.
+_:b4_c14n9 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Parallel1, title"@eng;
+    <http://id.loc.gov/ontologies/bibframe/partName> "Parallel1, part name1"@eng, "Parallel1, part name2"@eng;
+    <http://id.loc.gov/ontologies/bibframe/partNumber> "Parallel1, part number1"@eng, "Parallel1, part number2"@eng;
+    <http://id.loc.gov/ontologies/bibframe/subtitle> "Parallel1, subtitle"@eng;
+    a <http://id.loc.gov/ontologies/bibframe/ParallelTitle>.

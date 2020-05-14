@@ -12,7 +12,8 @@ module Rdf2marc
           Leader.new(marc_record, record_model.leader).generate
           add_control_field('001', record_model.control_number, marc_record)
           add_control_field('003', record_model.control_number_id, marc_record)
-          add_control_field('005', to_marc_date(record_model.latest_transaction), marc_record)
+          add_field(ControlField005, record_model, marc_record)
+          add_field(ControlField008, record_model.general_info, marc_record)
           add_repeating_field(Field242, record_model.translated_titles, marc_record)
           add_field(Field245, record_model.title_statement, marc_record)
           add_repeating_field(Field246, record_model.variant_titles, marc_record)
@@ -40,10 +41,6 @@ module Rdf2marc
         marc_record << MARC::ControlField.new(tag,value) unless value.nil?
       end
 
-      def to_marc_date(date)
-        return nil if date.nil?
-        date.strftime("%Y%m%d%H%M%S.f")
-      end
     end
   end
 end

@@ -1,6 +1,8 @@
 <https://trellis.stage.sinopia.io/repository/stanford/ce0376a8-e01b-4829-95c2-c7aa4fa9568c> <http://id.loc.gov/ontologies/bibframe/content> <http://id.loc.gov/vocabulary/contentTypes/txt>;
-    <http://id.loc.gov/ontologies/bibframe/genreForm> <http://id.loc.gov/authorities/genreForms/gf2014026281>;
-    <http://sinopia.io/vocabulary/hasResourceTemplate> "ld4p:RT:bf2:Monograph:Work:Un-nested";
-    a <http://id.loc.gov/ontologies/bibframe/Work>.
-<http://id.loc.gov/authorities/genreForms/gf2014026281> <http://www.w3.org/2000/01/rdf-schema#label> "Detective and mystery plays".
-<http://id.loc.gov/vocabulary/contentTypes/txt> <http://www.w3.org/2000/01/rdf-schema#label> "text".
+     <http://id.loc.gov/ontologies/bibframe/genreForm> <http://id.loc.gov/authorities/genreForms/gf2014026281>;
+     <http://id.loc.gov/ontologies/bibframe/language> <http://id.loc.gov/vocabulary/languages/hsb>;
+     <http://sinopia.io/vocabulary/hasResourceTemplate> "ld4p:RT:bf2:Monograph:Work:Un-nested";
+     a <http://id.loc.gov/ontologies/bibframe/Work>.
+ <http://id.loc.gov/authorities/genreForms/gf2014026281> <http://www.w3.org/2000/01/rdf-schema#label> "Detective and mystery plays".
+ <http://id.loc.gov/vocabulary/contentTypes/txt> <http://www.w3.org/2000/01/rdf-schema#label> "text".
+ <http://id.loc.gov/vocabulary/languages/hsb> <http://www.w3.org/2000/01/rdf-schema#label> "Upper Sorbian".

@@ -18,6 +18,7 @@ module Rdf2marc
             control_number: control_number,
             control_number_id: control_number_id,
             latest_transaction: latest_transaction,
+            general_info: general_info,
             translated_titles: translated_titles,
             title_statement: title_statement,
             variant_titles: variant_titles,
@@ -178,6 +179,20 @@ module Rdf2marc
       def latest_transaction
         return nil if admin_metadata_term.nil?
         date_literal = query.path_first_literal([BF.changeDate], subject_term: admin_metadata_term)
+        return nil if date_literal.nil?
+        DateTime.iso8601(date_literal)
+      end
+
+      def general_info
+        {
+            date_entered: date_entered,
+            date1: query.path_first_literal([[BF.provisionActivity, BF.Publication],[BF.date]], subject_term: resource_term)
+        }
+      end
+
+      def date_entered
+        return nil if admin_metadata_term.nil?
+        date_literal = query.path_first_literal([BF.creationDate], subject_term: admin_metadata_term)
         return nil if date_literal.nil?
         DateTime.iso8601(date_literal)
       end

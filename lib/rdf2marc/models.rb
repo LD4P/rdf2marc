@@ -8,6 +8,7 @@ module Rdf2marc
     # Base class for Models
     class Struct < Dry::Struct
       transform_keys(&:to_sym)
+
       schema schema.strict
     end
   end

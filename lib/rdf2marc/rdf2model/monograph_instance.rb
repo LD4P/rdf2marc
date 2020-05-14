@@ -26,6 +26,9 @@ module Rdf2marc
               title_statement: title_statement,
               variant_titles: variant_titles,
               former_titles: former_titles
+            },
+            number_and_code_fields: {
+                lccn: lccn
             }
         }
       end
@@ -199,6 +202,26 @@ module Rdf2marc
         date_literal = query.path_first_literal([BF.creationDate], subject_term: admin_metadata_term)
         return nil if date_literal.nil?
         DateTime.iso8601(date_literal)
+      end
+
+      def lccn
+        # Can be multiple non-cancelled LCCNs. However, only using one.
+        lccn = {
+            cancelled_lccns: []
+        }
+        id_terms = query.path_all([[BF.identifiedBy, BF.Lccn]], subject_term: resource_term)
+        return if id_terms.nil?
+        id_terms.each do |id_term|
+          lccn_value = query.path_first_literal([RDF::RDFV.value], subject_term: id_term)
+          next if lccn_value.nil?
+          is_cancelled = query.path_first([BF.status], subject_term: id_term) == LC_VOCAB['mstatus/cancinv']
+          if is_cancelled
+            lccn[:cancelled_lccns] << lccn_value
+          else
+            lccn[:lccn] = lccn_value
+          end
+        end
+        lccn
       end
     end
   end

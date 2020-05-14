@@ -14,6 +14,7 @@ module Rdf2marc
           add_control_field('003', record_model.control_fields.control_number_id, marc_record)
           add_field(ControlField005, record_model.control_fields, marc_record)
           add_field(ControlField008, record_model.control_fields.general_info, marc_record)
+          add_field(Field010, record_model.number_and_code_fields.lccn, marc_record)
           add_repeating_field(Field242, record_model.title_fields.translated_titles, marc_record)
           add_field(Field245, record_model.title_fields.title_statement, marc_record)
           add_repeating_field(Field246, record_model.title_fields.variant_titles, marc_record)

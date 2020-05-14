@@ -15,14 +15,18 @@ module Rdf2marc
       def generate
         {
             leader: leader,
-            control_number: control_number,
-            control_number_id: control_number_id,
-            latest_transaction: latest_transaction,
-            general_info: general_info,
-            translated_titles: translated_titles,
-            title_statement: title_statement,
-            variant_titles: variant_titles,
-            former_titles: former_titles
+            control_fields: {
+              control_number: control_number,
+              control_number_id: control_number_id,
+              latest_transaction: latest_transaction,
+              general_info: general_info
+            },
+            title_fields: {
+              translated_titles: translated_titles,
+              title_statement: title_statement,
+              variant_titles: variant_titles,
+              former_titles: former_titles
+            }
         }
       end
 
@@ -87,7 +91,7 @@ module Rdf2marc
       def variant_title_type(title_term, is_parallel)
         return 'parallel' if is_parallel
         variant_type = query.path_first_literal([BF.variantType], subject_term: title_term )
-        return variant_type if Rdf2marc::Models::VariantTitle::TYPES.include?(variant_type)
+        return variant_type if Rdf2marc::Models::TitleField::VariantTitle::TYPES.include?(variant_type)
         'none'
       end
 

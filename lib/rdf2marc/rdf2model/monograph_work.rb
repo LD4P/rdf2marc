@@ -14,8 +14,12 @@ module Rdf2marc
 
       def generate
         {
-            general_info: general_information,
-            title_statement: title_statement
+            control_fields: {
+              general_info: general_information
+            },
+            title_fields: {
+              title_statement: title_statement
+            }
         }
       end
 

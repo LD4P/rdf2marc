@@ -17,6 +17,9 @@ module Rdf2marc
             control_fields: {
               general_info: general_information
             },
+            main_entry_fields: {
+              personal_name: personal_name
+            },
             title_fields: {
               title_statement: title_statement
             }
@@ -43,6 +46,12 @@ module Rdf2marc
         language_term = query.path_first([BF.language], subject_term: resource_term)
         return nil if language_term.nil? or ! language_term.value.start_with?('http://id.loc.gov/vocabulary/languages/')
         language_term.value.delete_prefix('http://id.loc.gov/vocabulary/languages/')
+      end
+
+      def personal_name
+        person_term = query.path_first([[BF.contribution, BFLC.PrimaryContribution], [BF.agent, BF.Person], [RDF::RDFV.value]], subject_term: resource_term)
+        return if person_term.nil?
+        Resolver.resolve_loc_name(person_term.value, Models::MainEntryField::PersonalName)
       end
     end
   end

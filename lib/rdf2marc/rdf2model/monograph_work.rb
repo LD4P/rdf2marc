@@ -18,10 +18,15 @@ module Rdf2marc
               general_info: general_information
             },
             main_entry_fields: {
-              personal_name: personal_name
+              personal_name: main_personal_name,
+              corporate_name: main_corporate_name
             },
             title_fields: {
               title_statement: title_statement
+            },
+            subject_access_fields: {
+                personal_names: personal_names,
+                corporate_names: corporate_names
             }
         }
       end
@@ -48,11 +53,35 @@ module Rdf2marc
         language_term.value.delete_prefix('http://id.loc.gov/vocabulary/languages/')
       end
 
-      def personal_name
-        person_term = query.path_first([[BF.contribution, BFLC.PrimaryContribution], [BF.agent, BF.Person], [RDF::RDFV.value]], subject_term: resource_term)
+      def main_personal_name
+        # Person or family
+        person_term = query.path_first([[BF.contribution, BFLC.PrimaryContribution], [BF.agent, BF.Person], [RDF::RDFV.value]], subject_term: resource_term) || query.path_first([[BF.contribution, BFLC.PrimaryContribution], [BF.agent, BF.Family], [RDF::RDFV.value]], subject_term: resource_term)
+
         return if person_term.nil?
         Resolver.resolve_loc_name(person_term.value, Models::MainEntryField::PersonalName)
       end
+
+      def main_corporate_name
+        corporate_term = query.path_first([[BF.contribution, BFLC.PrimaryContribution], [BF.agent, BF.Organization], [RDF::RDFV.value]], subject_term: resource_term)
+
+        return if corporate_term.nil?
+        Resolver.resolve_loc_name(corporate_term.value, Models::MainEntryField::CorporateName)
+      end
+
+      def personal_names
+        # Person or family
+        person_terms = (query.path_all([[BF.contribution, BF.Contribution], [BF.agent, BF.Person], [RDF::RDFV.value]], subject_term: resource_term) || []) + (query.path_first([[BF.contribution, BF.Contribution], [BF.agent, BF.Family], [RDF::RDFV.value]], subject_term: resource_term) || [])
+        return if person_terms.nil?
+        person_terms.map { |person_term| Resolver.resolve_loc_name(person_term.value, Models::SubjectAccessField::PersonalName) }
+      end
+
+      def corporate_names
+        corporate_terms = query.path_all([[BF.contribution, BF.Contribution], [BF.agent, BF.Organization], [RDF::RDFV.value]], subject_term: resource_term)
+        return if corporate_terms.nil?
+        corporate_terms.map { |corporate_term| Resolver.resolve_loc_name(corporate_term.value, Models::SubjectAccessField::CorporateName) }
+      end
+
+
     end
   end
 end

@@ -3,11 +3,11 @@ module Rdf2marc
     def self.to_model(instance_graph, work_graph)
       # In merge, instance trumps work
       instance_params = generate_instance(instance_graph)
-      puts "instance: #{instance_params}"
+      # puts "instance: #{JSON.pretty_generate(instance_params)}"
       work_params = generate_work(work_graph)
-      puts "work: #{work_params}"
+      # puts "work: #{JSON.pretty_generate(work_params)}"
       record_params = work_params.deep_merge(instance_params).deep_compact
-      puts "record: #{record_params}"
+      puts "record: #{JSON.pretty_generate(record_params)}"
       Rdf2marc::Models::Record.new(record_params)
     end
 

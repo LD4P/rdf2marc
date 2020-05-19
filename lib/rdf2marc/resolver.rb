@@ -12,7 +12,13 @@ module Rdf2marc
     def self.resolve_loc_name(uri, model_class)
       case model_class.name
       when Rdf2marc::Models::MainEntryField::PersonalName.name
+        Resolver::IdLocGovResolver.new.resolve_main_personal_name(uri)
+      when Rdf2marc::Models::SubjectAccessField::PersonalName.name
         Resolver::IdLocGovResolver.new.resolve_personal_name(uri)
+      when Rdf2marc::Models::MainEntryField::CorporateName.name
+        Resolver::IdLocGovResolver.new.resolve_main_corporate_name(uri)
+      when Rdf2marc::Models::SubjectAccessField::CorporateName.name
+        Resolver::IdLocGovResolver.new.resolve_corporate_name(uri)
       else
         nil
       end

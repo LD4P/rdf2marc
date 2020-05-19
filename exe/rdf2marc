@@ -6,13 +6,19 @@ $LOAD_PATH.unshift 'lib'
 
 require 'rdf2marc'
 
-unless ARGV.length == 2
+if ARGV.length == 1
+  instance_graph = RDF::Repository.load(ARGV[0])
+  work_uri = Rdf2marc::GraphHelper.new(instance_graph).instance_of_uri
+  raise "Work (bf:instanceOf) not specified for Instance" unless work_uri
+  work_graph = RDF::Repository.load(work_uri)
+elsif ARGV.length == 2
+  instance_graph = RDF::Repository.load(ARGV[0])
+  work_graph = RDF::Repository.load(ARGV[1])
+else
   puts "Usage: rdf2marc <instance ttl file> <work ttl file>"
+  puts "Usage: rdf2marc <instance uri>"
   exit(false)
 end
-
-instance_graph = RDF::Repository.load(ARGV[0])
-work_graph = RDF::Repository.load(ARGV[1])
 
 record_model = Rdf2marc::Rdf2model.to_model(instance_graph, work_graph)
 marc_record = Rdf2marc::Model2marc::Record.new(record_model)

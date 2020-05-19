@@ -1,8 +1,8 @@
 module Rdf2marc
   module Model2marc
-    class Field100 < Field
+    class Field600 < Field
       def initialize(marc_record, model)
-        super(marc_record, model, '100')
+        super(marc_record, model, '600')
       end
 
       def build
@@ -14,17 +14,27 @@ module Rdf2marc
         append_repeatable('e', model.relator_terms)
         append('f', model.work_date)
         append_repeatable('g', model.misc_infos)
+        append_repeatable('h', model.versions)
         append_repeatable('j', model.attribution_qualifiers)
         append_repeatable('k', model.form_subheadings)
         append('l', model.work_language)
+        append_repeatable('m', model.music_performance_mediums)
         append_repeatable('n', model.part_numbers)
+        append_repeatable('o', model.music_arranged_statement)
         append_repeatable('p', model.part_names)
         append('q', model.fuller_form)
+        append('r', model.music_key)
+        append('s', model.medium)
         append('t', model.work_title)
         append('u', model.affiliation)
+        append_repeatable('v', model.form_subdivisions)
+        append_repeatable('x', model.general_subdivisions)
+        append_repeatable('y', model.chronological_subdivisions)
+        append_repeatable('z', model.geographic_subdivisions)
         append_repeatable('0', model.authority_record_control_numbers)
         append('1', model.uri)
         append('2', model.heading_source)
+        append('3', model.materials_specified)
         append_repeatable('4', model.relationships)
         append('6', model.linkage)
         append_repeatable('8', model.field_links)

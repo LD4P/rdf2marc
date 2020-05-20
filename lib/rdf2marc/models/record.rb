@@ -7,6 +7,7 @@ module Rdf2marc
       attribute :main_entry_fields, MainEntryFields
       attribute :title_fields, TitleFields
       attribute :subject_access_fields, SubjectAccessFields
+      attribute :added_entry_fields, AddedEntryFields
     end
   end
 end

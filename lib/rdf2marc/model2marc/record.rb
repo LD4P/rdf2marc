@@ -15,6 +15,7 @@ module Rdf2marc
           add_field(ControlField005, record_model.control_fields, marc_record)
           add_field(ControlField008, record_model.control_fields.general_info, marc_record)
           add_field(Field010, record_model.number_and_code_fields.lccn, marc_record)
+          add_repeating_field(Field020, record_model.number_and_code_fields.isbns, marc_record)
           add_field(Field100, record_model.main_entry_fields.personal_name, marc_record)
           add_field(Field110, record_model.main_entry_fields.corporate_name, marc_record)
           add_repeating_field(Field242, record_model.title_fields.translated_titles, marc_record)
@@ -23,6 +24,8 @@ module Rdf2marc
           add_repeating_field(Field247, record_model.title_fields.former_titles, marc_record)
           add_repeating_field(Field600, record_model.subject_access_fields.personal_names, marc_record)
           add_repeating_field(Field610, record_model.subject_access_fields.corporate_names, marc_record)
+          add_repeating_field(Field700, record_model.added_entry_fields.personal_names, marc_record)
+          add_repeating_field(Field710, record_model.added_entry_fields.corporate_names, marc_record)
         end
       end
 

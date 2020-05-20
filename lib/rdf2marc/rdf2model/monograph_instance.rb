@@ -28,7 +28,8 @@ module Rdf2marc
               former_titles: former_titles
             },
             number_and_code_fields: {
-                lccn: lccn
+                lccn: lccn,
+                isbns: isbns
             }
         }
       end
@@ -222,6 +223,27 @@ module Rdf2marc
           end
         end
         lccn
+      end
+
+      def isbns
+        id_terms = query.path_all([[BF.identifiedBy, BF.Isbn]], subject_term: resource_term)
+        return if id_terms.nil?
+
+        # Cancelled ISBNs should probably be associated with an ISBN. However, RDF model does not support.
+        id_terms.map do |id_term|
+          isbn_value = query.path_first_literal([RDF::RDFV.value], subject_term: id_term)
+          next if isbn_value.nil?
+          is_cancelled = query.path_first([BF.status], subject_term: id_term) == LC_VOCAB['mstatus/cancinv']
+          isbn = {}
+          if is_cancelled
+            isbn[:cancelled_isbns] = [isbn_value]
+          else
+            isbn[:isbn] = isbn_value
+          end
+          qualifier_values = query.path_all_literal([BF.qualifier], subject_term: id_term)
+          isbn[:qualifying_infos] = qualifier_values if qualifier_values
+          isbn
+        end.compact
       end
     end
   end

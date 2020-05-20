@@ -14,11 +14,15 @@ module Rdf2marc
       when Rdf2marc::Models::MainEntryField::PersonalName.name
         Resolver::IdLocGovResolver.new.resolve_main_personal_name(uri)
       when Rdf2marc::Models::SubjectAccessField::PersonalName.name
-        Resolver::IdLocGovResolver.new.resolve_personal_name(uri)
+        Resolver::IdLocGovResolver.new.resolve_subject_personal_name(uri)
+      when Rdf2marc::Models::AddedEntryField::PersonalName.name
+        Resolver::IdLocGovResolver.new.resolve_added_personal_name(uri)
       when Rdf2marc::Models::MainEntryField::CorporateName.name
         Resolver::IdLocGovResolver.new.resolve_main_corporate_name(uri)
       when Rdf2marc::Models::SubjectAccessField::CorporateName.name
-        Resolver::IdLocGovResolver.new.resolve_corporate_name(uri)
+        Resolver::IdLocGovResolver.new.resolve_subject_corporate_name(uri)
+      when Rdf2marc::Models::AddedEntryField::CorporateName.name
+        Resolver::IdLocGovResolver.new.resolve_added_corporate_name(uri)
       else
         nil
       end

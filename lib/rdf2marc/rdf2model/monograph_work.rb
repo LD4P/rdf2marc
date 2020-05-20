@@ -24,9 +24,10 @@ module Rdf2marc
             title_fields: {
               title_statement: title_statement
             },
-            subject_access_fields: {
-                personal_names: personal_names,
-                corporate_names: corporate_names
+            subject_access_fields: subject_access_fields,
+            added_entry_fields: {
+                personal_names: added_personal_names,
+                corporate_names: added_corporate_names
             }
         }
       end
@@ -68,20 +69,24 @@ module Rdf2marc
         Resolver.resolve_loc_name(corporate_term.value, Models::MainEntryField::CorporateName)
       end
 
-      def personal_names
+      def added_personal_names
         # Person or family
         person_terms = (query.path_all([[BF.contribution, BF.Contribution], [BF.agent, BF.Person], [RDF::RDFV.value]], subject_term: resource_term) || []) + (query.path_first([[BF.contribution, BF.Contribution], [BF.agent, BF.Family], [RDF::RDFV.value]], subject_term: resource_term) || [])
         return if person_terms.nil?
-        person_terms.map { |person_term| Resolver.resolve_loc_name(person_term.value, Models::SubjectAccessField::PersonalName) }
+        person_terms.map { |person_term| Resolver.resolve_loc_name(person_term.value, Models::AddedEntryField::PersonalName) }
       end
 
-      def corporate_names
+      def added_corporate_names
         corporate_terms = query.path_all([[BF.contribution, BF.Contribution], [BF.agent, BF.Organization], [RDF::RDFV.value]], subject_term: resource_term)
         return if corporate_terms.nil?
-        corporate_terms.map { |corporate_term| Resolver.resolve_loc_name(corporate_term.value, Models::SubjectAccessField::CorporateName) }
+        corporate_terms.map { |corporate_term| Resolver.resolve_loc_name(corporate_term.value, Models::AddedEntryField::CorporateName) }
       end
 
-
+      def subject_access_fields
+        subject_terms = query.path_all([BF.subject], subject_term: resource_term)
+        # TODO: Determine type of subject access field
+        {}
+      end
     end
   end
 end

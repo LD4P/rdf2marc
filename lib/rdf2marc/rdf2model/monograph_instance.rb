@@ -21,15 +21,21 @@ module Rdf2marc
               latest_transaction: latest_transaction,
               general_info: general_info
             },
+            number_and_code_fields: {
+                lccn: lccn,
+                isbns: isbns
+            },
             title_fields: {
               translated_titles: translated_titles,
               title_statement: title_statement,
               variant_titles: variant_titles,
               former_titles: former_titles
             },
-            number_and_code_fields: {
-                lccn: lccn,
-                isbns: isbns
+            physical_description_fields: {
+              physical_descriptions: physical_descriptions
+            },
+            edition_imprint_fields: {
+                editions: editions
             }
         }
       end
@@ -244,6 +250,28 @@ module Rdf2marc
           isbn[:qualifying_infos] = qualifier_values if qualifier_values
           isbn
         end.compact
+      end
+
+      def editions
+        edition_statements = query.path_all_literal([BF.editionStatement], subject_term: resource_term)
+        return if edition_statements.nil?
+
+        edition_statements.map { |edition_statement| { edition: edition_statement}}
+      end
+
+      def physical_descriptions
+        extent_terms = (query.path_all([[BF.extent, BF.Extent]], subject_term: resource_term) || [])
+        extent_physical_description = extent_terms.map do |extent_term|
+          {
+              extents: query.path_all_literal([RDF::RDFS.label], subject_term: extent_term),
+              # Can be multiple notes, but only using one.
+              materials_specified: query.path_first_literal([[BF.note, BF.Note], RDF::RDFS.label], subject_term: extent_term)
+          }
+        end
+        dimensions = {
+            dimensions: query.path_all_literal([BF.dimensions], subject_term: resource_term)
+        }
+        extent_physical_description + [dimensions]
       end
     end
   end

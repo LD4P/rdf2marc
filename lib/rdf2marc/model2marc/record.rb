@@ -22,6 +22,8 @@ module Rdf2marc
           add_field(Field245, record_model.title_fields.title_statement, marc_record)
           add_repeating_field(Field246, record_model.title_fields.variant_titles, marc_record)
           add_repeating_field(Field247, record_model.title_fields.former_titles, marc_record)
+          add_repeating_field(Field250, record_model.edition_imprint_fields.editions, marc_record)
+          add_repeating_field(Field300, record_model.physical_description_fields.physical_descriptions, marc_record)
           add_repeating_field(Field600, record_model.subject_access_fields.personal_names, marc_record)
           add_repeating_field(Field610, record_model.subject_access_fields.corporate_names, marc_record)
           add_repeating_field(Field700, record_model.added_entry_fields.personal_names, marc_record)

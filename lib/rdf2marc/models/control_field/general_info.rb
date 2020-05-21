@@ -3,6 +3,7 @@
 module Rdf2marc
   module Models
     module ControlField
+      # Model for Heading Fields - General Information.
       class GeneralInfo < Struct
         attribute? :date_entered, Types::Date
         attribute? :date1, Types::String

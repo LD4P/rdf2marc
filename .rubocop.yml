@@ -1,0 +1,27 @@
+Layout/LineLength:
+  Max: 120
+
+Lint/InterpolationCheck:
+  Exclude:
+    - 'lib/rdf2marc/model2marc/*.rb'
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Security/Eval:
+  Exclude:
+    - 'lib/rdf2marc/model2marc/field.rb'
+
+Style/Documentation:
+  Exclude:
+    - 'lib/array.rb'
+    - 'lib/hash.rb'

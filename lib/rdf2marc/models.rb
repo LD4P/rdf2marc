@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Models
     # DRY Types
@@ -5,7 +7,7 @@ module Rdf2marc
       include Dry.Types()
     end
 
-    # Base class for Models
+    # Base class for models.
     class Struct < Dry::Struct
       transform_keys(&:to_sym)
 

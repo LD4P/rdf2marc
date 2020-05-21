@@ -3,6 +3,7 @@
 module Rdf2marc
   module Models
     module AddedEntryField
+      # Model for 710 - Added Entry - Corporate Name.
       class CorporateName < Struct
         attribute :type, Types::String.default('direct').enum('inverted', 'jurisdiction', 'direct')
         attribute? :corporate_name, Types::String

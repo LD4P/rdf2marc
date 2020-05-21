@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Model2marc
+    # Maps model to field 008.
     class ControlField008 < ControlField
       def initialize(marc_record, model)
         super(marc_record, model, '008')
@@ -8,7 +11,7 @@ module Rdf2marc
       def value
         field_value = ' ' * 40
         # Date entered on file
-        field_value[0..5] = (model.date_entered || Date.today).strftime("%y%m%d")
+        field_value[0..5] = (model.date_entered || Date.today).strftime('%y%m%d')
         # Type of date, date1, date2
         if model.date1
           field_value[6..10] = "s#{formatted_date1}" if model.date1

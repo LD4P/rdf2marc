@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Model2marc
+    # Maps model to field 700.
     class Field700 < Field
       def initialize(marc_record, model)
         super(marc_record, model, '700')
@@ -44,11 +47,11 @@ module Rdf2marc
       def name_type
         case model.type
         when 'forename'
-          "0"
-        when "surname"
-          "1"
+          '0'
+        when 'surname'
+          '1'
         else
-          "3"
+          '3'
         end
       end
     end

@@ -17,5 +17,6 @@ loader = Zeitwerk::Loader.new
 loader.push_dir(File.absolute_path("#{__FILE__}/.."))
 loader.setup
 
+# Maps RDF to MARC.
 module Rdf2marc
 end

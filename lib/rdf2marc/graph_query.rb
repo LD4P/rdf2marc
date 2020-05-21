@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   BF = RDF::Vocabulary.new('http://id.loc.gov/ontologies/bibframe/')
   SINOPIA = RDF::Vocabulary.new('http://sinopia.io/vocabulary/')
   LC_VOCAB = RDF::Vocabulary.new('http://id.loc.gov/vocabulary/')
   BFLC = RDF::Vocabulary.new('http://id.loc.gov/ontologies/bflc/')
+  # Queries graph using graph patterns.
   class GraphQuery
     QueryPart = Struct.new(:pred, :class)
 
@@ -38,11 +41,11 @@ module Rdf2marc
       patterns = []
       path.map.with_index do |path_part, index|
         predicate, type = if path_part.is_a?(Array)
-           path_part
-        else
-          [path_part, nil]
-        end
-        obj = "var#{index+1}".to_sym
+                            path_part
+                          else
+                            [path_part, nil]
+                          end
+        obj = "var#{index + 1}".to_sym
         patterns << RDF::Query::Pattern.new(subj, predicate, obj)
         patterns << RDF::Query::Pattern.new(obj,  RDF.type, type) if type
         subj = obj
@@ -51,32 +54,31 @@ module Rdf2marc
     end
 
     def query_first(patterns, var)
-      solutions =  RDF::Query.new(patterns).execute(graph)
+      solutions = RDF::Query.new(patterns).execute(graph)
       return nil if solutions.empty?
 
       solutions.first[var]
     end
 
     def query_all(patterns, var)
-      solutions =  RDF::Query.new(patterns).execute(graph)
+      solutions = RDF::Query.new(patterns).execute(graph)
       return nil if solutions.empty?
 
       solutions.map { |solution| solution[var] }
     end
 
-
     def to_literal(term)
       return nil if term.nil?
 
       raise 'Not a literal' unless term.is_a?(RDF::Literal)
+
       term.value
     end
 
     def to_literals(terms)
       return nil if terms.nil?
 
-      terms.map { |term| to_literal(term)}
+      terms.map { |term| to_literal(term) }
     end
-
   end
 end

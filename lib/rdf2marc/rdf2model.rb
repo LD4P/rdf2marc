@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 module Rdf2marc
+  # Mapping RDF to model.
   module Rdf2model
     def self.to_model(instance_graph, work_graph)
       # In merge, instance trumps work
@@ -32,6 +35,5 @@ module Rdf2marc
               end
       clazz.new(graph, graph_helper.uri).generate
     end
-
   end
 end

@@ -3,6 +3,7 @@
 module Rdf2marc
   module Models
     module NumberAndCodeField
+      # Model for 020 - International Standard Book Number.
       class Isbn < Struct
         attribute? :isbn, Types::String
         attribute? :availability_terms, Types::String

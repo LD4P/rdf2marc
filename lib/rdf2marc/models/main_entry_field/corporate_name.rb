@@ -3,6 +3,7 @@
 module Rdf2marc
   module Models
     module MainEntryField
+      # Model for 110 - Main Entry - Corporate Name.
       class CorporateName < Struct
         attribute :type, Types::String.default('direct').enum('inverted', 'jurisdiction', 'direct')
         attribute? :corporate_name, Types::String

@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Model2marc
+    # Base class for mapping model to field.
     class Field
       def initialize(marc_record, model, tag)
         @marc_record = marc_record
@@ -34,7 +37,8 @@ module Rdf2marc
         return if value.nil?
 
         raise "#{subfield} is repeatable, but did not receive an array" unless value.is_a?(Array)
-        value.each {|value_item| field.append(MARC::Subfield.new(subfield, formatted_value(value_item, pattern))) }
+
+        value.each { |value_item| field.append(MARC::Subfield.new(subfield, formatted_value(value_item, pattern))) }
       end
 
       def formatted_value(value, pattern)

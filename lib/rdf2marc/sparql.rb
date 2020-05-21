@@ -1,10 +1,13 @@
+# frozen_string_literal: true
+
 module Rdf2marc
+  # Queries graph using SPARQL.
   class Sparql
     NAMESPACES = {
-        bf: 'http://id.loc.gov/ontologies/bibframe/',
-        sinopia: 'http://sinopia.io/vocabulary/',
-        rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
-    }
+      bf: 'http://id.loc.gov/ontologies/bibframe/',
+      sinopia: 'http://sinopia.io/vocabulary/',
+      rdfs: 'http://www.w3.org/2000/01/rdf-schema#'
+    }.freeze
 
     def initialize(graph, addl_namespaces: {})
       @graph = graph
@@ -62,24 +65,24 @@ module Rdf2marc
     attr_reader :graph, :namespaces
 
     def with_namespaces(sparql)
-      namespaces_str = namespaces.map { |prefix, uri| "PREFIX #{prefix}: <#{uri}>"}.join("\n")
+      namespaces_str = namespaces.map { |prefix, uri| "PREFIX #{prefix}: <#{uri}>" }.join("\n")
       "#{namespaces_str}\n#{sparql}"
     end
 
     def query_string_for_path(path, subject_uri: nil)
-      subj = subject_uri ? "<#{subject_uri}>" : "var0"
+      subj = subject_uri ? "<#{subject_uri}>" : 'var0'
       where_str = path.map.with_index do |predicate, index|
-        obj = "var#{index+1}"
+        obj = "var#{index + 1}"
         clause = "?#{subj} #{predicate} ?#{obj} ."
         subj = obj
         clause
       end
-      query_string = <<-SPARQL
-SELECT ?#{subj}
-WHERE
-{ 
-  #{where_str.join("\n")}
-}
+      query_string = <<~SPARQL
+        SELECT ?#{subj}
+        WHERE
+        { 
+          #{where_str.join("\n")}
+        }
       SPARQL
       [query_string, subj]
     end
@@ -88,14 +91,14 @@ WHERE
       return nil if term.nil?
 
       raise 'Not a literal' unless term.is_a?(RDF::Literal)
+
       term.value
     end
 
     def to_literals(terms)
       return nil if terms.nil?
 
-      terms.map { |term| to_literal(term)}
+      terms.map { |term| to_literal(term) }
     end
-
   end
 end

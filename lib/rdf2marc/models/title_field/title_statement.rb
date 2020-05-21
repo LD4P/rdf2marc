@@ -3,6 +3,7 @@
 module Rdf2marc
   module Models
     module TitleField
+      # Model for 245 - Title Statement.
       class TitleStatement < Struct
         attribute :added_entry, Types::String.default('added').enum('added', 'no_added')
         attribute :nonfile_characters, Types::Integer.default(0)

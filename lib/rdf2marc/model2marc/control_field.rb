@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Model2marc
+    # Base class for mapping model to control field.
     class ControlField
       def initialize(marc_record, model, tag)
         @marc_record = marc_record

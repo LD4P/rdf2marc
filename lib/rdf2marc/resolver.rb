@@ -1,11 +1,12 @@
+# frozen_string_literal: true
+
 module Rdf2marc
+  # Resolves and maps entities to models.
   module Resolver
     def self.resolve(uri, model_class)
       case uri
       when uri.start_with?('http://id.loc.gov/authorities/names/')
         resolve_loc_name(uri, model_class)
-      else
-        nil
       end
     end
 
@@ -23,8 +24,6 @@ module Rdf2marc
         Resolver::IdLocGovResolver.new.resolve_subject_corporate_name(uri)
       when Rdf2marc::Models::AddedEntryField::CorporateName.name
         Resolver::IdLocGovResolver.new.resolve_added_corporate_name(uri)
-      else
-        nil
       end
     end
   end

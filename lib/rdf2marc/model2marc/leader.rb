@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Model2marc
+    # Maps model to Leader.
     class Leader
       def initialize(marc_record, model)
         @marc_record = marc_record

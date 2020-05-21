@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Models
+    # Model for a bibliographic record.
     class Record < Struct
       attribute :leader, Leader
       attribute :control_fields, ControlFields

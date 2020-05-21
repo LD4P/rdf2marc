@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Model2marc
+    # Maps model to MARC record.
     class Record
       delegate :to_s, :to_marc, to: :marc_record
 
@@ -48,9 +51,8 @@ module Rdf2marc
       end
 
       def add_control_field(tag, value, marc_record)
-        marc_record << MARC::ControlField.new(tag,value) unless value.nil?
+        marc_record << MARC::ControlField.new(tag, value) unless value.nil?
       end
-
     end
   end
 end

@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Model2marc
+    # Maps model to field 110.
     class Field110 < Field
       def initialize(marc_record, model)
         super(marc_record, model, '110')
@@ -33,11 +36,11 @@ module Rdf2marc
       def name_type
         case model.type
         when 'inverted'
-          "0"
-        when "jurisdiction"
-          "1"
+          '0'
+        when 'jurisdiction'
+          '1'
         else
-          "2"
+          '2'
         end
       end
     end

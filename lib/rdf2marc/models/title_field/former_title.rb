@@ -3,6 +3,7 @@
 module Rdf2marc
   module Models
     module TitleField
+      # Model for 247 - Former Title.
       class FormerTitle < Struct
         attribute :added_entry, Types::String.default('added').enum('added', 'no_added')
         attribute :note_controller, Types::String.default('no_display').enum('display', 'no_display')

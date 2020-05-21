@@ -3,6 +3,7 @@
 module Rdf2marc
   module Models
     module MainEntryField
+      # Model for 100 - Main Entry - Personal Name.
       class PersonalName < Struct
         attribute :type, Types::String.default('surname').enum('forename', 'surname', 'family_name')
         attribute? :personal_name, Types::String

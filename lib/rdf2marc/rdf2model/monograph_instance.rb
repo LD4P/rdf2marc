@@ -17,13 +17,6 @@ module Rdf2marc
 
       def generate
         {
-          leader: leader,
-          control_fields: {
-            control_number: control_number,
-            control_number_id: control_number_id,
-            latest_transaction: latest_transaction,
-            general_info: general_info
-          },
           number_and_code_fields: {
             lccn: lccn,
             isbns: isbns
@@ -46,30 +39,6 @@ module Rdf2marc
       private
 
       attr_reader :graph, :sparql, :resource_uri, :query, :resource_term
-
-      def leader
-        return nil if admin_metadata_term.nil?
-
-        {
-          record_status: query.path_first_literal([[BF.status, BF.Status],
-                                                   BF.code], subject_term: admin_metadata_term),
-          bibliographic_level: bibliographic_level,
-          encoding_level: encoding_level,
-          cataloging_form: cataloging_form
-        }
-      end
-
-      def bibliographic_level
-        # Record may contain multiple. Only using one and which is selected is indeterminate.
-        case query.path_first([BF.issuance], subject_term: resource_term)
-        when LC_VOCAB['issuance/intg']
-          'integrating_resource'
-        when LC_VOCAB['issuance/seri']
-          'serial'
-        else
-          'item'
-        end
-      end
 
       def title_statement
         # Record may contain multiple bf:Title. Only using one and which is selected is indeterminate.
@@ -149,84 +118,6 @@ module Rdf2marc
             part_names: query.path_all_literal([BF.partName], subject_term: title_term)
           }
         end
-      end
-
-      def encoding_level
-        encoding_level_term = query.path_first([BFLC.encodingLevel], subject_term: admin_metadata_term)
-        case encoding_level_term
-        when LC_VOCAB['menclvl/3']
-          'abbreviated'
-        when LC_VOCAB['menclvl/4']
-          'core'
-        when LC_VOCAB['menclvl/f']
-          'full'
-        when LC_VOCAB['menclvl/1']
-          'full_not_examined'
-        when LC_VOCAB['menclvl/7']
-          'minimum'
-        when LC_VOCAB['menclvl/5']
-          'partial'
-        when LC_VOCAB['menclvl/8']
-          'prepublication'
-        end
-      end
-
-      def cataloging_form
-        # Can be more than one, but only using first.
-        description_convention_term = query.path_first([BF.descriptionConventions], subject_term: admin_metadata_term)
-        case description_convention_term
-        when LC_VOCAB['descriptionConventions/aacr']
-          'aacr2'
-        when LC_VOCAB['descriptionConventions/isbd']
-          'isbd'
-        end
-      end
-
-      def admin_metadata_term
-        # Record may contain multiple bf:AdminMetadata. Only using one and which is selected is indeterminate.
-        @admin_metadata_term ||= query.path_first([[BF.adminMetadata, BF.AdminMetadata]], subject_term: resource_term)
-      end
-
-      def control_number
-        return nil if admin_metadata_term.nil?
-
-        query.path_first_literal([[BF.identifiedBy, BF.Local], [RDF::RDFV.value]], subject_term: admin_metadata_term)
-      end
-
-      def control_number_id
-        return nil if admin_metadata_term.nil?
-
-        # Can be multiple but only using first.
-        source_term = query.path_first([BF.source], subject_term: admin_metadata_term)
-        return nil if source_term.nil?
-
-        source_term.value.delete_prefix('http://id.loc.gov/vocabulary/organizations/')
-      end
-
-      def latest_transaction
-        return nil if admin_metadata_term.nil?
-
-        date_literal = query.path_first_literal([BF.changeDate], subject_term: admin_metadata_term)
-        return nil if date_literal.nil?
-
-        DateTime.iso8601(date_literal)
-      end
-
-      def general_info
-        {
-          date_entered: date_entered,
-          date1: query.path_first_literal([[BF.provisionActivity, BF.Publication],
-                                           [BF.date]], subject_term: resource_term)
-        }
-      end
-
-      def date_entered
-        return nil if admin_metadata_term.nil?
-
-        date_literal = query.path_first_literal([BF.creationDate], subject_term: admin_metadata_term)
-        return nil if date_literal.nil?
-
-        DateTime.iso8601(date_literal)
       end
 
       def lccn

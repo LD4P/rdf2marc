@@ -12,14 +12,20 @@ if ARGV.length == 1
   raise 'Work (bf:instanceOf) not specified for Instance' unless work_uri
 
   work_graph = RDF::Repository.load(work_uri)
+
+  admin_metadata_uri = Rdf2marc::GraphHelper.new(instance_graph).admin_metadata_uri
+  raise 'Work (bf:adminMetadata) not specified for Instance' unless admin_metadata_uri
+
+  admin_metadata_graph = RDF::Repository.load(admin_metadata_uri)
 elsif ARGV.length == 2
   instance_graph = RDF::Repository.load(ARGV[0])
   work_graph = RDF::Repository.load(ARGV[1])
+  admin_metadata_graph = RDF::Repository.load(ARGV[2])
 else
-  puts 'Usage: rdf2model <instance ttl file> <work ttl file>'
+  puts 'Usage: rdf2model <instance ttl file> <work ttl file> <admin metadata ttl file>'
   puts 'Usage: rdf2model <instance uri>'
   exit(false)
 end
 
-record_model = Rdf2marc::Rdf2model.to_model(instance_graph, work_graph)
+record_model = Rdf2marc::Rdf2model.to_model(instance_graph, work_graph, admin_metadata_graph)
 puts JSON.pretty_generate(record_model.to_h)

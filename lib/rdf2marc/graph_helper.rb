@@ -33,6 +33,15 @@ module Rdf2marc
       end
     end
 
+    def admin_metadata_uri
+      @admin_metadata_uri ||= begin
+        admin_metadata_term = query.path_first([BF.adminMetadata], subject_term: resource_term)
+        return nil if admin_metadata_term.nil?
+
+        admin_metadata_term.value
+      end
+    end
+
     private
 
     attr_reader :graph, :sparql, :query

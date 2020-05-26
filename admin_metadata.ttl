@@ -1,0 +1,19 @@
+<https://trellis.stage.sinopia.io/repository/stanford/2b27de29-fdd7-45f2-96d5-db89fa2306aa> <http://id.loc.gov/ontologies/bflc/catalogerId> "jlittman"@eng;
+    <http://id.loc.gov/ontologies/bflc/encodingLevel> <http://id.loc.gov/vocabulary/menclvl/5>;
+    <http://id.loc.gov/ontologies/bibframe/changeDate> "2008-12-23T09:50:49"@eng;
+    <http://id.loc.gov/ontologies/bibframe/creationDate> "2020-05-13"@eng;
+    <http://id.loc.gov/ontologies/bibframe/descriptionConventions> <http://id.loc.gov/vocabulary/descriptionConventions/isbd>;
+    <http://id.loc.gov/ontologies/bibframe/descriptionLanguage> <http://id.loc.gov/vocabulary/languages/eng>;
+    <http://id.loc.gov/ontologies/bibframe/identifiedBy> _:b6_c14n0;
+    <http://id.loc.gov/ontologies/bibframe/source> <http://id.loc.gov/vocabulary/organizations/cst>;
+    <http://id.loc.gov/ontologies/bibframe/status> _:b6_c14n1;
+    <http://sinopia.io/vocabulary/hasResourceTemplate> "ld4p:RT:bf2:AdminMetadata:BFDB";
+    a <http://id.loc.gov/ontologies/bibframe/AdminMetadata>.
+<http://id.loc.gov/vocabulary/descriptionConventions/isbd> <http://www.w3.org/2000/01/rdf-schema#label> "ISBD: International Standard Bibliographic Description".
+<http://id.loc.gov/vocabulary/languages/eng> <http://www.w3.org/2000/01/rdf-schema#label> "English".
+<http://id.loc.gov/vocabulary/menclvl/5> <http://www.w3.org/2000/01/rdf-schema#label> "preliminary".
+<http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2000/01/rdf-schema#label> "http://id.loc.gov/vocabulary/organizations/cst".
+_:b6_c14n0 a <http://id.loc.gov/ontologies/bibframe/Local>;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "1457626"@eng.
+_:b6_c14n1 <http://id.loc.gov/ontologies/bibframe/code> "n"@eng;
+    a <http://id.loc.gov/ontologies/bibframe/Status>.

@@ -20,6 +20,9 @@ module Rdf2marc
           control_fields: {
             general_info: general_information
           },
+          number_and_code_fields: {
+              lc_call_numbers: lc_call_numbers
+          },
           main_entry_fields: {
             personal_name: main_personal_name,
             corporate_name: main_corporate_name
@@ -114,6 +117,20 @@ module Rdf2marc
         subject_terms = query.path_all([BF.subject], subject_term: resource_term)
         # TODO: Determine type of subject access field
         {}
+      end
+
+      def lc_call_numbers
+        classification_terms = query.path_all([[BF.classification, BF.ClassificationLcc]], subject_term: resource_term)
+
+        return if classification_terms.nil?
+
+        classification_terms.map do |classification_term|
+          {
+              classification_numbers: query.path_all_literal([BF.classificationPortion], subject_term: classification_term),
+              # Can be multiple, however only using one.
+              item_number: query.path_first_literal([BF.itemPortion], subject_term: classification_term)
+          }
+        end
       end
     end
   end

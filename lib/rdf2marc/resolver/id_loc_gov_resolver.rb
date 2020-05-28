@@ -209,6 +209,11 @@ module Rdf2marc
         }
       end
 
+      def resolve_gac(uri)
+        marc_record = get_marc(uri)
+        marc_record['043']['a']
+      end
+
       private
 
       def get_marc(uri)

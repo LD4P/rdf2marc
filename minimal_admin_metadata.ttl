@@ -1,0 +1,7 @@
+<https://trellis.stage.sinopia.io/repository/stanford/60560229-5113-4e65-86e8-40f97c5bbfea> <http://id.loc.gov/ontologies/bflc/catalogerId> "jlittman"@eng;
+    <http://id.loc.gov/ontologies/bibframe/descriptionConventions> <http://id.loc.gov/vocabulary/descriptionConventions/rda>;
+    <http://id.loc.gov/ontologies/bibframe/descriptionLanguage> <http://id.loc.gov/vocabulary/languages/eng>;
+    <http://sinopia.io/vocabulary/hasResourceTemplate> "ld4p:RT:bf2:AdminMetadata:BFDB";
+    a <http://id.loc.gov/ontologies/bibframe/AdminMetadata>.
+<http://id.loc.gov/vocabulary/descriptionConventions/rda> <http://www.w3.org/2000/01/rdf-schema#label> "Resource Description and Access".
+<http://id.loc.gov/vocabulary/languages/eng> <http://www.w3.org/2000/01/rdf-schema#label> "English".

@@ -21,7 +21,7 @@ module Rdf2marc
         # Place of publication not yet supported. Would require doing lookup on URI.
         field_value[15..17] = 'xx '
         # Language
-        field_value[35..37] = model.language[0..2]
+        field_value[35..37] = model.language[0..2] if model.language
         # Modified record
         field_value[38] = '|'
         # Cataloging source

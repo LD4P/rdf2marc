@@ -90,10 +90,10 @@ module Rdf2marc
 
       def control_number_id
         # Can be multiple but only using first.
-        source_term = query.path_first([BF.source], subject_term: resource_term)
-        return nil if source_term.nil?
+        source_uri = query.path_first_uri([BF.source], subject_term: resource_term)
+        return nil if source_uri.nil?
 
-        source_term.value.delete_prefix('http://id.loc.gov/vocabulary/organizations/')
+        source_uri.delete_prefix('http://id.loc.gov/vocabulary/organizations/')
       end
 
       def latest_transaction

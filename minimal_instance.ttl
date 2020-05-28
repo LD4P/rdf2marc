@@ -1,0 +1,13 @@
+<https://trellis.stage.sinopia.io/repository/stanford/251932ae-7619-45ed-b165-1c2d5c82a5f1> <http://id.loc.gov/ontologies/bibframe/adminMetadata> <https://trellis.stage.sinopia.io/repository/stanford/60560229-5113-4e65-86e8-40f97c5bbfea>;
+    <http://id.loc.gov/ontologies/bibframe/carrier> <http://id.loc.gov/vocabulary/carriers/nc>;
+    <http://id.loc.gov/ontologies/bibframe/instanceOf> <https://trellis.stage.sinopia.io/repository/stanford/9f1670a0-76d7-464a-9850-855d511c4a9e>;
+    <http://id.loc.gov/ontologies/bibframe/issuance> <http://id.loc.gov/vocabulary/issuance/mono>;
+    <http://id.loc.gov/ontologies/bibframe/media> <http://id.loc.gov/vocabulary/mediaTypes/n>;
+    <http://id.loc.gov/ontologies/bibframe/title> _:b13_c14n0;
+    <http://sinopia.io/vocabulary/hasResourceTemplate> "ld4p:RT:bf2:Monograph:Instance:Un-nested";
+    a <http://id.loc.gov/ontologies/bibframe/Instance>.
+<http://id.loc.gov/vocabulary/carriers/nc> <http://www.w3.org/2000/01/rdf-schema#label> "volume".
+<http://id.loc.gov/vocabulary/issuance/mono> <http://www.w3.org/2000/01/rdf-schema#label> "single unit".
+<http://id.loc.gov/vocabulary/mediaTypes/n> <http://www.w3.org/2000/01/rdf-schema#label> "unmediated".
+_:b13_c14n0 <http://id.loc.gov/ontologies/bibframe/mainTitle> "title1"@eng;
+    a <http://id.loc.gov/ontologies/bibframe/Title>.

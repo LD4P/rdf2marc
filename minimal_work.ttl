@@ -1,0 +1,7 @@
+<https://trellis.stage.sinopia.io/repository/stanford/9f1670a0-76d7-464a-9850-855d511c4a9e> <http://id.loc.gov/ontologies/bibframe/content> <http://id.loc.gov/vocabulary/contentTypes/txt>;
+    <http://id.loc.gov/ontologies/bibframe/title> _:b5_c14n0;
+    <http://sinopia.io/vocabulary/hasResourceTemplate> "ld4p:RT:bf2:Monograph:Work:Un-nested";
+    a <http://id.loc.gov/ontologies/bibframe/Work>.
+<http://id.loc.gov/vocabulary/contentTypes/txt> <http://www.w3.org/2000/01/rdf-schema#label> "text".
+_:b5_c14n0 <http://id.loc.gov/ontologies/bibframe/mainTitle> "title1"@eng;
+    a <http://id.loc.gov/ontologies/bibframe/Title>.

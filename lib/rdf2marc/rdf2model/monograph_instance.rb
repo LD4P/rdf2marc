@@ -55,15 +55,14 @@ module Rdf2marc
 
       def variant_titles
         # VariantTitle and ParallelTitle
-        variant_title_terms = query.path_all([[BF.title, BF.VariantTitle]], subject_term: resource_term) || []
+        variant_title_terms = query.path_all([[BF.title, BF.VariantTitle]], subject_term: resource_term)
         # Filter variant titles where variantType='translated' or 'former'
         variant_title_terms.delete_if do |title_term|
           %w[translated former].include?(query.path_first_literal([BF.variantType], subject_term: title_term))
         end
 
-        parallel_title_terms = query.path_all([[BF.title, BF.ParallelTitle]], subject_term: resource_term) || []
+        parallel_title_terms = query.path_all([[BF.title, BF.ParallelTitle]], subject_term: resource_term)
         title_terms = variant_title_terms + parallel_title_terms
-        return nil if title_terms.empty?
 
         title_terms.map do |title_term|
           {
@@ -86,12 +85,10 @@ module Rdf2marc
 
       def former_titles
         # VariantTitles where variantType='former'
-        former_title_terms = query.path_all([[BF.title, BF.VariantTitle]], subject_term: resource_term) || []
+        former_title_terms = query.path_all([[BF.title, BF.VariantTitle]], subject_term: resource_term)
         former_title_terms.keep_if do |title_term|
           query.path_first_literal([BF.variantType], subject_term: title_term) == 'former'
         end
-
-        return nil if former_title_terms.empty?
 
         former_title_terms.map do |title_term|
           {
@@ -104,12 +101,10 @@ module Rdf2marc
 
       def translated_titles
         # VariantTitles where variantType='translated'
-        translated_title_terms = query.path_all([[BF.title, BF.VariantTitle]], subject_term: resource_term) || []
+        translated_title_terms = query.path_all([[BF.title, BF.VariantTitle]], subject_term: resource_term)
         translated_title_terms.keep_if do |title_term|
           query.path_first_literal([BF.variantType], subject_term: title_term) == 'translated'
         end
-
-        return nil if translated_title_terms.empty?
 
         translated_title_terms.map do |title_term|
           {
@@ -126,7 +121,6 @@ module Rdf2marc
           cancelled_lccns: []
         }
         id_terms = query.path_all([[BF.identifiedBy, BF.Lccn]], subject_term: resource_term)
-        return if id_terms.nil?
 
         id_terms.each do |id_term|
           lccn_value = query.path_first_literal([RDF::RDFV.value], subject_term: id_term)
@@ -144,7 +138,6 @@ module Rdf2marc
 
       def isbns
         id_terms = query.path_all([[BF.identifiedBy, BF.Isbn]], subject_term: resource_term)
-        return if id_terms.nil?
 
         # Cancelled ISBNs should probably be associated with an ISBN. However, RDF model does not support.
         id_terms.map do |id_term|
@@ -166,13 +159,12 @@ module Rdf2marc
 
       def editions
         edition_statements = query.path_all_literal([BF.editionStatement], subject_term: resource_term)
-        return if edition_statements.nil?
 
         edition_statements.map { |edition_statement| { edition: edition_statement } }
       end
 
       def physical_descriptions
-        extent_terms = (query.path_all([[BF.extent, BF.Extent]], subject_term: resource_term) || [])
+        extent_terms = query.path_all([[BF.extent, BF.Extent]], subject_term: resource_term)
         extent_physical_description = extent_terms.map do |extent_term|
           {
             extents: query.path_all_literal([RDF::RDFS.label], subject_term: extent_term),

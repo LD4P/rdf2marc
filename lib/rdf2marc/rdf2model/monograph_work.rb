@@ -21,7 +21,8 @@ module Rdf2marc
             general_info: general_information
           },
           number_and_code_fields: {
-              lc_call_numbers: lc_call_numbers
+            geographic_area_code: geographic_area_code,
+            lc_call_numbers: lc_call_numbers
           },
           main_entry_fields: {
             personal_name: main_personal_name,
@@ -55,61 +56,53 @@ module Rdf2marc
       end
 
       def language
-        language_term = query.path_first([BF.language], subject_term: resource_term)
-        return nil if language_term.nil? || !language_term.value.start_with?('http://id.loc.gov/vocabulary/languages/')
+        language_uri = query.path_first_uri([BF.language], subject_term: resource_term)
+        return nil if language_uri.nil? || !language_uri.start_with?('http://id.loc.gov/vocabulary/languages/')
 
-        language_term.value.delete_prefix('http://id.loc.gov/vocabulary/languages/')
+        language_uri.delete_prefix('http://id.loc.gov/vocabulary/languages/')
       end
 
       def main_personal_name
         # Person or family
-        person_term = query.path_first([[BF.contribution, BFLC.PrimaryContribution],
-                                        [BF.agent, BF.Person],
-                                        [RDF::RDFV.value]], subject_term: resource_term) ||
-                      query.path_first([[BF.contribution, BFLC.PrimaryContribution],
-                                        [BF.agent, BF.Family],
-                                        [RDF::RDFV.value]], subject_term: resource_term)
+        person_uri = query.path_first_uri([[BF.contribution, BFLC.PrimaryContribution],
+                                           [BF.agent, BF.Person],
+                                           [RDF::RDFV.value]], subject_term: resource_term) ||
+                     query.path_first_uri([[BF.contribution, BFLC.PrimaryContribution],
+                                           [BF.agent, BF.Family],
+                                           [RDF::RDFV.value]], subject_term: resource_term)
 
-        return if person_term.nil?
-
-        Resolver.resolve_loc_name(person_term.value, Models::MainEntryField::PersonalName)
+        Resolver.resolve(person_uri, Models::MainEntryField::PersonalName)
       end
 
       def main_corporate_name
-        corporate_term = query.path_first([[BF.contribution, BFLC.PrimaryContribution],
-                                           [BF.agent, BF.Organization],
-                                           [RDF::RDFV.value]], subject_term: resource_term)
+        corporate_uri = query.path_first_uri([[BF.contribution, BFLC.PrimaryContribution],
+                                              [BF.agent, BF.Organization],
+                                              [RDF::RDFV.value]], subject_term: resource_term)
 
-        return if corporate_term.nil?
-
-        Resolver.resolve_loc_name(corporate_term.value, Models::MainEntryField::CorporateName)
+        Resolver.resolve(corporate_uri, Models::MainEntryField::CorporateName)
       end
 
       def added_personal_names
         # Person or family
-        person_terms = (query.path_all([[BF.contribution, BF.Contribution],
-                                        [BF.agent, BF.Person],
-                                        [RDF::RDFV.value]], subject_term: resource_term) || []) +
-                       (query.path_first([[BF.contribution, BF.Contribution],
-                                          [BF.agent, BF.Family],
-                                          [RDF::RDFV.value]], subject_term: resource_term) || [])
-        return if person_terms.nil?
-
-        person_terms.map do |person_term|
-          Resolver.resolve_loc_name(person_term.value,
-                                    Models::AddedEntryField::PersonalName)
+        person_uris = query.path_all_uri([[BF.contribution, BF.Contribution],
+                                          [BF.agent, BF.Person],
+                                          [RDF::RDFV.value]], subject_term: resource_term) +
+                      (query.path_first_uri([[BF.contribution, BF.Contribution],
+                                             [BF.agent, BF.Family],
+                                             [RDF::RDFV.value]], subject_term: resource_term) || [])
+        person_uris.map do |person_uri|
+          Resolver.resolve(person_uri,
+                           Models::AddedEntryField::PersonalName)
         end
       end
 
       def added_corporate_names
-        corporate_terms = query.path_all([[BF.contribution, BF.Contribution],
-                                          [BF.agent, BF.Organization],
-                                          [RDF::RDFV.value]], subject_term: resource_term)
-        return if corporate_terms.nil?
-
-        corporate_terms.map do |corporate_term|
-          Resolver.resolve_loc_name(corporate_term.value,
-                                    Models::AddedEntryField::CorporateName)
+        corporate_uris = query.path_all_uri([[BF.contribution, BF.Contribution],
+                                             [BF.agent, BF.Organization],
+                                             [RDF::RDFV.value]], subject_term: resource_term)
+        corporate_uris.map do |corporate_uri|
+          Resolver.resolve(corporate_uri,
+                           Models::AddedEntryField::CorporateName)
         end
       end
 
@@ -122,15 +115,24 @@ module Rdf2marc
       def lc_call_numbers
         classification_terms = query.path_all([[BF.classification, BF.ClassificationLcc]], subject_term: resource_term)
 
-        return if classification_terms.nil?
-
         classification_terms.map do |classification_term|
           {
-              classification_numbers: query.path_all_literal([BF.classificationPortion], subject_term: classification_term),
-              # Can be multiple, however only using one.
-              item_number: query.path_first_literal([BF.itemPortion], subject_term: classification_term)
+            classification_numbers: query.path_all_literal([BF.classificationPortion],
+                                                           subject_term: classification_term),
+            # Can be multiple, however only using one.
+            item_number: query.path_first_literal([BF.itemPortion], subject_term: classification_term)
           }
         end
+      end
+
+      def geographic_area_code
+        gac_uris = query.path_all_uri([BF.geographicCoverage], subject_term: resource_term)
+        gacs = gac_uris.map do |gac_uri|
+          Resolver.resolve(gac_uri, Rdf2marc::Models::NumberAndCodeField::GeographicAreaCode, 'geographic_area_code')
+        end
+        {
+          geographic_area_codes: gacs
+        }
       end
     end
   end

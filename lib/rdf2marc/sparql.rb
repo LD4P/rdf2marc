@@ -27,7 +27,6 @@ module Rdf2marc
 
     def query_all(sparql, var_name: 'solut')
       solutions = query(sparql)
-      return nil if solutions.empty?
 
       solutions.map { |solution| solution[var_name.to_sym] }
     end
@@ -96,8 +95,6 @@ module Rdf2marc
     end
 
     def to_literals(terms)
-      return nil if terms.nil?
-
       terms.map { |term| to_literal(term) }
     end
   end

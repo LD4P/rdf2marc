@@ -22,6 +22,10 @@ module Rdf2marc
       to_literal(path_first(path, subject_term: subject_term))
     end
 
+    def path_first_uri(path, subject_term: nil)
+      to_uri(path_first(path, subject_term: subject_term))
+    end
+
     def path_all(path, subject_term: nil)
       patterns, subj = patterns_for_path(path, subject_term: subject_term)
       query_all(patterns, subj)
@@ -30,6 +34,11 @@ module Rdf2marc
     def path_all_literal(path, subject_term: nil)
       patterns, subj = patterns_for_path(path, subject_term: subject_term)
       to_literals(query_all(patterns, subj))
+    end
+
+    def path_all_uri(path, subject_term: nil)
+      patterns, subj = patterns_for_path(path, subject_term: subject_term)
+      to_uris(query_all(patterns, subj))
     end
 
     private
@@ -62,7 +71,6 @@ module Rdf2marc
 
     def query_all(patterns, var)
       solutions = RDF::Query.new(patterns).execute(graph)
-      return nil if solutions.empty?
 
       solutions.map { |solution| solution[var] }
     end
@@ -75,10 +83,20 @@ module Rdf2marc
       term.value
     end
 
-    def to_literals(terms)
-      return nil if terms.nil?
+    def to_uri(term)
+      return nil if term.nil?
 
+      raise 'Not a URI' unless term.is_a?(RDF::URI)
+
+      term.value
+    end
+
+    def to_literals(terms)
       terms.map { |term| to_literal(term) }
+    end
+
+    def to_uris(terms)
+      terms.map { |term| to_uri(term) }
     end
   end
 end

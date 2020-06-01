@@ -71,7 +71,7 @@ module Rdf2marc
                                            [BF.agent, BF.Family],
                                            [RDF::RDFV.value]], subject_term: resource_term)
 
-        Resolver.resolve(person_uri, Models::MainEntryField::PersonalName)
+        Resolver.resolve_model(person_uri, Models::MainEntryField::PersonalName)
       end
 
       def main_corporate_name
@@ -79,7 +79,7 @@ module Rdf2marc
                                               [BF.agent, BF.Organization],
                                               [RDF::RDFV.value]], subject_term: resource_term)
 
-        Resolver.resolve(corporate_uri, Models::MainEntryField::CorporateName)
+        Resolver.resolve_model(corporate_uri, Models::MainEntryField::CorporateName)
       end
 
       def added_personal_names
@@ -91,8 +91,8 @@ module Rdf2marc
                                              [BF.agent, BF.Family],
                                              [RDF::RDFV.value]], subject_term: resource_term) || [])
         person_uris.map do |person_uri|
-          Resolver.resolve(person_uri,
-                           Models::AddedEntryField::PersonalName)
+          Resolver.resolve_model(person_uri,
+                                 Models::AddedEntryField::PersonalName)
         end
       end
 
@@ -101,15 +101,24 @@ module Rdf2marc
                                              [BF.agent, BF.Organization],
                                              [RDF::RDFV.value]], subject_term: resource_term)
         corporate_uris.map do |corporate_uri|
-          Resolver.resolve(corporate_uri,
-                           Models::AddedEntryField::CorporateName)
+          Resolver.resolve_model(corporate_uri,
+                                 Models::AddedEntryField::CorporateName)
         end
       end
 
       def subject_access_fields
-        subject_terms = query.path_all([BF.subject], subject_term: resource_term)
-        # TODO: Determine type of subject access field
-        {}
+        subj_fields = {
+            personal_names: [],
+            corporate_names: []
+        }
+        subject_uris = query.path_all_uri([BF.subject], subject_term: resource_term)
+        subject_uris.each do |subject_uri|
+          subject_type = Resolver.resolve_type(subject_uri)
+          if subject_type == 'corporate_name'
+            subj_fields[:corporate_names] << Resolver.resolve_model(subject_uri, Rdf2marc::Models::AddedEntryField::CorporateName)
+          end
+        end
+        subj_fields
       end
 
       def lc_call_numbers
@@ -128,7 +137,7 @@ module Rdf2marc
       def geographic_area_code
         gac_uris = query.path_all_uri([BF.geographicCoverage], subject_term: resource_term)
         gacs = gac_uris.map do |gac_uri|
-          Resolver.resolve(gac_uri, Rdf2marc::Models::NumberAndCodeField::GeographicAreaCode, 'geographic_area_code')
+          Resolver.resolve_model(gac_uri, Rdf2marc::Models::NumberAndCodeField::GeographicAreaCode, 'geographic_area_code')
         end
         {
           geographic_area_codes: gacs

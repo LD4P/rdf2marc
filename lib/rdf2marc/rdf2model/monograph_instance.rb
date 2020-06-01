@@ -31,7 +31,8 @@ module Rdf2marc
             physical_descriptions: physical_descriptions
           },
           edition_imprint_fields: {
-            editions: editions
+            editions: editions,
+            publication_distributions: publication_distributions
           }
         }
       end
@@ -177,6 +178,34 @@ module Rdf2marc
           dimensions: query.path_all_literal([BF.dimensions], subject_term: resource_term)
         }
         extent_physical_description + [dimensions]
+      end
+
+      def publication_distributions
+        pub_dist_terms = query.path_all([[BF.provisionActivity, BF.Publication]], subject_term: resource_term)
+        pub_dists = pub_dist_terms.map do |pub_dist_term|
+          {
+              publication_distribution_places: publication_distributions_places(pub_dist_term),
+              publisher_distributor_names: publication_distributions_names(pub_dist_term),
+              publication_distribution_dates: query.path_all_literal([BF.date], subject_term: pub_dist_term)
+          }
+        end
+        manufacture_terms = query.path_all([[BF.provisionActivity, BF.Distribution]], subject_term: resource_term)
+        manufactures = manufacture_terms.map do |manufacture_term|
+          {
+              manufacture_places: publication_distributions_places(manufacture_term),
+              manufacturer_names: publication_distributions_names(manufacture_term),
+              manufacture_dates: query.path_all_literal([BF.date], subject_term: manufacture_term)
+          }
+        end
+        pub_dists + manufactures
+      end
+
+      def publication_distributions_places(subject_term)
+        query.path_all_uri([BF.place], subject_term: subject_term).map {|place_uri| Resolver.resolve_label(place_uri)}
+      end
+
+      def publication_distributions_names(subject_term)
+        query.path_all_uri([[BF.agent, BF.Agent], BF.Agent], subject_term: subject_term).map {|agent_uri| Resolver.resolve_label(agent_uri)}
       end
     end
   end

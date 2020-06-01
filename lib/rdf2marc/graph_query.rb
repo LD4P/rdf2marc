@@ -5,6 +5,7 @@ module Rdf2marc
   SINOPIA = RDF::Vocabulary.new('http://sinopia.io/vocabulary/')
   LC_VOCAB = RDF::Vocabulary.new('http://id.loc.gov/vocabulary/')
   BFLC = RDF::Vocabulary.new('http://id.loc.gov/ontologies/bflc/')
+  SKOS = RDF::Vocabulary.new('http://www.w3.org/2004/02/skos/core#')
   # Queries graph using graph patterns.
   class GraphQuery
     QueryPart = Struct.new(:pred, :class)

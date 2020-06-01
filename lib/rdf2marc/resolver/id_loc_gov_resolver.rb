@@ -214,11 +214,24 @@ module Rdf2marc
         marc_record['043']['a']
       end
 
+      def resolve_label(uri)
+        graph = RDF::Repository.load("#{uri}.skos.nt")
+        query = GraphQuery.new(graph)
+        query.path_first_literal([SKOS.prefLabel], subject_term: RDF::URI.new(uri))
+      end
+
+      def resolve_type(uri)
+        graph = RDF::Repository.load("#{uri}.madsrdf.nt")
+        query = GraphQuery.new(graph)
+        mads_uris = query.path_all_uri([RDF::RDFV.type], subject_term: RDF::URI.new(uri))
+        mads_uris.map { |mad_uri| type_for(mad_uri)}.compact.first
+      end
+
       private
 
       def get_marc(uri)
         resp = Faraday.get("#{uri}.marcxml.xml")
-        raise unless resp.success?
+        raise "Error getting MARCXML for #{uri}." unless resp.success?
 
         MARC::XMLReader.new(StringIO.new(resp.body)).first
       end
@@ -251,6 +264,22 @@ module Rdf2marc
 
       def subfield_values(field, code)
         field.find_all { |subfield| subfield.code == code }.map(&:value)
+      end
+
+      def type_for(mads_uri)
+        case mads_uri
+        when 'http://www.loc.gov/mads/rdf/v1#FamilyName'
+          'family_name'
+        when 'http://www.loc.gov/mads/rdf/v1#PersonalName'
+          'personal_name'
+        when 'http://www.loc.gov/mads/rdf/v1#CorporateName'
+          'corporate_name'
+        when 'http://www.loc.gov/mads/rdf/v1#ConferenceName'
+          'meeting_name'
+        when 'http://www.loc.gov/mads/rdf/v1#Geographic'
+          'geographic_name'
+        end
+        # Not yet mapped: uniform_title, named_event, chronological_term, topical_term
       end
     end
   end

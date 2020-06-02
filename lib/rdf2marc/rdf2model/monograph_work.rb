@@ -32,7 +32,10 @@ module Rdf2marc
             title_statement: title_statement
           },
           physical_description_fields: {
-              content_types: content_types
+            content_types: content_types
+          },
+          note_fields: {
+            work_general_notes: general_notes
           },
           subject_access_fields: subject_access_fields,
           added_entry_fields: {
@@ -111,14 +114,15 @@ module Rdf2marc
 
       def subject_access_fields
         subj_fields = {
-            personal_names: [],
-            corporate_names: []
+          personal_names: [],
+          corporate_names: []
         }
         subject_uris = query.path_all_uri([BF.subject], subject_term: resource_term)
         subject_uris.each do |subject_uri|
           subject_type = Resolver.resolve_type(subject_uri)
           if subject_type == 'corporate_name'
-            subj_fields[:corporate_names] << Resolver.resolve_model(subject_uri, Rdf2marc::Models::AddedEntryField::CorporateName)
+            subj_fields[:corporate_names] << Resolver.resolve_model(subject_uri,
+                                                                    Rdf2marc::Models::AddedEntryField::CorporateName)
           end
         end
         subj_fields
@@ -151,9 +155,17 @@ module Rdf2marc
         content_type_terms = query.path_all([BF.content], subject_term: resource_term)
         content_type_terms.map do |content_type_term|
           {
-              content_type_terms: [query.path_first_literal([RDF::RDFS.label], subject_term: content_type_term)],
-              content_type_codes: [content_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/contentTypes/')],
-              authority_control_number_uri: content_type_term.value
+            content_type_terms: [query.path_first_literal([RDF::RDFS.label], subject_term: content_type_term)],
+            content_type_codes: [content_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/contentTypes/')],
+            authority_control_number_uri: content_type_term.value
+          }
+        end
+      end
+
+      def general_notes
+        query.path_all_literal([[BF.note, BF.Note], RDF::RDFS.label], subject_term: resource_term).map do |note|
+          {
+            general_note: note
           }
         end
       end

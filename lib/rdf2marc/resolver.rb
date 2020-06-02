@@ -38,8 +38,8 @@ module Rdf2marc
       Resolver::IdLocGovResolver.new.resolve_gac(uri) if uri.start_with?('http://id.loc.gov/authorities/')
     end
 
-
-    # personal_name, family_name, corporate_name, meeting_name, uniform_title, named_event, chronological_term, topical_term, geographic_name
+    # personal_name, family_name, corporate_name, meeting_name, uniform_title, named_event,
+    # chronological_term, topical_term, geographic_name
     def self.resolve_type(uri)
       return if uri.nil?
 

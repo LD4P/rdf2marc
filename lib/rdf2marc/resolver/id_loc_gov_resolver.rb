@@ -224,7 +224,7 @@ module Rdf2marc
         graph = RDF::Repository.load("#{uri}.madsrdf.nt")
         query = GraphQuery.new(graph)
         mads_uris = query.path_all_uri([RDF::RDFV.type], subject_term: RDF::URI.new(uri))
-        mads_uris.map { |mad_uri| type_for(mad_uri)}.compact.first
+        mads_uris.map { |mad_uri| type_for(mad_uri) }.compact.first
       end
 
       private

@@ -18,8 +18,8 @@ module Rdf2marc
       def generate
         {
           control_fields: {
-              general_info: {
-                place: place
+            general_info: {
+              place: place
             }
           },
           number_and_code_fields: {
@@ -37,6 +37,9 @@ module Rdf2marc
             media_types: media_types,
             carrier_types: carrier_types
           },
+          note_fields: {
+            instance_general_notes: general_notes
+          },
           edition_imprint_fields: {
             editions: editions,
             publication_distributions: publication_distributions
@@ -49,7 +52,8 @@ module Rdf2marc
       attr_reader :graph, :sparql, :resource_uri, :query, :resource_term
 
       def place
-        place_uri = query.path_first_uri([[BF.provisionActivity, BF.Publication], BF.place], subject_term: resource_term)
+        place_uri = query.path_first_uri([[BF.provisionActivity, BF.Publication], BF.place],
+                                         subject_term: resource_term)
 
         gac = Resolver.resolve_geographic_area_code(place_uri)
         # For example, an-cn-on
@@ -201,37 +205,39 @@ module Rdf2marc
         pub_dist_terms = query.path_all([[BF.provisionActivity, BF.Publication]], subject_term: resource_term)
         pub_dists = pub_dist_terms.map do |pub_dist_term|
           {
-              publication_distribution_places: publication_distributions_places(pub_dist_term),
-              publisher_distributor_names: publication_distributions_names(pub_dist_term),
-              publication_distribution_dates: query.path_all_literal([BF.date], subject_term: pub_dist_term)
+            publication_distribution_places: publication_distributions_places(pub_dist_term),
+            publisher_distributor_names: publication_distributions_names(pub_dist_term),
+            publication_distribution_dates: query.path_all_literal([BF.date], subject_term: pub_dist_term)
           }
         end
         manufacture_terms = query.path_all([[BF.provisionActivity, BF.Distribution]], subject_term: resource_term)
         manufactures = manufacture_terms.map do |manufacture_term|
           {
-              manufacture_places: publication_distributions_places(manufacture_term),
-              manufacturer_names: publication_distributions_names(manufacture_term),
-              manufacture_dates: query.path_all_literal([BF.date], subject_term: manufacture_term)
+            manufacture_places: publication_distributions_places(manufacture_term),
+            manufacturer_names: publication_distributions_names(manufacture_term),
+            manufacture_dates: query.path_all_literal([BF.date], subject_term: manufacture_term)
           }
         end
         pub_dists + manufactures
       end
 
       def publication_distributions_places(subject_term)
-        query.path_all_uri([BF.place], subject_term: subject_term).map {|place_uri| Resolver.resolve_label(place_uri)}
+        query.path_all_uri([BF.place], subject_term: subject_term).map { |place_uri| Resolver.resolve_label(place_uri) }
       end
 
       def publication_distributions_names(subject_term)
-        query.path_all_uri([[BF.agent, BF.Agent], BF.Agent], subject_term: subject_term).map {|agent_uri| Resolver.resolve_label(agent_uri)}
+        query.path_all_uri([[BF.agent, BF.Agent], BF.Agent], subject_term: subject_term).map do |agent_uri|
+          Resolver.resolve_label(agent_uri)
+        end
       end
 
       def media_types
         media_type_terms = query.path_all([BF.media], subject_term: resource_term)
         media_type_terms.map do |media_type_term|
           {
-              media_type_terms: [query.path_first_literal([RDF::RDFS.label], subject_term: media_type_term)],
-              media_type_codes: [media_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/mediaTypes/')],
-              authority_control_number_uri: media_type_term.value
+            media_type_terms: [query.path_first_literal([RDF::RDFS.label], subject_term: media_type_term)],
+            media_type_codes: [media_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/mediaTypes/')],
+            authority_control_number_uri: media_type_term.value
           }
         end
       end
@@ -240,9 +246,17 @@ module Rdf2marc
         carrier_type_terms = query.path_all([BF.carrier], subject_term: resource_term)
         carrier_type_terms.map do |carrier_type_term|
           {
-              carrier_type_terms: [query.path_first_literal([RDF::RDFS.label], subject_term: carrier_type_term)],
-              carrier_type_codes: [carrier_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/carriers/')],
-              authority_control_number_uri: carrier_type_term.value
+            carrier_type_terms: [query.path_first_literal([RDF::RDFS.label], subject_term: carrier_type_term)],
+            carrier_type_codes: [carrier_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/carriers/')],
+            authority_control_number_uri: carrier_type_term.value
+          }
+        end
+      end
+
+      def general_notes
+        query.path_all_literal([[BF.note, BF.Note], RDF::RDFS.label], subject_term: resource_term).map do |note|
+          {
+            general_note: note
           }
         end
       end

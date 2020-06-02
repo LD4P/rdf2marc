@@ -33,6 +33,8 @@ module Rdf2marc
           add_repeating_field(Field336, record_model.physical_description_fields.content_types, marc_record)
           add_repeating_field(Field337, record_model.physical_description_fields.media_types, marc_record)
           add_repeating_field(Field338, record_model.physical_description_fields.carrier_types, marc_record)
+          add_repeating_field(Field500, record_model.note_fields.instance_general_notes, marc_record)
+          add_repeating_field(Field500, record_model.note_fields.work_general_notes, marc_record)
           add_repeating_field(Field600, record_model.subject_access_fields.personal_names, marc_record)
           add_repeating_field(Field610, record_model.subject_access_fields.corporate_names, marc_record)
           add_repeating_field(Field700, record_model.added_entry_fields.personal_names, marc_record)
@@ -52,6 +54,7 @@ module Rdf2marc
 
       def add_repeating_field(field_class, models, marc_record)
         return if models.nil?
+
         models.each { |model| add_field(field_class, model, marc_record) }
       end
 

@@ -17,6 +17,11 @@ module Rdf2marc
 
       def generate
         {
+          control_fields: {
+              general_info: {
+                place: place
+            }
+          },
           number_and_code_fields: {
             lccn: lccn,
             isbns: isbns
@@ -40,6 +45,16 @@ module Rdf2marc
       private
 
       attr_reader :graph, :sparql, :resource_uri, :query, :resource_term
+
+      def place
+        place_uri = query.path_first_uri([[BF.provisionActivity, BF.Publication], BF.place], subject_term: resource_term)
+
+        gac = Resolver.resolve_geographic_area_code(place_uri)
+        # For example, an-cn-on
+        return nil if gac.nil?
+
+        gac.split('-')[1]
+      end
 
       def title_statement
         # Record may contain multiple bf:Title. Only using one and which is selected is indeterminate.

@@ -21,7 +21,7 @@ module Rdf2marc
             general_info: general_information
           },
           number_and_code_fields: {
-            geographic_area_code: geographic_area_code,
+            geographic_area_code: geographic_area_codes,
             lc_call_numbers: lc_call_numbers
           },
           main_entry_fields: {
@@ -134,10 +134,10 @@ module Rdf2marc
         end
       end
 
-      def geographic_area_code
+      def geographic_area_codes
         gac_uris = query.path_all_uri([BF.geographicCoverage], subject_term: resource_term)
         gacs = gac_uris.map do |gac_uri|
-          Resolver.resolve_model(gac_uri, Rdf2marc::Models::NumberAndCodeField::GeographicAreaCode, 'geographic_area_code')
+          Resolver.resolve_geographic_area_code(gac_uri)
         end
         {
           geographic_area_codes: gacs

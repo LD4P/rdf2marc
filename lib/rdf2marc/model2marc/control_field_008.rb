@@ -18,8 +18,7 @@ module Rdf2marc
         else
           field_value[6..14] = '|||||||||'
         end
-        # Place of publication not yet supported. Would require doing lookup on URI.
-        field_value[15..17] = 'xx '
+        field_value[15..17] = model.place ? model.place[0,3] : 'xx '
         # Language
         field_value[35..37] = model.language[0..2] if model.language
         # Modified record

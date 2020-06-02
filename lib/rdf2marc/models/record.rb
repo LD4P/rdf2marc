@@ -10,6 +10,7 @@ module Rdf2marc
       attribute :main_entry_fields, MainEntryFields
       attribute :title_fields, TitleFields
       attribute :physical_description_fields, PhysicalDescriptionFields
+      attribute :series_statement_fields, SeriesStatementFields
       attribute :edition_imprint_fields, EditionImprintFields
       attribute :note_fields, NoteFields
       attribute :subject_access_fields, SubjectAccessFields

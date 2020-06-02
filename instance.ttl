@@ -2,14 +2,15 @@
     <http://id.loc.gov/ontologies/bibframe/carrier> <http://id.loc.gov/vocabulary/carriers/nc>, <http://id.loc.gov/vocabulary/carriers/nn>;
     <http://id.loc.gov/ontologies/bibframe/dimensions> "dimension1"@eng, "dimension2"@eng;
     <http://id.loc.gov/ontologies/bibframe/editionStatement> "Third and a half edition"@eng, "Third edition"@eng;
-    <http://id.loc.gov/ontologies/bibframe/extent> _:b3_c14n10, _:b3_c14n17;
-    <http://id.loc.gov/ontologies/bibframe/identifiedBy> _:b3_c14n1, _:b3_c14n15, _:b3_c14n20, _:b3_c14n23, _:b3_c14n8, _:b3_c14n9;
+    <http://id.loc.gov/ontologies/bibframe/extent> _:b13_c14n10, _:b13_c14n17;
+    <http://id.loc.gov/ontologies/bibframe/identifiedBy> _:b13_c14n1, _:b13_c14n15, _:b13_c14n20, _:b13_c14n23, _:b13_c14n8, _:b13_c14n9;
     <http://id.loc.gov/ontologies/bibframe/instanceOf> <https://trellis.stage.sinopia.io/repository/stanford/ce0376a8-e01b-4829-95c2-c7aa4fa9568c>;
     <http://id.loc.gov/ontologies/bibframe/issuance> <http://id.loc.gov/vocabulary/issuance/intg>;
     <http://id.loc.gov/ontologies/bibframe/media> <http://id.loc.gov/vocabulary/mediaTypes/n>, <http://id.loc.gov/vocabulary/mediaTypes/p>;
-    <http://id.loc.gov/ontologies/bibframe/note> _:b3_c14n2, _:b3_c14n7;
-    <http://id.loc.gov/ontologies/bibframe/provisionActivity> _:b3_c14n3, _:b3_c14n6;
-    <http://id.loc.gov/ontologies/bibframe/title> _:b3_c14n11, _:b3_c14n12, _:b3_c14n14, _:b3_c14n16, _:b3_c14n18, _:b3_c14n21, _:b3_c14n22, _:b3_c14n4;
+    <http://id.loc.gov/ontologies/bibframe/note> _:b13_c14n2, _:b13_c14n7;
+    <http://id.loc.gov/ontologies/bibframe/provisionActivity> _:b13_c14n3, _:b13_c14n6;
+    <http://id.loc.gov/ontologies/bibframe/seriesStatement> "Series statement1"@eng, "Series statement2"@eng;
+    <http://id.loc.gov/ontologies/bibframe/title> _:b13_c14n11, _:b13_c14n12, _:b13_c14n14, _:b13_c14n16, _:b13_c14n18, _:b13_c14n21, _:b13_c14n22, _:b13_c14n4;
     <http://sinopia.io/vocabulary/hasResourceTemplate> "ld4p:RT:bf2:Monograph:Instance:Un-nested";
     a <http://id.loc.gov/ontologies/bibframe/Instance>.
 <http://id.loc.gov/authorities/names/n79021759> <http://www.w3.org/2000/01/rdf-schema#label> "Utah".
@@ -24,70 +25,69 @@
 <http://id.loc.gov/vocabulary/mstatus/cancinv> <http://www.w3.org/2000/01/rdf-schema#label> "http://id.loc.gov/vocabulary/mstatus/cancinv".
 <https://trellis.stage.sinopia.io/repository/stanford/2b27de29-fdd7-45f2-96d5-db89fa2306aa> <http://www.w3.org/2000/01/rdf-schema#label> "https://trellis.stage.sinopia.io/repository/stanford/2b27de29-fdd7-45f2-96d5-db89fa2306aa".
 <https://trellis.stage.sinopia.io/repository/stanford/ce0376a8-e01b-4829-95c2-c7aa4fa9568c> <http://www.w3.org/2000/01/rdf-schema#label> "https://trellis.stage.sinopia.io/repository/stanford/ce0376a8-e01b-4829-95c2-c7aa4fa9568c".
-_:b3_c14n0 a <http://id.loc.gov/ontologies/bibframe/Note>;
+_:b13_c14n0 a <http://id.loc.gov/ontologies/bibframe/Note>;
     <http://www.w3.org/2000/01/rdf-schema#label> "extend1 note2"@eng.
-_:b3_c14n1 <http://id.loc.gov/ontologies/bibframe/status> <http://id.loc.gov/vocabulary/mstatus/cancinv>;
+_:b13_c14n1 <http://id.loc.gov/ontologies/bibframe/status> <http://id.loc.gov/vocabulary/mstatus/cancinv>;
     a <http://id.loc.gov/ontologies/bibframe/Lccn>;
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "2001627092"@eng.
-_:b3_c14n10 <http://id.loc.gov/ontologies/bibframe/note> _:b3_c14n0, _:b3_c14n13;
+_:b13_c14n10 <http://id.loc.gov/ontologies/bibframe/note> _:b13_c14n0, _:b13_c14n13;
     a <http://id.loc.gov/ontologies/bibframe/Extent>;
     <http://www.w3.org/2000/01/rdf-schema#label> "extent1a"@eng, "extent1b"@eng.
-_:b3_c14n11 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Variant1, title"@eng;
+_:b13_c14n11 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Variant1, title"@eng;
     <http://id.loc.gov/ontologies/bibframe/partName> "Variant1, part name1"@eng, "Variant1, part name2"@eng;
     <http://id.loc.gov/ontologies/bibframe/variantType> "caption"@eng;
     a <http://id.loc.gov/ontologies/bibframe/VariantTitle>.
-_:b3_c14n12 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Former variant1"@eng;
+_:b13_c14n12 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Former variant1"@eng;
     <http://id.loc.gov/ontologies/bibframe/variantType> "former"@eng;
     a <http://id.loc.gov/ontologies/bibframe/VariantTitle>.
-_:b3_c14n13 a <http://id.loc.gov/ontologies/bibframe/Note>;
+_:b13_c14n13 a <http://id.loc.gov/ontologies/bibframe/Note>;
     <http://www.w3.org/2000/01/rdf-schema#label> "extent1 note1"@eng.
-_:b3_c14n14 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Variant2, title"@eng;
+_:b13_c14n14 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Variant2, title"@eng;
     a <http://id.loc.gov/ontologies/bibframe/VariantTitle>.
-_:b3_c14n15 <http://id.loc.gov/ontologies/bibframe/qualifier> "0914378260"@eng, "pbk."@eng;
+_:b13_c14n15 <http://id.loc.gov/ontologies/bibframe/qualifier> "0914378260"@eng, "pbk."@eng;
     a <http://id.loc.gov/ontologies/bibframe/Isbn>;
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "0491001304"@eng.
-_:b3_c14n16 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Parallel2, title"@eng;
+_:b13_c14n16 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Parallel2, title"@eng;
     a <http://id.loc.gov/ontologies/bibframe/ParallelTitle>.
-_:b3_c14n17 a <http://id.loc.gov/ontologies/bibframe/Extent>;
+_:b13_c14n17 a <http://id.loc.gov/ontologies/bibframe/Extent>;
     <http://www.w3.org/2000/01/rdf-schema#label> "extent2"@eng.
-_:b3_c14n18 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Translated variant1"@eng;
+_:b13_c14n18 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Translated variant1"@eng;
     <http://id.loc.gov/ontologies/bibframe/variantType> "translated"@eng;
     a <http://id.loc.gov/ontologies/bibframe/VariantTitle>.
-_:b3_c14n19 <http://id.loc.gov/ontologies/bibframe/Agent> <http://id.loc.gov/authorities/names/n81038616>;
+_:b13_c14n19 <http://id.loc.gov/ontologies/bibframe/Agent> <http://id.loc.gov/authorities/names/n81038616>;
     a <http://id.loc.gov/ontologies/bibframe/Agent>.
-_:b3_c14n2 a <http://id.loc.gov/ontologies/bibframe/Note>;
+_:b13_c14n2 a <http://id.loc.gov/ontologies/bibframe/Note>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Instance note2"@eng.
-_:b3_c14n20 a <http://id.loc.gov/ontologies/bibframe/Lccn>;
+_:b13_c14n20 a <http://id.loc.gov/ontologies/bibframe/Lccn>;
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "2001627091"@eng.
-_:b3_c14n21 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Parallel1, title"@eng;
+_:b13_c14n21 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Parallel1, title"@eng;
     <http://id.loc.gov/ontologies/bibframe/partName> "Parallel1, part name1"@eng, "Parallel1, part name2"@eng;
     <http://id.loc.gov/ontologies/bibframe/partNumber> "Parallel1, part number1"@eng, "Parallel1, part number2"@eng;
     <http://id.loc.gov/ontologies/bibframe/subtitle> "Parallel1, subtitle"@eng;
     a <http://id.loc.gov/ontologies/bibframe/ParallelTitle>.
-_:b3_c14n22 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Instance1, main title"@eng;
+_:b13_c14n22 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Instance1, main title"@eng;
     <http://id.loc.gov/ontologies/bibframe/partName> "Instance1, part name1"@eng, "Instance1, part name2"@eng;
     <http://id.loc.gov/ontologies/bibframe/partNumber> "Instance1, part number1"@eng, "Instance1, part number2"@eng;
     <http://id.loc.gov/ontologies/bibframe/subtitle> "Instance1, subtitle"@eng;
     a <http://id.loc.gov/ontologies/bibframe/Title>.
-_:b3_c14n23 a <http://id.loc.gov/ontologies/bibframe/Isbn>;
+_:b13_c14n23 a <http://id.loc.gov/ontologies/bibframe/Isbn>;
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "0914378260"@eng.
-_:b3_c14n3 <http://id.loc.gov/ontologies/bibframe/agent> _:b3_c14n5;
+_:b13_c14n3 <http://id.loc.gov/ontologies/bibframe/agent> _:b13_c14n5;
     <http://id.loc.gov/ontologies/bibframe/date> "2020"@eng;
     <http://id.loc.gov/ontologies/bibframe/place> <http://id.loc.gov/authorities/names/n79021759>;
     a <http://id.loc.gov/ontologies/bibframe/Distribution>.
-_:b3_c14n4 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Instance2, main title"@eng;
+_:b13_c14n4 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Instance2, main title"@eng;
     a <http://id.loc.gov/ontologies/bibframe/Title>.
-_:b3_c14n5 <http://id.loc.gov/ontologies/bibframe/Agent> <http://id.loc.gov/authorities/names/nr2005022094>;
+_:b13_c14n5 <http://id.loc.gov/ontologies/bibframe/Agent> <http://id.loc.gov/authorities/names/nr2005022094>;
     a <http://id.loc.gov/ontologies/bibframe/Agent>.
-_:b3_c14n6 <http://id.loc.gov/ontologies/bibframe/agent> _:b3_c14n19;
+_:b13_c14n6 <http://id.loc.gov/ontologies/bibframe/agent> _:b13_c14n19;
     <http://id.loc.gov/ontologies/bibframe/date> "202X"@eng;
     <http://id.loc.gov/ontologies/bibframe/place> <http://id.loc.gov/authorities/names/n79022909>;
     a <http://id.loc.gov/ontologies/bibframe/Publication>.
-_:b3_c14n7 a <http://id.loc.gov/ontologies/bibframe/Note>;
+_:b13_c14n7 a <http://id.loc.gov/ontologies/bibframe/Note>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Instance note1"@eng.
-_:b3_c14n8 a <http://id.loc.gov/ontologies/bibframe/Lccn>;
+_:b13_c14n8 a <http://id.loc.gov/ontologies/bibframe/Lccn>;
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "2001627090"@eng.
-_:b3_c14n9 <http://id.loc.gov/ontologies/bibframe/status> <http://id.loc.gov/vocabulary/mstatus/cancinv>;
+_:b13_c14n9 <http://id.loc.gov/ontologies/bibframe/status> <http://id.loc.gov/vocabulary/mstatus/cancinv>;
     a <http://id.loc.gov/ontologies/bibframe/Isbn>;
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "0877790105"@eng.
-

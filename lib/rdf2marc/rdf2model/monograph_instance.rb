@@ -37,6 +37,9 @@ module Rdf2marc
             media_types: media_types,
             carrier_types: carrier_types
           },
+          series_statement_fields: {
+            series_statements: series_statements
+          },
           note_fields: {
             instance_general_notes: general_notes
           },
@@ -257,6 +260,14 @@ module Rdf2marc
         query.path_all_literal([[BF.note, BF.Note], RDF::RDFS.label], subject_term: resource_term).map do |note|
           {
             general_note: note
+          }
+        end
+      end
+
+      def series_statements
+        query.path_all_literal([BF.seriesStatement], subject_term: resource_term).map do |series_statement|
+          {
+            series_statements: [series_statement]
           }
         end
       end

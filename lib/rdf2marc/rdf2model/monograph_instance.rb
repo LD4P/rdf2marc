@@ -34,7 +34,8 @@ module Rdf2marc
           },
           physical_description_fields: {
             physical_descriptions: physical_descriptions,
-            media_types: media_types
+            media_types: media_types,
+            carrier_types: carrier_types
           },
           edition_imprint_fields: {
             editions: editions,
@@ -231,6 +232,17 @@ module Rdf2marc
               media_type_terms: [query.path_first_literal([RDF::RDFS.label], subject_term: media_type_term)],
               media_type_codes: [media_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/mediaTypes/')],
               authority_control_number_uri: media_type_term.value
+          }
+        end
+      end
+
+      def carrier_types
+        carrier_type_terms = query.path_all([BF.carrier], subject_term: resource_term)
+        carrier_type_terms.map do |carrier_type_term|
+          {
+              carrier_type_terms: [query.path_first_literal([RDF::RDFS.label], subject_term: carrier_type_term)],
+              carrier_type_codes: [carrier_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/carriers/')],
+              authority_control_number_uri: carrier_type_term.value
           }
         end
       end

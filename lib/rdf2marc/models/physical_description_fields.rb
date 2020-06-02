@@ -6,6 +6,7 @@ module Rdf2marc
     class PhysicalDescriptionFields < Struct
       attribute? :physical_descriptions, Types::Array.of(PhysicalDescriptionField::PhysicalDescription)
       attribute? :content_types, Types::Array.of(PhysicalDescriptionField::ContentType)
+      attribute? :media_types, Types::Array.of(PhysicalDescriptionField::MediaType)
     end
   end
 end

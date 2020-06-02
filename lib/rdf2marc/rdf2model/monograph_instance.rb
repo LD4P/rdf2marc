@@ -33,7 +33,8 @@ module Rdf2marc
             former_titles: former_titles
           },
           physical_description_fields: {
-            physical_descriptions: physical_descriptions
+            physical_descriptions: physical_descriptions,
+            media_types: media_types
           },
           edition_imprint_fields: {
             editions: editions,
@@ -221,6 +222,17 @@ module Rdf2marc
 
       def publication_distributions_names(subject_term)
         query.path_all_uri([[BF.agent, BF.Agent], BF.Agent], subject_term: subject_term).map {|agent_uri| Resolver.resolve_label(agent_uri)}
+      end
+
+      def media_types
+        media_type_terms = query.path_all([BF.media], subject_term: resource_term)
+        media_type_terms.map do |media_type_term|
+          {
+              media_type_terms: [query.path_first_literal([RDF::RDFS.label], subject_term: media_type_term)],
+              media_type_codes: [media_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/mediaTypes/')],
+              authority_control_number_uri: media_type_term.value
+          }
+        end
       end
     end
   end

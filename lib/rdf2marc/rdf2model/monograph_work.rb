@@ -31,6 +31,9 @@ module Rdf2marc
           title_fields: {
             title_statement: title_statement
           },
+          physical_description_fields: {
+              content_types: content_types
+          },
           subject_access_fields: subject_access_fields,
           added_entry_fields: {
             personal_names: added_personal_names,
@@ -142,6 +145,17 @@ module Rdf2marc
         {
           geographic_area_codes: gacs
         }
+      end
+
+      def content_types
+        content_type_terms = query.path_all([BF.content], subject_term: resource_term)
+        content_type_terms.map do |content_type_term|
+          {
+              content_type_terms: [query.path_first_literal([RDF::RDFS.label], subject_term: content_type_term)],
+              content_type_codes: [content_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/contentTypes/')],
+              authority_control_number_uri: content_type_term.value
+          }
+        end
       end
     end
   end

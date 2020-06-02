@@ -5,6 +5,7 @@ module Rdf2marc
     # Model for 3XX: Physical Description, Etc. Fields.
     class PhysicalDescriptionFields < Struct
       attribute? :physical_descriptions, Types::Array.of(PhysicalDescriptionField::PhysicalDescription)
+      attribute? :content_types, Types::Array.of(PhysicalDescriptionField::ContentType)
     end
   end
 end

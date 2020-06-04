@@ -7,20 +7,11 @@ $LOAD_PATH.unshift 'lib'
 require 'rdf2marc'
 
 if ARGV.length == 1
-  instance_graph = RDF::Repository.load(ARGV[0])
-  work_uri = Rdf2marc::GraphHelper.new(instance_graph).instance_of_uri
-  raise 'Work (bf:instanceOf) not specified for Instance' unless work_uri
-
-  work_graph = RDF::Repository.load(work_uri)
-
-  admin_metadata_uri = Rdf2marc::GraphHelper.new(instance_graph).admin_metadata_uri
-  raise 'Work (bf:adminMetadata) not specified for Instance' unless admin_metadata_uri
-
-  admin_metadata_graph = RDF::Repository.load(admin_metadata_uri)
-elsif ARGV.length == 2
-  instance_graph = RDF::Repository.load(ARGV[0])
-  work_graph = RDF::Repository.load(ARGV[1])
-  admin_metadata_graph = RDF::Repository.load(ARGV[2])
+  instance_graph, work_graph, admin_metadata_graph = Rdf2marc::GraphsLoader.from_instance_uri(ARGV[0])
+elsif ARGV.length == 3
+  instance_graph = Rdf2marc::GraphsLoader.from_path(ARGV[0])
+  work_graph = Rdf2marc::GraphsLoader.from_path(ARGV[1])
+  admin_metadata_graph = Rdf2marc::GraphsLoader.from_path(ARGV[2])
 else
   puts 'Usage: rdf2model <instance ttl file> <work ttl file> <admin metadata ttl file>'
   puts 'Usage: rdf2model <instance uri>'

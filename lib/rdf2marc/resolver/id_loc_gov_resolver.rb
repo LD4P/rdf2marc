@@ -231,7 +231,7 @@ module Rdf2marc
 
       def get_marc(uri)
         resp = Faraday.get("#{uri}.marcxml.xml")
-        raise "Error getting MARCXML for #{uri}." unless resp.success?
+        raise Error, "Error getting MARCXML for #{uri}." unless resp.success?
 
         MARC::XMLReader.new(StringIO.new(resp.body)).first
       end

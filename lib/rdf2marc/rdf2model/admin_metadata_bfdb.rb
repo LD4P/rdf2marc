@@ -98,9 +98,7 @@ module Rdf2marc
 
       def latest_transaction
         date_literal = query.path_first_literal([BF.changeDate], subject_term: resource_term)
-        return nil if date_literal.nil?
-
-        DateTime.iso8601(date_literal)
+        parse_date(date_literal)
       end
 
       def general_info
@@ -113,9 +111,15 @@ module Rdf2marc
 
       def date_entered
         date_literal = query.path_first_literal([BF.creationDate], subject_term: resource_term)
+        parse_date(date_literal)
+      end
+
+      def parse_date(date_literal)
         return nil if date_literal.nil?
 
         DateTime.iso8601(date_literal)
+      rescue Date::Error
+        raise BadRequestError, "#{date_literal} is an invalid date."
       end
     end
   end

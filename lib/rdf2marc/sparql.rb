@@ -89,7 +89,7 @@ module Rdf2marc
     def to_literal(term)
       return nil if term.nil?
 
-      raise 'Not a literal' unless term.is_a?(RDF::Literal)
+      raise MappingError, 'Not a literal' unless term.is_a?(RDF::Literal)
 
       term.value
     end

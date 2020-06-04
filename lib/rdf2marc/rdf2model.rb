@@ -16,9 +16,8 @@ module Rdf2marc
     def self.graph_context_for(graph)
       uri = GraphHelper.new(graph).uri
       term = RDF::URI.new(uri)
-      GraphContext.new(graph, uri, term, GraphQuery.new(graph, default_subject_term: term) )
+      GraphContext.new(graph, uri, term, GraphQuery.new(graph, default_subject_term: term))
     end
     private_class_method :graph_context_for
-
   end
 end

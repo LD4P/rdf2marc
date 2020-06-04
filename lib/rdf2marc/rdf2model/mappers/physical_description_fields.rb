@@ -1,13 +1,16 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Rdf2model
     module Mappers
+      # Mapping to Physical Description Fields model.
       class PhysicalDescriptionFields < BaseMapper
         def generate
           {
-              physical_descriptions: physical_descriptions,
-              media_types: media_types,
-              carrier_types: carrier_types,
-              content_types: content_types
+            physical_descriptions: physical_descriptions,
+            media_types: media_types,
+            carrier_types: carrier_types,
+            content_types: content_types
           }
         end
 
@@ -17,14 +20,14 @@ module Rdf2marc
           extent_terms = item.instance.query.path_all([[BF.extent, BF.Extent]])
           extent_physical_description = extent_terms.map do |extent_term|
             {
-                extents: item.instance.query.path_all_literal([RDF::RDFS.label], subject_term: extent_term),
-                # Can be multiple notes, but only using one.
-                materials_specified: item.instance.query.path_first_literal([[BF.note, BF.Note],
-                                                               RDF::RDFS.label], subject_term: extent_term)
+              extents: item.instance.query.path_all_literal([RDF::RDFS.label], subject_term: extent_term),
+              # Can be multiple notes, but only using one.
+              materials_specified: item.instance.query.path_first_literal([[BF.note, BF.Note],
+                                                                           RDF::RDFS.label], subject_term: extent_term)
             }
           end
           dimensions = {
-              dimensions: item.instance.query.path_all_literal([BF.dimensions])
+            dimensions: item.instance.query.path_all_literal([BF.dimensions])
           }
           extent_physical_description + [dimensions]
         end
@@ -33,9 +36,10 @@ module Rdf2marc
           media_type_terms = item.instance.query.path_all([BF.media])
           media_type_terms.map do |media_type_term|
             {
-                media_type_terms: [item.instance.query.path_first_literal([RDF::RDFS.label], subject_term: media_type_term)],
-                media_type_codes: [media_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/mediaTypes/')],
-                authority_control_number_uri: media_type_term.value
+              media_type_terms: [item.instance.query.path_first_literal([RDF::RDFS.label],
+                                                                        subject_term: media_type_term)],
+              media_type_codes: [media_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/mediaTypes/')],
+              authority_control_number_uri: media_type_term.value
             }
           end
         end
@@ -44,9 +48,10 @@ module Rdf2marc
           carrier_type_terms = item.instance.query.path_all([BF.carrier])
           carrier_type_terms.map do |carrier_type_term|
             {
-                carrier_type_terms: [item.instance.query.path_first_literal([RDF::RDFS.label], subject_term: carrier_type_term)],
-                carrier_type_codes: [carrier_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/carriers/')],
-                authority_control_number_uri: carrier_type_term.value
+              carrier_type_terms: [item.instance.query.path_first_literal([RDF::RDFS.label],
+                                                                          subject_term: carrier_type_term)],
+              carrier_type_codes: [carrier_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/carriers/')],
+              authority_control_number_uri: carrier_type_term.value
             }
           end
         end
@@ -55,9 +60,10 @@ module Rdf2marc
           content_type_terms = item.work.query.path_all([BF.content])
           content_type_terms.map do |content_type_term|
             {
-                content_type_terms: [item.work.query.path_first_literal([RDF::RDFS.label], subject_term: content_type_term)],
-                content_type_codes: [content_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/contentTypes/')],
-                authority_control_number_uri: content_type_term.value
+              content_type_terms: [item.work.query.path_first_literal([RDF::RDFS.label],
+                                                                      subject_term: content_type_term)],
+              content_type_codes: [content_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/contentTypes/')],
+              authority_control_number_uri: content_type_term.value
             }
           end
         end

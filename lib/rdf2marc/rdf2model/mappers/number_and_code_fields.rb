@@ -1,13 +1,16 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Rdf2model
     module Mappers
+      # Mapping to Number and Code Fields model.
       class NumberAndCodeFields < BaseMapper
         def generate
           {
-              lccn: lccn,
-              isbns: isbns,
-              geographic_area_code: geographic_area_codes,
-              lc_call_numbers: lc_call_numbers
+            lccn: lccn,
+            isbns: isbns,
+            geographic_area_code: geographic_area_codes,
+            lc_call_numbers: lc_call_numbers
           }
         end
 
@@ -16,7 +19,7 @@ module Rdf2marc
         def lccn
           # Can be multiple non-cancelled LCCNs. However, only using one.
           lccn = {
-              cancelled_lccns: []
+            cancelled_lccns: []
           }
           id_terms = item.instance.query.path_all([[BF.identifiedBy, BF.Lccn]])
 
@@ -24,7 +27,8 @@ module Rdf2marc
             lccn_value = item.instance.query.path_first_literal([RDF::RDFV.value], subject_term: id_term)
             next if lccn_value.nil?
 
-            is_cancelled = item.instance.query.path_first([BF.status], subject_term: id_term) == LC_VOCAB['mstatus/cancinv']
+            is_cancelled = item.instance.query.path_first([BF.status],
+                                                          subject_term: id_term) == LC_VOCAB['mstatus/cancinv']
             if is_cancelled
               lccn[:cancelled_lccns] << lccn_value
             else
@@ -42,7 +46,8 @@ module Rdf2marc
             isbn_value = item.instance.query.path_first_literal([RDF::RDFV.value], subject_term: id_term)
             next if isbn_value.nil?
 
-            is_cancelled = item.instance.query.path_first([BF.status], subject_term: id_term) == LC_VOCAB['mstatus/cancinv']
+            is_cancelled = item.instance.query.path_first([BF.status],
+                                                          subject_term: id_term) == LC_VOCAB['mstatus/cancinv']
             isbn = {}
             if is_cancelled
               isbn[:cancelled_isbns] = [isbn_value]
@@ -61,7 +66,7 @@ module Rdf2marc
             Resolver.resolve_geographic_area_code(gac_uri)
           end
           {
-              geographic_area_codes: gacs
+            geographic_area_codes: gacs
           }
         end
 
@@ -70,14 +75,13 @@ module Rdf2marc
 
           classification_terms.map do |classification_term|
             {
-                classification_numbers: item.work.query.path_all_literal([BF.classificationPortion],
-                                                               subject_term: classification_term),
-                # Can be multiple, however only using one.
-                item_number: item.work.query.path_first_literal([BF.itemPortion], subject_term: classification_term)
+              classification_numbers: item.work.query.path_all_literal([BF.classificationPortion],
+                                                                       subject_term: classification_term),
+              # Can be multiple, however only using one.
+              item_number: item.work.query.path_first_literal([BF.itemPortion], subject_term: classification_term)
             }
           end
         end
-
       end
     end
   end

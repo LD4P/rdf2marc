@@ -1,13 +1,16 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Rdf2model
     module Mappers
+      # Mapping to Leader model.
       class Leader < BaseMapper
         def generate
           {
-              record_status: item.admin_metadata.query.path_first_literal([[BF.status, BF.Status], BF.code]),
-              bibliographic_level: bibliographic_level,
-              encoding_level: encoding_level,
-              cataloging_form: cataloging_form
+            record_status: item.admin_metadata.query.path_first_literal([[BF.status, BF.Status], BF.code]),
+            bibliographic_level: bibliographic_level,
+            encoding_level: encoding_level,
+            cataloging_form: cataloging_form
           }
         end
 
@@ -55,7 +58,6 @@ module Rdf2marc
             'isbd'
           end
         end
-
       end
     end
   end

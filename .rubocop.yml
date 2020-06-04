@@ -1,6 +1,10 @@
 Layout/LineLength:
   Max: 120
 
+Lint/UnusedMethodArgument:
+  Exclude:
+    - 'lambda/lambda_function.rb'
+
 Lint/InterpolationCheck:
   Exclude:
     - 'lib/rdf2marc/model2marc/*.rb'

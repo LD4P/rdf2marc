@@ -1,13 +1,16 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Rdf2model
     module Mappers
+      # Mapping to Title Fields model.
       class TitleFields < BaseMapper
         def generate
           {
-              translated_titles: translated_titles,
-              title_statement: title_statement,
-              variant_titles: variant_titles,
-              former_titles: former_titles
+            translated_titles: translated_titles,
+            title_statement: title_statement,
+            variant_titles: variant_titles,
+            former_titles: former_titles
           }
         end
 
@@ -22,9 +25,9 @@ module Rdf2marc
 
           translated_title_terms.map do |title_term|
             {
-                title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
-                part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
-                part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term)
+              title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
+              part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
+              part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term)
             }
           end
         end
@@ -35,11 +38,11 @@ module Rdf2marc
           return nil if title_term.nil?
 
           {
-              title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
-              remainder_of_title: item.instance.query.path_first_literal([BF.subtitle], subject_term: title_term),
-              part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
-              part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term),
-              medium: item.work.query.path_first_literal([BF.genreForm, RDF::RDFS.label])
+            title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
+            remainder_of_title: item.instance.query.path_first_literal([BF.subtitle], subject_term: title_term),
+            part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
+            part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term),
+            medium: item.work.query.path_first_literal([BF.genreForm, RDF::RDFS.label])
           }
         end
 
@@ -48,7 +51,8 @@ module Rdf2marc
           variant_title_terms = item.instance.query.path_all([[BF.title, BF.VariantTitle]])
           # Filter variant titles where variantType='translated' or 'former'
           variant_title_terms.delete_if do |title_term|
-            %w[translated former].include?(item.instance.query.path_first_literal([BF.variantType], subject_term: title_term))
+            %w[translated former].include?(item.instance.query.path_first_literal([BF.variantType],
+                                                                                  subject_term: title_term))
           end
 
           parallel_title_terms = item.instance.query.path_all([[BF.title, BF.ParallelTitle]])
@@ -56,10 +60,10 @@ module Rdf2marc
 
           title_terms.map do |title_term|
             {
-                type: variant_title_type(title_term, parallel_title_terms.include?(title_term)),
-                title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
-                part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
-                part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term)
+              type: variant_title_type(title_term, parallel_title_terms.include?(title_term)),
+              title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
+              part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
+              part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term)
             }
           end
         end
@@ -82,9 +86,9 @@ module Rdf2marc
 
           former_title_terms.map do |title_term|
             {
-                title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
-                part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
-                part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term)
+              title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
+              part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
+              part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term)
             }
           end
         end

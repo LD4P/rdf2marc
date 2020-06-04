@@ -1,18 +1,21 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Rdf2model
     module Mappers
+      # Mapping to Control Fields model.
       class ControlFields < BaseMapper
         def generate
           {
-              control_number: control_number,
-              control_number_id: control_number_id,
-              latest_transaction: latest_transaction,
-              general_info: {
-                  place: place,
-                  date_entered: date_entered,
-                  date1: item.admin_metadata.query.path_first_literal([[BF.provisionActivity, BF.Publication], [BF.date]]),
-                  language: language
-              }
+            control_number: control_number,
+            control_number_id: control_number_id,
+            latest_transaction: latest_transaction,
+            general_info: {
+              place: place,
+              date_entered: date_entered,
+              date1: item.admin_metadata.query.path_first_literal([[BF.provisionActivity, BF.Publication], [BF.date]]),
+              language: language
+            }
           }
         end
 
@@ -64,7 +67,6 @@ module Rdf2marc
 
           language_uri.delete_prefix('http://id.loc.gov/vocabulary/languages/')
         end
-
       end
     end
   end

@@ -1,12 +1,15 @@
+# frozen_string_literal: true
+
 module Rdf2marc
   module Rdf2model
     module Mappers
+      # Mapping to Subject Access Fields model.
       class SubjectAccessFields < BaseMapper
         def generate
           # Note that this is only partially implemented.
           subj_fields = {
-              personal_names: [],
-              corporate_names: []
+            personal_names: [],
+            corporate_names: []
           }
           subject_uris = item.work.query.path_all_uri([BF.subject])
           subject_uris.each do |subject_uri|

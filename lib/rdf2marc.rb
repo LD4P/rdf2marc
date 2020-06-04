@@ -31,4 +31,8 @@ module Rdf2marc
 
   # Error with mapping.
   class MappingError < Error; end
+
+  GraphContext = Struct.new(:graph, :uri, :term, :query)
+
+  ItemContext = Struct.new(:instance, :work, :admin_metadata)
 end

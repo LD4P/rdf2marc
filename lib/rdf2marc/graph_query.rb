@@ -10,41 +10,42 @@ module Rdf2marc
   class GraphQuery
     QueryPart = Struct.new(:pred, :class)
 
-    def initialize(graph)
+    def initialize(graph, default_subject_term: nil)
       @graph = graph
+      @default_subject_termn = default_subject_term
     end
 
-    def path_first(path, subject_term: nil)
+    def path_first(path, subject_term: default_subject_term)
       patterns, subj = patterns_for_path(path, subject_term: subject_term)
       query_first(patterns, subj)
     end
 
-    def path_first_literal(path, subject_term: nil)
+    def path_first_literal(path, subject_term: default_subject_term)
       to_literal(path_first(path, subject_term: subject_term))
     end
 
-    def path_first_uri(path, subject_term: nil)
+    def path_first_uri(path, subject_term: default_subject_term)
       to_uri(path_first(path, subject_term: subject_term))
     end
 
-    def path_all(path, subject_term: nil)
+    def path_all(path, subject_term: default_subject_term)
       patterns, subj = patterns_for_path(path, subject_term: subject_term)
       query_all(patterns, subj)
     end
 
-    def path_all_literal(path, subject_term: nil)
+    def path_all_literal(path, subject_term: default_subject_term)
       patterns, subj = patterns_for_path(path, subject_term: subject_term)
       to_literals(query_all(patterns, subj))
     end
 
-    def path_all_uri(path, subject_term: nil)
+    def path_all_uri(path, subject_term: default_subject_term)
       patterns, subj = patterns_for_path(path, subject_term: subject_term)
       to_uris(query_all(patterns, subj))
     end
 
     private
 
-    attr_reader :graph
+    attr_reader :graph, :default_subject_term
 
     def patterns_for_path(path, subject_term: nil)
       subj = subject_term || :var0

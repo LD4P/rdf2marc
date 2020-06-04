@@ -1,0 +1,71 @@
+module Rdf2marc
+  module Rdf2model
+    module Mappers
+      class ControlFields < BaseMapper
+        def generate
+          {
+              control_number: control_number,
+              control_number_id: control_number_id,
+              latest_transaction: latest_transaction,
+              general_info: {
+                  place: place,
+                  date_entered: date_entered,
+                  date1: item.admin_metadata.query.path_first_literal([[BF.provisionActivity, BF.Publication], [BF.date]]),
+                  language: language
+              }
+          }
+        end
+
+        private
+
+        def place
+          place_uri = item.instance.query.path_first_uri([[BF.provisionActivity, BF.Publication], BF.place])
+
+          gac = Resolver.resolve_geographic_area_code(place_uri)
+          # For example, an-cn-on
+          return nil if gac.nil?
+
+          gac.split('-')[1]
+        end
+
+        def control_number
+          item.admin_metadata.query.path_first_literal([[BF.identifiedBy, BF.Local], [RDF::RDFV.value]])
+        end
+
+        def control_number_id
+          # Can be multiple but only using first.
+          source_uri = item.admin_metadata.query.path_first_uri([BF.source])
+          return nil if source_uri.nil?
+
+          source_uri.delete_prefix('http://id.loc.gov/vocabulary/organizations/')
+        end
+
+        def latest_transaction
+          date_literal = item.admin_metadata.query.path_first_literal([BF.changeDate])
+          parse_date(date_literal)
+        end
+
+        def date_entered
+          date_literal = item.admin_metadata.query.path_first_literal([BF.creationDate])
+          parse_date(date_literal)
+        end
+
+        def parse_date(date_literal)
+          return nil if date_literal.nil?
+
+          DateTime.iso8601(date_literal)
+        rescue Date::Error
+          raise BadRequestError, "#{date_literal} is an invalid date."
+        end
+
+        def language
+          language_uri = item.work.query.path_first_uri([BF.language])
+          return nil if language_uri.nil? || !language_uri.start_with?('http://id.loc.gov/vocabulary/languages/')
+
+          language_uri.delete_prefix('http://id.loc.gov/vocabulary/languages/')
+        end
+
+      end
+    end
+  end
+end

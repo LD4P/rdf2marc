@@ -36,11 +36,10 @@ Note when using files:
 
 Note when using Instance uri:
 * The Instance must contain a `bf:instanceOf` that references the Work.
+* The Instance must contain a `bf:adminMetadata` that references the Admin Metadata.
 
 ## Current limitations
 * Only some fields are mapped.
-* Only `ld4p:RT:bf2:Monograph:Instance:Un-nested` and `ld4p:RT:bf2:Monograph:Work:Un-nested` are supported.
+* Optimized for `ld4p:RT:bf2:*:Un-nested` resource templates.
+* Only `ld4p:RT:bf2:Monograph:*:Un-nested` is currently implemented.
 * Only `id.loc.gov` external resources are resolved.
-
-## To consider
-* To what degree is there overlap between different resource templates? Does this enable code re-use?

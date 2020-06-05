@@ -23,7 +23,7 @@ module Rdf2marc
                                                          [RDF::RDFV.value]]) || [])
           person_uris.map do |person_uri|
             Resolver.resolve_model(person_uri,
-                                   Models::AddedEntryField::PersonalName)
+                                   Models::General::PersonalName)
           end
         end
 
@@ -32,7 +32,7 @@ module Rdf2marc
                                                          [BF.agent, BF.Organization], [RDF::RDFV.value]])
           corporate_uris.map do |corporate_uri|
             Resolver.resolve_model(corporate_uri,
-                                   Models::AddedEntryField::CorporateName)
+                                   Models::General::CorporateName)
           end
         end
       end

@@ -4,8 +4,8 @@ module Rdf2marc
   module Models
     # Model for 1XX: Main Entry Fields.
     class MainEntryFields < Struct
-      attribute? :personal_name, MainEntryField::PersonalName
-      attribute? :corporate_name, MainEntryField::CorporateName
+      attribute? :personal_name, General::PersonalName
+      attribute? :corporate_name, General::CorporateName
     end
   end
 end

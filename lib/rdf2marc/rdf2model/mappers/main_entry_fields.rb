@@ -21,7 +21,7 @@ module Rdf2marc
                        item.work.query.path_first_uri([[BF.contribution, BFLC.PrimaryContribution],
                                                        [BF.agent, BF.Family], [RDF::RDFV.value]])
 
-          Resolver.resolve_model(person_uri, Models::MainEntryField::PersonalName)
+          Resolver.resolve_model(person_uri, Models::General::PersonalName)
         end
 
         def main_corporate_name
@@ -29,7 +29,7 @@ module Rdf2marc
                                                           [BF.agent, BF.Organization],
                                                           [RDF::RDFV.value]])
 
-          Resolver.resolve_model(corporate_uri, Models::MainEntryField::CorporateName)
+          Resolver.resolve_model(corporate_uri, Models::General::CorporateName)
         end
       end
     end

@@ -16,7 +16,7 @@ module Rdf2marc
             subject_type = Resolver.resolve_type(subject_uri)
             if subject_type == 'corporate_name'
               subj_fields[:corporate_names] << Resolver.resolve_model(subject_uri,
-                                                                      Rdf2marc::Models::AddedEntryField::CorporateName)
+                                                                      Rdf2marc::Models::General::CorporateName)
             end
           end
           subj_fields

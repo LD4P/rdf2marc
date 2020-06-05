@@ -54,7 +54,7 @@ module Rdf2marc
         when 'manuscript'
           't'
         else
-          raise 'unexpected type of record'
+          raise MappingError, 'unexpected type of record'
         end
       end
 
@@ -75,7 +75,7 @@ module Rdf2marc
         when 'serial'
           's'
         else
-          raise 'unexpected bibliographic level'
+          raise MappingError, 'unexpected bibliographic level'
         end
       end
 
@@ -102,7 +102,7 @@ module Rdf2marc
         when 'not_applicable'
           'z'
         else
-          raise 'unexpected encoding level'
+          raise MappingError, 'unexpected encoding level'
         end
       end
 
@@ -121,7 +121,7 @@ module Rdf2marc
         when 'unknown'
           'u'
         else
-          raise 'unexpected cataloging form'
+          raise MappingError, 'unexpected cataloging form'
         end
       end
     end

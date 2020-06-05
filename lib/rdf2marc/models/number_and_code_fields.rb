@@ -6,6 +6,7 @@ module Rdf2marc
     class NumberAndCodeFields < Struct
       attribute? :lccn, NumberAndCodeField::Lccn
       attribute? :isbns, Types::Array.of(NumberAndCodeField::Isbn)
+      attribute? :cataloging_source, NumberAndCodeField::CatalogingSource
       attribute? :geographic_area_code, NumberAndCodeField::GeographicAreaCode
       attribute? :lc_call_numbers, Types::Array.of(NumberAndCodeField::LcCallNumber)
     end

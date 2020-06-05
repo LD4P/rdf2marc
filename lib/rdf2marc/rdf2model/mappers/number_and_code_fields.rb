@@ -9,6 +9,7 @@ module Rdf2marc
           {
             lccn: lccn,
             isbns: isbns,
+            cataloging_source: cataloging_source,
             geographic_area_code: geographic_area_codes,
             lc_call_numbers: lc_call_numbers
           }
@@ -58,6 +59,44 @@ module Rdf2marc
             isbn[:qualifying_infos] = qualifier_values if qualifier_values
             isbn
           end.compact
+        end
+
+        def cataloging_source
+          {
+            cataloging_agency: agency,
+            cataloging_language: cataloging_language,
+            transcribing_agency: agency,
+            modifying_agencies: modifying_agencies,
+            description_conventions: description_conventions
+          }
+        end
+
+        def agency
+          agency_uri = item.admin_metadata.query.path_first_uri([BF.source])
+
+          return if agency_uri.nil?
+
+          agency_uri.delete_prefix('http://id.loc.gov/vocabulary/organizations/')
+        end
+
+        def cataloging_language
+          language_uri = item.admin_metadata.query.path_first_uri([BF.descriptionLanguage])
+
+          return if language_uri.nil?
+
+          language_uri.delete_prefix('http://id.loc.gov/vocabulary/languages/')
+        end
+
+        def modifying_agencies
+          item.admin_metadata.query.path_all_uri([BF.descriptionModifier]).map do |agency_uri|
+            agency_uri.delete_prefix('http://id.loc.gov/vocabulary/organizations/')
+          end
+        end
+
+        def description_conventions
+          item.admin_metadata.query.path_all_uri([BF.descriptionConventions]).map do |agency_uri|
+            agency_uri.delete_prefix('http://id.loc.gov/vocabulary/descriptionConventions/')
+          end
         end
 
         def geographic_area_codes

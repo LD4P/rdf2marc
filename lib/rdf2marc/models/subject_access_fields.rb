@@ -6,6 +6,7 @@ module Rdf2marc
     class SubjectAccessFields < Struct
       attribute? :personal_names, Types::Array.of(General::PersonalName)
       attribute? :corporate_names, Types::Array.of(General::CorporateName)
+      attribute? :meeting_names, Types::Array.of(General::MeetingName)
     end
   end
 end

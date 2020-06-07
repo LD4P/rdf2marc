@@ -6,6 +6,7 @@ module Rdf2marc
     class MainEntryFields < Struct
       attribute? :personal_name, General::PersonalName
       attribute? :corporate_name, General::CorporateName
+      attribute? :meeting_name, General::MeetingName
     end
   end
 end

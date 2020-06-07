@@ -5,11 +5,12 @@ module Rdf2marc
     # Resolver for id.loc.gov.
     class IdLocGovResolver
       def resolve_personal_name(uri)
+        expect_type(uri, %w[personal_name family_name])
         marc_record = get_marc(uri)
         field = marc_record['100']
         {
           type: personal_name_type_for(field.indicator1),
-          personal_name: clean(field['a']),
+          personal_name: subfield_value(field, 'a', clean: true),
           numeration: field['b'],
           title_and_words: subfield_values(field, 'c'),
           dates: field['d'],
@@ -44,11 +45,12 @@ module Rdf2marc
       end
 
       def resolve_corporate_name(uri)
+        expect_type(uri, ['corporate_name'])
         marc_record = get_marc(uri)
         field = marc_record['110']
         {
-          type: corporate_name_type_for(field.indicator1),
-          corporate_name: clean(field['a']),
+          type: name_type_for(field.indicator1),
+          corporate_name: subfield_value(field, 'a', clean: true),
           subordinate_unit: field['b'],
           meeting_location: subfield_values(field, 'c'),
           meeting_date: field['d'],
@@ -80,7 +82,46 @@ module Rdf2marc
         }
       end
 
+      def resolve_meeting_name(uri)
+        expect_type(uri, ['meeting_name'])
+        marc_record = get_marc(uri)
+        field = marc_record['111']
+        {
+          type: name_type_for(field.indicator1),
+          meeting_name: subfield_value(field, 'a', clean: true),
+          meeting_locations: subfield_values(field, 'c', clean: true),
+          meeting_dates: subfield_values(field, 'd', clean: true),
+          subordinate_units: subfield_values(field, 'e'),
+          work_date: field['f'],
+          misc_infos: subfield_values(field, 'g'),
+          medium: field['h'],
+          # No relationship_info: subfield_values(field, 'i')
+          relator_terms: subfield_values(field, 'j'),
+          form_subheadings: subfield_values(field, 'k'),
+          work_language: field['l'],
+          part_numbers: subfield_values(field, 'n', clean: true),
+          part_names: subfield_values(field, 'p'),
+          following_meeting_name: field['q'],
+          versions: subfield_values(field, 's'),
+          work_title: field['t'],
+          # No affiliation: field['u'],
+          form_subdivisions: subfield_values(field, 'v'),
+          general_subdivisions: subfield_values(field, 'x'),
+          # No issn field['x']
+          chronological_subdivisions: subfield_values(field, 'y'),
+          geographic_subdivisions: subfield_values(field, 'z'),
+          authority_record_control_numbers: [uri],
+          # No uri: field['1'],
+          # No heading_source: field['2'],
+          # No materials_specified: field['3'],
+          # No relationshipa: subfield_values(field, '4'),
+          linkage: field['6'],
+          field_links: subfield_values(field, '8')
+        }
+      end
+
       def resolve_gac(uri)
+        expect_type(uri, ['geographic_name'])
         marc_record = get_marc(uri)
         marc_record['043']['a']
       end
@@ -118,26 +159,36 @@ module Rdf2marc
         end
       end
 
-      def corporate_name_type_for(indicator1)
+      def name_type_for(indicator1)
         case indicator1
         when '0'
           'inverted'
         when '1'
           'jurisdiction'
-        else
+        when '2'
           'direct'
+        else ' '
         end
       end
 
-      def clean(value)
-        value.gsub(/[,]$/, '')
+      def clean_value(value)
+        return nil if value.nil?
+
+        value.gsub(/[[,)]]$/, '').gsub(/^[(]/, '').gsub(/[ :]$/, '').strip
       end
 
-      def subfield_values(field, code)
-        field.find_all { |subfield| subfield.code == code }.map(&:value)
+      def subfield_values(field, code, clean: false)
+        field.find_all { |subfield| subfield.code == code }.map do |subfield|
+          clean ? clean_value(subfield.value) : subfield.value
+        end
+      end
+
+      def subfield_value(field, code, clean: false)
+        clean ? clean_value(field[code]) : field[code]
       end
 
       def type_for(mads_uri)
+        # Not yet mapped: uniform_title, named_event, chronological_term, topical_term
         case mads_uri
         when 'http://www.loc.gov/mads/rdf/v1#FamilyName'
           'family_name'
@@ -150,7 +201,10 @@ module Rdf2marc
         when 'http://www.loc.gov/mads/rdf/v1#Geographic'
           'geographic_name'
         end
-        # Not yet mapped: uniform_title, named_event, chronological_term, topical_term
+      end
+
+      def expect_type(uri, types)
+        raise BadRequestError, "#{uri} is not a #{types.join(' or ')}" unless types.include?(resolve_type(uri))
       end
     end
   end

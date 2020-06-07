@@ -8,7 +8,8 @@ module Rdf2marc
         def generate
           {
             personal_name: main_personal_name,
-            corporate_name: main_corporate_name
+            corporate_name: main_corporate_name,
+            meeting_name: main_meeting_name
           }
         end
 
@@ -30,6 +31,14 @@ module Rdf2marc
                                                           [RDF::RDFV.value]])
 
           Resolver.resolve_model(corporate_uri, Models::General::CorporateName)
+        end
+
+        def main_meeting_name
+          meeting_uri = item.work.query.path_first_uri([[BF.contribution, BFLC.PrimaryContribution],
+                                                        [BF.agent, BF.Meeting],
+                                                        [RDF::RDFV.value]])
+
+          Resolver.resolve_model(meeting_uri, Models::General::MeetingName)
         end
       end
     end

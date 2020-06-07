@@ -28,7 +28,7 @@ module Rdf2marc
       def append(subfield, value, pattern: nil)
         return if value.nil?
 
-        raise "#{subfield} is not repeatable, but received an array" if value.is_a?(Array)
+        raise MappingError, "#{subfield} is not repeatable, but received an array" if value.is_a?(Array)
 
         field.append(MARC::Subfield.new(subfield, formatted_value(value, pattern)))
       end

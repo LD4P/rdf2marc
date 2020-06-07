@@ -8,7 +8,8 @@ module Rdf2marc
         def generate
           {
             personal_names: added_personal_names,
-            corporate_names: added_corporate_names
+            corporate_names: added_corporate_names,
+            meeting_names: added_meeting_names
           }
         end
 
@@ -33,6 +34,15 @@ module Rdf2marc
           corporate_uris.map do |corporate_uri|
             Resolver.resolve_model(corporate_uri,
                                    Models::General::CorporateName)
+          end
+        end
+
+        def added_meeting_names
+          meeting_uris = item.work.query.path_all_uri([[BF.contribution, BF.Contribution],
+                                                       [BF.agent, BF.Meeting], [RDF::RDFV.value]])
+          meeting_uris.map do |meeting_uri|
+            Resolver.resolve_model(meeting_uri,
+                                   Models::General::MeetingName)
           end
         end
       end

@@ -9,7 +9,8 @@ module Rdf2marc
           # Note that this is only partially implemented.
           subj_fields = {
             personal_names: [],
-            corporate_names: []
+            corporate_names: [],
+            meeting_names: []
           }
           subject_uris = item.work.query.path_all_uri([BF.subject])
           subject_uris.each do |subject_uri|
@@ -17,6 +18,14 @@ module Rdf2marc
             if subject_type == 'corporate_name'
               subj_fields[:corporate_names] << Resolver.resolve_model(subject_uri,
                                                                       Rdf2marc::Models::General::CorporateName)
+            elsif %w[personal_name family_name].include?(subject_type)
+              subj_fields[:personal_names] << Resolver.resolve_model(subject_uri,
+                                                                     Rdf2marc::Models::General::PersonalName)
+            elsif subject_type == 'meeting_name'
+              subj_fields[:meeting_names] << Resolver.resolve_model(subject_uri,
+                                                                    Rdf2marc::Models::General::MeetingName)
+              elseif subject_type
+              Logger.warn("Resolving subject for #{uri} not supported.")
             end
           end
           subj_fields

@@ -8,6 +8,7 @@ module Rdf2marc
         def generate
           {
             record_status: item.admin_metadata.query.path_first_literal([[BF.status, BF.Status], BF.code]),
+            type: type,
             bibliographic_level: bibliographic_level,
             encoding_level: encoding_level,
             cataloging_form: cataloging_form
@@ -15,6 +16,25 @@ module Rdf2marc
         end
 
         private
+
+        def type
+          # Mapping from instance resource template id
+          resource_template_id = item.instance.query.path_first_literal([SINOPIA.hasResourceTemplate])
+          case resource_template_id.downcase
+          when /cartographic/
+            'cartographic'
+          when /35mmfeaturefilm/
+            'projected_medium'
+          when /notatedmusic/
+            'notated_music'
+          when /analog/, /soundrecording/, /soundcdr/
+            'nonmusical_sound_recording'
+          when /printphoto/
+            '2d_nonprojectable_graphic'
+          else
+            'language_material'
+          end
+        end
 
         def bibliographic_level
           # Record may contain multiple. Only using one and which is selected is indeterminate.

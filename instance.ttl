@@ -1,4 +1,5 @@
-<https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95d0-492a-a300-050a40895b74> <http://id.loc.gov/ontologies/bibframe/adminMetadata> <https://trellis.stage.sinopia.io/repository/stanford/2b27de29-fdd7-45f2-96d5-db89fa2306aa>;
+<https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95d0-492a-a300-050a40895b74>
+<http://id.loc.gov/ontologies/bibframe/adminMetadata> <https://trellis.stage.sinopia.io/repository/stanford/2b27de29-fdd7-45f2-96d5-db89fa2306aa>;
     <http://id.loc.gov/ontologies/bibframe/carrier> <http://id.loc.gov/vocabulary/carriers/nc>, <http://id.loc.gov/vocabulary/carriers/nn>;
     <http://id.loc.gov/ontologies/bibframe/dimensions> "dimension1"@eng, "dimension2"@eng;
     <http://id.loc.gov/ontologies/bibframe/editionStatement> "Third and a half edition"@eng, "Third edition"@eng;

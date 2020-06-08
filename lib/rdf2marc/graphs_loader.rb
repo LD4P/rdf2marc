@@ -4,18 +4,38 @@ module Rdf2marc
   # Helper for loading graphs.
   class GraphsLoader
     def self.from_instance_uri(uri)
-      instance_graph = from_uri(uri)
-      work_uri = Rdf2marc::GraphHelper.new(instance_graph).instance_of_uri
-      raise BadRequestError, 'Work (bf:instanceOf) not specified for Instance' unless work_uri
+      graph = from_uri(uri)
 
-      work_graph = from_uri(work_uri)
+      graph_helper = Rdf2marc::GraphHelper.new(graph)
+      work_term = graph_helper.work_term
+      raise BadRequestError, 'Work (bf:instanceOf) not specified for Instance' unless work_term
 
-      admin_metadata_uri = Rdf2marc::GraphHelper.new(instance_graph).admin_metadata_uri
-      raise BadRequestError, 'Work (bf:adminMetadata) not specified for Instance' unless admin_metadata_uri
+      graph << from_uri(work_term.value) if work_term.instance_of?(RDF::URI)
 
-      admin_metadata_graph = from_uri(admin_metadata_uri)
+      admin_metadata_term = graph_helper.admin_metadata_term
+      raise BadRequestError, 'Work (bf:adminMetadata) not specified for Instance' unless admin_metadata_term
 
-      [instance_graph, work_graph, admin_metadata_graph]
+      graph << from_uri(admin_metadata_term.value) if admin_metadata_term.instance_of?(RDF::URI)
+
+      [graph, RDF::URI.new(uri), work_term, admin_metadata_term]
+    end
+
+    def self.from_filepaths(instance_filepath, *other_filepaths)
+      graph = from_path(instance_filepath)
+
+      graph_helper = Rdf2marc::GraphHelper.new(graph)
+      instance_term = RDF::URI.new(graph_helper.uri)
+      work_term = graph_helper.work_term
+      raise BadRequestError, 'Work (bf:instanceOf) not specified for Instance' unless work_term
+
+      admin_metadata_term = graph_helper.admin_metadata_term
+      raise BadRequestError, 'Work (bf:adminMetadata) not specified for Instance' unless admin_metadata_term
+
+      other_filepaths.each do |filepath|
+        graph << from_path(filepath)
+      end
+
+      [graph, instance_term, work_term, admin_metadata_term]
     end
 
     def self.from_uri(uri)

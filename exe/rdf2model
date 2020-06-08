@@ -6,17 +6,15 @@ $LOAD_PATH.unshift 'lib'
 
 require 'rdf2marc'
 
-if ARGV.length == 1
-  instance_graph, work_graph, admin_metadata_graph = Rdf2marc::GraphsLoader.from_instance_uri(ARGV[0])
-elsif ARGV.length == 3
-  instance_graph = Rdf2marc::GraphsLoader.from_path(ARGV[0])
-  work_graph = Rdf2marc::GraphsLoader.from_path(ARGV[1])
-  admin_metadata_graph = Rdf2marc::GraphsLoader.from_path(ARGV[2])
-else
-  puts 'Usage: rdf2model <instance ttl file> <work ttl file> <admin metadata ttl file>'
+if ARGV.empty?
+  puts 'Usage: rdf2model <instance ttl file> <work ttl file?> <admin metadata ttl file?>'
   puts 'Usage: rdf2model <instance uri>'
   exit(false)
+elsif ARGV.length == 1 && ARGV[0].start_with?('http')
+  graph, instance_term, work_term, admin_metadata_term = Rdf2marc::GraphsLoader.from_instance_uri(ARGV[0])
+else
+  graph, instance_term, work_term, admin_metadata_term = Rdf2marc::GraphsLoader.from_filepaths(ARGV[0], ARGV[1..])
 end
 
-record_model = Rdf2marc::Rdf2model.to_model(instance_graph, work_graph, admin_metadata_graph)
+record_model = Rdf2marc::Rdf2model.to_model(graph, instance_term, work_term, admin_metadata_term)
 puts JSON.pretty_generate(record_model.to_h)

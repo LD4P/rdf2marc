@@ -18,7 +18,7 @@
         <hr class="my-4">
         <p>Limitations:
         <ul>
-            <li>Only some resource templates are supported (see below).</li>
+            <li>Developed for <span class="font-italic">ld4p:RT:bf2:*</span> resource templates. Preliminary focus is on Monographs.</li>
             <li>Only some MARC fields are mapped.</li>
             <li>Only <span class="font-italic">id.loc.gov</span> external resources are resolved.</li>
             <li>This is proof-of-concept code, so errors are to be expected.</li>
@@ -34,9 +34,8 @@
                 <input type="text" class="form-control form-control-lg" id="instanceURI" name="instance" placeholder="https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95d0-492a-a300-050a40895b74">
                 <small class="form-text text-muted">
                     <ul>
-                        <li>Must use the <span class="font-italic">ld4p:RT:bf2:Monograph:Instance:Un-nested</span> resource template.</li>
-                        <li>Must reference a Bibframe Work that uses the <span class="font-italic">ld4p:RT:bf2:Monograph:Work:Un-nested</span> resource template.</li>
-                        <li>Must reference Admin Metadata that uses the <span class="font-italic">ld4p:RT:bf2:AdminMetadata:BFDB</span> resource template.</li>
+                        <li>Must reference a Bibframe Work or nest a Bibframe Work via a blank node.</li>
+                        <li>Must reference Admin Metadata or nest Admin Metadata via a blank node.</li>
                     </ul>
                 </small>
             </div>

@@ -15,7 +15,7 @@ When the RDF references an external resource, rdf2marc will attempt to resolve t
 Mapping to the model:
 ```
 $ exe/rdf2model 
-Usage: rdf2model <instance ttl file> <work ttl file> <admin metadata ttl file>
+Usage: rdf2model <instance ttl file> <work ttl file?> <admin metadata ttl file?>
 Usage: rdf2model <instance uri>
 $ exe/rdf2model instance.ttl work.ttl admin_metadata.ttl
 $ exe/rdf2model https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95d0-492a-a300-050a40895b74
@@ -24,7 +24,7 @@ $ exe/rdf2model https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95
 Mapping to MARC:
 ```
 $ exe/rdf2marc
-Usage: rdf2marc <instance ttl file> <work ttl file> <admin metadata ttl file>
+Usage: rdf2marc <instance ttl file> <work ttl file?> <admin metadata ttl file?>
 Usage: rdf2marc <instance uri>
 $ exe/rdf2marc instance.ttl work.ttl admin_metadata.ttl
 $ exe/rdf2marc https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95d0-492a-a300-050a40895b74
@@ -32,14 +32,14 @@ $ exe/rdf2marc https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95d
 
 Note when using files:
 * Currently, only turtle is supported.
-* When copying turtle from Sinopia's RDF preview, the resource uri (`<>`) must be replaced by the actual uri (e.g., `https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95d0-492a-a300-050a40895b74`) 
+* When copying turtle from Sinopia's RDF preview, the resource uri (`<>`) must be replaced by the actual uri (e.g., `https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95d0-492a-a300-050a40895b74`)
+* At least the instance ttl file. The Work ttl and Admin Metadata ttl files are optional if they are nested via a blank node in the Instance ttl file.
 
 Note when using Instance uri:
-* The Instance must contain a `bf:instanceOf` that references the Work.
-* The Instance must contain a `bf:adminMetadata` that references the Admin Metadata.
+* The Instance must contain a `bf:instanceOf` that references the Work or nests the Work via a blank node.
+* The Instance must contain a `bf:adminMetadata` that references the Admin Metadata or nests the Admin Metadata via a blank node.
 
 ## Current limitations
 * Only some fields are mapped.
-* Optimized for `ld4p:RT:bf2:*:Un-nested` resource templates.
-* Only `ld4p:RT:bf2:Monograph:*:Un-nested` is currently implemented.
+* Optimized for `ld4p:RT:bf2:*`resource templates, with a focus on Monographs.
 * Only `id.loc.gov` external resources are resolved.

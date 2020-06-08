@@ -24,7 +24,7 @@ module Rdf2marc
             elsif subject_type == 'meeting_name'
               subj_fields[:meeting_names] << Resolver.resolve_model(subject_uri,
                                                                     Rdf2marc::Models::General::MeetingName)
-              elseif subject_type
+            elsif subject_type
               Logger.warn("Resolving subject for #{uri} not supported.")
             end
           end

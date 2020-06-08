@@ -22,6 +22,8 @@ module Rdf2marc
         Resolver::IdLocGovResolver.new.resolve_corporate_name(uri)
       when Rdf2marc::Models::General::MeetingName.name
         Resolver::IdLocGovResolver.new.resolve_meeting_name(uri)
+      when Rdf2marc::Models::SubjectAccessField::GeographicName.name
+        Resolver::IdLocGovResolver.new.resolve_geographic_name(uri)
       else
         Logger.warn("Resolving #{uri} to #{model_class} not supported.")
         nil

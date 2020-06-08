@@ -40,6 +40,7 @@ module Rdf2marc
           add_repeating_field(Field600, record_model.subject_access_fields.personal_names, marc_record)
           add_repeating_field(Field610, record_model.subject_access_fields.corporate_names, marc_record)
           add_repeating_field(Field611, record_model.subject_access_fields.meeting_names, marc_record)
+          add_repeating_field(Field651, record_model.subject_access_fields.geographic_names, marc_record)
           add_repeating_field(Field700, record_model.added_entry_fields.personal_names, marc_record)
           add_repeating_field(Field710, record_model.added_entry_fields.corporate_names, marc_record)
           add_repeating_field(Field711, record_model.added_entry_fields.meeting_names, marc_record)

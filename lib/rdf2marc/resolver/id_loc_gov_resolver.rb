@@ -120,6 +120,16 @@ module Rdf2marc
         }
       end
 
+      def resolve_geographic_name(uri)
+        expect_type(uri, ['geographic_name'])
+        marc_record = get_marc(uri)
+        field = marc_record['151']
+        {
+          geographic_name: subfield_value(field, 'a'),
+          authority_record_control_numbers: [uri]
+        }
+      end
+
       def resolve_gac(uri)
         expect_type(uri, ['geographic_name'])
         marc_record = get_marc(uri)

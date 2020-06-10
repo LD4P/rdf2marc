@@ -16,5 +16,7 @@ else
   graph, instance_term, work_term, admin_metadata_term = Rdf2marc::GraphsLoader.from_filepaths(ARGV[0], ARGV[1..])
 end
 
+Rdf2marc::Cache.configure(Rdf2marc::Caches::FileSystemCache.new)
+
 record_model = Rdf2marc::Rdf2model.to_model(graph, instance_term, work_term, admin_metadata_term)
 puts JSON.pretty_generate(record_model.to_h)

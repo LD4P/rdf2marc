@@ -137,13 +137,15 @@ module Rdf2marc
       end
 
       def resolve_label(uri)
-        graph = RDF::Repository.load("#{uri}.skos.nt")
+        # graph = RDF::Repository.load("#{uri}.skos.nt")
+        graph = graph_get("#{uri}.skos.nt")
         query = GraphQuery.new(graph)
         query.path_first_literal([SKOS.prefLabel], subject_term: RDF::URI.new(uri))
       end
 
       def resolve_type(uri)
-        graph = RDF::Repository.load("#{uri}.madsrdf.nt")
+        # graph = RDF::Repository.load("#{uri}.madsrdf.nt")
+        graph = graph_get("#{uri}.madsrdf.nt")
         query = GraphQuery.new(graph)
         mads_uris = query.path_all_uri([RDF::RDFV.type], subject_term: RDF::URI.new(uri))
         mads_uris.map { |mad_uri| type_for(mad_uri) }.compact.first
@@ -151,11 +153,29 @@ module Rdf2marc
 
       private
 
-      def get_marc(uri)
-        resp = Faraday.get("#{uri}.marcxml.xml")
-        raise Error, "Error getting MARCXML for #{uri}." unless resp.success?
+      def graph_get(url)
+        data = StringIO.new(http_get(url))
+        graph = RDF::Repository.new
+        reader = RDF::Reader.for(:ntriples).new(data)
+        graph << reader
+        graph
+      end
 
-        MARC::XMLReader.new(StringIO.new(resp.body)).first
+      def http_get(url)
+        body = Cache.get_cache(url)
+        if body.nil?
+          resp = Faraday.get(url)
+          raise Error, "Error getting #{url}." unless resp.success?
+
+          body = resp.body
+          Cache.set_cache(url, body)
+        end
+        body
+      end
+
+      def get_marc(uri)
+        body = http_get("#{uri}.marcxml.xml")
+        MARC::XMLReader.new(StringIO.new(body)).first
       end
 
       def personal_name_type_for(indicator1)

@@ -22,10 +22,10 @@ end
 
 def response(code, body)
   {
-      'statusCode' => code,
-      'headers' => {
-          'Content-Type' => 'text/plain'
-      },
-      'body' => body
+    'statusCode' => code,
+    'headers' => {
+      'Content-Type' => 'text/plain'
+    },
+    'body' => body
   }
 end

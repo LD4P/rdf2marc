@@ -39,6 +39,18 @@ Note when using Instance uri:
 * The Instance must contain a `bf:instanceOf` that references the Work or nests the Work via a blank node.
 * The Instance must contain a `bf:adminMetadata` that references the Admin Metadata or nests the Admin Metadata via a blank node.
 
+## Caching
+Resolving external resources is slow. To speed this up, responses can be cached. The following caches are supported.
+* `Rdf2marc::Caches::NullCache`: No caching (the default).
+* `Rdf2marc::Caches::FileSystemCache`: Cache to the file system.
+* `Rdf2marc::Caches::S3Cache`: Cache to an S3 bucket.
+
+Example configuration:
+```
+Rdf2marc::Cache.configure(Rdf2marc::Caches::FileSystemCache.new)
+Rdf2marc::Cache.configure(Rdf2marc::Caches::S3Cache.new('rdf2marc-development'))
+```
+
 ## Current limitations
 * Only some fields are mapped.
 * Optimized for `ld4p:RT:bf2:*`resource templates, with a focus on Monographs.

@@ -13,6 +13,8 @@ require 'active_support/core_ext/hash'
 require 'active_support/core_ext/module/delegation'
 require 'faraday'
 require 'logger'
+require 'fileutils'
+require 'aws-sdk-s3'
 
 loader = Zeitwerk::Loader.new
 loader.push_dir(File.absolute_path("#{__FILE__}/.."))

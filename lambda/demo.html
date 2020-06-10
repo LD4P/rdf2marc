@@ -43,10 +43,10 @@
         <div class="form-group row">
             <div class="col-sm-10">
                 <button type="submit" id="btnSubmit" class="btn btn-primary btn-lg">Submit</button>
-                <small class="form-text text-muted">
-                    Be patient! This may take a bit to retrieve resources.
-                </small>
             </div>
+        </div>
+        <div id="divAlert" class="alert alert-info" role="alert">
+            Be patient! This may take a bit to retrieve resources. <b>If it times out, please try again.</b>
         </div>
     </form>
 </div>
@@ -58,6 +58,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function() {
+        $("#divAlert").hide();
         window.onpageshow = function() {
             let btnSubmit = $("#btnSubmit");
             // enable button
@@ -66,6 +67,7 @@
             btnSubmit.html(
                 `Submit`
             );
+            $("#divAlert").hide();
         };
         $("#btnSubmit").click(function() {
             // disable button
@@ -74,6 +76,7 @@
             $(this).html(
                 `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Converting...`
             );
+            $("#divAlert").show();
         });
     });
 </script>

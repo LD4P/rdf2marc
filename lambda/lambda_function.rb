@@ -9,6 +9,8 @@ def lambda_handler(event:, context:)
   instance_uri = event['queryStringParameters']['instance']
   graph, instance_term, work_term, admin_metadata_term = Rdf2marc::GraphsLoader.from_instance_uri(instance_uri)
 
+  Rdf2marc::Cache.configure(Rdf2marc::Caches::S3Cache.new('rdf2marc-development'))
+
   record_model = Rdf2marc::Rdf2model.to_model(graph, instance_term, work_term, admin_metadata_term)
   marc_record = Rdf2marc::Model2marc::Record.new(record_model)
   response(200, marc_record.to_s)

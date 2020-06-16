@@ -27,7 +27,7 @@
         <p><a href="mailto:justinlittman@stanford.edu">Feedback</a>, <a href="https://github.com/sul-dlss-labs/rdf2marc/issues">tickets</a>, and <a href="https://github.com/sul-dlss-labs/rdf2marc/pulls">pull requests</a> are welcome.</p>
         <a class="btn btn-primary btn-sm" href="https://github.com/sul-dlss-labs/rdf2marc" role="button">Code on Github.</a>
     </div>
-    <form action="https://tl7l9n5pka.execute-api.us-west-2.amazonaws.com/development/">
+    <form id="formConvert" action="https://tl7l9n5pka.execute-api.us-west-2.amazonaws.com/development/">
         <div class="form-group">
             <label for="instanceURI" class="col-form-label col-form-label-lg">Provide a Bibframe Instance URI</label>
             <div>
@@ -77,6 +77,7 @@
                 `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Converting...`
             );
             $("#divAlert").show();
+            $("#formConvert").submit();
         });
     });
 </script>

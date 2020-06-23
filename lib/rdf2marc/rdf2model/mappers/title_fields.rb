@@ -41,7 +41,7 @@ module Rdf2marc
             title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
             remainder_of_title: item.instance.query.path_first_literal([BF.subtitle], subject_term: title_term),
             part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
-            part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term),
+            part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term)
           }
         end
 

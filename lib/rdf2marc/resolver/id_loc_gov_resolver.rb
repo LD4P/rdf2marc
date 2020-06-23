@@ -135,15 +135,15 @@ module Rdf2marc
         marc_record = get_marc(uri)
         field = marc_record['155']
         {
-            thesaurus: 'subfield2',
-            genre_form_data: subfield_value(field, 'a'),
-            form_subdivisions: subfield_values(field, 'v'),
-            general_subdivisions: subfield_values(field, 'x'),
-            chronological_subdivisions: subfield_values(field, 'y'),
-            geographic_subdivisions: subfield_values(field, 'z'),
-            term_source: 'lcgft',
-            linkage: subfield_value(field, '6'),
-            field_links: subfield_values(field, '8')
+          thesaurus: 'subfield2',
+          genre_form_data: subfield_value(field, 'a'),
+          form_subdivisions: subfield_values(field, 'v'),
+          general_subdivisions: subfield_values(field, 'x'),
+          chronological_subdivisions: subfield_values(field, 'y'),
+          geographic_subdivisions: subfield_values(field, 'z'),
+          term_source: 'lcgft',
+          linkage: subfield_value(field, '6'),
+          field_links: subfield_values(field, '8')
         }
       end
 

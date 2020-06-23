@@ -21,24 +21,27 @@ module Rdf2marc
         end
 
         def publication_distributions
-          pub_dist_terms = item.instance.query.path_all([[BF.provisionActivity, BF.Publication]])
-          pub_dists = pub_dist_terms.map do |pub_dist_term|
+          publications = publication_distributions_for(item.instance.query.path_all([[BF.provisionActivity,
+                                                                                      BF.Publication]]),
+                                                       'publication')
+          distributions = publication_distributions_for(item.instance.query.path_all([[BF.provisionActivity,
+                                                                                       BF.Distribution]]),
+                                                        'publication')
+          manufactures = publication_distributions_for(item.instance.query.path_all([[BF.provisionActivity,
+                                                                                      BF.Manufacture]]),
+                                                       'manufacture')
+          publications + distributions + manufactures
+        end
+
+        def publication_distributions_for(terms, entity_function)
+          terms.map do |term|
             {
-              publication_distribution_places: publication_distributions_places(pub_dist_term),
-              publisher_distributor_names: publication_distributions_names(pub_dist_term),
-              publication_distribution_dates: item.instance.query.path_all_literal([BF.date],
-                                                                                   subject_term: pub_dist_term)
+              entity_function: entity_function,
+              publication_distribution_places: publication_distributions_places(term),
+              publisher_distributor_names: publication_distributions_names(term),
+              publication_distribution_dates: item.instance.query.path_all_literal([BF.date], subject_term: term)
             }
           end
-          manufacture_terms = item.instance.query.path_all([[BF.provisionActivity, BF.Distribution]])
-          manufactures = manufacture_terms.map do |manufacture_term|
-            {
-              manufacture_places: publication_distributions_places(manufacture_term),
-              manufacturer_names: publication_distributions_names(manufacture_term),
-              manufacture_dates: item.instance.query.path_all_literal([BF.date], subject_term: manufacture_term)
-            }
-          end
-          pub_dists + manufactures
         end
 
         def publication_distributions_places(subject_term)

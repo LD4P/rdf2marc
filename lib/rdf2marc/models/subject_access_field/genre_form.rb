@@ -5,7 +5,14 @@ module Rdf2marc
     module SubjectAccessField
       # Model for 655 - Index Term-Genre/Form.
       class GenreForm < Struct
-        attribute :thesaurus, Types::String.default('not_specified').enum('lcsh', 'lcsh_childrens_literature', 'mesh', 'nal_subject_authority', 'not_specified', 'canadian_subject_headings', 'répertoire_de_vedettes-matière', 'subfield2')
+        attribute :thesaurus, Types::String.default('not_specified').enum('lcsh',
+                                                                          'lcsh_childrens_literature',
+                                                                          'mesh',
+                                                                          'nal_subject_authority',
+                                                                          'not_specified',
+                                                                          'canadian_subject_headings',
+                                                                          'répertoire_de_vedettes-matière',
+                                                                          'subfield2')
         attribute? :genre_form_data, Types::String
         attribute? :form_subdivisions, Types::Array.of(Types::String)
         attribute? :general_subdivisions, Types::Array.of(Types::String)

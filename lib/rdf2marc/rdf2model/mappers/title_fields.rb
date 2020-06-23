@@ -40,6 +40,8 @@ module Rdf2marc
           {
             title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
             remainder_of_title: item.instance.query.path_first_literal([BF.subtitle], subject_term: title_term),
+            # May be multiple bf.responsibilityStatement, but only using one.
+            statement_of_responsibility: item.instance.query.path_first_literal([BF.responsibilityStatement]),
             part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
             part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term)
           }
@@ -58,8 +60,10 @@ module Rdf2marc
           title_terms = variant_title_terms + parallel_title_terms
 
           title_terms.map do |title_term|
+            type = variant_title_type(title_term, parallel_title_terms.include?(title_term))
             {
-              type: variant_title_type(title_term, parallel_title_terms.include?(title_term)),
+              note_added_entry: note_added_entry(type),
+              type: type,
               title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
               part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
               part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term)
@@ -74,6 +78,17 @@ module Rdf2marc
           return variant_type if Rdf2marc::Models::TitleField::VariantTitle::TYPES.include?(variant_type)
 
           'none'
+        end
+
+        def note_added_entry(type)
+          case type
+          when 'none'
+            'note_no_added'
+          when 'parallel'
+            'no_note_added'
+          else
+            'note_added'
+          end
         end
 
         def former_titles

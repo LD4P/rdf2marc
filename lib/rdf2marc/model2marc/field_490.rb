@@ -9,6 +9,7 @@ module Rdf2marc
       end
 
       def build
+        field.indicator1 = model.tracing_policy == 'traced' ? '1' : '0'
         append_repeatable('a', model.series_statements)
       end
     end

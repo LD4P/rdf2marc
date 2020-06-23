@@ -11,7 +11,8 @@ module Rdf2marc
             personal_names: [],
             corporate_names: [],
             meeting_names: [],
-            geographic_names: []
+            geographic_names: [],
+            genre_forms: genre_forms
           }
           subject_uris = item.work.query.path_all_uri([BF.subject])
           subject_uris.each do |subject_uri|
@@ -35,6 +36,15 @@ module Rdf2marc
             end
           end
           subj_fields
+        end
+
+        private
+
+        def genre_forms
+          genre_form_uris = item.work.query.path_all_uri([BF.genreForm])
+          genre_form_uris.map do |genre_form_uri|
+            Resolver.resolve_model(genre_form_uri, Models::SubjectAccessField::GenreForm)
+          end
         end
       end
     end

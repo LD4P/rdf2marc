@@ -14,7 +14,6 @@ module Rdf2marc
         append('a', model.title)
         append('b', model.remainder_of_title)
         append('c', model.statement_of_responsibility)
-        append('h', model.medium, pattern: '[#{value.downcase}]')
         append_repeatable('n', model.part_numbers)
         append_repeatable('p', model.part_names)
       end

@@ -8,6 +8,7 @@ module Rdf2marc
       attribute? :corporate_names, Types::Array.of(General::CorporateName)
       attribute? :meeting_names, Types::Array.of(General::MeetingName)
       attribute? :geographic_names, Types::Array.of(SubjectAccessField::GeographicName)
+      attribute? :genre_forms, Types::Array.of(SubjectAccessField::GenreForm)
     end
   end
 end

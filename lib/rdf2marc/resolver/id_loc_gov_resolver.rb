@@ -130,6 +130,23 @@ module Rdf2marc
         }
       end
 
+      def resolve_genre_form(uri)
+        expect_type(uri, ['genre_form'])
+        marc_record = get_marc(uri)
+        field = marc_record['155']
+        {
+            thesaurus: 'subfield2',
+            genre_form_data: subfield_value(field, 'a'),
+            form_subdivisions: subfield_values(field, 'v'),
+            general_subdivisions: subfield_values(field, 'x'),
+            chronological_subdivisions: subfield_values(field, 'y'),
+            geographic_subdivisions: subfield_values(field, 'z'),
+            term_source: 'lcgft',
+            linkage: subfield_value(field, '6'),
+            field_links: subfield_values(field, '8')
+        }
+      end
+
       def resolve_gac(uri)
         expect_type(uri, ['geographic_name'])
         marc_record = get_marc(uri)
@@ -137,14 +154,12 @@ module Rdf2marc
       end
 
       def resolve_label(uri)
-        # graph = RDF::Repository.load("#{uri}.skos.nt")
         graph = graph_get("#{uri}.skos.nt")
         query = GraphQuery.new(graph)
         query.path_first_literal([SKOS.prefLabel], subject_term: RDF::URI.new(uri))
       end
 
       def resolve_type(uri)
-        # graph = RDF::Repository.load("#{uri}.madsrdf.nt")
         graph = graph_get("#{uri}.madsrdf.nt")
         query = GraphQuery.new(graph)
         mads_uris = query.path_all_uri([RDF::RDFV.type], subject_term: RDF::URI.new(uri))
@@ -230,6 +245,8 @@ module Rdf2marc
           'meeting_name'
         when 'http://www.loc.gov/mads/rdf/v1#Geographic'
           'geographic_name'
+        when 'http://www.loc.gov/mads/rdf/v1#GenreForm'
+          'genre_form'
         end
       end
 

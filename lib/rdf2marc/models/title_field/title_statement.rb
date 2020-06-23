@@ -10,7 +10,7 @@ module Rdf2marc
         attribute? :title, Types::String
         attribute? :remainder_of_title, Types::String
         attribute? :statement_of_responsibility, Types::String
-        attribute? :medium, Types::String
+        # medium is no longer used.
         attribute? :part_numbers, Types::Array.of(Types::String)
         attribute? :part_names, Types::Array.of(Types::String)
       end

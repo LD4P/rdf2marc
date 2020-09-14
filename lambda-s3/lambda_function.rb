@@ -12,6 +12,9 @@ def lambda_handler(event:, context:)
   marc_txt_path = event['marc_txt_path']
   error_path = event['error_path']
   bucket_name = event['bucket']
+  delete_from_s3(bucket_name, marc_path)
+  delete_from_s3(bucket_name, marc_txt_path)
+  delete_from_s3(bucket_name, error_path)
   graph, instance_term, work_term, admin_metadata_term = Rdf2marc::GraphsLoader.from_instance_uri(instance_uri)
 
   Rdf2marc::Cache.configure(Rdf2marc::Caches::S3Cache.new(bucket_name))
@@ -31,4 +34,9 @@ end
 def write_to_s3(value, bucket_name, path)
   s3 = Aws::S3::Resource.new
   s3.bucket(bucket_name).object("marc/#{path}").put(body: value)
+end
+
+def delete_from_s3(bucket_name, path)
+  s3 = Aws::S3::Resource.new
+  s3.bucket(bucket_name).object("marc/#{path}").delete
 end

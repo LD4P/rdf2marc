@@ -13,7 +13,7 @@ module Rdf2marc
       graph << from_uri(work_term.value) if work_term.instance_of?(RDF::URI)
 
       admin_metadata_term = graph_helper.admin_metadata_term
-      raise BadRequestError, 'Work (bf:adminMetadata) not specified for Instance' unless admin_metadata_term
+      raise BadRequestError, 'AdminMetadata (bf:adminMetadata) not specified for Instance' unless admin_metadata_term
 
       graph << from_uri(admin_metadata_term.value) if admin_metadata_term.instance_of?(RDF::URI)
 
@@ -29,7 +29,7 @@ module Rdf2marc
       raise BadRequestError, 'Work (bf:instanceOf) not specified for Instance' unless work_term
 
       admin_metadata_term = graph_helper.admin_metadata_term
-      raise BadRequestError, 'Work (bf:adminMetadata) not specified for Instance' unless admin_metadata_term
+      raise BadRequestError, 'AdminMetadata (bf:adminMetadata) not specified for Instance' unless admin_metadata_term
 
       other_filepaths.each do |filepath|
         graph << from_path(filepath)

@@ -21,7 +21,7 @@ mv vendor/bundle/gem_layer.zip .
 
 ## Generate a code zip.
 ```
-rm -f lambda.zip
-zip -r lambda.zip lib
-zip -j lambda.zip lambda/lambda_function.rb
+rm -f lambda-api.zip
+zip -r lambda-api.zip lib
+zip -j lambda-api.zip lambda-api/lambda_function.rb
 ```

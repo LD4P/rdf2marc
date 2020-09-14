@@ -6,7 +6,7 @@ module Rdf2marc
     def self.resolve_model(uri, model_class)
       if uri.nil?
         nil
-      elsif uri.start_with?('http://id.loc.gov/authorities/')
+      elsif self.is_id_loc(uri)
         resolve_loc_name_model(uri, model_class)
       else
         Logger.warn("Resolving #{uri} to #{model_class} not supported.")
@@ -35,7 +35,7 @@ module Rdf2marc
     def self.resolve_label(uri)
       if uri.nil?
         nil
-      elsif uri.start_with?('http://id.loc.gov/authorities/')
+      elsif self.is_id_loc(uri)
         Resolver::IdLocGovResolver.new.resolve_label(uri)
       else
         Logger.warn("Resolving label for #{uri} not supported.")
@@ -46,7 +46,7 @@ module Rdf2marc
     def self.resolve_geographic_area_code(uri)
       if uri.nil?
         nil
-      elsif uri.start_with?('http://id.loc.gov/authorities/')
+      elsif self.is_id_loc(uri)
         Resolver::IdLocGovResolver.new.resolve_gac(uri)
       else
         Logger.warn("Resolving geographic area code for #{uri} not supported.")
@@ -59,12 +59,17 @@ module Rdf2marc
     def self.resolve_type(uri)
       if uri.nil?
         nil
-      elsif uri.start_with?('http://id.loc.gov/authorities/')
+      elsif self.is_id_loc(uri)
         Resolver::IdLocGovResolver.new.resolve_type(uri)
       else
         Logger.warn("Resolving type for #{uri} not supported.")
         nil
       end
     end
+
+    def self.is_id_loc(uri)
+      uri.start_with?(/https?:\/\/id.loc.gov\/authorities\//)
+    end
+    private_class_method :is_id_loc
   end
 end

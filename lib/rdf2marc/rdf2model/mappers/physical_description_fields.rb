@@ -38,7 +38,7 @@ module Rdf2marc
             {
               media_type_terms: [item.instance.query.path_first_literal([RDF::RDFS.label],
                                                                         subject_term: media_type_term)],
-              media_type_codes: [media_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/mediaTypes/')],
+              media_type_codes: [media_type_term.value.sub(/^https?:\/\/id.loc.gov\/vocabulary\/mediaTypes\//, '')],
               authority_control_number_uri: media_type_term.value
             }
           end
@@ -50,7 +50,7 @@ module Rdf2marc
             {
               carrier_type_terms: [item.instance.query.path_first_literal([RDF::RDFS.label],
                                                                           subject_term: carrier_type_term)],
-              carrier_type_codes: [carrier_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/carriers/')],
+              carrier_type_codes: [carrier_type_term.value.sub(/^https?:\/\/id.loc.gov\/vocabulary\/carriers\//, '')],
               authority_control_number_uri: carrier_type_term.value
             }
           end
@@ -62,7 +62,7 @@ module Rdf2marc
             {
               content_type_terms: [item.work.query.path_first_literal([RDF::RDFS.label],
                                                                       subject_term: content_type_term)],
-              content_type_codes: [content_type_term.value.delete_prefix('http://id.loc.gov/vocabulary/contentTypes/')],
+              content_type_codes: [content_type_term.value.sub(/^https?:\/\/id.loc.gov\/vocabulary\/contentTypes\//, '')],
               authority_control_number_uri: content_type_term.value
             }
           end

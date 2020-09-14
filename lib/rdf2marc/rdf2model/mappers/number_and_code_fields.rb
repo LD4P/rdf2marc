@@ -76,7 +76,7 @@ module Rdf2marc
 
           return if agency_uri.nil?
 
-          agency_uri.delete_prefix('http://id.loc.gov/vocabulary/organizations/')
+          agency_uri.sub(/^https?:\/\/id.loc.gov\/vocabulary\/organizations\//, '')
         end
 
         def cataloging_language
@@ -84,18 +84,18 @@ module Rdf2marc
 
           return if language_uri.nil?
 
-          language_uri.delete_prefix('http://id.loc.gov/vocabulary/languages/')
+          language_uri.sub(/^https?:\/\/id.loc.gov\/vocabulary\/languages\//, '')
         end
 
         def modifying_agencies
           item.admin_metadata.query.path_all_uri([BF.descriptionModifier]).map do |agency_uri|
-            agency_uri.delete_prefix('http://id.loc.gov/vocabulary/organizations/')
+            agency_uri.sub(/^https?:\/\/id.loc.gov\/vocabulary\/organizations\//, '')
           end
         end
 
         def description_conventions
           item.admin_metadata.query.path_all_uri([BF.descriptionConventions]).map do |agency_uri|
-            agency_uri.delete_prefix('http://id.loc.gov/vocabulary/descriptionConventions/')
+            agency_uri.sub(/^https?:\/\/id.loc.gov\/vocabulary\/descriptionConventions\//, '')
           end
         end
 

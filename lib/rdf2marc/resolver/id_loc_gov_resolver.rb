@@ -179,7 +179,10 @@ module Rdf2marc
       def http_get(url)
         body = Cache.get_cache(url)
         if body.nil?
-          resp = Faraday.get(url)
+          conn = Faraday.new do |faraday|
+            faraday.use FaradayMiddleware::FollowRedirects
+          end
+          resp = conn.get(url)
           raise Error, "Error getting #{url}." unless resp.success?
 
           body = resp.body

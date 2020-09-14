@@ -12,7 +12,7 @@ module Rdf2marc
 
     def initialize(graph, default_subject_term: nil)
       @graph = graph
-      @default_subject_termn = default_subject_term
+      @default_subject_term = default_subject_term
     end
 
     def path_first(path, subject_term: default_subject_term)

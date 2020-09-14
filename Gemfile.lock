@@ -66,6 +66,8 @@ GEM
       nokogiri (>= 1.4.3)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
+    faraday_middleware (1.0.0)
+      faraday (~> 1.0)
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
@@ -249,6 +251,7 @@ DEPENDENCIES
   dry-struct
   dry-types
   faraday
+  faraday_middleware
   linkeddata
   marc
   rubocop

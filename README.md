@@ -18,7 +18,7 @@ $ exe/rdf2model
 Usage: rdf2model <instance ttl file> <work ttl file?> <admin metadata ttl file?>
 Usage: rdf2model <instance uri>
 $ exe/rdf2model instance.ttl work.ttl admin_metadata.ttl
-$ exe/rdf2model https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95d0-492a-a300-050a40895b74
+$ exe/rdf2model https://api.stage.sinopia.io/resource/70ac2ed7-95d0-492a-a300-050a40895b74
 ```
 
 Mapping to MARC:
@@ -27,7 +27,7 @@ $ exe/rdf2marc
 Usage: rdf2marc <instance ttl file> <work ttl file?> <admin metadata ttl file?>
 Usage: rdf2marc <instance uri>
 $ exe/rdf2marc instance.ttl work.ttl admin_metadata.ttl
-$ exe/rdf2marc https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95d0-492a-a300-050a40895b74
+$ exe/rdf2marc https://api.stage.sinopia.io/resource/70ac2ed7-95d0-492a-a300-050a40895b74
 ```
 
 Note when using files:

@@ -1,6 +1,6 @@
 .byebug_history
 vendor/
-lambda.zip
-gem_layer.zip
+lambda*.zip
+*layer.zip
 .ruby-version
 cache/

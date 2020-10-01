@@ -4,13 +4,17 @@ source 'https://rubygems.org'
 
 gem 'activesupport'
 gem 'aws-sdk-s3'
-gem 'byebug'
 gem 'dry-struct'
 gem 'dry-types'
 gem 'faraday'
 gem 'faraday_middleware'
 gem 'linkeddata'
 gem 'marc'
-gem 'rubocop'
 gem 'sparql'
 gem 'zeitwerk'
+
+group :development, :test do
+  gem 'byebug'
+  gem 'rspec'
+  gem 'rubocop'
+end

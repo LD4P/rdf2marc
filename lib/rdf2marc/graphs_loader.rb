@@ -20,7 +20,8 @@ module Rdf2marc
       [graph, RDF::URI.new(uri), work_term, admin_metadata_term]
     end
 
-    def self.from_filepaths(instance_filepath, *other_filepaths)
+    def self.from_filepaths(other_filepaths)
+      instance_filepath = other_filepaths.shift
       graph = from_path(instance_filepath)
 
       graph_helper = Rdf2marc::GraphHelper.new(graph)

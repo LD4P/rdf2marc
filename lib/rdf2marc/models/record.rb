@@ -15,6 +15,7 @@ module Rdf2marc
       attribute :note_fields, NoteFields
       attribute :subject_access_fields, SubjectAccessFields
       attribute :added_entry_fields, AddedEntryFields
+      attribute :holdings_etc_fields, HoldingsEtcFields
     end
   end
 end

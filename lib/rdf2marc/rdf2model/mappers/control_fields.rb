@@ -40,7 +40,7 @@ module Rdf2marc
           source_uri = item.admin_metadata.query.path_first_uri([BF.source])
           return nil if source_uri.nil?
 
-          source_uri.sub(/^https?:\/\/id.loc.gov\/vocabulary\/organizations\//, '')
+          source_uri.sub(%r{^https?://id.loc.gov/vocabulary/organizations/}, '')
         end
 
         def latest_transaction
@@ -63,9 +63,9 @@ module Rdf2marc
 
         def language
           language_uri = item.work.query.path_first_uri([BF.language])
-          return nil if language_uri.nil? || !language_uri.start_with?(/https?:\/\/id.loc.gov\/vocabulary\/languages\//)
+          return nil if language_uri.nil? || !language_uri.start_with?(%r{https?://id.loc.gov/vocabulary/languages/})
 
-          language_uri.sub(/^https?:\/\/id.loc.gov\/vocabulary\/languages\//, '')
+          language_uri.sub(%r{^https?://id.loc.gov/vocabulary/languages/}, '')
         end
       end
     end

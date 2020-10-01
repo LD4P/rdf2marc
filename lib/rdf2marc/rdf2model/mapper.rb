@@ -16,7 +16,8 @@ module Rdf2marc
           note_fields: Mappers::NoteFields.new(item).generate,
           edition_imprint_fields: Mappers::EditionImprintFields.new(item).generate,
           subject_access_fields: Mappers::SubjectAccessFields.new(item).generate,
-          added_entry_fields: Mappers::AddedEntryFields.new(item).generate
+          added_entry_fields: Mappers::AddedEntryFields.new(item).generate,
+          holdings_etc_fields: Mappers::HoldingsEtcFields.new(item).generate
         }
       end
     end

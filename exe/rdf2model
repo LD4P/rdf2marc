@@ -10,13 +10,11 @@ if ARGV.empty?
   puts 'Usage: rdf2model <instance ttl file> <work ttl file?> <admin metadata ttl file?>'
   puts 'Usage: rdf2model <instance uri>'
   exit(false)
-elsif ARGV.length == 1 && ARGV[0].start_with?('http')
-  graph, instance_term, work_term, admin_metadata_term = Rdf2marc::GraphsLoader.from_instance_uri(ARGV[0])
-else
-  graph, instance_term, work_term, admin_metadata_term = Rdf2marc::GraphsLoader.from_filepaths(ARGV[0], ARGV[1..])
 end
 
-Rdf2marc::Cache.configure(Rdf2marc::Caches::FileSystemCache.new)
-
-record_model = Rdf2marc::Rdf2model.to_model(graph, instance_term, work_term, admin_metadata_term)
+record_model = if ARGV.length == 1 && ARGV[0].start_with?('http')
+                 Rdf2marc::Converter.convert(url: ARGV[0])
+               else
+                 Rdf2marc::Converter.convert(files: ARGV)
+               end
 puts JSON.pretty_generate(record_model.to_h)

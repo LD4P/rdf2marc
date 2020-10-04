@@ -17,32 +17,43 @@ module Rdf2marc
 
         def added_personal_names
           # Person or family
-          person_uris = item.work.query.path_all_uri([[BF.contribution, BF.Contribution],
-                                                      [BF.agent, BF.Person], [RDF::RDFV.value]]) +
-                        (item.work.query.path_first_uri([[BF.contribution, BF.Contribution],
-                                                         [BF.agent, BF.Family],
-                                                         [RDF::RDFV.value]]) || [])
-          person_uris.map do |person_uri|
-            Resolver.resolve_model(person_uri,
-                                   Models::General::PersonalName)
+          person_terms = item.work.query.path_all([[BF.contribution, BF.Contribution],
+                                                   [BF.agent, BF.Person], [RDF::RDFV.value]]) +
+                         (item.work.query.path_first([[BF.contribution, BF.Contribution],
+                                                      [BF.agent, BF.Family],
+                                                      [RDF::RDFV.value]]) || [])
+          person_terms.map do |person_term|
+            if person_term.is_a?(RDF::Literal)
+              { personal_name: person_term.value }
+            else
+              Resolver.resolve_model(person_term&.value, Models::General::PersonalName)
+            end
           end
         end
 
         def added_corporate_names
-          corporate_uris = item.work.query.path_all_uri([[BF.contribution, BF.Contribution],
-                                                         [BF.agent, BF.Organization], [RDF::RDFV.value]])
-          corporate_uris.map do |corporate_uri|
-            Resolver.resolve_model(corporate_uri,
-                                   Models::General::CorporateName)
+          corporate_terms = item.work.query.path_all([[BF.contribution, BF.Contribution],
+                                                      [BF.agent, BF.Organization], [RDF::RDFV.value]])
+          corporate_terms.map do |corporate_term|
+            if corporate_term.is_a?(RDF::Literal)
+              { corporate_name: corporate_term.value }
+            else
+              Resolver.resolve_model(corporate_term&.value,
+                                     Models::General::CorporateName)
+            end
           end
         end
 
         def added_meeting_names
-          meeting_uris = item.work.query.path_all_uri([[BF.contribution, BF.Contribution],
-                                                       [BF.agent, BF.Meeting], [RDF::RDFV.value]])
-          meeting_uris.map do |meeting_uri|
-            Resolver.resolve_model(meeting_uri,
-                                   Models::General::MeetingName)
+          meeting_terms = item.work.query.path_all([[BF.contribution, BF.Contribution],
+                                                    [BF.agent, BF.Meeting], [RDF::RDFV.value]])
+          meeting_terms.map do |meeting_term|
+            if meeting_term.is_a?(RDF::Literal)
+              { meeting_name: meeting_term.value }
+            else
+              Resolver.resolve_model(meeting_term&.value,
+                                     Models::General::MeetingName)
+            end
           end
         end
       end

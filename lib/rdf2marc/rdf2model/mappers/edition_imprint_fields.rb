@@ -45,15 +45,15 @@ module Rdf2marc
         end
 
         def publication_distributions_places(subject_term)
-          item.instance.query.path_all_uri([BF.place], subject_term: subject_term).map do |place_uri|
-            Resolver.resolve_label(place_uri)
+          item.instance.query.path_all([BF.place], subject_term: subject_term).map do |place_term|
+            place_term.is_a?(RDF::Literal) ? place_term.value : Resolver.resolve_label(place_term&.value)
           end
         end
 
         def publication_distributions_names(subject_term)
           item.instance.query.path_all_uri([[BF.agent, BF.Agent], BF.Agent],
-                                           subject_term: subject_term).map do |agent_uri|
-            Resolver.resolve_label(agent_uri)
+                                           subject_term: subject_term).map do |agent_term|
+            agent_term.is_a?(RDF::Literal) ? agent_term.value : Resolver.resolve_label(agent_term&.value)
           end
         end
       end

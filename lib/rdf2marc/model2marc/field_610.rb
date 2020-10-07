@@ -11,9 +11,9 @@ module Rdf2marc
       def build
         field.indicator1 = name_type
         append('a', model.corporate_name)
-        append('b', model.subordinate_unit)
-        append_repeatable('c', model.meeting_location)
-        append('d', model.meeting_date)
+        append_repeatable('b', model.subordinate_units)
+        append_repeatable('c', model.meeting_locations)
+        append_repeatable('d', model.meeting_dates)
         append_repeatable('e', model.relator_terms)
         append('f', model.work_date)
         append_repeatable('g', model.misc_infos)

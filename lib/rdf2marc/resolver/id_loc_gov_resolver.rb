@@ -51,9 +51,9 @@ module Rdf2marc
         {
           type: name_type_for(field.indicator1),
           corporate_name: subfield_value(field, 'a', clean: true),
-          subordinate_unit: field['b'],
-          meeting_location: subfield_values(field, 'c'),
-          meeting_date: field['d'],
+          subordinate_units: subfield_values(field, 'b'),
+          meeting_locations: subfield_values(field, 'c'),
+          meeting_dates: subfield_values(field, 'd'),
           relator_terms: subfield_values(field, 'e'),
           work_date: field['f'],
           misc_infos: subfield_values(field, 'g'),

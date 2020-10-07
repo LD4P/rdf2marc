@@ -7,9 +7,9 @@ module Rdf2marc
       class CorporateName < Struct
         attribute :type, Types::String.default('direct').enum('inverted', 'jurisdiction', 'direct')
         attribute? :corporate_name, Types::String
-        attribute? :subordinate_unit, Types::Array.of(Types::String)
-        attribute? :meeting_location, Types::Array.of(Types::String)
-        attribute? :meeting_date, Types::Array.of(Types::String)
+        attribute? :subordinate_units, Types::Array.of(Types::String)
+        attribute? :meeting_locations, Types::Array.of(Types::String)
+        attribute? :meeting_dates, Types::Array.of(Types::String)
         attribute? :relator_terms, Types::Array.of(Types::String)
         attribute? :work_date, Types::String
         attribute? :misc_infos, Types::Array.of(Types::String)

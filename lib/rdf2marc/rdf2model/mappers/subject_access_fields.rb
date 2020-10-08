@@ -14,8 +14,14 @@ module Rdf2marc
             geographic_names: [],
             genre_forms: genre_forms
           }
-          subject_uris = item.work.query.path_all_uri([BF.subject])
-          subject_uris.each do |subject_uri|
+          subject_terms = item.work.query.path_all([BF.subject])
+          subject_terms.each do |subject_term|
+            if subject_term.is_a?(RDF::Literal)
+              Logger.warn("Ignoring subject #{subject_term.value} since it is a literam.")
+              next
+            end
+
+            subject_uri = subject_term.value
             subject_type = Resolver.resolve_type(subject_uri)
             if subject_type == 'corporate_name'
               subj_fields[:corporate_names] << Resolver.resolve_model(subject_uri,

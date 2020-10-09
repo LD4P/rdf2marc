@@ -17,7 +17,7 @@ module Rdf2marc
           subject_terms = item.work.query.path_all([BF.subject])
           subject_terms.each do |subject_term|
             if subject_term.is_a?(RDF::Literal)
-              Logger.warn("Ignoring subject #{subject_term.value} since it is a literam.")
+              Logger.warn("Ignoring subject #{subject_term.value} since it is a literal.")
               next
             end
 

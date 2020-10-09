@@ -150,6 +150,12 @@ module Rdf2marc
       def resolve_gac(uri)
         expect_type(uri, ['geographic_name'])
         marc_record = get_marc(uri)
+
+        if marc_record['043'].nil?
+          Logger.warn("Could not get GAC for #{uri} since missing field 043.")
+          return nil
+        end
+
         marc_record['043']['a']
       end
 

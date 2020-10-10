@@ -1,9 +1,12 @@
+AllCops:
+  NewCops: enable
+
 Layout/LineLength:
   Max: 120
 
 Lint/UnusedMethodArgument:
   Exclude:
-    - 'lambda/lambda_function.rb'
+    - 'lambda-*/lambda_function.rb'
 
 Lint/InterpolationCheck:
   Exclude:
@@ -22,6 +25,9 @@ Metrics/ClassLength:
   Enabled: false
 
 Metrics/MethodLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
   Enabled: false
 
 Security/Eval:

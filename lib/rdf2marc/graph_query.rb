@@ -8,8 +8,6 @@ module Rdf2marc
   SKOS = RDF::Vocabulary.new('http://www.w3.org/2004/02/skos/core#')
   # Queries graph using graph patterns.
   class GraphQuery
-    QueryPart = Struct.new(:pred, :class)
-
     def initialize(graph, default_subject_term: nil)
       @graph = graph
       @default_subject_term = default_subject_term

@@ -52,7 +52,7 @@ module Rdf2marc
 
         def publication_distributions_names(subject_term)
           item.instance.query.path_all([[BF.agent, BF.Agent], BF.Agent],
-                                           subject_term: subject_term).map do |agent_term|
+                                       subject_term: subject_term).map do |agent_term|
             agent_term.is_a?(RDF::Literal) ? agent_term.value : Resolver.resolve_label(agent_term&.value)
           end
         end

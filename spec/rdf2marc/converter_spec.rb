@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Rdf2marc::Converter do
+RSpec.describe Rdf2marc::Converter, :vcr do
   context 'with files' do
     let(:files) { %w[instance.ttl work.ttl admin_metadata.ttl] }
     subject { described_class.convert(files: files) }

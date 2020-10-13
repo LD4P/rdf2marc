@@ -1,0 +1,581 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/no2005086644.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Mon, 12 Oct 2020 00:38:45 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Mon, 12 Oct 2020 01:38:45 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/no2005086644.madsrdf.nt
+      Cf-Request-Id:
+      - 05bbd7e7d90000f45c701d7200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e0cc2862f21f45c-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Mon, 12 Oct 2020 00:38:45 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/no2005086644.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 12 Oct 2020 00:38:45 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d01cf354308236c3b9a82cd5901067b521602463125; expires=Wed, 11-Nov-20
+        00:38:45 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/no2005086644
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 50810178 50668888
+      Age:
+      - '86134'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05bbd7e8120000742525106200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e0cc2868f4e7425-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Jung, Carl" .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesno2005086644 .
+        _:b7iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesno2005086644 .
+        _:b7iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.loc.gov/mads/rdf/v1#elementValue> "Jung, Carl" .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/1622894> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cno2005086644#skos:Concept> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/no2005086644> .
+        <http://id.loc.gov/rwo/agents/no2005086644> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/no2005086644> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+        <http://id.loc.gov/rwo/agents/no2005086644> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+        <http://id.loc.gov/rwo/agents/no2005086644> <http://www.w3.org/2000/01/rdf-schema#label> "Jung, Carl" .
+        <http://id.loc.gov/rwo/agents/no2005086644> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/13130744> .
+        <http://id.loc.gov/resources/works/13130744> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/13130744> <http://id.loc.gov/ontologies/bflc/aap> "Jung, Carl. Kaross und Kimono : \"Hottentotten\" und Japaner im Spiegel des Reiseberichts von Carl Peter Thunberg (1743-1828)" .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://id.loc.gov/vocabulary/identifiers/lccn> "no2005086644" .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://id.loc.gov/vocabulary/identifiers/local> "(OCoLC)oca06734775" .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b30iddOtlocdOtgovauthoritiesnamesno2005086644 .
+        _:b30iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b30iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.loc.gov/mads/rdf/v1#citation-source> "Kaross und Kimono, 2002:" .
+        _:b30iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.loc.gov/mads/rdf/v1#citation-note> "t.p. (Carl Jung)" .
+        _:b30iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b38iddOtlocdOtgovauthoritiesnamesno2005086644 .
+        _:b38iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b38iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2005-09-09T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b38iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b38iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/njp> .
+        _:b38iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b46iddOtlocdOtgovauthoritiesnamesno2005086644 .
+        _:b46iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b46iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2005-09-17T07:11:19"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b46iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b46iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/njp> .
+        _:b46iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Mon, 12 Oct 2020 00:38:45 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/no2005086644.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Mon, 12 Oct 2020 00:38:45 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Mon, 12 Oct 2020 01:38:45 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/no2005086644.marcxml.xml
+      Cf-Request-Id:
+      - 05bbd7e85400009fd69f263200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e0cc286ec179fd6-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Mon, 12 Oct 2020 00:38:45 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/no2005086644.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 12 Oct 2020 00:38:45 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd51c8e7a6a3cd4e644dc1ac75b9e42b31602463125; expires=Wed, 11-Nov-20
+        00:38:45 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/no2005086644
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 50587119 50290306
+      Age:
+      - '86134'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05bbd7e8950000f11efc350200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e0cc2875eebf11e-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+                    <marcxml:leader>00324nz  a2200133n  4500</marcxml:leader>
+                    <marcxml:controlfield tag="001">no2005086644</marcxml:controlfield>
+                    <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+                    <marcxml:controlfield tag="005">20050917071119.0</marcxml:controlfield>
+                    <marcxml:controlfield tag="008">050909n| acannaabn          |n aaa     c</marcxml:controlfield>
+                    <marcxml:datafield tag="010" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">no2005086644</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="035" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">(OCoLC)oca06734775</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="040" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">NjP</marcxml:subfield>
+                      <marcxml:subfield code="b">eng</marcxml:subfield>
+                      <marcxml:subfield code="c">NjP</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="100" ind1="1" ind2=" ">
+                      <marcxml:subfield code="a">Jung, Carl</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Kaross und Kimono, 2002:</marcxml:subfield>
+                      <marcxml:subfield code="b">t.p. (Carl Jung)</marcxml:subfield>
+                    </marcxml:datafield>
+                  </marcxml:record>
+  recorded_at: Mon, 12 Oct 2020 00:38:45 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/no2020066646.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Mon, 12 Oct 2020 00:38:45 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Mon, 12 Oct 2020 01:38:45 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/no2020066646.madsrdf.nt
+      Cf-Request-Id:
+      - 05bbd7e8d6000073d1acb33200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e0cc287bbcb73d1-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Mon, 12 Oct 2020 00:38:45 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/no2020066646.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 12 Oct 2020 00:38:57 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=decec610459a54d1df67c1e0b7aeca17c1602463125; expires=Wed, 11-Nov-20
+        00:38:45 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/no2020066646
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '48286858'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05bbd7e902000028530317e200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e0cc2880b372853-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FamilyName> .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Kennedy (Family : Covington, Ky.)" .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesno2020066646 .
+        _:b7iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesno2020066646 .
+        _:b7iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b010 .
+        _:b8iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.loc.gov/mads/rdf/v1#elementValue> "Kennedy (Family :" .
+        _:b010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b11iddOtlocdOtgovauthoritiesnamesno2020066646 .
+        _:b010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b11iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TermsOfAddressNameElement> .
+        _:b11iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.loc.gov/mads/rdf/v1#elementValue> "Covington, Ky.)" .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/no2020066961> .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/no2020066824> .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cno2020066646#skos:Concept> .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/no2020066646> .
+        <http://id.loc.gov/rwo/agents/no2020066646> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/no2020066646> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Family> .
+        <http://id.loc.gov/rwo/agents/no2020066646> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Group> .
+        <http://id.loc.gov/rwo/agents/no2020066646> <http://www.w3.org/2000/01/rdf-schema#label> "Kennedy (Family : Covington, Ky.)" .
+        <http://id.loc.gov/rwo/agents/no2020066646> <http://www.loc.gov/mads/rdf/v1#associatedLocale> _:b25iddOtlocdOtgovauthoritiesnamesno2020066646 .
+        _:b25iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Geographic> .
+        _:b25iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.w3.org/2000/01/rdf-schema#label> "(naf) Covington (Ky.)" .
+        <http://id.loc.gov/rwo/agents/no2020066646> <http://www.loc.gov/mads/rdf/v1#entityDescriptor> <http://id.loc.gov/authorities/subjects/sh85047009> .
+        <http://id.loc.gov/authorities/subjects/sh85047009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/authorities/subjects/sh85047009> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Families" .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#editorialNote> "[SUBJECT USAGE: This heading is not valid for use as a subject; use a family name heading from LCSH.]" .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://id.loc.gov/vocabulary/identifiers/lccn> "no2020066646" .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://id.loc.gov/vocabulary/identifiers/local> "(OCoLC)oca12967517" .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b40iddOtlocdOtgovauthoritiesnamesno2020066646 .
+        _:b40iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b40iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.loc.gov/mads/rdf/v1#citation-source> "Kennedy, Moore, and Southgate family papers, 1793-1933." .
+        _:b40iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b46iddOtlocdOtgovauthoritiesnamesno2020066646 .
+        _:b46iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b46iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.loc.gov/mads/rdf/v1#citation-source> "Finding aid for Kennedy, Moore, and Southgate family papers, via UNC University Libraries WWW site, May 28, 2020" .
+        _:b46iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.loc.gov/mads/rdf/v1#citation-source> <https://finding-aids.lib.unc.edu/04416/> .
+        _:b46iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.loc.gov/mads/rdf/v1#citation-note> "(Members of the Kennedy, Moore, and Southgate families were early settlers in the area around Lawrenceburg, Indiana. Thomas D. Kennedy, II (d. 1821), operated the first ferry between Cincinnati and Covington, Ky. It seems that Thomas, II, and his brother Edmund R. were involved together in either this same ferry boat company or in another company in the late 1820s. Thomas D. Kennedy, III (1795-1869), grandson of Thomas D., II, married Nancy Davis, and in 1817 they moved to a farm near Covington. Thomas D., III, was a surveyor and engineer; his son, Joseph D. Kennedy, married Sallie Ann Moore (1831-1921) in 1861. Joseph D. and Sallie Ann Kennedy's daughter, Lallie Moore, married into the Southgate family)" .
+        _:b46iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b55iddOtlocdOtgovauthoritiesnamesno2020066646 .
+        _:b55iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b55iddOtlocdOtgovauthoritiesnamesno2020066646 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2020-05-29T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b55iddOtlocdOtgovauthoritiesnamesno2020066646 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b55iddOtlocdOtgovauthoritiesnamesno2020066646 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/ncu> .
+        _:b55iddOtlocdOtgovauthoritiesnamesno2020066646 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/no2020066646> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b63iddOtlocdOtgovauthoritiesnamesno2020066646 .
+        _:b63iddOtlocdOtgovauthoritiesnamesno2020066646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b63iddOtlocdOtgovauthoritiesnamesno2020066646 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2020-05-30T07:00:08"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b63iddOtlocdOtgovauthoritiesnamesno2020066646 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b63iddOtlocdOtgovauthoritiesnamesno2020066646 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/ncu> .
+        _:b63iddOtlocdOtgovauthoritiesnamesno2020066646 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Mon, 12 Oct 2020 00:38:57 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/no2020066646.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Mon, 12 Oct 2020 00:38:57 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Mon, 12 Oct 2020 01:38:57 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/no2020066646.marcxml.xml
+      Cf-Request-Id:
+      - 05bbd817940000e0c2238d9200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e0cc2d288bbe0c2-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Mon, 12 Oct 2020 00:38:57 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/no2020066646.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 12 Oct 2020 00:38:57 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d0a432e6ab938162ff16c94173d53e1681602463137; expires=Wed, 11-Nov-20
+        00:38:57 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/no2020066646
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '49415019'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05bbd817d1000056c1cf316200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e0cc2d2e9be56c1-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:semtriples="http://marklogic.com/semantic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <marcxml:leader xmlns:streams="info:lc/streams#">01584nz  a2200205n  4500</marcxml:leader>
+                    <marcxml:controlfield tag="001">no2020066646</marcxml:controlfield>
+                    <marcxml:controlfield tag="003" xmlns:streams="info:lc/streams#">DLC</marcxml:controlfield>
+                    <marcxml:controlfield tag="005" xmlns:streams="info:lc/streams#">20200530070008.0</marcxml:controlfield>
+                    <marcxml:controlfield tag="008" xmlns:streams="info:lc/streams#">200529n| aznnnabbn          |a ana     c</marcxml:controlfield>
+                    <marcxml:datafield tag="010" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">no2020066646</marcxml:subfield>
+          </marcxml:datafield>
+                    <marcxml:datafield tag="035" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">(OCoLC)oca12967517</marcxml:subfield>
+          </marcxml:datafield>
+                    <marcxml:datafield tag="040" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">NcU</marcxml:subfield>
+            <marcxml:subfield code="b">eng</marcxml:subfield>
+            <marcxml:subfield code="e">rda</marcxml:subfield>
+            <marcxml:subfield code="c">NcU</marcxml:subfield>
+          </marcxml:datafield>
+                    <marcxml:datafield tag="100" ind1="3" ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">Kennedy (Family :</marcxml:subfield>
+            <marcxml:subfield code="c">Covington, Ky.)</marcxml:subfield>
+          </marcxml:datafield>
+                    <marcxml:datafield tag="370" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="e">Covington (Ky.)</marcxml:subfield>
+            <marcxml:subfield code="2">naf</marcxml:subfield>
+          </marcxml:datafield>
+                    <marcxml:datafield tag="376" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">Families</marcxml:subfield>
+            <marcxml:subfield code="2">lcsh</marcxml:subfield>
+          </marcxml:datafield>
+                    <marcxml:datafield tag="500" ind1="1" ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="w">r</marcxml:subfield>
+            <marcxml:subfield code="i">Family member:</marcxml:subfield>
+            <marcxml:subfield code="a">Kennedy, Thomas D.,</marcxml:subfield>
+            <marcxml:subfield code="d">1741-1821</marcxml:subfield>
+          </marcxml:datafield>
+                    <marcxml:datafield tag="500" ind1="1" ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="w">r</marcxml:subfield>
+            <marcxml:subfield code="i">Family member:</marcxml:subfield>
+            <marcxml:subfield code="a">Kennedy, Thomas D.</marcxml:subfield>
+            <marcxml:subfield code="q">(Thomas Davis),</marcxml:subfield>
+            <marcxml:subfield code="d">1795-1869</marcxml:subfield>
+          </marcxml:datafield>
+                    <marcxml:datafield tag="667" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">SUBJECT USAGE: This heading is not valid for use as a subject; use a family name heading from LCSH.</marcxml:subfield>
+          </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">Kennedy, Moore, and Southgate family papers, 1793-1933.</marcxml:subfield>
+          </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">Finding aid for Kennedy, Moore, and Southgate family papers, via UNC University Libraries WWW site, May 28, 2020</marcxml:subfield>
+            <marcxml:subfield code="b">(Members of the Kennedy, Moore, and Southgate families were early settlers in the area around Lawrenceburg, Indiana. Thomas D. Kennedy, II (d. 1821), operated the first ferry between Cincinnati and Covington, Ky. It seems that Thomas, II, and his brother Edmund R. were involved together in either this same ferry boat company or in another company in the late 1820s. Thomas D. Kennedy, III (1795-1869), grandson of Thomas D., II, married Nancy Davis, and in 1817 they moved to a farm near Covington. Thomas D., III, was a surveyor and engineer; his son, Joseph D. Kennedy, married Sallie Ann Moore (1831-1921) in 1861. Joseph D. and Sallie Ann Kennedy's daughter, Lallie Moore, married into the Southgate family)</marcxml:subfield>
+            <marcxml:subfield code="u">https://finding-aids.lib.unc.edu/04416/</marcxml:subfield>
+          </marcxml:datafield>
+                  </marcxml:record>
+  recorded_at: Mon, 12 Oct 2020 00:38:57 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,242 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.stage.sinopia.io/resource/70ac2ed7-95d0-492a-a300-050a40895b74
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/n-triples, text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+json, text/html;q=0.5,
+        application/xhtml+xml;q=0.7, image/svg+xml;q=0.4, text/n3, text/rdf+n3;q=0.2,
+        application/rdf+n3;q=0.2, application/normalized+n-quads, application/x-normalized+n-quads,
+        application/rdf+xml, text/csv;q=0.4, text/tab-separated-values;q=0.4, application/csvm+json,
+        text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/trig, application/x-trig;q=0.2, application/trix, */*;q=0.1
+      User-Agent:
+      - Ruby RDF.rb/3.1.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 12:34:18 GMT
+      Content-Type:
+      - application/ld+json; charset=utf-8
+      Content-Length:
+      - '9978'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Location,Content-Location
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      X-Dns-Prefetch-Control:
+      - 'off'
+      Expect-Ct:
+      - max-age=0
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - no-referrer
+      X-Xss-Protection:
+      - '0'
+      Vary:
+      - Accept
+      Etag:
+      - W/"26fa-7Lw+93bkQtBJmPI+2xCmYlrfve0"
+    body:
+      encoding: UTF-8
+      string: '[{"@id":"_:b0","@type":["http://id.loc.gov/ontologies/bibframe/Title"],"http://id.loc.gov/ontologies/bibframe/mainTitle":[{"@value":"Instance2,
+        main title","@language":"eng"}]},{"@id":"_:b1","@type":["http://id.loc.gov/ontologies/bibframe/Extent"],"http://id.loc.gov/ontologies/bibframe/note":[{"@id":"_:b2"},{"@id":"_:b3"}],"http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"extent1b","@language":"eng"},{"@value":"extent1a","@language":"eng"}]},{"@id":"_:b10","@type":["http://id.loc.gov/ontologies/bibframe/Isbn"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@value":"0914378260","@language":"eng"}]},{"@id":"_:b11","@type":["http://id.loc.gov/ontologies/bibframe/Publication"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b12"}],"http://id.loc.gov/ontologies/bibframe/date":[{"@value":"202X","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/place":[{"@id":"http://id.loc.gov/authorities/names/n79022909"}]},{"@id":"_:b12","@type":["http://id.loc.gov/ontologies/bibframe/Agent"],"http://id.loc.gov/ontologies/bibframe/Agent":[{"@id":"http://id.loc.gov/authorities/names/n81038616"}]},{"@id":"_:b13","@type":["http://id.loc.gov/ontologies/bibframe/Isbn"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@value":"0491001304","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/qualifier":[{"@value":"pbk.","@language":"eng"}]},{"@id":"_:b14","@type":["http://id.loc.gov/ontologies/bibframe/Lccn"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@value":"2001627091","@language":"eng"}]},{"@id":"_:b15","@type":["http://id.loc.gov/ontologies/bibframe/VariantTitle"],"http://id.loc.gov/ontologies/bibframe/mainTitle":[{"@value":"Former
+        variant1","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/variantType":[{"@value":"former","@language":"eng"}]},{"@id":"_:b16","@type":["http://id.loc.gov/ontologies/bibframe/VariantTitle"],"http://id.loc.gov/ontologies/bibframe/mainTitle":[{"@value":"Variant2,
+        title","@language":"eng"}]},{"@id":"_:b17","@type":["http://id.loc.gov/ontologies/bibframe/Note"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Instance
+        note1","@language":"eng"}]},{"@id":"_:b18","@type":["http://id.loc.gov/ontologies/bibframe/Title"],"http://id.loc.gov/ontologies/bibframe/mainTitle":[{"@value":"Instance1,
+        main title","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/partName":[{"@value":"Instance1,
+        part name1","@language":"eng"},{"@value":"Instance1, part name2","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/partNumber":[{"@value":"Instance1,
+        part number1","@language":"eng"},{"@value":"Instance1, part number2","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/subtitle":[{"@value":"Instance1,
+        subtitle","@language":"eng"}]},{"@id":"_:b19","@type":["http://id.loc.gov/ontologies/bibframe/Note"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Instance
+        note2","@language":"eng"}]},{"@id":"_:b2","@type":["http://id.loc.gov/ontologies/bibframe/Note"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"extent1
+        note1","@language":"eng"}]},{"@id":"_:b20","@type":["http://id.loc.gov/ontologies/bibframe/ParallelTitle"],"http://id.loc.gov/ontologies/bibframe/mainTitle":[{"@value":"Parallel2,
+        title","@language":"eng"}]},{"@id":"_:b21","@type":["http://id.loc.gov/ontologies/bibframe/Distribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b22"}],"http://id.loc.gov/ontologies/bibframe/date":[{"@value":"2020","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/place":[{"@id":"http://id.loc.gov/authorities/names/n79021759"}]},{"@id":"_:b22","@type":["http://id.loc.gov/ontologies/bibframe/Agent"],"http://id.loc.gov/ontologies/bibframe/Agent":[{"@id":"http://id.loc.gov/authorities/names/nr2005022094"}]},{"@id":"_:b23","@type":["http://id.loc.gov/ontologies/bibframe/Isbn"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@value":"0877790105","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/status":[{"@id":"http://id.loc.gov/vocabulary/mstatus/cancinv"}]},{"@id":"_:b3","@type":["http://id.loc.gov/ontologies/bibframe/Note"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"extend1
+        note2","@language":"eng"}]},{"@id":"_:b4","@type":["http://id.loc.gov/ontologies/bibframe/ParallelTitle"],"http://id.loc.gov/ontologies/bibframe/mainTitle":[{"@value":"Parallel1,
+        title","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/partName":[{"@value":"Parallel1,
+        part name1","@language":"eng"},{"@value":"Parallel1, part name2","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/partNumber":[{"@value":"Parallel1,
+        part number1","@language":"eng"},{"@value":"Parallel1, part number2","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/subtitle":[{"@value":"Parallel1,
+        subtitle","@language":"eng"}]},{"@id":"_:b5","@type":["http://id.loc.gov/ontologies/bibframe/Lccn"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@value":"2001627092","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/status":[{"@id":"http://id.loc.gov/vocabulary/mstatus/cancinv"}]},{"@id":"_:b6","@type":["http://id.loc.gov/ontologies/bibframe/VariantTitle"],"http://id.loc.gov/ontologies/bibframe/mainTitle":[{"@value":"Variant1,
+        title","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/variantType":[{"@value":"caption","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/partName":[{"@value":"Variant1,
+        part name1","@language":"eng"},{"@value":"Variant1, part name2","@language":"eng"}]},{"@id":"_:b7","@type":["http://id.loc.gov/ontologies/bibframe/VariantTitle"],"http://id.loc.gov/ontologies/bibframe/mainTitle":[{"@value":"Translated
+        variant1","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/variantType":[{"@value":"translated","@language":"eng"}]},{"@id":"_:b8","@type":["http://id.loc.gov/ontologies/bibframe/Lccn"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@value":"2001627090","@language":"eng"}]},{"@id":"_:b9","@type":["http://id.loc.gov/ontologies/bibframe/Extent"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"extent2","@language":"eng"}]},{"@id":"http://id.loc.gov/authorities/names/n79021759","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Utah"}]},{"@id":"http://id.loc.gov/authorities/names/n79022909","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Virginia"}]},{"@id":"http://id.loc.gov/authorities/names/n81038616","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Macmillan
+        & Co."}]},{"@id":"http://id.loc.gov/authorities/names/nr2005022094","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Springer
+        (Firm)"}]},{"@id":"http://id.loc.gov/vocabulary/carriers/nc","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"volume"}]},{"@id":"http://id.loc.gov/vocabulary/carriers/nn","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"flipchart"}]},{"@id":"http://id.loc.gov/vocabulary/issuance/intg","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"integrating
+        resource"}]},{"@id":"http://id.loc.gov/vocabulary/mediaTypes/n","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"unmediated"}]},{"@id":"http://id.loc.gov/vocabulary/mediaTypes/p","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"microscopic"}]},{"@id":"http://id.loc.gov/vocabulary/mstatus/cancinv","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"http://id.loc.gov/vocabulary/mstatus/cancinv"}]},{"@id":"https://api.stage.sinopia.io/resource/2b27de29-fdd7-45f2-96d5-db89fa2306aa","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"https://api.stage.sinopia.io/resource/2b27de29-fdd7-45f2-96d5-db89fa2306aa"}]},{"@id":"https://api.stage.sinopia.io/resource/70ac2ed7-95d0-492a-a300-050a40895b74","@type":["http://id.loc.gov/ontologies/bibframe/Instance"],"http://id.loc.gov/ontologies/bibframe/note":[{"@id":"_:b17"},{"@id":"_:b19"}],"http://id.loc.gov/ontologies/bibframe/adminMetadata":[{"@id":"https://api.stage.sinopia.io/resource/2b27de29-fdd7-45f2-96d5-db89fa2306aa"}],"http://id.loc.gov/ontologies/bibframe/carrier":[{"@id":"http://id.loc.gov/vocabulary/carriers/nc"},{"@id":"http://id.loc.gov/vocabulary/carriers/nn"}],"http://id.loc.gov/ontologies/bibframe/dimensions":[{"@value":"dimension1","@language":"eng"},{"@value":"dimension2","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/editionStatement":[{"@value":"Third
+        and a half edition","@language":"eng"},{"@value":"Third edition","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/extent":[{"@id":"_:b1"},{"@id":"_:b9"}],"http://id.loc.gov/ontologies/bibframe/identifiedBy":[{"@id":"_:b10"},{"@id":"_:b13"},{"@id":"_:b14"},{"@id":"_:b23"},{"@id":"_:b5"},{"@id":"_:b8"}],"http://id.loc.gov/ontologies/bibframe/instanceOf":[{"@id":"https://api.stage.sinopia.io/resource/ce0376a8-e01b-4829-95c2-c7aa4fa9568c"}],"http://id.loc.gov/ontologies/bibframe/issuance":[{"@id":"http://id.loc.gov/vocabulary/issuance/intg"}],"http://id.loc.gov/ontologies/bibframe/media":[{"@id":"http://id.loc.gov/vocabulary/mediaTypes/n"},{"@id":"http://id.loc.gov/vocabulary/mediaTypes/p"}],"http://id.loc.gov/ontologies/bibframe/provisionActivity":[{"@id":"_:b11"},{"@id":"_:b21"}],"http://id.loc.gov/ontologies/bibframe/responsibilityStatement":[{"@value":"Statement
+        of responsibility1","@language":"eng"},{"@value":"Statement of responsibility2","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/seriesStatement":[{"@value":"Series
+        statement2","@language":"eng"},{"@value":"Series statement1","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/title":[{"@id":"_:b0"},{"@id":"_:b15"},{"@id":"_:b16"},{"@id":"_:b18"},{"@id":"_:b20"},{"@id":"_:b4"},{"@id":"_:b6"},{"@id":"_:b7"}],"http://sinopia.io/vocabulary/hasResourceTemplate":[{"@value":"ld4p:RT:bf2:Monograph:Instance:Un-nested"}]},{"@id":"https://api.stage.sinopia.io/resource/ce0376a8-e01b-4829-95c2-c7aa4fa9568c","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"https://api.stage.sinopia.io/resource/ce0376a8-e01b-4829-95c2-c7aa4fa9568c"}]}]'
+  recorded_at: Tue, 13 Oct 2020 12:34:18 GMT
+- request:
+    method: get
+    uri: https://api.stage.sinopia.io/resource/ce0376a8-e01b-4829-95c2-c7aa4fa9568c
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/n-triples, text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+json, text/html;q=0.5,
+        application/xhtml+xml;q=0.7, image/svg+xml;q=0.4, text/n3, text/rdf+n3;q=0.2,
+        application/rdf+n3;q=0.2, application/normalized+n-quads, application/x-normalized+n-quads,
+        application/rdf+xml, text/csv;q=0.4, text/tab-separated-values;q=0.4, application/csvm+json,
+        text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/trig, application/x-trig;q=0.2, application/trix, */*;q=0.1
+      User-Agent:
+      - Ruby RDF.rb/3.1.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 12:34:19 GMT
+      Content-Type:
+      - application/ld+json; charset=utf-8
+      Content-Length:
+      - '6843'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Location,Content-Location
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      X-Dns-Prefetch-Control:
+      - 'off'
+      Expect-Ct:
+      - max-age=0
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - no-referrer
+      X-Xss-Protection:
+      - '0'
+      Vary:
+      - Accept
+      Etag:
+      - W/"1abb-BvjFyx23t0eb3GJBYjvaHxn16Qs"
+    body:
+      encoding: UTF-8
+      string: '[{"@id":"_:b0","@type":["http://id.loc.gov/ontologies/bibframe/ClassificationLcc"],"http://id.loc.gov/ontologies/bibframe/classificationPortion":[{"@value":"lcc1,
+        number2","@language":"eng"},{"@value":"lcc1, number1","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/itemPortion":[{"@value":"lcc1,
+        item2","@language":"eng"},{"@value":"lcc1, item1","@language":"eng"}]},{"@id":"_:b1","@type":["http://id.loc.gov/ontologies/bibframe/Note"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Work
+        note1","@language":"eng"}]},{"@id":"_:b10","@type":["http://id.loc.gov/ontologies/bflc/PrimaryContribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b11"}]},{"@id":"_:b11","@type":["http://id.loc.gov/ontologies/bibframe/Meeting"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/n85347766"}]},{"@id":"_:b12","@type":["http://id.loc.gov/ontologies/bibframe/Contribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b13"}]},{"@id":"_:b13","@type":["http://id.loc.gov/ontologies/bibframe/Meeting"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/n2018183557"}]},{"@id":"_:b14","@type":["http://id.loc.gov/ontologies/bflc/PrimaryContribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b15"}]},{"@id":"_:b15","@type":["http://id.loc.gov/ontologies/bibframe/Organization"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/n83157379"}]},{"@id":"_:b16","@type":["http://id.loc.gov/ontologies/bibframe/ClassificationLcc"],"http://id.loc.gov/ontologies/bibframe/classificationPortion":[{"@value":"lcc2,
+        number1","@language":"eng"}]},{"@id":"_:b17","@type":["http://id.loc.gov/ontologies/bibframe/Note"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Work
+        note2","@language":"eng"}]},{"@id":"_:b2","@type":["http://id.loc.gov/ontologies/bibframe/Contribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b3"}]},{"@id":"_:b3","@type":["http://id.loc.gov/ontologies/bibframe/Organization"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/n84191112"}]},{"@id":"_:b4","@type":["http://id.loc.gov/ontologies/bibframe/Contribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b5"}]},{"@id":"_:b5","@type":["http://id.loc.gov/ontologies/bibframe/Person"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/n79055656"}]},{"@id":"_:b6","@type":["http://id.loc.gov/ontologies/bibframe/Family"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/no2020066646"}]},{"@id":"_:b7","@type":["http://id.loc.gov/ontologies/bflc/PrimaryContribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b6"}]},{"@id":"_:b8","@type":["http://id.loc.gov/ontologies/bflc/PrimaryContribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b9"}]},{"@id":"_:b9","@type":["http://id.loc.gov/ontologies/bibframe/Person"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/n79032058"}]},{"@id":"http://id.loc.gov/authorities/genreForms/gf2014026281","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Detective
+        and mystery plays"}]},{"@id":"http://id.loc.gov/authorities/names/n2018183557","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"http://id.loc.gov/authorities/names/n2018183557"}]},{"@id":"http://id.loc.gov/authorities/names/n79032058","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Wittgenstein,
+        Ludwig, 1889-1951"}]},{"@id":"http://id.loc.gov/authorities/names/n79055656","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Searle,
+        John R."}]},{"@id":"http://id.loc.gov/authorities/names/n80027795","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"IBM
+        Europe"}]},{"@id":"http://id.loc.gov/authorities/names/n80046086","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"http://id.loc.gov/authorities/names/n80046086"}]},{"@id":"http://id.loc.gov/authorities/names/n81097141","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Shetland
+        (Scotland)"}]},{"@id":"http://id.loc.gov/authorities/names/n83157379","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"New
+        York City Public Schools"}]},{"@id":"http://id.loc.gov/authorities/names/n84191112","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Amherst
+        Associates"}]},{"@id":"http://id.loc.gov/authorities/names/n85347766","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"http://id.loc.gov/authorities/names/n85347766"}]},{"@id":"http://id.loc.gov/authorities/names/no2007089310","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"http://id.loc.gov/authorities/names/no2007089310"}]},{"@id":"http://id.loc.gov/authorities/names/no2020066646","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"http://id.loc.gov/authorities/names/no2020066646"}]},{"@id":"http://id.loc.gov/authorities/subjects/sh85115949","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Russell
+        family"}]},{"@id":"http://id.loc.gov/vocabulary/contentTypes/snd","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"sounds"}]},{"@id":"http://id.loc.gov/vocabulary/contentTypes/txt","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"text"}]},{"@id":"http://id.loc.gov/vocabulary/languages/hsb","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Upper
+        Sorbian"}]},{"@id":"https://api.stage.sinopia.io/resource/ce0376a8-e01b-4829-95c2-c7aa4fa9568c","@type":["http://id.loc.gov/ontologies/bibframe/Work"],"http://id.loc.gov/ontologies/bibframe/classification":[{"@id":"_:b0"},{"@id":"_:b16"}],"http://id.loc.gov/ontologies/bibframe/content":[{"@id":"http://id.loc.gov/vocabulary/contentTypes/snd"},{"@id":"http://id.loc.gov/vocabulary/contentTypes/txt"}],"http://id.loc.gov/ontologies/bibframe/contribution":[{"@id":"_:b10"},{"@id":"_:b12"},{"@id":"_:b14"},{"@id":"_:b2"},{"@id":"_:b4"},{"@id":"_:b7"},{"@id":"_:b8"}],"http://id.loc.gov/ontologies/bibframe/genreForm":[{"@id":"http://id.loc.gov/authorities/genreForms/gf2014026281"}],"http://id.loc.gov/ontologies/bibframe/geographicCoverage":[{"@id":"http://id.loc.gov/authorities/names/n80046086"},{"@id":"http://id.loc.gov/authorities/names/n81097141"}],"http://id.loc.gov/ontologies/bibframe/language":[{"@id":"http://id.loc.gov/vocabulary/languages/hsb"}],"http://id.loc.gov/ontologies/bibframe/note":[{"@id":"_:b1"},{"@id":"_:b17"}],"http://id.loc.gov/ontologies/bibframe/subject":[{"@id":"http://id.loc.gov/authorities/names/n80027795"},{"@id":"http://id.loc.gov/authorities/names/no2007089310"},{"@id":"http://id.loc.gov/authorities/subjects/sh85115949"}],"http://sinopia.io/vocabulary/hasResourceTemplate":[{"@value":"ld4p:RT:bf2:Monograph:Work:Un-nested"}]}]'
+  recorded_at: Tue, 13 Oct 2020 12:34:19 GMT
+- request:
+    method: get
+    uri: https://api.stage.sinopia.io/resource/2b27de29-fdd7-45f2-96d5-db89fa2306aa
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/n-triples, text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+json, text/html;q=0.5,
+        application/xhtml+xml;q=0.7, image/svg+xml;q=0.4, text/n3, text/rdf+n3;q=0.2,
+        application/rdf+n3;q=0.2, application/normalized+n-quads, application/x-normalized+n-quads,
+        application/rdf+xml, text/csv;q=0.4, text/tab-separated-values;q=0.4, application/csvm+json,
+        text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/trig, application/x-trig;q=0.2, application/trix, */*;q=0.1
+      User-Agent:
+      - Ruby RDF.rb/3.1.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 12:34:19 GMT
+      Content-Type:
+      - application/ld+json; charset=utf-8
+      Content-Length:
+      - '2520'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Location,Content-Location
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';block-all-mixed-content;font-src ''self''
+        https: data:;frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      X-Dns-Prefetch-Control:
+      - 'off'
+      Expect-Ct:
+      - max-age=0
+      X-Frame-Options:
+      - SAMEORIGIN
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      X-Download-Options:
+      - noopen
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - no-referrer
+      X-Xss-Protection:
+      - '0'
+      Vary:
+      - Accept
+      Etag:
+      - W/"9d8-1MKl+xvRhFFRzbY2TECQ/94QWC8"
+    body:
+      encoding: UTF-8
+      string: '[{"@id":"_:b0","@type":["http://id.loc.gov/ontologies/bibframe/Status"],"http://id.loc.gov/ontologies/bibframe/code":[{"@value":"n","@language":"eng"}]},{"@id":"_:b1","@type":["http://id.loc.gov/ontologies/bibframe/Local"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@value":"1457626","@language":"eng"}]},{"@id":"http://id.loc.gov/vocabulary/descriptionConventions/dcrmg","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"DCRM(G):
+        Descriptive cataloging of rare materials (Graphics)"}]},{"@id":"http://id.loc.gov/vocabulary/descriptionConventions/isbd","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"ISBD:
+        International Standard Bibliographic Description"}]},{"@id":"http://id.loc.gov/vocabulary/languages/eng","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"English"}]},{"@id":"http://id.loc.gov/vocabulary/menclvl/5","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"preliminary"}]},{"@id":"http://id.loc.gov/vocabulary/organizations/cst","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"http://id.loc.gov/vocabulary/organizations/cst"}]},{"@id":"https://api.stage.sinopia.io/resource/2b27de29-fdd7-45f2-96d5-db89fa2306aa","@type":["http://id.loc.gov/ontologies/bibframe/AdminMetadata"],"http://id.loc.gov/ontologies/bflc/catalogerId":[{"@value":"jlittman","@language":"eng"}],"http://id.loc.gov/ontologies/bflc/encodingLevel":[{"@id":"http://id.loc.gov/vocabulary/menclvl/5"}],"http://id.loc.gov/ontologies/bibframe/changeDate":[{"@value":"2008-12-23T09:50:49","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/creationDate":[{"@value":"2020-05-13","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/descriptionConventions":[{"@id":"http://id.loc.gov/vocabulary/descriptionConventions/dcrmg"},{"@id":"http://id.loc.gov/vocabulary/descriptionConventions/isbd"}],"http://id.loc.gov/ontologies/bibframe/descriptionLanguage":[{"@id":"http://id.loc.gov/vocabulary/languages/eng"}],"http://id.loc.gov/ontologies/bibframe/descriptionModifier":[{"@id":"http://id.loc.gov/vocabulary/organizations/njrnl"},{"@id":"http://id.loc.gov/vocabulary/organizations/ma"}],"http://id.loc.gov/ontologies/bibframe/identifiedBy":[{"@id":"_:b1"}],"http://id.loc.gov/ontologies/bibframe/source":[{"@id":"http://id.loc.gov/vocabulary/organizations/cst"},{"@id":"http://id.loc.gov/vocabulary/organizations/vif"}],"http://id.loc.gov/ontologies/bibframe/status":[{"@id":"_:b0"}],"http://sinopia.io/vocabulary/hasResourceTemplate":[{"@value":"ld4p:RT:bf2:AdminMetadata:BFDB"}]}]'
+  recorded_at: Tue, 13 Oct 2020 12:34:19 GMT
+recorded_with: VCR 6.0.0

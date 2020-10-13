@@ -20,7 +20,7 @@ module Rdf2marc
         def type
           # Mapping from instance resource template id
           resource_template_id = item.instance.query.path_first_literal([SINOPIA.hasResourceTemplate])
-          case resource_template_id.downcase
+          case resource_template_id&.downcase
           when /cartographic/
             'cartographic'
           when /35mmfeaturefilm/
@@ -38,10 +38,10 @@ module Rdf2marc
 
         def bibliographic_level
           # Record may contain multiple. Only using one and which is selected is indeterminate.
-          case item.admin_metadata.query.path_first([BF.issuance])
+          case item.instance.query.path_first([BF.issuance])
           when LC_VOCAB['issuance/intg']
             'integrating_resource'
-          when LC_VOCAB['issuance/seri']
+          when LC_VOCAB['issuance/serl']
             'serial'
           else
             'item'

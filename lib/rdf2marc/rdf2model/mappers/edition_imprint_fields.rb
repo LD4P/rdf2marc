@@ -17,7 +17,7 @@ module Rdf2marc
         def editions
           edition_statements = item.instance.query.path_all_literal([BF.editionStatement])
 
-          edition_statements.map { |edition_statement| { edition: edition_statement } }
+          edition_statements.sort.map { |edition_statement| { edition: edition_statement } }
         end
 
         def publication_distributions

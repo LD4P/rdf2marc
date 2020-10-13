@@ -66,7 +66,7 @@ module Rdf2marc
       solutions = RDF::Query.new(patterns).execute(graph)
       return nil if solutions.empty?
 
-      solutions.first[var]
+      solutions.map { |solution| solution[var] }.min
     end
 
     def query_all(patterns, var)

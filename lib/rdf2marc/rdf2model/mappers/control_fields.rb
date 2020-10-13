@@ -13,7 +13,7 @@ module Rdf2marc
             general_info: {
               place: place,
               date_entered: date_entered,
-              date1: item.admin_metadata.query.path_first_literal([[BF.provisionActivity, BF.Publication], [BF.date]]),
+              date1: item.instance.query.path_first_literal([[BF.provisionActivity, BF.Publication], [BF.date]]),
               language: language
             }
           }

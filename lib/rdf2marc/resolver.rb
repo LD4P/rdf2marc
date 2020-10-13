@@ -26,6 +26,8 @@ module Rdf2marc
         Resolver::IdLocGovResolver.new.resolve_geographic_name(uri)
       when Rdf2marc::Models::SubjectAccessField::GenreForm.name
         Resolver::IdLocGovResolver.new.resolve_genre_form(uri)
+      when Rdf2marc::Models::SubjectAccessField::TopicalTerm.name
+        Resolver::IdLocGovResolver.new.resolve_topical_term(uri)
       else
         Logger.warn("Resolving #{uri} to #{model_class} not supported.")
         nil

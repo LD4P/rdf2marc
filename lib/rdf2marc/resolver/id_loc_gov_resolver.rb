@@ -159,6 +159,24 @@ module Rdf2marc
         marc_record['043']['a']
       end
 
+      def resolve_topical_term(uri)
+        expect_type(uri, ['topic'])
+        marc_record = get_marc(uri)
+        field = marc_record['150']
+        {
+          topical_term_or_geo_name: subfield_value(field, 'a'),
+          topical_term_following_geo_name: subfield_value(field, 'b'),
+          misc_infos: subfield_values(field, 'g'),
+          form_subdivisions: subfield_values(field, 'v'),
+          general_subdivisions: subfield_values(field, 'x'),
+          chronological_subdivisions: subfield_values(field, 'y'),
+          geographic_subdivisions: subfield_values(field, 'z'),
+          authority_record_control_numbers: [uri],
+          linkage: field['6'],
+          field_link: subfield_values(field, '8')
+        }
+      end
+
       def resolve_label(uri)
         graph = graph_get("#{uri}.skos.nt")
         query = GraphQuery.new(graph)
@@ -249,7 +267,8 @@ module Rdf2marc
           'http://www.loc.gov/mads/rdf/v1#CorporateName' => 'corporate_name',
           'http://www.loc.gov/mads/rdf/v1#ConferenceName' => 'meeting_name',
           'http://www.loc.gov/mads/rdf/v1#Geographic' => 'geographic_name',
-          'http://www.loc.gov/mads/rdf/v1#GenreForm' => 'genre_form'
+          'http://www.loc.gov/mads/rdf/v1#GenreForm' => 'genre_form',
+          'http://www.loc.gov/mads/rdf/v1#Topic' => 'topic'
         }
         types[mads_uri]
       end

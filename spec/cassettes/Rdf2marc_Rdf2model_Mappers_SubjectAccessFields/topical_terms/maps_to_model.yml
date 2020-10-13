@@ -1,0 +1,1604 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/subjects/sh85061211.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:42:02 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:42:02 GMT
+      Location:
+      - https://id.loc.gov/authorities/subjects/sh85061211.madsrdf.nt
+      Cf-Request-Id:
+      - 05c54be9120000931669213200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1be28819309316-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:42:02 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/subjects/sh85061211.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:42:11 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dc023d2d65ce4428b9bc4a54ce1d045f01602621723; expires=Thu, 12-Nov-20
+        20:42:03 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/subjects/sh85061211
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '52636695'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c54bea000000ed97e7b69200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1be2899ec5ed97-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Historiography"@en .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b7iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b7iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b8iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "Historiography"@en .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b11iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Historical criticism"@en .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b16iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b16iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b16iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b17iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b17iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "Historical criticism"@en .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b20iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ComplexSubject> .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History--Authorship"@en .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#componentList> _:b25iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b25iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b26iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b25iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b033 .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History"@en .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b30iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b30iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b31iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b30iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b31iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b31iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "History"@en .
+        _:b033 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b34iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b033 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Authorship"@en .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b38iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b39iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b39iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b39iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "Authorship"@en .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b42iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b42iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ComplexSubject> .
+        _:b42iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b42iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History--Criticism"@en .
+        _:b42iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#componentList> _:b47iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b47iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b48iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b47iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b055 .
+        _:b48iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b48iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b48iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History"@en .
+        _:b48iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b52iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b52iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b53iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b52iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b53iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b53iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "History"@en .
+        _:b055 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b56iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b055 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b56iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b56iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b56iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Criticism"@en .
+        _:b56iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b60iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b60iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b61iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b60iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b61iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b61iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "Criticism"@en .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b64iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b64iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ComplexSubject> .
+        _:b64iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b64iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History--Historiography"@en .
+        _:b64iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#componentList> _:b69iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b69iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b70iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b69iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b077 .
+        _:b70iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b70iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b70iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History"@en .
+        _:b70iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b74iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b74iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b75iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b74iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b75iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b75iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "History"@en .
+        _:b077 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b78iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b077 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b78iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b78iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b78iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Historiography"@en .
+        _:b78iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b82iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b82iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b83iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b82iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b83iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b83iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "Historiography"@en .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#classification> "D13-D15" .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85081689> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85061218> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/958231> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85077932> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/958221> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85045620> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85061228> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/958230> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85108430> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85088153> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/subjects/sh00006049> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh2005006093> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh90006104> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://www.wikidata.org/entity/Q30277550> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/958226> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/958232> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/958228> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85085207> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85090384> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh2008004179> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/958225> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://data.bnf.fr/ark:/12148/cb11934225b> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85143222> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85101316> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://d-nb.info/gnd/4020531-9> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://www.yso.fi/onto/yso/p16911> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85038194> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/1353219> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSHAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSH_General> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_SubdivideGeographically> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10277175> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1149627> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10116618> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11199947> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1009671> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10388508> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10139559> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10160750> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1054555> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1172997> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1005090> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11445928> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1009804> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10272842> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1058855> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10379256> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10178027> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10219820> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1063187> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1122749> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1027034> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1155676> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10145857> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10211095> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10254714> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10404058> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10191805> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10371653> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11259816> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10075580> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1092399> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10409582> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10375649> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10359768> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10180773> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10231652> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10098076> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10070258> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10110896> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10138044> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10351068> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10184787> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10980690> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10441234> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10224061> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11177929> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10389093> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11507618> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11413835> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10446126> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10254722> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10310144> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10266952> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10349975> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10405085> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11180708> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10278069> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10230980> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1063904> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10289736> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10112210> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10245945> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10435849> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10344585> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1030799> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10457484> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10393012> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10154255> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1133621> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10352515> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11767397> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10315105> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10452161> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1093693> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10222665> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10248222> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1137123> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10698751> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10136536> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1157594> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11771526> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11780110> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10234329> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10142645> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10110218> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10457454> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11220178> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10400126> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1053134> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1143113> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11454191> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10312410> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10262703> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10072956> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10073335> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10158282> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10024723> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10186614> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11804267> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1079853> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/subjects> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#note> "Here are entered works on historiography as a branch of learning. This heading may be divided geographically for works on this branch of learning in a specific place. Works on the historiography of particular regions, countries, cities, etc. are entered under the name of the place subdivided by [Historiography.]" .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#editorialNote> "subdivision [Historiography] under names of countries, cities, etc., and individual corporate bodies, uniform titles of sacred works and treaties, and under classes of persons, ethnic groups, individual wars, and topical subjects, e.g. [Art--Historiography; Bible--Historiography; Catholic Church--Historiography; United States--Historiography; United States--History--Civil War, 1861-1865--Historiography]" .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/vocabulary/identifiers/lccn> "sh 85061211" .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.w3.org/2002/07/owl#sameAs> <info:lc/authorities/sh85061211> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.w3.org/2002/07/owl#sameAs> <http://id.loc.gov/authorities/sh85061211#concept> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b228iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b228iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b228iddOtlocdOtgovauthoritiessubjectssh85061211 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1986-02-11T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b228iddOtlocdOtgovauthoritiessubjectssh85061211 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b228iddOtlocdOtgovauthoritiessubjectssh85061211 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b235iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b235iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b235iddOtlocdOtgovauthoritiessubjectssh85061211 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2004-08-25T14:10:57"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b235iddOtlocdOtgovauthoritiessubjectssh85061211 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b235iddOtlocdOtgovauthoritiessubjectssh85061211 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+  recorded_at: Tue, 13 Oct 2020 20:42:11 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/subjects/sh85061211.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:42:12 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:42:12 GMT
+      Location:
+      - https://id.loc.gov/authorities/subjects/sh85061211.madsrdf.nt
+      Cf-Request-Id:
+      - 05c54c0cc50000ed8bbf08c200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1be2c1389eed8b-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:42:12 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/subjects/sh85061211.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:42:12 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dbcf013ba12a9bfc7ed47923e060d768c1602621732; expires=Thu, 12-Nov-20
+        20:42:12 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/subjects/sh85061211
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 53248509 52636696
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c54c0db80000ed37de185200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1be2c2cab9ed37-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Historiography"@en .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b7iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b7iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b8iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "Historiography"@en .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b11iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Historical criticism"@en .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b16iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b16iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b16iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b17iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b17iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "Historical criticism"@en .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b20iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ComplexSubject> .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History--Authorship"@en .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#componentList> _:b25iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b25iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b26iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b25iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b033 .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History"@en .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b30iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b30iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b31iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b30iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b31iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b31iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "History"@en .
+        _:b033 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b34iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b033 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Authorship"@en .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b38iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b39iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b39iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b39iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "Authorship"@en .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b42iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b42iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ComplexSubject> .
+        _:b42iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b42iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History--Criticism"@en .
+        _:b42iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#componentList> _:b47iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b47iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b48iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b47iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b055 .
+        _:b48iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b48iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b48iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History"@en .
+        _:b48iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b52iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b52iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b53iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b52iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b53iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b53iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "History"@en .
+        _:b055 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b56iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b055 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b56iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b56iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b56iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Criticism"@en .
+        _:b56iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b60iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b60iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b61iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b60iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b61iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b61iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "Criticism"@en .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b64iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b64iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ComplexSubject> .
+        _:b64iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b64iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History--Historiography"@en .
+        _:b64iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#componentList> _:b69iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b69iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b70iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b69iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b077 .
+        _:b70iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b70iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b70iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History"@en .
+        _:b70iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b74iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b74iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b75iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b74iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b75iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b75iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "History"@en .
+        _:b077 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b78iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b077 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b78iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b78iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b78iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Historiography"@en .
+        _:b78iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementList> _:b82iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b82iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b83iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b82iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b83iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b83iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.loc.gov/mads/rdf/v1#elementValue> "Historiography"@en .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#classification> "D13-D15" .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85081689> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85061218> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/958231> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85077932> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/958221> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85045620> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85061228> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/958230> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85108430> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85088153> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/subjects/sh00006049> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh2005006093> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh90006104> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://www.wikidata.org/entity/Q30277550> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/958226> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/958232> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/958228> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85085207> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85090384> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh2008004179> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/958225> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://data.bnf.fr/ark:/12148/cb11934225b> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85143222> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85101316> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://d-nb.info/gnd/4020531-9> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://www.yso.fi/onto/yso/p16911> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85038194> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#hasNarrowerExternalAuthority> <http://id.worldcat.org/fast/1353219> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSHAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSH_General> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_SubdivideGeographically> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10277175> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1149627> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10116618> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11199947> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1009671> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10388508> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10139559> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10160750> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1054555> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1172997> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1005090> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11445928> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1009804> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10272842> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1058855> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10379256> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10178027> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10219820> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1063187> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1122749> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1027034> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1155676> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10145857> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10211095> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10254714> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10404058> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10191805> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10371653> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11259816> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10075580> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1092399> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10409582> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10375649> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10359768> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10180773> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10231652> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10098076> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10070258> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10110896> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10138044> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10351068> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10184787> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10980690> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10441234> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10224061> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11177929> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10389093> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11507618> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11413835> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10446126> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10254722> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10310144> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10266952> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10349975> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10405085> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11180708> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10278069> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10230980> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1063904> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10289736> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10112210> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10245945> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10435849> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10344585> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1030799> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10457484> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10393012> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10154255> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1133621> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10352515> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11767397> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10315105> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10452161> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1093693> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10222665> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10248222> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1137123> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10698751> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10136536> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1157594> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11771526> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11780110> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10234329> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10142645> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10110218> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10457454> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11220178> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10400126> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1053134> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1143113> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11454191> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10312410> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10262703> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10072956> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10073335> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10158282> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10024723> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10186614> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11804267> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1079853> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/subjects> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#note> "Here are entered works on historiography as a branch of learning. This heading may be divided geographically for works on this branch of learning in a specific place. Works on the historiography of particular regions, countries, cities, etc. are entered under the name of the place subdivided by [Historiography.]" .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#editorialNote> "subdivision [Historiography] under names of countries, cities, etc., and individual corporate bodies, uniform titles of sacred works and treaties, and under classes of persons, ethnic groups, individual wars, and topical subjects, e.g. [Art--Historiography; Bible--Historiography; Catholic Church--Historiography; United States--Historiography; United States--History--Civil War, 1861-1865--Historiography]" .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://id.loc.gov/vocabulary/identifiers/lccn> "sh 85061211" .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.w3.org/2002/07/owl#sameAs> <info:lc/authorities/sh85061211> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.w3.org/2002/07/owl#sameAs> <http://id.loc.gov/authorities/sh85061211#concept> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b228iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b228iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b228iddOtlocdOtgovauthoritiessubjectssh85061211 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1986-02-11T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b228iddOtlocdOtgovauthoritiessubjectssh85061211 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b228iddOtlocdOtgovauthoritiessubjectssh85061211 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b235iddOtlocdOtgovauthoritiessubjectssh85061211 .
+        _:b235iddOtlocdOtgovauthoritiessubjectssh85061211 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b235iddOtlocdOtgovauthoritiessubjectssh85061211 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2004-08-25T14:10:57"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b235iddOtlocdOtgovauthoritiessubjectssh85061211 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b235iddOtlocdOtgovauthoritiessubjectssh85061211 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+  recorded_at: Tue, 13 Oct 2020 20:42:12 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/subjects/sh85061211.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:42:12 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:42:12 GMT
+      Location:
+      - https://id.loc.gov/authorities/subjects/sh85061211.marcxml.xml
+      Cf-Request-Id:
+      - 05c54c100e00001fad7b906200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1be2c67c641fad-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:42:12 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/subjects/sh85061211.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:42:13 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=db63bd5bdc1a2f4b0df6d59f56443f6e71602621733; expires=Thu, 12-Nov-20
+        20:42:13 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/subjects/sh85061211
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 51569244 46037224
+      Age:
+      - '716552'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c54c10fe00001c8551838200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1be2c7fdd01c85-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+                    <marcxml:leader>01193cz  a2200205n  4500</marcxml:leader>
+                    <marcxml:controlfield tag="001">sh85061211</marcxml:controlfield>
+                    <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+                    <marcxml:controlfield tag="005">20040825141057.0</marcxml:controlfield>
+                    <marcxml:controlfield tag="008">860211i| anannbabn          |b ana      </marcxml:controlfield>
+                    <marcxml:datafield tag="010" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">sh 85061211 </marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="040" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">DLC</marcxml:subfield>
+                      <marcxml:subfield code="c">DLC</marcxml:subfield>
+                      <marcxml:subfield code="d">DLC</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="053" ind1=" " ind2="0">
+                      <marcxml:subfield code="a">D13</marcxml:subfield>
+                      <marcxml:subfield code="b">D15</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="150" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Historiography</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="360" ind1=" " ind2=" ">
+                      <marcxml:subfield code="i">subdivision</marcxml:subfield>
+                      <marcxml:subfield code="a">Historiography</marcxml:subfield>
+                      <marcxml:subfield code="i">under names of countries, cities, etc., and individual corporate bodies, uniform titles of sacred works and treaties, and under classes of persons, ethnic groups, individual wars, and topical subjects, e.g.</marcxml:subfield>
+                      <marcxml:subfield code="a">Art--Historiography; Bible--Historiography; Catholic Church--Historiography; United States--Historiography; United States--History--Civil War, 1861-1865--Historiography</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="450" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Historical criticism</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="450" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">History</marcxml:subfield>
+                      <marcxml:subfield code="x">Authorship</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="450" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">History</marcxml:subfield>
+                      <marcxml:subfield code="x">Criticism</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="450" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">History</marcxml:subfield>
+                      <marcxml:subfield code="x">Historiography</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="550" ind1=" " ind2=" ">
+                      <marcxml:subfield code="w">g</marcxml:subfield>
+                      <marcxml:subfield code="a">Authorship</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="680" ind1=" " ind2=" ">
+                      <marcxml:subfield code="i">Here are entered works on historiography as a branch of learning. This heading may be divided geographically for works on this branch of learning in a specific place. Works on the historiography of particular regions, countries, cities, etc. are entered under the name of the place subdivided by</marcxml:subfield>
+                      <marcxml:subfield code="a">Historiography.</marcxml:subfield>
+                    </marcxml:datafield>
+                  </marcxml:record>
+  recorded_at: Tue, 13 Oct 2020 20:42:13 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/subjects/sh85090384.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:42:13 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:42:13 GMT
+      Location:
+      - https://id.loc.gov/authorities/subjects/sh85090384.madsrdf.nt
+      Cf-Request-Id:
+      - 05c54c12e800001c974c8d7200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1be2cb0cdd1c97-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:42:13 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/subjects/sh85090384.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:42:21 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d796bb7d11989d7703f85b4dedaef83721602621733; expires=Thu, 12-Nov-20
+        20:42:13 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/subjects/sh85090384
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '53248510'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c54c13d5000093b21591a200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1be2cc8f6d93b2-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Naval history"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b7iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b7iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b8iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "Naval history"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b11iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Historiography, Naval"@en .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementList> _:b16iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b16iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b16iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b17iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b17iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "Historiography, Naval"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b20iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History, Naval"@en .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementList> _:b25iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b25iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b26iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b25iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "History, Naval"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b29iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Naval historiography"@en .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementList> _:b34iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b35iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b35iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b35iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "Naval historiography"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b38iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ComplexSubject> .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Naval history--Historiography"@en .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#componentList> _:b43iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b43iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b44iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b43iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b051 .
+        _:b44iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b44iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b44iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Naval history"@en .
+        _:b44iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementList> _:b48iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b48iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b49iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b48iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b49iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b49iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "Naval history"@en .
+        _:b051 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b52iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b051 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b52iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b52iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b52iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Historiography"@en .
+        _:b52iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementList> _:b56iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b56iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b57iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b56iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b57iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b57iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "Historiography"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b60iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b60iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b60iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b60iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Wars"@en .
+        _:b60iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementList> _:b65iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b65iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b66iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b65iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b66iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b66iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "Wars"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#classification> "D27" .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/subjects/sh85061212> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85017409> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85107056> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://data.bnf.fr/ark:/12148/cb120913936> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/subjects/sh00006046> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85090368> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/1035004> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85064670> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85090361> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85085139> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority> <http://id.loc.gov/authorities/subjects/sh85085207> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://data.bnf.fr/ark:/12148/cb119670285> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority> <http://id.loc.gov/authorities/subjects/sh85119246> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85145315> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSHAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSH_General> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18182770> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10359811> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14877520> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10471266> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12701065> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10417973> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13572025> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14254236> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11417494> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1191129> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12947886> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18248045> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10096935> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11379514> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17844783> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15634482> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11812054> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12220675> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1082401> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15149614> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15566310> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10121111> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13488481> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1076165> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16881906> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16064260> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14301358> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17218033> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14015099> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12067037> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18507600> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1275699> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15206559> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16666514> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12759940> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16225826> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10091548> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10079004> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/144318> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11787732> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16611932> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10263524> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1815451> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1408103> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14675909> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10962008> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10002354> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1201370> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18568406> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17927085> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18234819> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14123145> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1234945> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13500113> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17890709> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13761004> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16573386> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13543017> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16918389> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10197360> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12168520> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10279191> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1376733> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15433258> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10256980> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15552571> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13193830> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17732448> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1765567> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15059319> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/175944> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14873747> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1754579> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1877533> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1724270> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1494383> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1282362> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10196557> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1231047> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14368721> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12473707> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16715721> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17853952> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17952447> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16255958> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18321444> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17670889> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17580628> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17276973> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10138234> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13878387> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16157359> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1344340> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11215716> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12301363> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14336593> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16323638> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15454109> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16575254> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16115630> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/subjects> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#editorialNote> "subdivision [History, Naval] under names of countries; subdivision [History] under names of individual navies, e.g. [United States. Navy--History;] names of naval battles, e.g. [Jutland, Battle of, 1916;] and names of ships" .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/vocabulary/identifiers/lccn> "sh 85090384" .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.w3.org/2002/07/owl#sameAs> <info:lc/authorities/sh85090384> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.w3.org/2002/07/owl#sameAs> <http://id.loc.gov/authorities/sh85090384#concept> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b194iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b194iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b194iddOtlocdOtgovauthoritiessubjectssh85090384 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2004-10-14T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b194iddOtlocdOtgovauthoritiessubjectssh85090384 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b194iddOtlocdOtgovauthoritiessubjectssh85090384 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b201iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b201iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b201iddOtlocdOtgovauthoritiessubjectssh85090384 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2004-11-19T13:06:30"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b201iddOtlocdOtgovauthoritiessubjectssh85090384 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b201iddOtlocdOtgovauthoritiessubjectssh85090384 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+  recorded_at: Tue, 13 Oct 2020 20:42:21 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/subjects/sh85090384.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:42:21 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:42:21 GMT
+      Location:
+      - https://id.loc.gov/authorities/subjects/sh85090384.madsrdf.nt
+      Cf-Request-Id:
+      - 05c54c339b00001c97401bb200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1be2ff5d0d1c97-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:42:22 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/subjects/sh85090384.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:42:29 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d47766abfbaf0697a14130a5f4ee2816e1602621742; expires=Thu, 12-Nov-20
+        20:42:22 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/subjects/sh85090384
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '51285649'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c54c34820000023f9c2c3200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1be300dd2c023f-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Naval history"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b7iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b7iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b8iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "Naval history"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b11iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Historiography, Naval"@en .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementList> _:b16iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b16iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b16iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b17iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b17iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "Historiography, Naval"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b20iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "History, Naval"@en .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementList> _:b25iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b25iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b26iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b25iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "History, Naval"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b29iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Naval historiography"@en .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementList> _:b34iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b35iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b35iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b35iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "Naval historiography"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b38iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ComplexSubject> .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Naval history--Historiography"@en .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#componentList> _:b43iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b43iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b44iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b43iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b051 .
+        _:b44iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b44iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b44iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Naval history"@en .
+        _:b44iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementList> _:b48iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b48iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b49iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b48iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b49iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b49iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "Naval history"@en .
+        _:b051 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b52iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b051 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b52iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b52iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b52iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Historiography"@en .
+        _:b52iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementList> _:b56iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b56iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b57iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b56iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b57iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b57iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "Historiography"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b60iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b60iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+        _:b60iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b60iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Wars"@en .
+        _:b60iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementList> _:b65iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b65iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b66iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b65iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b66iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+        _:b66iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.loc.gov/mads/rdf/v1#elementValue> "Wars"@en .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#classification> "D27" .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/subjects/sh85061212> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85017409> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85107056> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://data.bnf.fr/ark:/12148/cb120913936> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/subjects/sh00006046> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85090368> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/1035004> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85090361> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85064670> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85085139> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority> <http://id.loc.gov/authorities/subjects/sh85085207> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://data.bnf.fr/ark:/12148/cb119670285> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority> <http://id.loc.gov/authorities/subjects/sh85119246> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/subjects/sh85145315> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSHAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSH_General> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18182770> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10359811> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14877520> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10471266> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12701065> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10417973> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13572025> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14254236> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11417494> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1191129> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12947886> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18248045> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10096935> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11379514> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17844783> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15634482> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11812054> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12220675> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1082401> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15149614> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15566310> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10121111> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13488481> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1076165> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16881906> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16064260> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14301358> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17218033> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14015099> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12067037> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18507600> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1275699> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15206559> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16666514> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12759940> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16225826> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10091548> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10079004> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/144318> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11787732> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16611932> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10263524> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1815451> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1408103> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14675909> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10962008> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10002354> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1201370> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18568406> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17927085> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18234819> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14123145> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1234945> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13500113> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17890709> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13761004> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16573386> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13543017> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16918389> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10197360> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12168520> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10279191> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1376733> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15433258> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10256980> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15552571> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13193830> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17732448> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1765567> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15059319> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/175944> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14873747> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1754579> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1877533> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1724270> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1494383> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1282362> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10196557> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1231047> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14368721> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12473707> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16715721> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17853952> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17952447> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16255958> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18321444> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17670889> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17580628> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/17276973> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10138234> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/13878387> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16157359> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1344340> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/11215716> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12301363> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/14336593> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16323638> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15454109> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16575254> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16115630> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/subjects> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#editorialNote> "subdivision [History, Naval] under names of countries; subdivision [History] under names of individual navies, e.g. [United States. Navy--History;] names of naval battles, e.g. [Jutland, Battle of, 1916;] and names of ships" .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://id.loc.gov/vocabulary/identifiers/lccn> "sh 85090384" .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.w3.org/2002/07/owl#sameAs> <info:lc/authorities/sh85090384> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.w3.org/2002/07/owl#sameAs> <http://id.loc.gov/authorities/sh85090384#concept> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b194iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b194iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b194iddOtlocdOtgovauthoritiessubjectssh85090384 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2004-10-14T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b194iddOtlocdOtgovauthoritiessubjectssh85090384 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b194iddOtlocdOtgovauthoritiessubjectssh85090384 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b201iddOtlocdOtgovauthoritiessubjectssh85090384 .
+        _:b201iddOtlocdOtgovauthoritiessubjectssh85090384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b201iddOtlocdOtgovauthoritiessubjectssh85090384 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2004-11-19T13:06:30"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b201iddOtlocdOtgovauthoritiessubjectssh85090384 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b201iddOtlocdOtgovauthoritiessubjectssh85090384 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+  recorded_at: Tue, 13 Oct 2020 20:42:30 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/subjects/sh85090384.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:42:30 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:42:30 GMT
+      Location:
+      - https://id.loc.gov/authorities/subjects/sh85090384.marcxml.xml
+      Cf-Request-Id:
+      - 05c54c53c2000092c291b25200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1be332d99c92c2-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:42:30 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/subjects/sh85090384.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:42:30 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d4f84591b2195f247e3ec6f295cd9bd961602621750; expires=Thu, 12-Nov-20
+        20:42:30 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/subjects/sh85090384
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '50739754'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c54c54b00000ed5f55baa200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1be33449eeed5f-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+                    <marcxml:leader>00792cz  a2200241n  4500</marcxml:leader>
+                    <marcxml:controlfield tag="001">sh85090384</marcxml:controlfield>
+                    <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+                    <marcxml:controlfield tag="005">20041119130630.0</marcxml:controlfield>
+                    <marcxml:controlfield tag="008">041014|| anannbabn          |b ana      </marcxml:controlfield>
+                    <marcxml:datafield tag="010" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">sh 85090384 </marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="040" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">DLC</marcxml:subfield>
+                      <marcxml:subfield code="c">DLC</marcxml:subfield>
+                      <marcxml:subfield code="d">DLC</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="053" ind1=" " ind2="0">
+                      <marcxml:subfield code="a">D27</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="150" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Naval history</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="360" ind1=" " ind2=" ">
+                      <marcxml:subfield code="i">subdivision</marcxml:subfield>
+                      <marcxml:subfield code="a">History, Naval</marcxml:subfield>
+                      <marcxml:subfield code="i">under names of countries; subdivision</marcxml:subfield>
+                      <marcxml:subfield code="a">History</marcxml:subfield>
+                      <marcxml:subfield code="i">under names of individual navies, e.g.</marcxml:subfield>
+                      <marcxml:subfield code="a">United States.  Navy--History;</marcxml:subfield>
+                      <marcxml:subfield code="i">names of naval battles, e.g.</marcxml:subfield>
+                      <marcxml:subfield code="a">Jutland, Battle of, 1916;</marcxml:subfield>
+                      <marcxml:subfield code="i">and names of ships</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="450" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Historiography, Naval</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="450" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">History, Naval</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="450" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Naval historiography</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="450" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Naval history</marcxml:subfield>
+                      <marcxml:subfield code="x">Historiography</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="450" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Wars</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="550" ind1=" " ind2=" ">
+                      <marcxml:subfield code="w">g</marcxml:subfield>
+                      <marcxml:subfield code="a">Historiography</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="550" ind1=" " ind2=" ">
+                      <marcxml:subfield code="w">g</marcxml:subfield>
+                      <marcxml:subfield code="a">History</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="550" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Military history</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="550" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Sea-power</marcxml:subfield>
+                    </marcxml:datafield>
+                  </marcxml:record>
+  recorded_at: Tue, 13 Oct 2020 20:42:30 GMT
+recorded_with: VCR 6.0.0

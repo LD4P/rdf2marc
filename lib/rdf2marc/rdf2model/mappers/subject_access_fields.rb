@@ -12,10 +12,11 @@ module Rdf2marc
             corporate_names: [],
             meeting_names: [],
             geographic_names: [],
+            topical_terms: [],
             genre_forms: genre_forms
           }
           subject_terms = item.work.query.path_all([BF.subject])
-          subject_terms.each do |subject_term|
+          subject_terms.sort.each do |subject_term|
             if subject_term.is_a?(RDF::Literal)
               Logger.warn("Ignoring subject #{subject_term.value} since it is a literal.")
               next
@@ -37,6 +38,9 @@ module Rdf2marc
                 subject_uri,
                 Rdf2marc::Models::SubjectAccessField::GeographicName
               )
+            elsif subject_type == 'topic'
+              subj_fields[:topical_terms] << Resolver.resolve_model(subject_uri,
+                                                                    Rdf2marc::Models::SubjectAccessField::TopicalTerm)
             elsif subject_type
               Logger.warn("Resolving subject for #{subject_uri} not supported.")
             end
@@ -47,9 +51,13 @@ module Rdf2marc
         private
 
         def genre_forms
-          genre_form_uris = item.work.query.path_all_uri([BF.genreForm])
-          genre_form_uris.map do |genre_form_uri|
-            Resolver.resolve_model(genre_form_uri, Models::SubjectAccessField::GenreForm)
+          genre_form_terms = item.work.query.path_all([BF.genreForm])
+          genre_form_terms.sort.map do |genre_form_term|
+            if genre_form_term.is_a?(RDF::Literal)
+              { genre_form_data: genre_form_term.value }
+            else
+              Resolver.resolve_model(genre_form_term&.value, Models::SubjectAccessField::GenreForm)
+            end
           end
         end
       end

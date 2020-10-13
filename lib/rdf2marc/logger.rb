@@ -6,7 +6,7 @@ module Rdf2marc
     include Singleton
 
     def initialize
-      @logger = ::Logger.new(STDOUT)
+      @logger = ::Logger.new($stdout)
     end
 
     class << self

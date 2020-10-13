@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/LD4P/rdf2marc.svg?style=svg)](https://circleci.com/gh/LD4P/rdf2marc)
+
 # rdf2marc
 A proof-of-concept RDF to MARC converter for use within the Sinopia ecosystem.
 
@@ -32,7 +34,7 @@ $ exe/rdf2marc https://api.stage.sinopia.io/resource/70ac2ed7-95d0-492a-a300-050
 
 Note when using files:
 * Currently, only turtle is supported.
-* When copying turtle from Sinopia's RDF preview, the resource uri (`<>`) must be replaced by the actual uri (e.g., `https://trellis.stage.sinopia.io/repository/stanford/70ac2ed7-95d0-492a-a300-050a40895b74`)
+* When copying turtle from Sinopia's RDF preview, the resource uri (`<>`) must be replaced by the actual uri (e.g., `https://api.stage.sinopia.io/resource/70ac2ed7-95d0-492a-a300-050a40895b74`)
 * At least the instance ttl file. The Work ttl and Admin Metadata ttl files are optional if they are nested via a blank node in the Instance ttl file.
 
 Note when using Instance uri:

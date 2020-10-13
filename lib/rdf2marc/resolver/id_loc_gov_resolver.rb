@@ -243,20 +243,15 @@ module Rdf2marc
 
       def type_for(mads_uri)
         # Not yet mapped: uniform_title, named_event, chronological_term, topical_term
-        case mads_uri
-        when 'http://www.loc.gov/mads/rdf/v1#FamilyName'
-          'family_name'
-        when 'http://www.loc.gov/mads/rdf/v1#PersonalName'
-          'personal_name'
-        when 'http://www.loc.gov/mads/rdf/v1#CorporateName'
-          'corporate_name'
-        when 'http://www.loc.gov/mads/rdf/v1#ConferenceName'
-          'meeting_name'
-        when 'http://www.loc.gov/mads/rdf/v1#Geographic'
-          'geographic_name'
-        when 'http://www.loc.gov/mads/rdf/v1#GenreForm'
-          'genre_form'
-        end
+        types = {
+          'http://www.loc.gov/mads/rdf/v1#FamilyName' => 'family_name',
+          'http://www.loc.gov/mads/rdf/v1#PersonalName' => 'personal_name',
+          'http://www.loc.gov/mads/rdf/v1#CorporateName' => 'corporate_name',
+          'http://www.loc.gov/mads/rdf/v1#ConferenceName' => 'meeting_name',
+          'http://www.loc.gov/mads/rdf/v1#Geographic' => 'geographic_name',
+          'http://www.loc.gov/mads/rdf/v1#GenreForm' => 'genre_form'
+        }
+        types[mads_uri]
       end
 
       def expect_type(uri, types)

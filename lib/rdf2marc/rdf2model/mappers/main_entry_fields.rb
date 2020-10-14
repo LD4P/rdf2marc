@@ -45,8 +45,6 @@ module Rdf2marc
           return { meeting_name: meeting_term.value } if meeting_term.is_a?(RDF::Literal)
 
           Resolver.resolve_model(meeting_term&.value, Models::General::MeetingName)
-
-          nil
         end
       end
     end

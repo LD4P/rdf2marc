@@ -14,7 +14,7 @@ module Rdf2marc
         private
 
         def series_statements
-          item.instance.query.path_all_literal([BF.seriesStatement]).map do |series_statement|
+          item.instance.query.path_all_literal([BF.seriesStatement]).sort.map do |series_statement|
             {
               series_statements: [series_statement]
             }

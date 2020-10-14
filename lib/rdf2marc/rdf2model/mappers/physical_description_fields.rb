@@ -18,23 +18,23 @@ module Rdf2marc
 
         def physical_descriptions
           extent_terms = item.instance.query.path_all([[BF.extent, BF.Extent]])
-          extent_physical_description = extent_terms.map do |extent_term|
+          extent_physical_description = extent_terms.sort.map do |extent_term|
             {
-              extents: item.instance.query.path_all_literal([RDF::RDFS.label], subject_term: extent_term),
+              extents: item.instance.query.path_all_literal([RDF::RDFS.label], subject_term: extent_term).sort,
               # Can be multiple notes, but only using one.
               materials_specified: item.instance.query.path_first_literal([[BF.note, BF.Note],
                                                                            RDF::RDFS.label], subject_term: extent_term)
             }
           end
           dimensions = {
-            dimensions: item.instance.query.path_all_literal([BF.dimensions])
+            dimensions: item.instance.query.path_all_literal([BF.dimensions]).sort
           }
           extent_physical_description + [dimensions]
         end
 
         def media_types
           media_type_terms = item.instance.query.path_all([BF.media])
-          media_type_terms.map do |media_type_term|
+          media_type_terms.sort.map do |media_type_term|
             {
               media_type_terms: [item.instance.query.path_first_literal([RDF::RDFS.label],
                                                                         subject_term: media_type_term)],
@@ -46,7 +46,7 @@ module Rdf2marc
 
         def carrier_types
           carrier_type_terms = item.instance.query.path_all([BF.carrier])
-          carrier_type_terms.map do |carrier_type_term|
+          carrier_type_terms.sort.map do |carrier_type_term|
             {
               carrier_type_terms: [item.instance.query.path_first_literal([RDF::RDFS.label],
                                                                           subject_term: carrier_type_term)],
@@ -58,7 +58,7 @@ module Rdf2marc
 
         def content_types
           content_type_terms = item.work.query.path_all([BF.content])
-          content_type_terms.map do |content_type_term|
+          content_type_terms.sort.map do |content_type_term|
             {
               content_type_terms: [item.work.query.path_first_literal([RDF::RDFS.label],
                                                                       subject_term: content_type_term)],

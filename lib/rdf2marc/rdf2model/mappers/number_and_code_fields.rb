@@ -24,7 +24,7 @@ module Rdf2marc
           }
           id_terms = item.instance.query.path_all([[BF.identifiedBy, BF.Lccn]])
 
-          id_terms.each do |id_term|
+          id_terms.sort.each do |id_term|
             lccn_value = item.instance.query.path_first_literal([RDF::RDFV.value], subject_term: id_term)
             next if lccn_value.nil?
 
@@ -43,7 +43,7 @@ module Rdf2marc
           id_terms = item.instance.query.path_all([[BF.identifiedBy, BF.Isbn]])
 
           # Cancelled ISBNs should probably be associated with an ISBN. However, RDF model does not support.
-          id_terms.map do |id_term|
+          id_terms.sort.map do |id_term|
             isbn_value = item.instance.query.path_first_literal([RDF::RDFV.value], subject_term: id_term)
             next if isbn_value.nil?
 
@@ -88,13 +88,13 @@ module Rdf2marc
         end
 
         def modifying_agencies
-          item.admin_metadata.query.path_all_uri([BF.descriptionModifier]).map do |agency_uri|
+          item.admin_metadata.query.path_all_uri([BF.descriptionModifier]).sort.map do |agency_uri|
             agency_uri.sub(%r{^https?://id.loc.gov/vocabulary/organizations/}, '')
           end
         end
 
         def description_conventions
-          item.admin_metadata.query.path_all_uri([BF.descriptionConventions]).map do |agency_uri|
+          item.admin_metadata.query.path_all_uri([BF.descriptionConventions]).sort.map do |agency_uri|
             agency_uri.sub(%r{^https?://id.loc.gov/vocabulary/descriptionConventions/}, '')
           end
         end
@@ -105,17 +105,17 @@ module Rdf2marc
             Resolver.resolve_geographic_area_code(gac_uri)
           end
           {
-            geographic_area_codes: gacs
+            geographic_area_codes: gacs.sort
           }
         end
 
         def lc_call_numbers
           classification_terms = item.work.query.path_all([[BF.classification, BF.ClassificationLcc]])
 
-          classification_terms.map do |classification_term|
+          classification_terms.sort.map do |classification_term|
             {
               classification_numbers: item.work.query.path_all_literal([BF.classificationPortion],
-                                                                       subject_term: classification_term),
+                                                                       subject_term: classification_term).sort,
               # Can be multiple, however only using one.
               item_number: item.work.query.path_first_literal([BF.itemPortion], subject_term: classification_term)
             }

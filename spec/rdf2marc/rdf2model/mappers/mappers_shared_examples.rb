@@ -17,6 +17,7 @@ RSpec.shared_examples 'mapper' do |mapper_class|
   let(:graph) { RDF::Graph.new.from_ttl(ttl) }
 
   it 'maps to model' do
+    # puts subject.generate.deep_compact
     expect(subject.generate.deep_compact).to eq model
   end
 end

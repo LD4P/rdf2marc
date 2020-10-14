@@ -20,14 +20,14 @@ module Rdf2marc
           # VariantTitles where variantType='translated'
           translated_title_terms = item.instance.query.path_all([[BF.title, BF.VariantTitle]])
           translated_title_terms.keep_if do |title_term|
-            item.instance.query.path_first_literal([BF.variantType], subject_term: title_term) == 'translated'
+            item.instance.query.path_all_literal([BF.variantType], subject_term: title_term).include?('translated')
           end
 
-          translated_title_terms.map do |title_term|
+          translated_title_terms.sort.map do |title_term|
             {
               title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
-              part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
-              part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term)
+              part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term).sort,
+              part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term).sort
             }
           end
         end
@@ -42,8 +42,8 @@ module Rdf2marc
             remainder_of_title: item.instance.query.path_first_literal([BF.subtitle], subject_term: title_term),
             # May be multiple bf.responsibilityStatement, but only using one.
             statement_of_responsibility: item.instance.query.path_first_literal([BF.responsibilityStatement]),
-            part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
-            part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term)
+            part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term).sort,
+            part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term).sort
           }
         end
 
@@ -52,21 +52,22 @@ module Rdf2marc
           variant_title_terms = item.instance.query.path_all([[BF.title, BF.VariantTitle]])
           # Filter variant titles where variantType='translated' or 'former'
           variant_title_terms.delete_if do |title_term|
-            %w[translated former].include?(item.instance.query.path_first_literal([BF.variantType],
-                                                                                  subject_term: title_term))
+            variant_types = item.instance.query.path_all_literal([BF.variantType],
+                                                                 subject_term: title_term)
+            variant_types.include?('translated') || variant_types.include?('former')
           end
 
           parallel_title_terms = item.instance.query.path_all([[BF.title, BF.ParallelTitle]])
           title_terms = variant_title_terms + parallel_title_terms
 
-          title_terms.map do |title_term|
+          title_terms.sort.map do |title_term|
             type = variant_title_type(title_term, parallel_title_terms.include?(title_term))
             {
               note_added_entry: note_added_entry(type),
               type: type,
               title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
-              part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
-              part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term)
+              part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term).sort,
+              part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term).sort
             }
           end
         end
@@ -95,14 +96,14 @@ module Rdf2marc
           # VariantTitles where variantType='former'
           former_title_terms = item.instance.query.path_all([[BF.title, BF.VariantTitle]])
           former_title_terms.keep_if do |title_term|
-            item.instance.query.path_first_literal([BF.variantType], subject_term: title_term) == 'former'
+            item.instance.query.path_all_literal([BF.variantType], subject_term: title_term).include?('former')
           end
 
-          former_title_terms.map do |title_term|
+          former_title_terms.sort.map do |title_term|
             {
               title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
-              part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term),
-              part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term)
+              part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term).sort,
+              part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term).sort
             }
           end
         end

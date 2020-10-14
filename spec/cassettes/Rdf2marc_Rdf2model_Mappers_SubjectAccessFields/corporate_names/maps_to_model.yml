@@ -1,0 +1,1471 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n78088613.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 19:52:04 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 20:52:04 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n78088613.madsrdf.nt
+      Cf-Request-Id:
+      - 05c51e284f00002827e7866200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1b9953bc872827-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 19:52:04 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n78088613.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 19:52:13 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d3ea07832654d442e31cf2e3acf40face1602618724; expires=Thu, 12-Nov-20
+        19:52:04 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n78088613
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '52799873'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c51e29350000ed035a317200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1b9955298fed03-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Ford Motor Company. Ford Division" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b010 .
+        _:b8iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#elementValue> "Ford Motor Company." .
+        _:b010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b11iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#elementValue> "Ford Division" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/528516> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cn++78088613#skos:Concept> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n78088613> .
+        <http://id.loc.gov/rwo/agents/n78088613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/n78088613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Organization> .
+        <http://id.loc.gov/rwo/agents/n78088613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+        <http://id.loc.gov/rwo/agents/n78088613> <http://www.w3.org/2000/01/rdf-schema#label> "Ford Motor Company. Ford Division" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 78088613" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://id.loc.gov/vocabulary/identifiers/local> "(OCoLC)oca00223785" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b29iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b29iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b29iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#citation-source> "Its Service Dept. 1962 Ford Fairlane ... c1961 (subdiv.)" .
+        _:b29iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#citation-note> "t.p. (Ford Division, Ford Motor Company)" .
+        _:b29iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b37iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b37iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b37iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#citation-source> "NLM files, 11-24-87" .
+        _:b37iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#citation-note> "(hdg.: Ford Motor Company. Ford Division)" .
+        _:b37iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b45iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b45iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b45iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1978-11-29T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b45iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b45iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b45iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b53iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b53iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b53iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2009-03-03T07:12:59"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b53iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b53iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/ocolc> .
+        _:b53iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Tue, 13 Oct 2020 19:52:13 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n78088613.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 19:52:15 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 20:52:15 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n78088613.madsrdf.nt
+      Cf-Request-Id:
+      - 05c51e521d000095e7922d0200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1b99969b2e95e7-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 19:52:15 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n78088613.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 19:52:15 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dc773e129fedb828cb455d2ddbf5ef34c1602618735; expires=Thu, 12-Nov-20
+        19:52:15 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n78088613
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 52862807 52799874
+      Age:
+      - '2'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c51e530800001fa7ba9b4200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1b99980bf71fa7-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Ford Motor Company. Ford Division" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b010 .
+        _:b8iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#elementValue> "Ford Motor Company." .
+        _:b010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b11iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#elementValue> "Ford Division" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/528516> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cn++78088613#skos:Concept> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n78088613> .
+        <http://id.loc.gov/rwo/agents/n78088613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/n78088613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Organization> .
+        <http://id.loc.gov/rwo/agents/n78088613> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+        <http://id.loc.gov/rwo/agents/n78088613> <http://www.w3.org/2000/01/rdf-schema#label> "Ford Motor Company. Ford Division" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 78088613" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://id.loc.gov/vocabulary/identifiers/local> "(OCoLC)oca00223785" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b29iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b29iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b29iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#citation-source> "Its Service Dept. 1962 Ford Fairlane ... c1961 (subdiv.)" .
+        _:b29iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#citation-note> "t.p. (Ford Division, Ford Motor Company)" .
+        _:b29iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b37iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b37iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b37iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#citation-source> "NLM files, 11-24-87" .
+        _:b37iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#citation-note> "(hdg.: Ford Motor Company. Ford Division)" .
+        _:b37iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b45iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b45iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b45iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1978-11-29T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b45iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b45iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b45iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/n78088613> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b53iddOtlocdOtgovauthoritiesnamesn78088613 .
+        _:b53iddOtlocdOtgovauthoritiesnamesn78088613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b53iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2009-03-03T07:12:59"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b53iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b53iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/ocolc> .
+        _:b53iddOtlocdOtgovauthoritiesnamesn78088613 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Tue, 13 Oct 2020 19:52:15 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n78088613.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 19:52:17 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 20:52:17 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n78088613.marcxml.xml
+      Cf-Request-Id:
+      - 05c51e5d30000095f973262200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1b99a84a2895f9-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 19:52:18 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n78088613.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 19:52:18 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dbc3afaa0ba6c0f23b50c5e898050ec901602618738; expires=Thu, 12-Nov-20
+        19:52:18 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n78088613
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '50802796'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c51e5e210000ed8f29a40200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1b99a9c82bed8f-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+                    <marcxml:leader>00522cz  a2200157n  4500</marcxml:leader>
+                    <marcxml:controlfield tag="001">n78088613</marcxml:controlfield>
+                    <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+                    <marcxml:controlfield tag="005">20090303071259.0</marcxml:controlfield>
+                    <marcxml:controlfield tag="008">781129n| acannaabn          |n ana      </marcxml:controlfield>
+                    <marcxml:datafield tag="010" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">n  78088613 </marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="035" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">(OCoLC)oca00223785</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="040" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">DLC</marcxml:subfield>
+                      <marcxml:subfield code="b">eng</marcxml:subfield>
+                      <marcxml:subfield code="c">DLC</marcxml:subfield>
+                      <marcxml:subfield code="d">DLC</marcxml:subfield>
+                      <marcxml:subfield code="d">OCoLC</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="110" ind1="2" ind2=" ">
+                      <marcxml:subfield code="a">Ford Motor Company.</marcxml:subfield>
+                      <marcxml:subfield code="b">Ford Division</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Its Service Dept. 1962 Ford Fairlane ... c1961 (subdiv.)</marcxml:subfield>
+                      <marcxml:subfield code="b">t.p. (Ford Division, Ford Motor Company)</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">NLM files, 11-24-87</marcxml:subfield>
+                      <marcxml:subfield code="b">(hdg.: Ford Motor Company. Ford Division)</marcxml:subfield>
+                    </marcxml:datafield>
+                  </marcxml:record>
+  recorded_at: Tue, 13 Oct 2020 19:52:18 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n81109238.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 19:52:19 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 20:52:19 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n81109238.madsrdf.nt
+      Cf-Request-Id:
+      - 05c51e646a000093eea6a90200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1b99b3dee093ee-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 19:52:19 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n81109238.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 19:52:23 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dd0ec2b7cf14ba6f24ec5e2df0def0ac81602618740; expires=Thu, 12-Nov-20
+        19:52:20 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n81109238
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '47869752'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c51e655d0000ed97de1e9200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1b99b56b53ed97-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "American Honda Motor Company" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#elementValue> "American Honda Motor Company" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b11iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#variantLabel> "American Honda Motor Co." .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#elementList> _:b16iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b16iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b16iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b17iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b17iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#elementValue> "American Honda Motor Co." .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b20iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b20iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+        _:b20iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b20iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Honda" .
+        _:b20iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#elementList> _:b25iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b25iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b26iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b25iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#elementValue> "Honda" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/560602> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://www.wikidata.org/entity/Q4744011> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cn++81109238#skos:Concept> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n81109238> .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Organization> .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://www.w3.org/2000/01/rdf-schema#label> "American Honda Motor Company" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1656953> .
+        <http://id.loc.gov/resources/works/1656953> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1656953> <http://id.loc.gov/ontologies/bflc/aap> "Lynch, Steve. Arrogance and Accords : the inside story of the Honda scandal" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18556893> .
+        <http://id.loc.gov/resources/works/18556893> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/18556893> <http://id.loc.gov/ontologies/bflc/aap> "Rothfeder, Jeffrey, Driving Honda : inside the world's most innovative car company" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18849603> .
+        <http://id.loc.gov/resources/works/18849603> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/18849603> <http://id.loc.gov/ontologies/bflc/aap> "Rothfeder, Jeffrey, Driving Honda : inside the world's most innovative car company" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18098188> .
+        <http://id.loc.gov/resources/works/18098188> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/18098188> <http://id.loc.gov/ontologies/bflc/aap> "Rothfeder, Jeffrey. Driving Honda : inside the world's most innovative car company" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1097665> .
+        <http://id.loc.gov/resources/works/1097665> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1097665> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. 1988 Prelude electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/2987466> .
+        <http://id.loc.gov/resources/works/2987466> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/2987466> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. 1988/1989 Prelude electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/47101> .
+        <http://id.loc.gov/resources/works/47101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/47101> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. 1991 Legend preliminary electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11451648> .
+        <http://id.loc.gov/resources/works/11451648> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11451648> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Accord ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11314682> .
+        <http://id.loc.gov/resources/works/11314682> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11314682> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Accord electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11466423> .
+        <http://id.loc.gov/resources/works/11466423> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11466423> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 2.2 CL service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11498029> .
+        <http://id.loc.gov/resources/works/11498029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11498029> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 2.3 CL service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11451927> .
+        <http://id.loc.gov/resources/works/11451927> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11451927> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 2.5 TL electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11451752> .
+        <http://id.loc.gov/resources/works/11451752> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11451752> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 2.5 TL service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11498172> .
+        <http://id.loc.gov/resources/works/11498172> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11498172> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 3.0 CL service manual supplement" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12985744> .
+        <http://id.loc.gov/resources/works/12985744> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12985744> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 3.2 CL electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11466363> .
+        <http://id.loc.gov/resources/works/11466363> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11466363> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 3.2 TL electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11498028> .
+        <http://id.loc.gov/resources/works/11498028> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11498028> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 3.5 RL electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11358070> .
+        <http://id.loc.gov/resources/works/11358070> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11358070> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura Legend coupe electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11451589> .
+        <http://id.loc.gov/resources/works/11451589> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11451589> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura Legend electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11422125> .
+        <http://id.loc.gov/resources/works/11422125> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11422125> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura Legend electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12418280> .
+        <http://id.loc.gov/resources/works/12418280> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12418280> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura MDX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/13457659> .
+        <http://id.loc.gov/resources/works/13457659> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/13457659> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura MDX navigation system" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11436794> .
+        <http://id.loc.gov/resources/works/11436794> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11436794> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura NSX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/15130705> .
+        <http://id.loc.gov/resources/works/15130705> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/15130705> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura RDX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/15477669> .
+        <http://id.loc.gov/resources/works/15477669> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/15477669> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura RDX service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/15032648> .
+        <http://id.loc.gov/resources/works/15032648> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/15032648> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura RL electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14633269> .
+        <http://id.loc.gov/resources/works/14633269> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14633269> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura RL service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12982709> .
+        <http://id.loc.gov/resources/works/12982709> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12982709> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura RSX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11466554> .
+        <http://id.loc.gov/resources/works/11466554> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11466554> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura SLX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12713740> .
+        <http://id.loc.gov/resources/works/12713740> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12713740> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura SLX fuel and emissions manual, 1999" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11506574> .
+        <http://id.loc.gov/resources/works/11506574> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11506574> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura SLX service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14050579> .
+        <http://id.loc.gov/resources/works/14050579> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14050579> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura TSX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/16972857> .
+        <http://id.loc.gov/resources/works/16972857> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/16972857> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura TSX L4 sedan & sport wagon service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/47360> .
+        <http://id.loc.gov/resources/works/47360> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/47360> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura warranty provisional flat rate manual for 90/91 Integra, 91 Legend, 92 Vigor" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/16784683> .
+        <http://id.loc.gov/resources/works/16784683> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/16784683> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura ZDX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/16503558> .
+        <http://id.loc.gov/resources/works/16503558> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/16503558> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura ZDX service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11482093> .
+        <http://id.loc.gov/resources/works/11482093> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11482093> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Civic ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/13080273> .
+        <http://id.loc.gov/resources/works/13080273> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/13080273> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Civic ... electrical troubleshooting. Hatchback" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1132682> .
+        <http://id.loc.gov/resources/works/1132682> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1132682> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Civic del Sol 1994 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11348222> .
+        <http://id.loc.gov/resources/works/11348222> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11348222> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Civic electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11497859> .
+        <http://id.loc.gov/resources/works/11497859> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11497859> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. CR-V ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11325630> .
+        <http://id.loc.gov/resources/works/11325630> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11325630> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. CRX electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11451652> .
+        <http://id.loc.gov/resources/works/11451652> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11451652> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Del Sol ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11439911> .
+        <http://id.loc.gov/resources/works/11439911> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11439911> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Electrical troubleshooting manual. Civic CRX" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14302901> .
+        <http://id.loc.gov/resources/works/14302901> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14302901> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Electrical troubleshooting, Element" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14808871> .
+        <http://id.loc.gov/resources/works/14808871> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14808871> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Fit ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/218991> .
+        <http://id.loc.gov/resources/works/218991> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/218991> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. GoldWing GL1500 Honda, 1999 GL1500 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/15049814> .
+        <http://id.loc.gov/resources/works/15049814> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/15049814> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Goldwing GL1800 Honda : service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14533045> .
+        <http://id.loc.gov/resources/works/14533045> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14533045> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. GoldWing Honda 2000 GL1500 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/13159643> .
+        <http://id.loc.gov/resources/works/13159643> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/13159643> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. GoldWing Honda 2001 GL1800 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12081813> .
+        <http://id.loc.gov/resources/works/12081813> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12081813> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda ... S2000 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1153180> .
+        <http://id.loc.gov/resources/works/1153180> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1153180> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda 1995 GL1500 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/2987353> .
+        <http://id.loc.gov/resources/works/2987353> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/2987353> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda GL1500 1988 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/3971669> .
+        <http://id.loc.gov/resources/works/3971669> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/3971669> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda GL1500 1991 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/628578> .
+        <http://id.loc.gov/resources/works/628578> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/628578> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing 1987 GL1200 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/962011> .
+        <http://id.loc.gov/resources/works/962011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/962011> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing GL1100, 1980/81/82 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1024593> .
+        <http://id.loc.gov/resources/works/1024593> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1024593> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing GL1200 : 1985 GL1200 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1924571> .
+        <http://id.loc.gov/resources/works/1924571> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1924571> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing GL1200, 1984 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/3356035> .
+        <http://id.loc.gov/resources/works/3356035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/3356035> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing GL1200, 1984-1985 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/2870546> .
+        <http://id.loc.gov/resources/works/2870546> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/2870546> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing Limited Edition Honda, 1985 GL1200 limited service manual supplement" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/4827202> .
+        <http://id.loc.gov/resources/works/4827202> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/4827202> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, GL 1200 : service manual, 1984-1987" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/2516844> .
+        <http://id.loc.gov/resources/works/2516844> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/2516844> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, GL1500 1988 GL1500 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/627909> .
+        <http://id.loc.gov/resources/works/627909> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/627909> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, GL1500 1989 Gl1500 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/3935594> .
+        <http://id.loc.gov/resources/works/3935594> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/3935594> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, GL1500 1991 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/4408296> .
+        <http://id.loc.gov/resources/works/4408296> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/4408296> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, GL1500 1992 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1570332> .
+        <http://id.loc.gov/resources/works/1570332> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1570332> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, GL1500, 1990 GL1500/GL1500SE electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/2516726> .
+        <http://id.loc.gov/resources/works/2516726> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/2516726> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, Special edition Honda, 1986 GL1200 Aspencade SE-i service manual supplement" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/3948086> .
+        <http://id.loc.gov/resources/works/3948086> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/3948086> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda GoldWing 1984-1986 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/2082205> .
+        <http://id.loc.gov/resources/works/2082205> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/2082205> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda GoldWing 1994 GL1500 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/4029276> .
+        <http://id.loc.gov/resources/works/4029276> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/4029276> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda GoldWing 1997 GL1500 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1101029> .
+        <http://id.loc.gov/resources/works/1101029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1101029> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Goldwing GL1500 1989 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/4894053> .
+        <http://id.loc.gov/resources/works/4894053> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/4894053> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda GoldWing, 1986 GL1200 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14340677> .
+        <http://id.loc.gov/resources/works/14340677> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14340677> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda motorcyle identification guide" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12560721> .
+        <http://id.loc.gov/resources/works/12560721> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12560721> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Insight ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11440940> .
+        <http://id.loc.gov/resources/works/11440940> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11440940> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Integra electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11466541> .
+        <http://id.loc.gov/resources/works/11466541> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11466541> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Odyssey ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11466591> .
+        <http://id.loc.gov/resources/works/11466591> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11466591> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Passport ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11506497> .
+        <http://id.loc.gov/resources/works/11506497> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11506497> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Passport service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14101656> .
+        <http://id.loc.gov/resources/works/14101656> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14101656> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. PGM-FI pinout box troubleshooting manaul" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12978261> .
+        <http://id.loc.gov/resources/works/12978261> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12978261> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Pilot ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11466477> .
+        <http://id.loc.gov/resources/works/11466477> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11466477> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Prelude electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11425111> .
+        <http://id.loc.gov/resources/works/11425111> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11425111> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Prelude electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/504369> .
+        <http://id.loc.gov/resources/works/504369> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/504369> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Prelude electrical troubleshooting manual, 1984" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/13714306> .
+        <http://id.loc.gov/resources/works/13714306> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/13714306> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. TL electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/13435692> .
+        <http://id.loc.gov/resources/works/13435692> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/13435692> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. TL service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/16899437> .
+        <http://id.loc.gov/resources/works/16899437> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/16899437> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. TSX V6 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11424527> .
+        <http://id.loc.gov/resources/works/11424527> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11424527> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Warranty flat rate manual. ATV, motorcycle" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11330638> .
+        <http://id.loc.gov/resources/works/11330638> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11330638> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Warranty flat rate manual. ATV, motorcycle, scooter" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/261801> .
+        <http://id.loc.gov/resources/works/261801> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/261801> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Wing Elite Honda 1984 Gold Wing dealer guide" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1656953> .
+        <http://id.loc.gov/resources/works/1656953> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1656953> <http://id.loc.gov/ontologies/bflc/aap> "Lynch, Steve. Arrogance and Accords : the inside story of the Honda scandal" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 81109238" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b403iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b403iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b403iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-source> "The Y-riders. [MP] 1970." .
+        _:b403iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b409iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b409iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b409iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-source> "Honda Gold Wing ... c1982:" .
+        _:b409iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-note> "t.p. (American Honda Motor Co., Inc.)" .
+        _:b409iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b417iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b417iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b417iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-source> "Its Warranty flat rate manual. ATV, motorcycle, scooter, 1984:" .
+        _:b417iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-note> "t.p. (Honda) p. 1-1 (American Honda Motor Co., Inc.)" .
+        _:b417iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b425iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b425iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b425iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-source> "U.S. Cong. House. Comm. on Ways and Means. Subcom. on Trade. Customs' enforcement of the rules-of-origin provisions ... 1992:" .
+        _:b425iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-note> "p. 97 (American Honda Motor Co., Inc., and Honda of America Mfg., Inc; Honda of America Mfg., Inc., an Ohio manufacturer; plant in Marysville, Ohio, opened 1979; compared with American Honda Motor Co., Inc., the distributor of all Honda products in U.S.)" .
+        _:b425iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b433iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b433iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b433iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-source> "Information from 678 converted Dec. 8, 2014" .
+        _:b433iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-note> "(Gardena, Calif.)" .
+        _:b433iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b441iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b441iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b441iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1981-12-08T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b441iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b441iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b441iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b449iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b449iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b449iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2014-12-08T10:12:44"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b449iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b449iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b449iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Tue, 13 Oct 2020 19:52:23 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n81109238.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 19:52:23 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 20:52:23 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n81109238.madsrdf.nt
+      Cf-Request-Id:
+      - 05c51e735e00001c733a022200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1b99cbcbe31c73-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 19:52:23 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n81109238.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 19:52:33 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d78997e47df5b60ad48cd52329673dcf81602618743; expires=Thu, 12-Nov-20
+        19:52:23 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n81109238
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '51316626'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c51e744900006dfaad314200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1b99cd48db6dfa-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "American Honda Motor Company" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#elementValue> "American Honda Motor Company" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b11iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#variantLabel> "American Honda Motor Co." .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#elementList> _:b16iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b16iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b16iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b17iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b17iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#elementValue> "American Honda Motor Co." .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b20iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b20iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+        _:b20iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b20iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Honda" .
+        _:b20iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#elementList> _:b25iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b25iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b26iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b25iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#elementValue> "Honda" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/560602> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://www.wikidata.org/entity/Q4744011> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cn++81109238#skos:Concept> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n81109238> .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Organization> .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://www.w3.org/2000/01/rdf-schema#label> "American Honda Motor Company" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/1656953> .
+        <http://id.loc.gov/resources/works/1656953> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1656953> <http://id.loc.gov/ontologies/bflc/aap> "Lynch, Steve. Arrogance and Accords : the inside story of the Honda scandal" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18556893> .
+        <http://id.loc.gov/resources/works/18556893> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/18556893> <http://id.loc.gov/ontologies/bflc/aap> "Rothfeder, Jeffrey, Driving Honda : inside the world's most innovative car company" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18849603> .
+        <http://id.loc.gov/resources/works/18849603> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/18849603> <http://id.loc.gov/ontologies/bflc/aap> "Rothfeder, Jeffrey, Driving Honda : inside the world's most innovative car company" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/18098188> .
+        <http://id.loc.gov/resources/works/18098188> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/18098188> <http://id.loc.gov/ontologies/bflc/aap> "Rothfeder, Jeffrey. Driving Honda : inside the world's most innovative car company" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1097665> .
+        <http://id.loc.gov/resources/works/1097665> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1097665> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. 1988 Prelude electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/2987466> .
+        <http://id.loc.gov/resources/works/2987466> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/2987466> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. 1988/1989 Prelude electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/47101> .
+        <http://id.loc.gov/resources/works/47101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/47101> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. 1991 Legend preliminary electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11451648> .
+        <http://id.loc.gov/resources/works/11451648> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11451648> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Accord ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11314682> .
+        <http://id.loc.gov/resources/works/11314682> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11314682> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Accord electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11466423> .
+        <http://id.loc.gov/resources/works/11466423> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11466423> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 2.2 CL service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11498029> .
+        <http://id.loc.gov/resources/works/11498029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11498029> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 2.3 CL service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11451927> .
+        <http://id.loc.gov/resources/works/11451927> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11451927> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 2.5 TL electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11451752> .
+        <http://id.loc.gov/resources/works/11451752> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11451752> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 2.5 TL service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11498172> .
+        <http://id.loc.gov/resources/works/11498172> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11498172> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 3.0 CL service manual supplement" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12985744> .
+        <http://id.loc.gov/resources/works/12985744> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12985744> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 3.2 CL electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11466363> .
+        <http://id.loc.gov/resources/works/11466363> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11466363> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 3.2 TL electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11498028> .
+        <http://id.loc.gov/resources/works/11498028> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11498028> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura 3.5 RL electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11358070> .
+        <http://id.loc.gov/resources/works/11358070> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11358070> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura Legend coupe electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11451589> .
+        <http://id.loc.gov/resources/works/11451589> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11451589> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura Legend electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11422125> .
+        <http://id.loc.gov/resources/works/11422125> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11422125> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura Legend electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12418280> .
+        <http://id.loc.gov/resources/works/12418280> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12418280> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura MDX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/13457659> .
+        <http://id.loc.gov/resources/works/13457659> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/13457659> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura MDX navigation system" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11436794> .
+        <http://id.loc.gov/resources/works/11436794> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11436794> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura NSX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/15130705> .
+        <http://id.loc.gov/resources/works/15130705> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/15130705> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura RDX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/15477669> .
+        <http://id.loc.gov/resources/works/15477669> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/15477669> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura RDX service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/15032648> .
+        <http://id.loc.gov/resources/works/15032648> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/15032648> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura RL electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14633269> .
+        <http://id.loc.gov/resources/works/14633269> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14633269> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura RL service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12982709> .
+        <http://id.loc.gov/resources/works/12982709> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12982709> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura RSX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11466554> .
+        <http://id.loc.gov/resources/works/11466554> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11466554> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura SLX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12713740> .
+        <http://id.loc.gov/resources/works/12713740> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12713740> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura SLX fuel and emissions manual, 1999" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11506574> .
+        <http://id.loc.gov/resources/works/11506574> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11506574> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura SLX service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14050579> .
+        <http://id.loc.gov/resources/works/14050579> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14050579> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura TSX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/16972857> .
+        <http://id.loc.gov/resources/works/16972857> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/16972857> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura TSX L4 sedan & sport wagon service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/47360> .
+        <http://id.loc.gov/resources/works/47360> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/47360> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura warranty provisional flat rate manual for 90/91 Integra, 91 Legend, 92 Vigor" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/16784683> .
+        <http://id.loc.gov/resources/works/16784683> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/16784683> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura ZDX electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/16503558> .
+        <http://id.loc.gov/resources/works/16503558> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/16503558> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Acura ZDX service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11482093> .
+        <http://id.loc.gov/resources/works/11482093> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11482093> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Civic ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/13080273> .
+        <http://id.loc.gov/resources/works/13080273> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/13080273> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Civic ... electrical troubleshooting. Hatchback" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1132682> .
+        <http://id.loc.gov/resources/works/1132682> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1132682> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Civic del Sol 1994 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11348222> .
+        <http://id.loc.gov/resources/works/11348222> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11348222> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Civic electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11497859> .
+        <http://id.loc.gov/resources/works/11497859> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11497859> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. CR-V ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11325630> .
+        <http://id.loc.gov/resources/works/11325630> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11325630> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. CRX electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11451652> .
+        <http://id.loc.gov/resources/works/11451652> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11451652> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Del Sol ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11439911> .
+        <http://id.loc.gov/resources/works/11439911> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11439911> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Electrical troubleshooting manual. Civic CRX" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14302901> .
+        <http://id.loc.gov/resources/works/14302901> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14302901> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Electrical troubleshooting, Element" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14808871> .
+        <http://id.loc.gov/resources/works/14808871> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14808871> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Fit ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/218991> .
+        <http://id.loc.gov/resources/works/218991> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/218991> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. GoldWing GL1500 Honda, 1999 GL1500 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/15049814> .
+        <http://id.loc.gov/resources/works/15049814> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/15049814> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Goldwing GL1800 Honda : service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14533045> .
+        <http://id.loc.gov/resources/works/14533045> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14533045> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. GoldWing Honda 2000 GL1500 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/13159643> .
+        <http://id.loc.gov/resources/works/13159643> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/13159643> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. GoldWing Honda 2001 GL1800 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12081813> .
+        <http://id.loc.gov/resources/works/12081813> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12081813> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda ... S2000 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1153180> .
+        <http://id.loc.gov/resources/works/1153180> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1153180> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda 1995 GL1500 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/2987353> .
+        <http://id.loc.gov/resources/works/2987353> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/2987353> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda GL1500 1988 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/3971669> .
+        <http://id.loc.gov/resources/works/3971669> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/3971669> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda GL1500 1991 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/628578> .
+        <http://id.loc.gov/resources/works/628578> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/628578> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing 1987 GL1200 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/962011> .
+        <http://id.loc.gov/resources/works/962011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/962011> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing GL1100, 1980/81/82 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1024593> .
+        <http://id.loc.gov/resources/works/1024593> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1024593> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing GL1200 : 1985 GL1200 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1924571> .
+        <http://id.loc.gov/resources/works/1924571> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1924571> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing GL1200, 1984 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/3356035> .
+        <http://id.loc.gov/resources/works/3356035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/3356035> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing GL1200, 1984-1985 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/2870546> .
+        <http://id.loc.gov/resources/works/2870546> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/2870546> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing Limited Edition Honda, 1985 GL1200 limited service manual supplement" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/4827202> .
+        <http://id.loc.gov/resources/works/4827202> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/4827202> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, GL 1200 : service manual, 1984-1987" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/2516844> .
+        <http://id.loc.gov/resources/works/2516844> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/2516844> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, GL1500 1988 GL1500 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/627909> .
+        <http://id.loc.gov/resources/works/627909> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/627909> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, GL1500 1989 Gl1500 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/3935594> .
+        <http://id.loc.gov/resources/works/3935594> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/3935594> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, GL1500 1991 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/4408296> .
+        <http://id.loc.gov/resources/works/4408296> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/4408296> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, GL1500 1992 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1570332> .
+        <http://id.loc.gov/resources/works/1570332> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1570332> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, GL1500, 1990 GL1500/GL1500SE electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/2516726> .
+        <http://id.loc.gov/resources/works/2516726> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/2516726> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Gold Wing, Special edition Honda, 1986 GL1200 Aspencade SE-i service manual supplement" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/3948086> .
+        <http://id.loc.gov/resources/works/3948086> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/3948086> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda GoldWing 1984-1986 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/2082205> .
+        <http://id.loc.gov/resources/works/2082205> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/2082205> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda GoldWing 1994 GL1500 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/4029276> .
+        <http://id.loc.gov/resources/works/4029276> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/4029276> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda GoldWing 1997 GL1500 service manual & electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1101029> .
+        <http://id.loc.gov/resources/works/1101029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1101029> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda Goldwing GL1500 1989 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/4894053> .
+        <http://id.loc.gov/resources/works/4894053> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/4894053> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda GoldWing, 1986 GL1200 electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14340677> .
+        <http://id.loc.gov/resources/works/14340677> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14340677> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Honda motorcyle identification guide" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12560721> .
+        <http://id.loc.gov/resources/works/12560721> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12560721> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Insight ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11440940> .
+        <http://id.loc.gov/resources/works/11440940> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11440940> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Integra electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11466541> .
+        <http://id.loc.gov/resources/works/11466541> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11466541> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Odyssey ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11466591> .
+        <http://id.loc.gov/resources/works/11466591> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11466591> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Passport ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11506497> .
+        <http://id.loc.gov/resources/works/11506497> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11506497> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Passport service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14101656> .
+        <http://id.loc.gov/resources/works/14101656> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14101656> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. PGM-FI pinout box troubleshooting manaul" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/12978261> .
+        <http://id.loc.gov/resources/works/12978261> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/12978261> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Pilot ... electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11466477> .
+        <http://id.loc.gov/resources/works/11466477> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11466477> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Prelude electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11425111> .
+        <http://id.loc.gov/resources/works/11425111> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11425111> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Prelude electrical troubleshooting manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/504369> .
+        <http://id.loc.gov/resources/works/504369> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/504369> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Prelude electrical troubleshooting manual, 1984" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/13714306> .
+        <http://id.loc.gov/resources/works/13714306> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/13714306> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. TL electrical troubleshooting" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/13435692> .
+        <http://id.loc.gov/resources/works/13435692> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/13435692> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. TL service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/16899437> .
+        <http://id.loc.gov/resources/works/16899437> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/16899437> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. TSX V6 service manual" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11424527> .
+        <http://id.loc.gov/resources/works/11424527> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11424527> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Warranty flat rate manual. ATV, motorcycle" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/11330638> .
+        <http://id.loc.gov/resources/works/11330638> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/11330638> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Warranty flat rate manual. ATV, motorcycle, scooter" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/261801> .
+        <http://id.loc.gov/resources/works/261801> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/261801> <http://id.loc.gov/ontologies/bflc/aap> "American Honda Motor Company. Wing Elite Honda 1984 Gold Wing dealer guide" .
+        <http://id.loc.gov/rwo/agents/n81109238> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/1656953> .
+        <http://id.loc.gov/resources/works/1656953> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/1656953> <http://id.loc.gov/ontologies/bflc/aap> "Lynch, Steve. Arrogance and Accords : the inside story of the Honda scandal" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 81109238" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b403iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b403iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b403iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-source> "The Y-riders. [MP] 1970." .
+        _:b403iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b409iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b409iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b409iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-source> "Honda Gold Wing ... c1982:" .
+        _:b409iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-note> "t.p. (American Honda Motor Co., Inc.)" .
+        _:b409iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b417iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b417iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b417iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-source> "Its Warranty flat rate manual. ATV, motorcycle, scooter, 1984:" .
+        _:b417iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-note> "t.p. (Honda) p. 1-1 (American Honda Motor Co., Inc.)" .
+        _:b417iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b425iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b425iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b425iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-source> "U.S. Cong. House. Comm. on Ways and Means. Subcom. on Trade. Customs' enforcement of the rules-of-origin provisions ... 1992:" .
+        _:b425iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-note> "p. 97 (American Honda Motor Co., Inc., and Honda of America Mfg., Inc; Honda of America Mfg., Inc., an Ohio manufacturer; plant in Marysville, Ohio, opened 1979; compared with American Honda Motor Co., Inc., the distributor of all Honda products in U.S.)" .
+        _:b425iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b433iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b433iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b433iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-source> "Information from 678 converted Dec. 8, 2014" .
+        _:b433iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-note> "(Gardena, Calif.)" .
+        _:b433iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b441iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b441iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b441iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1981-12-08T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b441iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b441iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b441iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/n81109238> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b449iddOtlocdOtgovauthoritiesnamesn81109238 .
+        _:b449iddOtlocdOtgovauthoritiesnamesn81109238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b449iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2014-12-08T10:12:44"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b449iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b449iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b449iddOtlocdOtgovauthoritiesnamesn81109238 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Tue, 13 Oct 2020 19:52:33 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n81109238.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 19:52:34 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 20:52:34 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n81109238.marcxml.xml
+      Cf-Request-Id:
+      - 05c51e9c4d0000ed37e5053200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1b9a0d4f08ed37-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 19:52:34 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n81109238.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 19:52:34 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d4ee57b91a456938d4252fca4ece6b5cb1602618754; expires=Thu, 12-Nov-20
+        19:52:34 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n81109238
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '51540175'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c51e9d48000095f3c7af1200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1b9a0ed81a95f3-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+                    <marcxml:leader>01145cz  a2200229n  4500</marcxml:leader>
+                    <marcxml:controlfield tag="001">n81109238</marcxml:controlfield>
+                    <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+                    <marcxml:controlfield tag="005">20141208101244.0</marcxml:controlfield>
+                    <marcxml:controlfield tag="008">811208n| azannaab           |a ana      </marcxml:controlfield>
+                    <marcxml:datafield tag="010" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">n  81109238 </marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="035" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">(DLC)n  81109238</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="040" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">DLC</marcxml:subfield>
+                      <marcxml:subfield code="b">eng</marcxml:subfield>
+                      <marcxml:subfield code="e">rda</marcxml:subfield>
+                      <marcxml:subfield code="c">DLC</marcxml:subfield>
+                      <marcxml:subfield code="d">DLC</marcxml:subfield>
+                      <marcxml:subfield code="d">DGPO</marcxml:subfield>
+                      <marcxml:subfield code="d">DLC</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="110" ind1="2" ind2=" ">
+                      <marcxml:subfield code="a">American Honda Motor Company</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="410" ind1="2" ind2="0">
+                      <marcxml:subfield code="a">American Honda Motor Co.</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="410" ind1="2" ind2="0">
+                      <marcxml:subfield code="a">Honda</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">The Y-riders. [MP] 1970.</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Honda Gold Wing ... c1982:</marcxml:subfield>
+                      <marcxml:subfield code="b">t.p. (American Honda Motor Co., Inc.)</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Its Warranty flat rate manual. ATV, motorcycle, scooter, 1984:</marcxml:subfield>
+                      <marcxml:subfield code="b">t.p. (Honda) p. 1-1 (American Honda Motor Co., Inc.)</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">U.S. Cong. House. Comm. on Ways and Means. Subcom. on Trade. Customs' enforcement of the rules-of-origin provisions ... 1992:</marcxml:subfield>
+                      <marcxml:subfield code="b">p. 97 (American Honda Motor Co., Inc., and Honda of America Mfg., Inc; Honda of America Mfg., Inc., an Ohio manufacturer; plant in Marysville, Ohio, opened 1979; compared with American Honda Motor Co., Inc., the distributor of all Honda products in U.S.)</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Information from 678 converted Dec. 8, 2014</marcxml:subfield>
+                      <marcxml:subfield code="b">(Gardena, Calif.)</marcxml:subfield>
+                    </marcxml:datafield>
+                  </marcxml:record>
+  recorded_at: Tue, 13 Oct 2020 19:52:34 GMT
+recorded_with: VCR 6.0.0

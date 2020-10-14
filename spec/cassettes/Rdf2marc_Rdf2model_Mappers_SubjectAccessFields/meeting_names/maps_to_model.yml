@@ -1,0 +1,812 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n2013185327.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:27:18 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:27:18 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n2013185327.madsrdf.nt
+      Cf-Request-Id:
+      - 05c53e6a89000095ffcc055200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bccf0dd6495ff-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:27:18 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n2013185327.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:27:31 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d20111673c875e31cda08f931d64391f01602620838; expires=Thu, 12-Nov-20
+        20:27:18 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n2013185327
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '49113755'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c53e6b7e00006c2600251200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bccf268ad6c26-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ConferenceName> .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Auchenorrhyncha Meeting" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesn2013185327 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesn2013185327 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.loc.gov/mads/rdf/v1#elementValue> "Auchenorrhyncha Meeting" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cn+2013185327#skos:Concept> .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n2013185327> .
+        <http://id.loc.gov/rwo/agents/n2013185327> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/n2013185327> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Meeting> .
+        <http://id.loc.gov/rwo/agents/n2013185327> <http://www.w3.org/2000/01/rdf-schema#label> "Auchenorrhyncha Meeting" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#editorialNote> "[See also related access points for individual instances of this conference which include specific information about the number, date, or place of the individual conference]" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 2013185327" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://id.loc.gov/vocabulary/identifiers/local> "(DNLM)1576193" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b26iddOtlocdOtgovauthoritiesnamesn2013185327 .
+        _:b26iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b26iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.loc.gov/mads/rdf/v1#citation-source> "Fourth Auchenorrhyncha Meeting, 1981" .
+        _:b26iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b32iddOtlocdOtgovauthoritiesnamesn2013185327 .
+        _:b32iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b32iddOtlocdOtgovauthoritiesnamesn2013185327 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2013-08-08T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b32iddOtlocdOtgovauthoritiesnamesn2013185327 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b32iddOtlocdOtgovauthoritiesnamesn2013185327 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dnlm> .
+        _:b32iddOtlocdOtgovauthoritiesnamesn2013185327 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Tue, 13 Oct 2020 20:27:31 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n2013185327.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:27:31 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:27:31 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n2013185327.madsrdf.nt
+      Cf-Request-Id:
+      - 05c53e9e4e0000269abf0d7200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bcd43bffe269a-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:27:31 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n2013185327.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:27:32 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=da4e33272a3c150b81ac326ae69332cc31602620852; expires=Thu, 12-Nov-20
+        20:27:32 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n2013185327
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 50000303 49113756
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c53e9f390000023bb2179200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bcd452fb6023b-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ConferenceName> .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Auchenorrhyncha Meeting" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesn2013185327 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesn2013185327 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.loc.gov/mads/rdf/v1#elementValue> "Auchenorrhyncha Meeting" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cn+2013185327#skos:Concept> .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n2013185327> .
+        <http://id.loc.gov/rwo/agents/n2013185327> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/n2013185327> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Meeting> .
+        <http://id.loc.gov/rwo/agents/n2013185327> <http://www.w3.org/2000/01/rdf-schema#label> "Auchenorrhyncha Meeting" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#editorialNote> "[See also related access points for individual instances of this conference which include specific information about the number, date, or place of the individual conference]" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 2013185327" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://id.loc.gov/vocabulary/identifiers/local> "(DNLM)1576193" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b26iddOtlocdOtgovauthoritiesnamesn2013185327 .
+        _:b26iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b26iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.loc.gov/mads/rdf/v1#citation-source> "Fourth Auchenorrhyncha Meeting, 1981" .
+        _:b26iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n2013185327> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b32iddOtlocdOtgovauthoritiesnamesn2013185327 .
+        _:b32iddOtlocdOtgovauthoritiesnamesn2013185327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b32iddOtlocdOtgovauthoritiesnamesn2013185327 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2013-08-08T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b32iddOtlocdOtgovauthoritiesnamesn2013185327 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b32iddOtlocdOtgovauthoritiesnamesn2013185327 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dnlm> .
+        _:b32iddOtlocdOtgovauthoritiesnamesn2013185327 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Tue, 13 Oct 2020 20:27:32 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n2013185327.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:27:32 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:27:32 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n2013185327.marcxml.xml
+      Cf-Request-Id:
+      - 05c53ea1520000025a27397200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bcd488e6a025a-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:27:32 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n2013185327.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:27:33 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d5f76f9bc92aa21724e84711f8d3e702b1602620852; expires=Thu, 12-Nov-20
+        20:27:32 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n2013185327
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '51798361'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c53ea24100001fb9dab43200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bcd4a0bcf1fb9-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+                    <marcxml:leader>00521nz  a2200145n  4500</marcxml:leader>
+                    <marcxml:controlfield tag="001">n2013185327</marcxml:controlfield>
+                    <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+                    <marcxml:controlfield tag="005">20130808044105.0</marcxml:controlfield>
+                    <marcxml:controlfield tag="008">130808n| azannaabn          |n ana      </marcxml:controlfield>
+                    <marcxml:datafield tag="010" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">n 2013185327</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="035" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">(DNLM)1576193</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="040" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">DNLM</marcxml:subfield>
+                      <marcxml:subfield code="b">eng</marcxml:subfield>
+                      <marcxml:subfield code="e">rda</marcxml:subfield>
+                      <marcxml:subfield code="c">DNLM</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="111" ind1="2" ind2=" ">
+                      <marcxml:subfield code="a">Auchenorrhyncha Meeting</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="667" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">See also related access points for individual instances of this conference which include specific information about the number, date, or place of the individual conference</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Fourth Auchenorrhyncha Meeting, 1981</marcxml:subfield>
+                    </marcxml:datafield>
+                  </marcxml:record>
+  recorded_at: Tue, 13 Oct 2020 20:27:33 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n81025771.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:27:33 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:27:33 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n81025771.madsrdf.nt
+      Cf-Request-Id:
+      - 05c53ea4200000ed5740b18200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bcd4d0d4bed57-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:27:33 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n81025771.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:27:43 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d1e209be555630a35552d4daa49df887f1602620853; expires=Thu, 12-Nov-20
+        20:27:33 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n81025771
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '50739568'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c53ea50c000021451ca03200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bcd4e7a622145-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ConferenceName> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Bacteriophage Meeting" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesn81025771 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesn81025771 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#elementValue> "Bacteriophage Meeting" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cn++81025771#skos:Concept> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n81025771> .
+        <http://id.loc.gov/rwo/agents/n81025771> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/n81025771> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Meeting> .
+        <http://id.loc.gov/rwo/agents/n81025771> <http://www.w3.org/2000/01/rdf-schema#label> "Bacteriophage Meeting" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#editorialNote> "[THIS 1XX FIELD CANNOT BE USED UNDER RDA UNTIL THIS RECORD HAS BEEN REVIEWED AND/OR UPDATED]" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 81025771" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://id.loc.gov/vocabulary/identifiers/local> "(OCoLC)oca00571530" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b26iddOtlocdOtgovauthoritiesnamesn81025771 .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#citation-source> "Its Abstracts of papers presented at ... c1980:" .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#citation-note> "t.p. (Bacteriophage Meeting; 8/19-24/80; Cold Spring Harbor Lab.)" .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b34iddOtlocdOtgovauthoritiesnamesn81025771 .
+        _:b34iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b34iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#citation-source> "Its (1984 : Cold Spring Harbor Lab.). Abstracts of papers presented at ... 1984:" .
+        _:b34iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#citation-note> "t.p. (Bacteriophage Meeting, August 21-August 26, 1984; Cold Spring Harbor Laboratory)" .
+        _:b34iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b42iddOtlocdOtgovauthoritiesnamesn81025771 .
+        _:b42iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b42iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1981-03-26T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b42iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b42iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b42iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b50iddOtlocdOtgovauthoritiesnamesn81025771 .
+        _:b50iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b50iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2012-08-03T07:21:06"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b50iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b50iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b50iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Tue, 13 Oct 2020 20:27:43 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n81025771.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:27:44 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:27:44 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n81025771.madsrdf.nt
+      Cf-Request-Id:
+      - 05c53ece6e0000214515133200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bcd90bb6f2145-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:27:44 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n81025771.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:27:50 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d1ae9fc57f6f5c535221d970341644a1c1602620864; expires=Thu, 12-Nov-20
+        20:27:44 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n81025771
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '52119680'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c53ecf5e00006c2c47b6c200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bcd923f446c2c-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ConferenceName> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Bacteriophage Meeting" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesn81025771 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesn81025771 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#elementValue> "Bacteriophage Meeting" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cn++81025771#skos:Concept> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n81025771> .
+        <http://id.loc.gov/rwo/agents/n81025771> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/n81025771> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Meeting> .
+        <http://id.loc.gov/rwo/agents/n81025771> <http://www.w3.org/2000/01/rdf-schema#label> "Bacteriophage Meeting" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#editorialNote> "[THIS 1XX FIELD CANNOT BE USED UNDER RDA UNTIL THIS RECORD HAS BEEN REVIEWED AND/OR UPDATED]" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 81025771" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://id.loc.gov/vocabulary/identifiers/local> "(OCoLC)oca00571530" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b26iddOtlocdOtgovauthoritiesnamesn81025771 .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#citation-source> "Its Abstracts of papers presented at ... c1980:" .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#citation-note> "t.p. (Bacteriophage Meeting; 8/19-24/80; Cold Spring Harbor Lab.)" .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b34iddOtlocdOtgovauthoritiesnamesn81025771 .
+        _:b34iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b34iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#citation-source> "Its (1984 : Cold Spring Harbor Lab.). Abstracts of papers presented at ... 1984:" .
+        _:b34iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#citation-note> "t.p. (Bacteriophage Meeting, August 21-August 26, 1984; Cold Spring Harbor Laboratory)" .
+        _:b34iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b42iddOtlocdOtgovauthoritiesnamesn81025771 .
+        _:b42iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b42iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1981-03-26T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b42iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b42iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b42iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/n81025771> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b50iddOtlocdOtgovauthoritiesnamesn81025771 .
+        _:b50iddOtlocdOtgovauthoritiesnamesn81025771 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b50iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2012-08-03T07:21:06"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b50iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b50iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b50iddOtlocdOtgovauthoritiesnamesn81025771 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Tue, 13 Oct 2020 20:27:50 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n81025771.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:27:51 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:27:51 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n81025771.marcxml.xml
+      Cf-Request-Id:
+      - 05c53ee953000092925fbaa200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bcdbbb9939292-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:27:51 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n81025771.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:27:51 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dcf28c7b96966749b302c6aa10e22de831602620871; expires=Thu, 12-Nov-20
+        20:27:51 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n81025771
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '52562447'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c53eea480000960bf425e200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bcdbd4f6c960b-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+                    <marcxml:leader>00743cz  a2200169n  4500</marcxml:leader>
+                    <marcxml:controlfield tag="001">n81025771</marcxml:controlfield>
+                    <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+                    <marcxml:controlfield tag="005">20120803072106.0</marcxml:controlfield>
+                    <marcxml:controlfield tag="008">810326n| acannaabn          |n ana      </marcxml:controlfield>
+                    <marcxml:datafield tag="010" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">n  81025771 </marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="035" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">(OCoLC)oca00571530</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="040" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">DLC</marcxml:subfield>
+                      <marcxml:subfield code="b">eng</marcxml:subfield>
+                      <marcxml:subfield code="c">DLC</marcxml:subfield>
+                      <marcxml:subfield code="d">DLC</marcxml:subfield>
+                      <marcxml:subfield code="d">OCoLC</marcxml:subfield>
+                      <marcxml:subfield code="d">DLC</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="111" ind1="2" ind2=" ">
+                      <marcxml:subfield code="a">Bacteriophage Meeting</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="667" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">THIS 1XX FIELD CANNOT BE USED UNDER RDA UNTIL THIS RECORD HAS BEEN REVIEWED AND/OR UPDATED</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Its Abstracts of papers presented at ... c1980:</marcxml:subfield>
+                      <marcxml:subfield code="b">t.p. (Bacteriophage Meeting; 8/19-24/80; Cold Spring Harbor Lab.)</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Its (1984 : Cold Spring Harbor Lab.). Abstracts of papers presented at ... 1984:</marcxml:subfield>
+                      <marcxml:subfield code="b">t.p. (Bacteriophage Meeting, August 21-August 26, 1984; Cold Spring Harbor Laboratory)</marcxml:subfield>
+                    </marcxml:datafield>
+                  </marcxml:record>
+  recorded_at: Tue, 13 Oct 2020 20:27:51 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,914 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/nb2010025455.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:19:53 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:19:53 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/nb2010025455.madsrdf.nt
+      Cf-Request-Id:
+      - 05c537a09800001c797d23c200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bc214287e1c79-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:19:53 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/nb2010025455.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:20:03 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d9bfa5d273ec512157ad90136ceb777111602620393; expires=Thu, 12-Nov-20
+        20:19:53 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/nb2010025455
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '51830197'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c537a1880000ed9b69327200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bc215afdfed9b-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Mellon, Andrew" .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesnb2010025455 .
+        _:b7iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesnb2010025455 .
+        _:b7iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.loc.gov/mads/rdf/v1#elementValue> "Mellon, Andrew" .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cnb2010025455#skos:Concept> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/nb2010025455> .
+        <http://id.loc.gov/rwo/agents/nb2010025455> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/nb2010025455> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+        <http://id.loc.gov/rwo/agents/nb2010025455> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+        <http://id.loc.gov/rwo/agents/nb2010025455> <http://www.w3.org/2000/01/rdf-schema#label> "Mellon, Andrew" .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://id.loc.gov/vocabulary/identifiers/lccn> "nb2010025455" .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://id.loc.gov/vocabulary/identifiers/local> "(Uk)007930296" .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b25iddOtlocdOtgovauthoritiesnamesnb2010025455 .
+        _:b25iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b25iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.loc.gov/mads/rdf/v1#citation-source> "How to shop, 2008:" .
+        _:b25iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.loc.gov/mads/rdf/v1#citation-note> "cover (Andrew Mellon) text (has worked around the world as a private chef)" .
+        _:b25iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b33iddOtlocdOtgovauthoritiesnamesnb2010025455 .
+        _:b33iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b33iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2010-09-29T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b33iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b33iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/uk> .
+        _:b33iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b41iddOtlocdOtgovauthoritiesnamesnb2010025455 .
+        _:b41iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b41iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2010-09-30T05:09:05"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b41iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b41iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/uk> .
+        _:b41iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Tue, 13 Oct 2020 20:20:03 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/nb2010025455.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:20:03 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:20:03 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/nb2010025455.madsrdf.nt
+      Cf-Request-Id:
+      - 05c537c6330000023f97a26200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bc2505c22023f-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:20:03 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/nb2010025455.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:20:03 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=daf2ce817d5b0e48b2ee70c14ee13c4e51602620403; expires=Thu, 12-Nov-20
+        20:20:03 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/nb2010025455
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 51506453 51830198
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c537c7230000023fa23ac200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bc251dfb9023f-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Mellon, Andrew" .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesnb2010025455 .
+        _:b7iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesnb2010025455 .
+        _:b7iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.loc.gov/mads/rdf/v1#elementValue> "Mellon, Andrew" .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cnb2010025455#skos:Concept> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/nb2010025455> .
+        <http://id.loc.gov/rwo/agents/nb2010025455> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/nb2010025455> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+        <http://id.loc.gov/rwo/agents/nb2010025455> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+        <http://id.loc.gov/rwo/agents/nb2010025455> <http://www.w3.org/2000/01/rdf-schema#label> "Mellon, Andrew" .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://id.loc.gov/vocabulary/identifiers/lccn> "nb2010025455" .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://id.loc.gov/vocabulary/identifiers/local> "(Uk)007930296" .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b25iddOtlocdOtgovauthoritiesnamesnb2010025455 .
+        _:b25iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b25iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.loc.gov/mads/rdf/v1#citation-source> "How to shop, 2008:" .
+        _:b25iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.loc.gov/mads/rdf/v1#citation-note> "cover (Andrew Mellon) text (has worked around the world as a private chef)" .
+        _:b25iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b33iddOtlocdOtgovauthoritiesnamesnb2010025455 .
+        _:b33iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b33iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2010-09-29T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b33iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b33iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/uk> .
+        _:b33iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/nb2010025455> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b41iddOtlocdOtgovauthoritiesnamesnb2010025455 .
+        _:b41iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b41iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2010-09-30T05:09:05"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b41iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b41iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/uk> .
+        _:b41iddOtlocdOtgovauthoritiesnamesnb2010025455 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Tue, 13 Oct 2020 20:20:03 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/nb2010025455.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:20:04 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:20:04 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/nb2010025455.marcxml.xml
+      Cf-Request-Id:
+      - 05c537c95100006c7a9409f200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bc2554a8d6c7a-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:20:04 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/nb2010025455.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:20:04 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d2c2d293471e4dd61769104311555098e1602620404; expires=Thu, 12-Nov-20
+        20:20:04 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/nb2010025455
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '52283864'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c537ca5f000093766d388200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bc256feb99376-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+                    <marcxml:leader>00373nz  a2200133n  4500</marcxml:leader>
+                    <marcxml:controlfield tag="001">nb2010025455</marcxml:controlfield>
+                    <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+                    <marcxml:controlfield tag="005">20100930050905.0</marcxml:controlfield>
+                    <marcxml:controlfield tag="008">100929n| acannaabn          |n aaa      </marcxml:controlfield>
+                    <marcxml:datafield tag="010" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">nb2010025455</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="035" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">(Uk)007930296</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="040" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Uk</marcxml:subfield>
+                      <marcxml:subfield code="b">eng</marcxml:subfield>
+                      <marcxml:subfield code="c">Uk</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="100" ind1="1" ind2=" ">
+                      <marcxml:subfield code="a">Mellon, Andrew</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">How to shop, 2008:</marcxml:subfield>
+                      <marcxml:subfield code="b">cover (Andrew Mellon) text (has worked around the world as a private chef)</marcxml:subfield>
+                    </marcxml:datafield>
+                  </marcxml:record>
+  recorded_at: Tue, 13 Oct 2020 20:20:04 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/subjects/sh94002335.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:20:04 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:20:04 GMT
+      Location:
+      - https://id.loc.gov/authorities/subjects/sh94002335.madsrdf.nt
+      Cf-Request-Id:
+      - 05c537cc8500000271ac0b0200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bc25a69f70271-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:20:04 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/subjects/sh94002335.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:20:11 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d4a7d3f83c7fdec88d96f339068f7d2fa1602620405; expires=Thu, 12-Nov-20
+        20:20:05 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/subjects/sh94002335
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '48032691'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c537cd7c000002dfc5144200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bc25bfd5702df-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FamilyName> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Mellon family"@en .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b7iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b7iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b8iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementValue> "Mellon family"@en .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b11iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FamilyName> .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Mellen family"@en .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementList> _:b16iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b16iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b16iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b17iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b17iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementValue> "Mellen family"@en .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b20iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FamilyName> .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Mellin family"@en .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementList> _:b25iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b25iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b26iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b25iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementValue> "Mellin family"@en .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b29iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FamilyName> .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Melling family"@en .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementList> _:b34iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b35iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b35iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b35iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementValue> "Melling family"@en .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b38iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FamilyName> .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Mellins family"@en .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementList> _:b43iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b43iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b44iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b43iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b44iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b44iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementValue> "Mellins family"@en .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority> <http://id.loc.gov/authorities/subjects/sh85080185> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/340172> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSHAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSH_General> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/8819696> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/2721217> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/2721784> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15965981> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16499950> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/4905419> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/7369768> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/8351449> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10162812> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/6886284> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16525620> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12270678> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/subjects> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/vocabulary/identifiers/lccn> "sh 94002335" .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.w3.org/2002/07/owl#sameAs> <info:lc/authorities/sh94002335> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.w3.org/2002/07/owl#sameAs> <http://id.loc.gov/authorities/sh94002335#concept> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b68iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b68iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b68iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#citation-source> "Am. fam. names" .
+        _:b68iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#citation-note> "(Mellon, Malone, Mellen, Melling)"@en .
+        _:b68iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b76iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b76iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b76iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#citation-source> "Cent. pop. growth" .
+        _:b76iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#citation-note> "(all but Malone)"@en .
+        _:b76iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b84iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b84iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b84iddOtlocdOtgovauthoritiessubjectssh94002335 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1994-03-24T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b84iddOtlocdOtgovauthoritiessubjectssh94002335 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b84iddOtlocdOtgovauthoritiessubjectssh94002335 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b91iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b91iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b91iddOtlocdOtgovauthoritiessubjectssh94002335 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1994-05-12T10:05:05"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b91iddOtlocdOtgovauthoritiessubjectssh94002335 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b91iddOtlocdOtgovauthoritiessubjectssh94002335 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+  recorded_at: Tue, 13 Oct 2020 20:20:11 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/subjects/sh94002335.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:20:11 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:20:11 GMT
+      Location:
+      - https://id.loc.gov/authorities/subjects/sh94002335.madsrdf.nt
+      Cf-Request-Id:
+      - 05c537e62700001fbf6b105200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bc2837d2a1fbf-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:20:11 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/subjects/sh94002335.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:20:16 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dcdee85ee4f9967274149720b0a550a1e1602620411; expires=Thu, 12-Nov-20
+        20:20:11 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/subjects/sh94002335
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '52314042'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c537e7150000023f9f0c1200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bc284ed65023f-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FamilyName> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Mellon family"@en .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b7iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b7iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b8iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementValue> "Mellon family"@en .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b11iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FamilyName> .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Mellen family"@en .
+        _:b11iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementList> _:b16iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b16iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b16iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b17iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b17iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementValue> "Mellen family"@en .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b20iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FamilyName> .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Mellin family"@en .
+        _:b20iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementList> _:b25iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b25iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b26iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b25iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b26iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementValue> "Mellin family"@en .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b29iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FamilyName> .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Melling family"@en .
+        _:b29iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementList> _:b34iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b35iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b34iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b35iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b35iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementValue> "Melling family"@en .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b38iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FamilyName> .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Mellins family"@en .
+        _:b38iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementList> _:b43iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b43iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b44iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b43iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b44iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b44iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#elementValue> "Mellins family"@en .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority> <http://id.loc.gov/authorities/subjects/sh85080185> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/340172> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSHAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSH_General> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/8819696> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/2721217> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/2721784> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15965981> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16499950> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/4905419> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/7369768> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/8351449> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/10162812> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/6886284> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/16525620> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/12270678> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/subjects> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://id.loc.gov/vocabulary/identifiers/lccn> "sh 94002335" .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.w3.org/2002/07/owl#sameAs> <info:lc/authorities/sh94002335> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.w3.org/2002/07/owl#sameAs> <http://id.loc.gov/authorities/sh94002335#concept> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b68iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b68iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b68iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#citation-source> "Am. fam. names" .
+        _:b68iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#citation-note> "(Mellon, Malone, Mellen, Melling)"@en .
+        _:b68iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b76iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b76iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b76iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#citation-source> "Cent. pop. growth" .
+        _:b76iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#citation-note> "(all but Malone)"@en .
+        _:b76iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b84iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b84iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b84iddOtlocdOtgovauthoritiessubjectssh94002335 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1994-03-24T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b84iddOtlocdOtgovauthoritiessubjectssh94002335 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b84iddOtlocdOtgovauthoritiessubjectssh94002335 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        <http://id.loc.gov/authorities/subjects/sh94002335> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b91iddOtlocdOtgovauthoritiessubjectssh94002335 .
+        _:b91iddOtlocdOtgovauthoritiessubjectssh94002335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b91iddOtlocdOtgovauthoritiessubjectssh94002335 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1994-05-12T10:05:05"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b91iddOtlocdOtgovauthoritiessubjectssh94002335 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b91iddOtlocdOtgovauthoritiessubjectssh94002335 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+  recorded_at: Tue, 13 Oct 2020 20:20:16 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/subjects/sh94002335.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:20:16 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 13 Oct 2020 21:20:16 GMT
+      Location:
+      - https://id.loc.gov/authorities/subjects/sh94002335.marcxml.xml
+      Cf-Request-Id:
+      - 05c537fb2e00001fa7b71cf200000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bc2a51e531fa7-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 13 Oct 2020 20:20:16 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/subjects/sh94002335.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 13 Oct 2020 20:20:17 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=da33af2a838a65ad7139c06615358c9441602620417; expires=Thu, 12-Nov-20
+        20:20:17 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/subjects/sh94002335
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '41570620'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c537fc1d00001fc5dc901200000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e1bc2a698a31fc5-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+                    <marcxml:leader>00503nz  a2200193n  4500</marcxml:leader>
+                    <marcxml:controlfield tag="001">sh94002335</marcxml:controlfield>
+                    <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+                    <marcxml:controlfield tag="005">19940512100505.5</marcxml:controlfield>
+                    <marcxml:controlfield tag="008">940324 | anannbab|          |a ana |||  </marcxml:controlfield>
+                    <marcxml:datafield tag="010" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">sh 94002335 </marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="040" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">DLC</marcxml:subfield>
+                      <marcxml:subfield code="c">DLC</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="100" ind1="3" ind2="0">
+                      <marcxml:subfield code="a">Mellon family</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="400" ind1="3" ind2="0">
+                      <marcxml:subfield code="a">Mellen family</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="400" ind1="3" ind2="0">
+                      <marcxml:subfield code="a">Mellin family</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="400" ind1="3" ind2="0">
+                      <marcxml:subfield code="a">Melling family</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="400" ind1="3" ind2="0">
+                      <marcxml:subfield code="a">Mellins family</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="500" ind1="3" ind2="0">
+                      <marcxml:subfield code="a">Malone family</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Am. fam. names</marcxml:subfield>
+                      <marcxml:subfield code="b">(Mellon, Malone, Mellen, Melling)</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Cent. pop. growth</marcxml:subfield>
+                      <marcxml:subfield code="b">(all but Malone)</marcxml:subfield>
+                    </marcxml:datafield>
+                  </marcxml:record>
+  recorded_at: Tue, 13 Oct 2020 20:20:17 GMT
+recorded_with: VCR 6.0.0

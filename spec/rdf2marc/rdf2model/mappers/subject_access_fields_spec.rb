@@ -171,6 +171,29 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
     include_examples 'mapper', described_class
   end
 
+  describe 'complex subjects' do
+    let(:ttl) do
+      <<~TTL
+                    <#{work_term}> <http://id.loc.gov/ontologies/bibframe/subject> <http://id.loc.gov/authorities/subjects/sh2009113554>.
+        <http://id.loc.gov/authorities/subjects/sh2009113554> <http://www.w3.org/2000/01/rdf-schema#label> "Actresses--Drama".
+      TTL
+    end
+
+    let(:model) do
+      {
+        topical_terms: [
+          {
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/subjects/sh2009113554'],
+            form_subdivisions: ['Drama'],
+            topical_term_or_geo_name: 'Actresses'
+          }
+        ]
+      }
+    end
+
+    include_examples 'mapper', described_class
+  end
+
   describe 'genre forms' do
     context 'mapping from multiple URIs' do
       let(:ttl) do

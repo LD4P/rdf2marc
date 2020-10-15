@@ -187,6 +187,8 @@ module Rdf2marc
         graph = graph_get("#{uri}.madsrdf.nt")
         query = GraphQuery.new(graph)
         mads_uris = query.path_all_uri([RDF::RDFV.type], subject_term: RDF::URI.new(uri))
+        return resolve_complex_type(uri, query) if mads_uris.include?('http://www.loc.gov/mads/rdf/v1#ComplexSubject')
+
         mads_uris.map { |mad_uri| type_for(mad_uri) }.compact.first
       end
 
@@ -275,6 +277,12 @@ module Rdf2marc
 
       def expect_type(uri, types)
         raise BadRequestError, "#{uri} is not a #{types.join(' or ')}" unless types.include?(resolve_type(uri))
+      end
+
+      def resolve_complex_type(uri, query)
+        mads_uris = query.path_all_uri([[MADS.componentList], [RDF::RDFV.first], [RDF::RDFV.type]],
+                                       subject_term: RDF::URI.new(uri))
+        mads_uris.map { |mad_uri| type_for(mad_uri) }.compact.first
       end
     end
   end

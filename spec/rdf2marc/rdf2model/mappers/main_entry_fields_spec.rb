@@ -2,7 +2,7 @@
 
 require 'rdf2marc/rdf2model/mappers/mappers_shared_examples'
 
-RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
+RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
   context 'with minimal graph' do
     let(:ttl) { '' }
 
@@ -11,12 +11,12 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
     include_examples 'mapper', described_class
   end
 
-  describe 'added personal names' do
+  describe 'personal names' do
     context 'mapping from multiple BF.Person and BF.Family URIs' do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.
-          _:b1 a <http://id.loc.gov/ontologies/bibframe/Contribution>;
+          _:b1 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b2.
           _:b2 a <http://id.loc.gov/ontologies/bibframe/Person>;
               <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://id.loc.gov/authorities/names/no2005086644>.
@@ -30,15 +30,11 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
 
       let(:model) do
         {
-          personal_names: [
-            {
-              type: 'surname',
-              personal_name: 'Jung, Carl',
-              authority_record_control_numbers: ['http://id.loc.gov/authorities/names/no2005086644']
-            },
-            { authority_record_control_numbers: ['http://id.loc.gov/authorities/names/no2020066646'],
-              personal_name: 'Kennedy (Family', title_and_words: ['Covington, Ky.)'], type: 'family_name' }
-          ]
+          personal_name: {
+            type: 'surname',
+            personal_name: 'Jung, Carl',
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/no2005086644']
+          }
         }
       end
 
@@ -48,7 +44,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b7.
-          _:b7 a <http://id.loc.gov/ontologies/bibframe/Contribution>;
+          _:b7 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b8.
           _:b8 a <http://id.loc.gov/ontologies/bibframe/Person>;
               <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Jung, Carl", "Kennedy Family".
@@ -56,26 +52,21 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
       end
 
       let(:model) do
-        { personal_names: [
-          {
-            personal_name: 'Jung, Carl'
-          },
-          {
-            personal_name: 'Kennedy Family'
-          }
-        ] }
+        { personal_name: {
+          personal_name: 'Jung, Carl'
+        } }
       end
 
       include_examples 'mapper', described_class
     end
   end
 
-  describe 'added corporate names' do
+  describe 'corporate names' do
     context 'mapping from multiple BF.Organzation URIs' do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b4.
-          _:b4 a <http://id.loc.gov/ontologies/bibframe/Contribution>;
+          _:b4 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b5.
           _:b5 a <http://id.loc.gov/ontologies/bibframe/Organization>;
               <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://id.loc.gov/authorities/names/nb2007013471>.
@@ -87,19 +78,12 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
 
       let(:model) do
         {
-          corporate_names: [
-            {
-              type: 'jurisdiction',
-              corporate_name: 'United States.',
-              subordinate_units: ['Army Map Service'],
-              authority_record_control_number: ['http://id.loc.gov/authorities/names/n79122611']
-            },
-            {
-              type: 'direct',
-              corporate_name: 'Iranian Chemical Society',
-              authority_record_control_number: ['http://id.loc.gov/authorities/names/nb2007013471']
-            }
-          ]
+          corporate_name: {
+            type: 'jurisdiction',
+            corporate_name: 'United States.',
+            subordinate_units: ['Army Map Service'],
+            authority_record_control_number: ['http://id.loc.gov/authorities/names/n79122611']
+          }
         }
       end
 
@@ -109,24 +93,19 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
     context 'mapping from multiple BF.Organzation literals' do
       let(:ttl) do
         <<~TTL
-          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b9.
-           _:b9 a <http://id.loc.gov/ontologies/bibframe/Contribution>;
-               <http://id.loc.gov/ontologies/bibframe/agent> _:b10.
-           _:b10 a <http://id.loc.gov/ontologies/bibframe/Organization>;
-               <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Iranian Chemical Society", "United States. Army Map Service".
+                    <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b9.
+          _:b9 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> _:b10.
+          _:b10 a <http://id.loc.gov/ontologies/bibframe/Organization>;
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Iranian Chemical Society", "United States. Army Map Service".
         TTL
       end
 
       let(:model) do
         {
-          corporate_names: [
-            {
-              corporate_name: 'Iranian Chemical Society'
-            },
-            {
-              corporate_name: 'United States. Army Map Service'
-            }
-          ]
+          corporate_name: {
+            corporate_name: 'Iranian Chemical Society'
+          }
         }
       end
 
@@ -134,12 +113,12 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
     end
   end
 
-  describe 'added meeting names' do
+  describe 'meeting names' do
     context 'mapping from multiple BF.Meeting URIs' do
       let(:ttl) do
         <<~TTL
-           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b11.
-          _:b11 a <http://id.loc.gov/ontologies/bibframe/Contribution>;
+                    <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b11.
+          _:b11 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b12.
           _:b12 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
               <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://id.loc.gov/authorities/names/n81133545>.
@@ -151,20 +130,13 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
 
       let(:model) do
         {
-          meeting_names: [
-            {
-              type: 'direct',
-              meeting_name: 'Women and National Health Insurance Meeting',
-              meeting_locations: ['Washington, D.C.'],
-              meeting_dates: ['1980'],
-              authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n81027412']
-            },
-            {
-              type: 'direct',
-              meeting_name: 'Van Cliburn International Piano Competition',
-              authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n81133545']
-            }
-          ]
+          meeting_name: {
+            type: 'direct',
+            meeting_name: 'Women and National Health Insurance Meeting',
+            meeting_locations: ['Washington, D.C.'],
+            meeting_dates: ['1980'],
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n81027412']
+          }
         }
       end
 
@@ -174,8 +146,8 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
     context 'mapping from multiple BF.Meeting literals' do
       let(:ttl) do
         <<~TTL
-          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b13.
-          _:b13 a <http://id.loc.gov/ontologies/bibframe/Contribution>;
+                              <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b13.
+          _:b13 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b14.
           _:b14 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
               <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Women and National Health Insurance Meeting", "Van Cliburn International Piano Competition".
@@ -185,14 +157,9 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
 
       let(:model) do
         {
-          meeting_names: [
-            {
-              meeting_name: 'Van Cliburn International Piano Competition'
-            },
-            {
-              meeting_name: 'Women and National Health Insurance Meeting'
-            }
-          ]
+          meeting_name: {
+            meeting_name: 'Van Cliburn International Piano Competition'
+          }
         }
       end
 

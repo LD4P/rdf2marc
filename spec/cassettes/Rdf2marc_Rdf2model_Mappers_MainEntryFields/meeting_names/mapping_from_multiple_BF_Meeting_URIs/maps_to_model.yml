@@ -1,0 +1,288 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n81027412.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 14 Oct 2020 12:08:51 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 14 Oct 2020 13:08:51 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n81027412.madsrdf.nt
+      Cf-Request-Id:
+      - 05c89c6d0e0000214be11f3000000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e2130281c11214b-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 14 Oct 2020 12:08:51 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n81027412.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 14 Oct 2020 12:08:51 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=db5faa09685e3b318f6030f33bd81dd6f1602677331; expires=Fri, 13-Nov-20
+        12:08:51 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n81027412
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 54067207 50994317
+      Age:
+      - '211985'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c89c6df50000ed933da9c000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e2130298df9ed93-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ConferenceName> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Women and National Health Insurance Meeting (1980 : Washington, D.C.)" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b010 .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#elementValue> "Women and National Health Insurance Meeting" .
+        _:b010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b11iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b013 .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#elementValue> "(1980 :" .
+        _:b013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b14iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b14iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GeographicElement> .
+        _:b14iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#elementValue> "Washington, D.C.)" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cn++81027412#skos:Concept> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n81027412> .
+        <http://id.loc.gov/rwo/agents/n81027412> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/n81027412> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Meeting> .
+        <http://id.loc.gov/rwo/agents/n81027412> <http://www.w3.org/2000/01/rdf-schema#label> "Women and National Health Insurance Meeting (1980 : Washington, D.C.)" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#editorialNote> "[THIS 1XX FIELD CANNOT BE USED UNDER RDA UNTIL THIS RECORD HAS BEEN REVIEWED AND/OR UPDATED]" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 81027412" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b30iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b30iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b30iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#citation-source> "Kasper, A. Women and national health ... 1980 (a.e.)" .
+        _:b30iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#citation-note> "p. 14 (Women and National Health Insurance Meeting, 5/2/80)" .
+        _:b30iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b38iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b38iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b38iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#citation-source> "Phone call to Secretary's Advisory Committee on the Rights and Responsibilities of Women" .
+        _:b38iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#citation-note> "(Meeting held in Washington, D.C.)" .
+        _:b38iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#citation-status> "found" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b46iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b46iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b46iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1981-04-09T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b46iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b46iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dgpo> .
+        _:b46iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b54iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b54iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b54iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2012-08-10T10:18:44"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b54iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b54iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b54iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Wed, 14 Oct 2020 12:08:51 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n81027412.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 14 Oct 2020 12:08:52 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 14 Oct 2020 13:08:52 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n81027412.marcxml.xml
+      Cf-Request-Id:
+      - 05c89c703200009605fe1a3000000001
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e21302d19e99605-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 14 Oct 2020 12:08:52 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n81027412.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 14 Oct 2020 12:08:52 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d475653df26e524d7fe4afe12ac0cdd101602677332; expires=Fri, 13-Nov-20
+        12:08:52 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n81027412
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 50620781 47476967
+      Age:
+      - '211985'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - 05c89c711f0000ed6fcdb31000000001
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5e21302e9a4eed6f-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+                    <marcxml:leader>00729cz  a2200169n  4500</marcxml:leader>
+                    <marcxml:controlfield tag="001">n81027412</marcxml:controlfield>
+                    <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+                    <marcxml:controlfield tag="005">20120810101844.0</marcxml:controlfield>
+                    <marcxml:controlfield tag="008">810409n| acannaab           |n ana     c</marcxml:controlfield>
+                    <marcxml:datafield tag="010" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">n  81027412 </marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="035" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">(DLC)n  81027412</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="040" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">DGPO</marcxml:subfield>
+                      <marcxml:subfield code="b">eng</marcxml:subfield>
+                      <marcxml:subfield code="c">DLC</marcxml:subfield>
+                      <marcxml:subfield code="d">DLC</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="111" ind1="2" ind2=" ">
+                      <marcxml:subfield code="a">Women and National Health Insurance Meeting</marcxml:subfield>
+                      <marcxml:subfield code="d">(1980 :</marcxml:subfield>
+                      <marcxml:subfield code="c">Washington, D.C.)</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="667" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">THIS 1XX FIELD CANNOT BE USED UNDER RDA UNTIL THIS RECORD HAS BEEN REVIEWED AND/OR UPDATED</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Kasper, A. Women and national health ... 1980 (a.e.)</marcxml:subfield>
+                      <marcxml:subfield code="b">p. 14 (Women and National Health Insurance Meeting, 5/2/80)</marcxml:subfield>
+                    </marcxml:datafield>
+                    <marcxml:datafield tag="670" ind1=" " ind2=" ">
+                      <marcxml:subfield code="a">Phone call to Secretary's Advisory Committee on the Rights and Responsibilities of Women</marcxml:subfield>
+                      <marcxml:subfield code="b">(Meeting held in Washington, D.C.)</marcxml:subfield>
+                    </marcxml:datafield>
+                  </marcxml:record>
+  recorded_at: Wed, 14 Oct 2020 12:08:52 GMT
+recorded_with: VCR 6.0.0

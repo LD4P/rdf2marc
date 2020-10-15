@@ -16,7 +16,7 @@ module Rdf2marc
         def general_notes
           notes = item.instance.query.path_all_literal([[BF.note, BF.Note], RDF::RDFS.label]) +
                   item.work.query.path_all_literal([[BF.note, BF.Note], RDF::RDFS.label])
-          notes.map do |note|
+          notes.sort.map do |note|
             {
               general_note: note
             }

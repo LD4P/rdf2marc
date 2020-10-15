@@ -92,12 +92,12 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
               type: 'jurisdiction',
               corporate_name: 'United States.',
               subordinate_units: ['Army Map Service'],
-              authority_record_control_number: ['http://id.loc.gov/authorities/names/n79122611']
+              authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n79122611']
             },
             {
               type: 'direct',
               corporate_name: 'Iranian Chemical Society',
-              authority_record_control_number: ['http://id.loc.gov/authorities/names/nb2007013471']
+              authority_record_control_numbers: ['http://id.loc.gov/authorities/names/nb2007013471']
             }
           ]
         }

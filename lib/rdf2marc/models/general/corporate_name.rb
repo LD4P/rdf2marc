@@ -26,18 +26,18 @@ module Rdf2marc
         attribute? :work_title, Types::String
         attribute? :affiliation, Types::String
         attribute? :issn, Types::String
-        attribute? :authority_record_control_number, Types::Array.of(Types::String)
-        attribute? :uri, Types::Array.of(Types::String)
+        attribute? :authority_record_control_numbers, Types::Array.of(Types::String)
+        attribute? :uris, Types::Array.of(Types::String)
         attribute? :heading_source, Types::String
         attribute? :materials_specified, Types::String
-        attribute? :relationship, Types::Array.of(Types::String)
+        attribute? :relationships, Types::Array.of(Types::String)
         attribute? :institution_applies_to, Types::String
         attribute? :form_subdivisions, Types::Array.of(Types::String)
         attribute? :general_subdivisions, Types::Array.of(Types::String)
         attribute? :chronological_subdivisions, Types::Array.of(Types::String)
         attribute? :geographic_subdivisions, Types::Array.of(Types::String)
         attribute? :linkage, Types::String
-        attribute? :field_link, Types::Array.of(Types::String)
+        attribute? :field_links, Types::Array.of(Types::String)
       end
     end
   end

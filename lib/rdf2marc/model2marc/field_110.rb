@@ -23,12 +23,12 @@ module Rdf2marc
         append_repeatable('p', model.part_names)
         append('t', model.work_title)
         append('u', model.affiliation)
-        append_repeatable('0', model.authority_record_control_number)
-        append('1', model.uri)
+        append_repeatable('0', model.authority_record_control_numbers)
+        append_repeatable('1', model.uris)
         append('2', model.heading_source)
-        append_repeatable('4', model.relationship)
+        append_repeatable('4', model.relationships)
         append('6', model.linkage)
-        append_repeatable('8', model.field_link)
+        append_repeatable('8', model.field_links)
       end
 
       private

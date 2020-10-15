@@ -11,7 +11,7 @@ module Rdf2marc
       def value
         return nil if model.latest_transaction.nil?
 
-        model.latest_transaction.strftime('%Y%m%d%H%M%S.f')
+        model.latest_transaction.strftime('%Y%m%d%H%M%S.0')
       end
     end
   end

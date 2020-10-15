@@ -82,7 +82,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
             type: 'jurisdiction',
             corporate_name: 'United States.',
             subordinate_units: ['Army Map Service'],
-            authority_record_control_number: ['http://id.loc.gov/authorities/names/n79122611']
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n79122611']
           }
         }
       end

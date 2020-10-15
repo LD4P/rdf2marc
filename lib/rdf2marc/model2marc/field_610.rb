@@ -22,7 +22,7 @@ module Rdf2marc
         append('l', model.work_language)
         append_repeatable('m', model.music_performance_mediums)
         append_repeatable('n', model.part_numbers)
-        append_repeatable('o', model.music_arranged_statement)
+        append('o', model.music_arranged_statement)
         append_repeatable('p', model.part_names)
         append('r', model.music_key)
         append('s', model.medium)
@@ -32,13 +32,13 @@ module Rdf2marc
         append_repeatable('x', model.general_subdivisions)
         append_repeatable('y', model.chronological_subdivisions)
         append_repeatable('z', model.geographic_subdivisions)
-        append_repeatable('0', model.authority_record_control_number)
-        append('1', model.uri)
+        append_repeatable('0', model.authority_record_control_numbers)
+        append_repeatable('1', model.uris)
         append('2', model.heading_source)
         append('3', model.materials_specified)
-        append_repeatable('4', model.relationship)
+        append_repeatable('4', model.relationships)
         append('6', model.linkage)
-        append_repeatable('8', model.field_link)
+        append_repeatable('8', model.field_links)
       end
 
       private

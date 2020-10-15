@@ -3,6 +3,8 @@ AllCops:
 
 Layout/LineLength:
   Max: 120
+  Exclude:
+    - 'spec/rdf2marc/model2marc/*field_*_spec.rb'
 
 Lint/UnusedMethodArgument:
   Exclude:

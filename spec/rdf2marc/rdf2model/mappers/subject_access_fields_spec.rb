@@ -41,12 +41,12 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
             type: 'direct',
             corporate_name: 'Ford Motor Company.',
             subordinate_units: ['Ford Division'],
-            authority_record_control_number: ['http://id.loc.gov/authorities/names/n78088613']
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n78088613']
           },
           {
             type: 'direct',
             corporate_name: 'American Honda Motor Company',
-            authority_record_control_number: ['http://id.loc.gov/authorities/names/n81109238']
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n81109238']
           }
         ]
       }
@@ -209,14 +209,14 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
         {
           genre_forms: [
             {
-              thesaurus: 'subfield2',
               genre_form_data: 'Diaries',
-              term_source: 'lcgft'
+              term_source: 'lcgft',
+              authority_record_control_numbers: ['http://id.loc.gov/authorities/genreForms/gf2014026085']
             },
             {
-              thesaurus: 'subfield2',
               genre_form_data: 'Rosaries (Prayer books)',
-              term_source: 'lcgft'
+              term_source: 'lcgft',
+              authority_record_control_numbers: ['http://id.loc.gov/authorities/genreForms/gf2015026083']
             }
           ]
         }

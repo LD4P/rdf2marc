@@ -25,7 +25,7 @@ module Rdf2marc
         attribute? :chronological_subdivisions, Types::Array.of(Types::String)
         attribute? :geographic_subdivisions, Types::Array.of(Types::String)
         attribute? :authority_record_control_numbers, Types::Array.of(Types::String)
-        attribute? :uri, Types::Array.of(Types::String)
+        attribute? :uris, Types::Array.of(Types::String)
         attribute? :heading_source, Types::String
         attribute? :materials_specified, Types::String
         attribute? :relationships, Types::Array.of(Types::String)

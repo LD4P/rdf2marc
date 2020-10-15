@@ -22,7 +22,7 @@ module Rdf2marc
         append_repeatable('y', model.chronological_subdivisions)
         append_repeatable('z', model.geographic_subdivisions)
         append_repeatable('0', model.authority_record_control_numbers)
-        append('1', model.uri)
+        append_repeatable('1', model.uris)
         append('2', model.heading_source)
         append('3', model.materials_specified)
         append_repeatable('4', model.relationships)

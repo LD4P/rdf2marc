@@ -72,13 +72,13 @@ module Rdf2marc
           general_subdivisions: subfield_values(field, 'x'),
           chronological_subdivisions: subfield_values(field, 'y'),
           geographic_subdivisions: subfield_values(field, 'z'),
-          authority_record_control_number: [uri],
+          authority_record_control_numbers: [uri],
           # No uri: field['1'],
           # No heading_source: field['2'],
           # No materials_specified: field['3'],
           # No relationship: subfield_values(field, '4'),
           linkage: field['6'],
-          field_link: subfield_values(field, '8')
+          field_links: subfield_values(field, '8')
         }
       end
 
@@ -126,7 +126,13 @@ module Rdf2marc
         field = marc_record['151']
         {
           geographic_name: subfield_value(field, 'a'),
-          authority_record_control_numbers: [uri]
+          form_subdivisions: subfield_values(field, 'v'),
+          general_subdivisions: subfield_values(field, 'x'),
+          chronological_subdivisions: subfield_values(field, 'y'),
+          geographic_subdivisions: subfield_values(field, 'z'),
+          authority_record_control_numbers: [uri],
+          linkage: field['6'],
+          field_link: subfield_values(field, '8')
         }
       end
 
@@ -135,12 +141,12 @@ module Rdf2marc
         marc_record = get_marc(uri)
         field = marc_record['155']
         {
-          thesaurus: 'subfield2',
           genre_form_data: subfield_value(field, 'a'),
           form_subdivisions: subfield_values(field, 'v'),
           general_subdivisions: subfield_values(field, 'x'),
           chronological_subdivisions: subfield_values(field, 'y'),
           geographic_subdivisions: subfield_values(field, 'z'),
+          authority_record_control_numbers: [uri],
           term_source: 'lcgft',
           linkage: subfield_value(field, '6'),
           field_links: subfield_values(field, '8')

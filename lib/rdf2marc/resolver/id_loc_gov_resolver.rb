@@ -4,153 +4,17 @@ module Rdf2marc
   module Resolver
     # Resolver for id.loc.gov.
     class IdLocGovResolver
-      def resolve_personal_name(uri)
-        expect_type(uri, %w[personal_name family_name])
-        marc_record = get_marc(uri)
-        field = marc_record['100']
-        {
-          type: personal_name_type_for(field.indicator1),
-          personal_name: subfield_value(field, 'a', clean: true),
-          numeration: field['b'],
-          title_and_words: subfield_values(field, 'c'),
-          dates: field['d'],
-          relator_terms: subfield_values(field, 'e'),
-          work_date: field['f'],
-          misc_infos: subfield_values(field, 'g'),
-          medium: field['h'],
-          attribution_qualifiers: subfield_values(field, 'j'),
-          form_subheadings: subfield_values(field, 'k'),
-          work_language: field['l'],
-          music_performance_mediums: subfield_values(field, 'm'),
-          part_numbers: subfield_values(field, 'n'),
-          music_arranged_statment: field['o'],
-          part_names: subfield_values(field, 'p'),
-          fuller_form: field['q'],
-          music_key: field['r'],
-          versions: subfield_values(field, 's'),
-          work_title: field['t'],
-          # No affiliation: field['u'],
-          form_subdivisions: subfield_values(field, 'v'),
-          general_subdivisions: subfield_values(field, 'x'),
-          chronological_subdivisions: subfield_values(field, 'y'),
-          geographic_subdivisions: subfield_values(field, 'z'),
-          authority_record_control_numbers: [uri],
-          # No uri: field['1'],
-          # No heading_source: field['2'],
-          # No materials_specified: field['3'],
-          # No relationships: subfield_values(field, '4'),
-          linkage: field['6'],
-          field_links: subfield_values(field, '8')
-        }
-      end
+      def resolve_model(uri, model_class)
+        mapper_class = mapper_class_for(model_class)
 
-      def resolve_corporate_name(uri)
-        expect_type(uri, ['corporate_name'])
-        marc_record = get_marc(uri)
-        field = marc_record['110']
-        {
-          type: name_type_for(field.indicator1),
-          corporate_name: subfield_value(field, 'a', clean: true),
-          subordinate_units: subfield_values(field, 'b'),
-          meeting_locations: subfield_values(field, 'c'),
-          meeting_dates: subfield_values(field, 'd'),
-          relator_terms: subfield_values(field, 'e'),
-          work_date: field['f'],
-          misc_infos: subfield_values(field, 'g'),
-          medium: field['h'],
-          form_subheadings: subfield_values(field, 'k'),
-          work_language: field['l'],
-          music_performance_mediums: subfield_values(field, 'm'),
-          part_numbers: subfield_values(field, 'n'),
-          music_arranged_statment: field['o'],
-          part_names: subfield_values(field, 'p'),
-          music_key: field['r'],
-          versions: subfield_values(field, 's'),
-          work_title: field['t'],
-          # No affiliation: field['u'],
-          form_subdivisions: subfield_values(field, 'v'),
-          general_subdivisions: subfield_values(field, 'x'),
-          chronological_subdivisions: subfield_values(field, 'y'),
-          geographic_subdivisions: subfield_values(field, 'z'),
-          authority_record_control_numbers: [uri],
-          # No uri: field['1'],
-          # No heading_source: field['2'],
-          # No materials_specified: field['3'],
-          # No relationship: subfield_values(field, '4'),
-          linkage: field['6'],
-          field_links: subfield_values(field, '8')
-        }
-      end
+        if mapper_class.nil?
+          Logger.warn("Resolving #{uri} to #{model_class} not supported.")
+          return nil
+        end
 
-      def resolve_meeting_name(uri)
-        expect_type(uri, ['meeting_name'])
+        expect_type(uri, types_for(model_class))
         marc_record = get_marc(uri)
-        field = marc_record['111']
-        {
-          type: name_type_for(field.indicator1),
-          meeting_name: subfield_value(field, 'a', clean: true),
-          meeting_locations: subfield_values(field, 'c', clean: true),
-          meeting_dates: subfield_values(field, 'd', clean: true),
-          subordinate_units: subfield_values(field, 'e'),
-          work_date: field['f'],
-          misc_infos: subfield_values(field, 'g'),
-          medium: field['h'],
-          # No relationship_info: subfield_values(field, 'i')
-          relator_terms: subfield_values(field, 'j'),
-          form_subheadings: subfield_values(field, 'k'),
-          work_language: field['l'],
-          part_numbers: subfield_values(field, 'n', clean: true),
-          part_names: subfield_values(field, 'p'),
-          following_meeting_name: field['q'],
-          versions: subfield_values(field, 's'),
-          work_title: field['t'],
-          # No affiliation: field['u'],
-          form_subdivisions: subfield_values(field, 'v'),
-          general_subdivisions: subfield_values(field, 'x'),
-          # No issn field['x']
-          chronological_subdivisions: subfield_values(field, 'y'),
-          geographic_subdivisions: subfield_values(field, 'z'),
-          authority_record_control_numbers: [uri],
-          # No uri: field['1'],
-          # No heading_source: field['2'],
-          # No materials_specified: field['3'],
-          # No relationshipa: subfield_values(field, '4'),
-          linkage: field['6'],
-          field_links: subfield_values(field, '8')
-        }
-      end
-
-      def resolve_geographic_name(uri)
-        expect_type(uri, ['geographic_name'])
-        marc_record = get_marc(uri)
-        field = marc_record['151']
-        {
-          geographic_name: subfield_value(field, 'a'),
-          form_subdivisions: subfield_values(field, 'v'),
-          general_subdivisions: subfield_values(field, 'x'),
-          chronological_subdivisions: subfield_values(field, 'y'),
-          geographic_subdivisions: subfield_values(field, 'z'),
-          authority_record_control_numbers: [uri],
-          linkage: field['6'],
-          field_link: subfield_values(field, '8')
-        }
-      end
-
-      def resolve_genre_form(uri)
-        expect_type(uri, ['genre_form'])
-        marc_record = get_marc(uri)
-        field = marc_record['155']
-        {
-          genre_form_data: subfield_value(field, 'a'),
-          form_subdivisions: subfield_values(field, 'v'),
-          general_subdivisions: subfield_values(field, 'x'),
-          chronological_subdivisions: subfield_values(field, 'y'),
-          geographic_subdivisions: subfield_values(field, 'z'),
-          authority_record_control_numbers: [uri],
-          term_source: 'lcgft',
-          linkage: subfield_value(field, '6'),
-          field_links: subfield_values(field, '8')
-        }
+        mapper_class.new(uri, marc_record).map
       end
 
       def resolve_gac(uri)
@@ -163,24 +27,6 @@ module Rdf2marc
         end
 
         marc_record['043']['a']
-      end
-
-      def resolve_topical_term(uri)
-        expect_type(uri, ['topic'])
-        marc_record = get_marc(uri)
-        field = marc_record['150']
-        {
-          topical_term_or_geo_name: subfield_value(field, 'a'),
-          topical_term_following_geo_name: subfield_value(field, 'b'),
-          misc_infos: subfield_values(field, 'g'),
-          form_subdivisions: subfield_values(field, 'v'),
-          general_subdivisions: subfield_values(field, 'x'),
-          chronological_subdivisions: subfield_values(field, 'y'),
-          geographic_subdivisions: subfield_values(field, 'z'),
-          authority_record_control_numbers: [uri],
-          linkage: field['6'],
-          field_link: subfield_values(field, '8')
-        }
       end
 
       def resolve_label(uri)
@@ -228,45 +74,6 @@ module Rdf2marc
         MARC::XMLReader.new(StringIO.new(body)).first
       end
 
-      def personal_name_type_for(indicator1)
-        case indicator1
-        when '0'
-          'forename'
-        when '1'
-          'surname'
-        else
-          'family_name'
-        end
-      end
-
-      def name_type_for(indicator1)
-        case indicator1
-        when '0'
-          'inverted'
-        when '1'
-          'jurisdiction'
-        when '2'
-          'direct'
-        else ' '
-        end
-      end
-
-      def clean_value(value)
-        return nil if value.nil?
-
-        value.gsub(/[[,)]]$/, '').gsub(/^[(]/, '').gsub(/[ :]$/, '').strip
-      end
-
-      def subfield_values(field, code, clean: false)
-        field.find_all { |subfield| subfield.code == code }.map do |subfield|
-          clean ? clean_value(subfield.value) : subfield.value
-        end
-      end
-
-      def subfield_value(field, code, clean: false)
-        clean ? clean_value(field[code]) : field[code]
-      end
-
       def type_for(mads_uri)
         # Not yet mapped: uniform_title, named_event, chronological_term, topical_term
         types = {
@@ -289,6 +96,40 @@ module Rdf2marc
         mads_uris = query.path_all_uri([[MADS.componentList], [RDF::RDFV.first], [RDF::RDFV.type]],
                                        subject_term: RDF::URI.new(uri))
         mads_uris.map { |mad_uri| type_for(mad_uri) }.compact.first
+      end
+
+      def mapper_class_for(model_class)
+        case model_class.name
+        when Rdf2marc::Models::General::PersonalName.name
+          IdLocGovResolvers::PersonalName
+        when Rdf2marc::Models::General::CorporateName.name
+          IdLocGovResolvers::CorporateName
+        when Rdf2marc::Models::General::MeetingName.name
+          IdLocGovResolvers::MeetingName
+        when Rdf2marc::Models::SubjectAccessField::GeographicName.name
+          IdLocGovResolvers::GeographicName
+        when Rdf2marc::Models::SubjectAccessField::GenreForm.name
+          IdLocGovResolvers::GenreForm
+        when Rdf2marc::Models::SubjectAccessField::TopicalTerm.name
+          IdLocGovResolvers::TopicalTerm
+        end
+      end
+
+      def types_for(model_class)
+        case model_class.name
+        when Rdf2marc::Models::General::PersonalName.name
+          %w[personal_name family_name]
+        when Rdf2marc::Models::General::CorporateName.name
+          ['corporate_name']
+        when Rdf2marc::Models::General::MeetingName.name
+          ['meeting_name']
+        when Rdf2marc::Models::SubjectAccessField::GeographicName.name
+          ['geographic_name']
+        when Rdf2marc::Models::SubjectAccessField::GenreForm.name
+          ['genre_form']
+        when Rdf2marc::Models::SubjectAccessField::TopicalTerm.name
+          ['topic']
+        end
       end
     end
   end

@@ -25,3 +25,13 @@ rm -f lambda.zip
 zip -r lambda.zip lib
 zip -j lambda.zip lambda-s3/lambda_function.rb
 ```
+
+## Copying zip files to AWS Production
+```
+aws s3 cp lambda.zip s3://sinopia-lambdas-production/sinopia-rdf2marc-production/ --profile developer --acl bucket-owner-full-control
+aws s3 cp layer.zip s3://sinopia-lambdas-production/sinopia-rdf2marc-production/ --profile developer --acl bucket-owner-full-control
+```
+Check to see if the files are what you expect:
+```
+aws s3 ls s3://sinopia-lambdas-production/sinopia-rdf2marc-production/ --profile developer
+```

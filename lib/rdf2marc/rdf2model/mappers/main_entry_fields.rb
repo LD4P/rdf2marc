@@ -22,7 +22,7 @@ module Rdf2marc
                         item.work.query.path_first([[BF.contribution, BFLC.PrimaryContribution],
                                                     [BF.agent, BF.Family], [RDF::RDFV.value]])
 
-          return { personal_name: person_term.value } if person_term.is_a?(RDF::Literal)
+          return { thesaurus: 'not_specified', personal_name: person_term.value } if person_term.is_a?(RDF::Literal)
 
           Resolver.resolve_model(person_term&.value, Models::General::PersonalName)
         end
@@ -32,7 +32,9 @@ module Rdf2marc
                                                        [BF.agent, BF.Organization],
                                                        [RDF::RDFV.value]])
 
-          return { corporate_name: corporate_term.value } if corporate_term.is_a?(RDF::Literal)
+          if corporate_term.is_a?(RDF::Literal)
+            return { thesaurus: 'not_specified', corporate_name: corporate_term.value }
+          end
 
           Resolver.resolve_model(corporate_term&.value, Models::General::CorporateName)
         end
@@ -42,7 +44,7 @@ module Rdf2marc
                                                      [BF.agent, BF.Meeting],
                                                      [RDF::RDFV.value]])
 
-          return { meeting_name: meeting_term.value } if meeting_term.is_a?(RDF::Literal)
+          return { thesaurus: 'not_specified', meeting_name: meeting_term.value } if meeting_term.is_a?(RDF::Literal)
 
           Resolver.resolve_model(meeting_term&.value, Models::General::MeetingName)
         end

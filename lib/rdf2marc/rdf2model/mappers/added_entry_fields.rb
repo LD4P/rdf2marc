@@ -24,7 +24,7 @@ module Rdf2marc
                                                    [RDF::RDFV.value]]) || []
           person_terms.sort.map do |person_term|
             if person_term.is_a?(RDF::Literal)
-              { personal_name: person_term.value }
+              { thesaurus: 'not_specified', personal_name: person_term.value }
             else
               Resolver.resolve_model(person_term&.value, Models::General::PersonalName)
             end
@@ -36,7 +36,7 @@ module Rdf2marc
                                                       [BF.agent, BF.Organization], [RDF::RDFV.value]])
           corporate_terms.sort.map do |corporate_term|
             if corporate_term.is_a?(RDF::Literal)
-              { corporate_name: corporate_term.value }
+              { thesaurus: 'not_specified', corporate_name: corporate_term.value }
             else
               Resolver.resolve_model(corporate_term&.value,
                                      Models::General::CorporateName)
@@ -49,7 +49,7 @@ module Rdf2marc
                                                     [BF.agent, BF.Meeting], [RDF::RDFV.value]])
           meeting_terms.sort.map do |meeting_term|
             if meeting_term.is_a?(RDF::Literal)
-              { meeting_name: meeting_term.value }
+              { thesaurus: 'not_specified', meeting_name: meeting_term.value }
             else
               Resolver.resolve_model(meeting_term&.value,
                                      Models::General::MeetingName)

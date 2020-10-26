@@ -39,12 +39,14 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
         corporate_names: [
           {
             type: 'direct',
+            thesaurus: 'lcsh',
             corporate_name: 'Ford Motor Company.',
             subordinate_units: ['Ford Division'],
             authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n78088613']
           },
           {
             type: 'direct',
+            thesaurus: 'lcsh',
             corporate_name: 'American Honda Motor Company',
             authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n81109238']
           }
@@ -70,11 +72,13 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
         personal_names: [
           {
             type: 'surname',
+            thesaurus: 'lcsh',
             personal_name: 'Mellon, Andrew',
             authority_record_control_numbers: ['http://id.loc.gov/authorities/names/nb2010025455']
           },
           {
             type: 'family_name',
+            thesaurus: 'lcsh',
             personal_name: 'Mellon family',
             authority_record_control_numbers: ['http://id.loc.gov/authorities/subjects/sh94002335']
           }
@@ -99,10 +103,12 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
       {
         geographic_names: [
           {
+            thesaurus: 'lcsh',
             geographic_name: 'Menlo Park (Calif.)',
             authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n81024722']
           },
           {
+            thesaurus: 'lcsh',
             geographic_name: 'East Palo Alto (Calif.)',
             authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n85186120']
           }
@@ -128,11 +134,13 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
         meeting_names: [
           {
             type: 'direct',
+            thesaurus: 'lcsh',
             meeting_name: 'Auchenorrhyncha Meeting',
             authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n2013185327']
           },
           {
             type: 'direct',
+            thesaurus: 'lcsh',
             meeting_name: 'Bacteriophage Meeting',
             authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n81025771']
           }
@@ -157,10 +165,12 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
       {
         topical_terms: [
           {
+            thesaurus: 'lcsh',
             topical_term_or_geo_name: 'Historiography',
             authority_record_control_numbers: ['http://id.loc.gov/authorities/subjects/sh85061211']
           },
           {
+            thesaurus: 'lcsh',
             topical_term_or_geo_name: 'Naval history',
             authority_record_control_numbers: ['http://id.loc.gov/authorities/subjects/sh85090384']
           }
@@ -183,6 +193,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
       {
         topical_terms: [
           {
+            thesaurus: 'lcsh',
             authority_record_control_numbers: ['http://id.loc.gov/authorities/subjects/sh2009113554'],
             form_subdivisions: ['Drama'],
             topical_term_or_geo_name: 'Actresses'
@@ -209,11 +220,13 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
         {
           genre_forms: [
             {
+              thesaurus: 'lcsh',
               genre_form_data: 'Diaries',
               term_source: 'lcgft',
               authority_record_control_numbers: ['http://id.loc.gov/authorities/genreForms/gf2014026085']
             },
             {
+              thesaurus: 'lcsh',
               genre_form_data: 'Rosaries (Prayer books)',
               term_source: 'lcgft',
               authority_record_control_numbers: ['http://id.loc.gov/authorities/genreForms/gf2015026083']
@@ -236,9 +249,11 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
         {
           genre_forms: [
             {
+              thesaurus: 'not_specified',
               genre_form_data: 'Diaries'
             },
             {
+              thesaurus: 'not_specified',
               genre_form_data: 'Rosaries (Prayer books)'
             }
           ]

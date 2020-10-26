@@ -9,6 +9,7 @@ module Rdf2marc
           field = marc_record['111']
           {
             type: name_type_for(field.indicator1),
+            thesaurus: 'lcsh',
             meeting_name: subfield_value(field, 'a', clean: true),
             meeting_locations: subfield_values(field, 'c', clean: true),
             meeting_dates: subfield_values(field, 'd', clean: true),

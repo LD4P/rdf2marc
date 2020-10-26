@@ -8,6 +8,7 @@ module Rdf2marc
         def map
           field = marc_record['150']
           {
+            thesaurus: 'lcsh',
             topical_term_or_geo_name: subfield_value(field, 'a'),
             topical_term_following_geo_name: subfield_value(field, 'b'),
             misc_infos: subfield_values(field, 'g'),

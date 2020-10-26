@@ -52,6 +52,7 @@ RSpec.describe Rdf2marc::Resolver::IdLocGovResolvers::MeetingName do
   let(:model) do
     {
       type: 'direct',
+      thesaurus: 'lcsh',
       meeting_name: 'International Bigfoot Symposium',
       meeting_locations: ['Rome, Italy', 'Waco'],
       meeting_dates: ['1950', '1682 Apr. 20'],

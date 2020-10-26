@@ -27,6 +27,7 @@ RSpec.describe Rdf2marc::Resolver::IdLocGovResolvers::TopicalTerm do
 
   let(:model) do
     {
+      thesaurus: 'lcsh',
       topical_term_or_geo_name: 'Historiography',
       topical_term_following_geo_name: 'Lincoln Memorial',
       misc_infos: %w[Bodenkunde Politik],

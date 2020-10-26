@@ -9,6 +9,7 @@ module Rdf2marc
           field = marc_record['100']
           {
             type: personal_name_type_for(field.indicator1),
+            thesaurus: 'lcsh',
             personal_name: subfield_value(field, 'a', clean: true),
             numeration: field['b'],
             title_and_words: subfield_values(field, 'c'),

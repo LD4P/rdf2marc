@@ -6,6 +6,14 @@ module Rdf2marc
       # General model for Corporate Name.
       class CorporateName < Struct
         attribute :type, Types::String.default('direct').enum('inverted', 'jurisdiction', 'direct')
+        attribute :thesaurus, Types::String.default('not_specified').enum('lcsh',
+                                                                          'lcsh_childrens_literature',
+                                                                          'mesh',
+                                                                          'nal_subject_authority',
+                                                                          'not_specified',
+                                                                          'canadian_subject_headings',
+                                                                          'répertoire_de_vedettes-matière',
+                                                                          'subfield2')
         attribute? :corporate_name, Types::String
         attribute? :subordinate_units, Types::Array.of(Types::String)
         attribute? :meeting_locations, Types::Array.of(Types::String)

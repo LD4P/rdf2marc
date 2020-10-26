@@ -33,11 +33,15 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
           personal_names: [
             {
               type: 'surname',
+              thesaurus: 'lcsh',
               personal_name: 'Jung, Carl',
               authority_record_control_numbers: ['http://id.loc.gov/authorities/names/no2005086644']
             },
-            { authority_record_control_numbers: ['http://id.loc.gov/authorities/names/no2020066646'],
-              personal_name: 'Kennedy (Family', title_and_words: ['Covington, Ky.)'], type: 'family_name' }
+            {
+              thesaurus: 'lcsh',
+              authority_record_control_numbers: ['http://id.loc.gov/authorities/names/no2020066646'],
+              personal_name: 'Kennedy (Family', title_and_words: ['Covington, Ky.)'], type: 'family_name'
+            }
           ]
         }
       end
@@ -58,9 +62,11 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
       let(:model) do
         { personal_names: [
           {
+            thesaurus: 'not_specified',
             personal_name: 'Jung, Carl'
           },
           {
+            thesaurus: 'not_specified',
             personal_name: 'Kennedy Family'
           }
         ] }
@@ -90,12 +96,14 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
           corporate_names: [
             {
               type: 'jurisdiction',
+              thesaurus: 'lcsh',
               corporate_name: 'United States.',
               subordinate_units: ['Army Map Service'],
               authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n79122611']
             },
             {
               type: 'direct',
+              thesaurus: 'lcsh',
               corporate_name: 'Iranian Chemical Society',
               authority_record_control_numbers: ['http://id.loc.gov/authorities/names/nb2007013471']
             }
@@ -121,9 +129,11 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
         {
           corporate_names: [
             {
+              thesaurus: 'not_specified',
               corporate_name: 'Iranian Chemical Society'
             },
             {
+              thesaurus: 'not_specified',
               corporate_name: 'United States. Army Map Service'
             }
           ]
@@ -154,6 +164,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
           meeting_names: [
             {
               type: 'direct',
+              thesaurus: 'lcsh',
               meeting_name: 'Women and National Health Insurance Meeting',
               meeting_locations: ['Washington, D.C.'],
               meeting_dates: ['1980'],
@@ -161,6 +172,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
             },
             {
               type: 'direct',
+              thesaurus: 'lcsh',
               meeting_name: 'Van Cliburn International Piano Competition',
               authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n81133545']
             }
@@ -187,9 +199,11 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
         {
           meeting_names: [
             {
+              thesaurus: 'not_specified',
               meeting_name: 'Van Cliburn International Piano Competition'
             },
             {
+              thesaurus: 'not_specified',
               meeting_name: 'Women and National Health Insurance Meeting'
             }
           ]

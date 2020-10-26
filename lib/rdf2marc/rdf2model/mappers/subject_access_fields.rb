@@ -54,7 +54,10 @@ module Rdf2marc
           genre_form_terms = item.work.query.path_all([BF.genreForm])
           genre_form_terms.sort.map do |genre_form_term|
             if genre_form_term.is_a?(RDF::Literal)
-              { genre_form_data: genre_form_term.value }
+              {
+                genre_form_data: genre_form_term.value,
+                thesaurus: 'not_specified'
+              }
             else
               Resolver.resolve_model(genre_form_term&.value, Models::SubjectAccessField::GenreForm)
             end

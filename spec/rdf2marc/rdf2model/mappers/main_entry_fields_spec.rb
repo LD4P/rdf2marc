@@ -31,6 +31,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:model) do
         {
           personal_name: {
+            thesaurus: 'lcsh',
             type: 'surname',
             personal_name: 'Jung, Carl',
             authority_record_control_numbers: ['http://id.loc.gov/authorities/names/no2005086644']
@@ -52,9 +53,12 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       end
 
       let(:model) do
-        { personal_name: {
-          personal_name: 'Jung, Carl'
-        } }
+        {
+          personal_name: {
+            thesaurus: 'not_specified',
+            personal_name: 'Jung, Carl'
+          }
+        }
       end
 
       include_examples 'mapper', described_class
@@ -80,6 +84,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
         {
           corporate_name: {
             type: 'jurisdiction',
+            thesaurus: 'lcsh',
             corporate_name: 'United States.',
             subordinate_units: ['Army Map Service'],
             authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n79122611']
@@ -104,6 +109,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:model) do
         {
           corporate_name: {
+            thesaurus: 'not_specified',
             corporate_name: 'Iranian Chemical Society'
           }
         }
@@ -132,6 +138,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
         {
           meeting_name: {
             type: 'direct',
+            thesaurus: 'lcsh',
             meeting_name: 'Women and National Health Insurance Meeting',
             meeting_locations: ['Washington, D.C.'],
             meeting_dates: ['1980'],
@@ -158,6 +165,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:model) do
         {
           meeting_name: {
+            thesaurus: 'not_specified',
             meeting_name: 'Van Cliburn International Piano Competition'
           }
         }

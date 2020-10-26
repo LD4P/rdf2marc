@@ -47,6 +47,7 @@ RSpec.describe Rdf2marc::Resolver::IdLocGovResolvers::PersonalName do
   let(:model) do
     {
       type: 'family_name',
+      thesaurus: 'lcsh',
       personal_name: "Manya K'Omalowete a Djonga",
       numeration: 'II',
       dates: '1950-',

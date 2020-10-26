@@ -51,6 +51,7 @@ RSpec.describe Rdf2marc::Resolver::IdLocGovResolvers::CorporateName do
   let(:model) do
     {
       type: 'direct',
+      thesaurus: 'lcsh',
       corporate_name: 'Alphabet Inc.',
       subordinate_units: ['Dept. of Human Services', 'Conference'],
       meeting_locations: ['Rome, Italy', 'Waco'],

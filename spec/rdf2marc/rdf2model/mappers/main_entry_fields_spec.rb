@@ -153,12 +153,12 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
     context 'mapping from multiple BF.Meeting literals' do
       let(:ttl) do
         <<~TTL
-                              <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b13.
-          _:b13 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
-              <http://id.loc.gov/ontologies/bibframe/agent> _:b14.
-          _:b14 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
-              <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Women and National Health Insurance Meeting", "Van Cliburn International Piano Competition".
-          
+                                        <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b13.
+                    _:b13 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+                        <http://id.loc.gov/ontologies/bibframe/agent> _:b14.
+                    _:b14 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
+                        <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Women and National Health Insurance Meeting", "Van Cliburn International Piano Competition".
+          #{'          '}
         TTL
       end
 

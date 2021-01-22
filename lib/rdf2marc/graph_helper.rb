@@ -17,7 +17,7 @@ module Rdf2marc
       query = <<~SPARQL
         SELECT ?solut
         WHERE
-        { 
+        {#{' '}
           ?solut sinopia:hasResourceTemplate ?x .
         }
       SPARQL

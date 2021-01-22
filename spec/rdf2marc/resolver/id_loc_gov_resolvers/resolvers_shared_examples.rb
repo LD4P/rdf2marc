@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.shared_examples 'mapper' do |mapper_class, tag, model_class|
+RSpec.shared_examples 'resolver_mapper' do |mapper_class, tag, model_class|
   let(:subject) { mapper.map.deep_compact }
 
   let(:mapper) { mapper_class.new(uri, marc_record) }

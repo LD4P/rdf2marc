@@ -78,5 +78,5 @@ RSpec.describe Rdf2marc::Resolver::IdLocGovResolvers::MeetingName do
     }
   end
 
-  include_examples 'mapper', described_class, '111', Rdf2marc::Models::General::MeetingName
+  include_examples 'resolver_mapper', described_class, '111', Rdf2marc::Models::General::MeetingName
 end

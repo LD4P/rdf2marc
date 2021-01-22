@@ -78,5 +78,5 @@ RSpec.describe Rdf2marc::Resolver::IdLocGovResolvers::CorporateName do
     }
   end
 
-  include_examples 'mapper', described_class, '110', Rdf2marc::Models::General::CorporateName
+  include_examples 'resolver_mapper', described_class, '110', Rdf2marc::Models::General::CorporateName
 end

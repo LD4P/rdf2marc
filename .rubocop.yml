@@ -40,3 +40,6 @@ Style/Documentation:
   Exclude:
     - 'lib/array.rb'
     - 'lib/hash.rb'
+
+Style/DocumentDynamicEvalDefinition:
+  Enabled: false

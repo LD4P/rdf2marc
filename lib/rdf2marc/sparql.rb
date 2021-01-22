@@ -79,7 +79,7 @@ module Rdf2marc
       query_string = <<~SPARQL
         SELECT ?#{subj}
         WHERE
-        { 
+        {#{' '}
           #{where_str.join("\n")}
         }
       SPARQL

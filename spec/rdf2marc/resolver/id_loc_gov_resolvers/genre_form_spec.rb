@@ -36,5 +36,5 @@ RSpec.describe Rdf2marc::Resolver::IdLocGovResolvers::GenreForm do
     }
   end
 
-  include_examples 'mapper', described_class, '155', Rdf2marc::Models::SubjectAccessField::GenreForm
+  include_examples 'resolver_mapper', described_class, '155', Rdf2marc::Models::SubjectAccessField::GenreForm
 end

@@ -32,6 +32,8 @@ $ exe/rdf2marc instance.ttl work.ttl admin_metadata.ttl
 $ exe/rdf2marc https://api.stage.sinopia.io/resource/70ac2ed7-95d0-492a-a300-050a40895b74
 ```
 
+In addition to printing the MARC record, this will also output a binary MARC record (`record.mar`).
+
 Note when using files:
 * Currently, only turtle is supported.
 * When copying turtle from Sinopia's RDF preview, the resource uri (`<>`) must be replaced by the actual uri (e.g., `https://api.stage.sinopia.io/resource/70ac2ed7-95d0-492a-a300-050a40895b74`)

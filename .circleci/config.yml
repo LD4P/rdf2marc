@@ -1,29 +1,61 @@
 version: 2.1
+orbs:
+  ruby: circleci/ruby@1.1.4
+references:
+  default_ruby_version: &default_ruby_version 2.7-browsers
+  ruby_envs: &ruby_envs
+    environment:
+      BUNDLE_JOBS: 3
+      BUNDLE_RETRY: 3
 executors:
-  docker-publisher:
+  default:
+    parameters:
+      ruby_tag:
+        description: "The `cimg/ruby` Docker image version tag."
+        type: string
+        default: *default_ruby_version
     docker:
-      - image: circleci/buildpack-deps:stretch
+      - image: cimg/ruby:<< parameters.ruby_tag >>
+        <<: *ruby_envs
 jobs:
-  test:
-    docker:
-      - image: circleci/ruby:2.7.0
+  build:
+    executor: default
     steps:
       - checkout
+      - ruby/install-deps:
+          key: rdf2marc
+  linting:
+    executor: default
+    steps:
+      - checkout
+      - ruby/install-deps:
+          key: rdf2marc
+      - ruby/rubocop-check:
+          format: progress
+          label: Inspecting with Rubocop
+  test:
+    executor: default
+    steps:
+      - checkout
+      - ruby/install-deps:
+          key: rdf2marc
       - run:
-          name: install bundler
-          command: gem install bundler -v 2.1.4
-      - run:
-          name: Install gem dependencies
-          command: bundle check || bundle install
-      - run:
-          name: Lint using rubocop
-          command: bundle exec rubocop
-      - run:
-          name: Run RSpec test suite
-          command: bundle exec rspec
+          name: Run tests in parallel
+          command: |
+            bundle exec rspec --profile 10 \
+                              --format RspecJunitFormatter \
+                              --out test_results/rspec.xml \
+                              --format progress
+      - store_test_results:
+          path: test_results
 workflows:
   version: 2
-
-  test:
+  build:
     jobs:
-      - test
+      - build
+      - linting:
+          requires:
+            - build
+      - test:
+          requires:
+            - build

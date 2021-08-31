@@ -17,6 +17,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec'
   gem 'rubocop'
+  gem 'rubocop-rspec'
   gem 'vcr'
   gem 'webmock'
 end

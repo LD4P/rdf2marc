@@ -255,6 +255,9 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.11.0)
       parser (>= 3.0.1.1)
+    rubocop-rspec (2.4.0)
+      rubocop (~> 1.0)
+      rubocop-ast (>= 1.1.0)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
     scanf (1.0.0)
@@ -318,6 +321,7 @@ DEPENDENCIES
   marc
   rspec
   rubocop
+  rubocop-rspec
   sparql
   vcr
   webmock

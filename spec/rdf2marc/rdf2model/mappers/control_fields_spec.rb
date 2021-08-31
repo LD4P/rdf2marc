@@ -3,7 +3,7 @@
 require 'rdf2marc/rdf2model/mappers/mappers_shared_examples'
 
 RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
-  context 'mapping minimal graph' do
+  context 'when mapping minimal graph' do
     let(:ttl) { '' }
 
     let(:model) do

@@ -32,6 +32,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SeriesStatementFields do
         ]
       }
     end
+
     include_examples 'mapper', described_class
   end
 end

@@ -11,7 +11,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
     include_examples 'mapper', described_class
   end
 
-  context 'mapping from literal' do
+  context 'when mapping from literal' do
     let(:ttl) do
       <<~TTL
         <#{work_term}> <http://id.loc.gov/ontologies/bibframe/subject> "Weber, Max".
@@ -206,7 +206,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
   end
 
   describe 'genre forms' do
-    context 'mapping from multiple URIs' do
+    context 'when mapping from multiple URIs' do
       let(:ttl) do
         <<~TTL
                       <#{work_term}> <http://id.loc.gov/ontologies/bibframe/genreForm> <http://id.loc.gov/authorities/genreForms/gf2014026085>.
@@ -238,7 +238,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
       include_examples 'mapper', described_class
     end
 
-    context 'mapping from multiple literals' do
+    context 'when mapping from multiple literals' do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/genreForm> "Diaries", "Rosaries (Prayer books)".

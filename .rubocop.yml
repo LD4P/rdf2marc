@@ -1,3 +1,5 @@
+require: rubocop-rspec
+
 AllCops:
   NewCops: enable
 
@@ -31,6 +33,10 @@ Metrics/MethodLength:
 
 Metrics/PerceivedComplexity:
   Enabled: false
+
+RSpec/FilePath:
+  Exclude:
+    - 'spec/rdf2marc/model2marc/*field_*_spec.rb'
 
 Security/Eval:
   Exclude:

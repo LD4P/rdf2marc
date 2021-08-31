@@ -12,7 +12,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
   end
 
   describe 'added personal names' do
-    context 'mapping from multiple BF.Person and BF.Family URIs' do
+    context 'when mapping from multiple BF.Person and BF.Family URIs' do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.
@@ -48,7 +48,8 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
 
       include_examples 'mapper', described_class
     end
-    context 'mapping from multiple BF.Person and BF.Family literals' do
+
+    context 'when mapping from multiple BF.Person and BF.Family literals' do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b7.
@@ -77,7 +78,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
   end
 
   describe 'added corporate names' do
-    context 'mapping from multiple BF.Organzation URIs' do
+    context 'when mapping from multiple BF.Organzation URIs' do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b4.
@@ -114,7 +115,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
       include_examples 'mapper', described_class
     end
 
-    context 'mapping from multiple BF.Organzation literals' do
+    context 'when mapping from multiple BF.Organzation literals' do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b9.
@@ -145,7 +146,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
   end
 
   describe 'added meeting names' do
-    context 'mapping from multiple BF.Meeting URIs' do
+    context 'when mapping from multiple BF.Meeting URIs' do
       let(:ttl) do
         <<~TTL
            <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b11.
@@ -183,7 +184,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
       include_examples 'mapper', described_class
     end
 
-    context 'mapping from multiple BF.Meeting literals' do
+    context 'when mapping from multiple BF.Meeting literals' do
       let(:ttl) do
         <<~TTL
                     <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b13.

@@ -47,6 +47,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
         ]
       }
     end
+
     include_examples 'mapper', described_class
   end
 
@@ -77,6 +78,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
         ]
       }
     end
+
     include_examples 'mapper', described_class
   end
 
@@ -107,6 +109,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
         ]
       }
     end
+
     include_examples 'mapper', described_class
   end
 
@@ -137,6 +140,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
         ]
       }
     end
+
     include_examples 'mapper', described_class
   end
 end

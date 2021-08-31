@@ -71,7 +71,6 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::Leader do
     include_examples 'mapper', described_class
   end
 
-  # rubocop:disable RSpec/RepeatedExampleGroupBody
   describe 'encoding level' do
     let(:ttl) do
       <<~TTL
@@ -89,29 +88,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::Leader do
     end
 
     include_examples 'mapper', described_class
-    skip('NEEDS FIX: tests for encoding level and cataloging form are the same')
   end
-
-  describe 'cataloging form' do
-    let(:ttl) do
-      <<~TTL
-        <#{admin_metadata_term}> <http://id.loc.gov/ontologies/bflc/encodingLevel> <http://id.loc.gov/vocabulary/menclvl/f>.
-        <http://id.loc.gov/vocabulary/menclvl/f> <http://www.w3.org/2000/01/rdf-schema#label> "full".
-      TTL
-    end
-
-    let(:model) do
-      {
-        bibliographic_level: 'item',
-        type: 'language_material',
-        encoding_level: 'full'
-      }
-    end
-
-    include_examples 'mapper', described_class
-    skip('NEEDS FIX: tests for encoding level and cataloging form are the same')
-  end
-  # rubocop:enable RSpec/RepeatedExampleGroupBody
 
   describe 'description conventions' do
     let(:ttl) do

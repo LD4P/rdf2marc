@@ -34,6 +34,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
         ]
       }
     end
+
     include_examples 'mapper', described_class
   end
 
@@ -65,6 +66,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
         }
       }
     end
+
     include_examples 'mapper', described_class
   end
 
@@ -101,6 +103,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
         ]
       }
     end
+
     include_examples 'mapper', described_class
   end
 
@@ -125,6 +128,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
         ]
       }
     end
+
     include_examples 'mapper', described_class
   end
 end

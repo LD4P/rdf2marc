@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe 'leader' do
+RSpec.describe Rdf2marc::Model2marc::Leader do
   subject(:leader) { marc_record.marc_record.leader }
 
   let(:model) do

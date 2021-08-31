@@ -8,6 +8,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::HoldingsEtcFields do
   before do
     allow(Date).to receive(:today).and_return(today)
   end
+
   context 'with minimal graph' do
     let(:ttl) { '' }
 

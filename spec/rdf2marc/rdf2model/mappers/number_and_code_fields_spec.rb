@@ -52,6 +52,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::NumberAndCodeFields, :vcr do
         }
       }
     end
+
     include_examples 'mapper', described_class
   end
 
@@ -103,6 +104,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::NumberAndCodeFields, :vcr do
         geographic_area_code: {}
       }
     end
+
     include_examples 'mapper', described_class
   end
 
@@ -126,6 +128,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::NumberAndCodeFields, :vcr do
         geographic_area_code: {}
       }
     end
+
     include_examples 'mapper', described_class
   end
 
@@ -148,6 +151,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::NumberAndCodeFields, :vcr do
         geographic_area_code: {}
       }
     end
+
     include_examples 'mapper', described_class
   end
 
@@ -170,6 +174,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::NumberAndCodeFields, :vcr do
         geographic_area_code: {}
       }
     end
+
     include_examples 'mapper', described_class
   end
 
@@ -192,6 +197,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::NumberAndCodeFields, :vcr do
         }
       }
     end
+
     include_examples 'mapper', described_class
   end
 
@@ -226,6 +232,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::NumberAndCodeFields, :vcr do
         ]
       }
     end
+
     include_examples 'mapper', described_class
   end
 end

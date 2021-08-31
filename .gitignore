@@ -5,3 +5,4 @@ lambda*.zip
 .ruby-version
 cache/
 record.mar
+coverage

@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   ruby: circleci/ruby@1.1.4
+  aws-cli: circleci/aws-cli@2.0
 references:
   default_ruby_version: &default_ruby_version 2.7-browsers
   ruby_envs: &ruby_envs
@@ -48,6 +49,66 @@ jobs:
                               --format progress
       - store_test_results:
           path: test_results
+  build_lambda:
+    executor: default
+    steps:
+      - checkout
+      - ruby/install-deps:
+          key: rdf2marc
+      - run:
+          name: Build layer zip
+          command: |
+            mkdir -p tmp/ruby/gems
+            cp -r vendor/bundle/ruby/2.7.0 tmp/ruby/gems
+            cd tmp
+            zip -r layer.zip ruby/gems/2.7.0/
+            cd ..
+            mv tmp/layer.zip .
+      - run:
+          name: Build lambda zip
+          command: |
+            zip -r lambda.zip lib
+            zip -j lambda.zip lambda-s3/lambda_function.rb
+      - persist_to_workspace:
+          root: ~/project
+          paths: lambda.zip
+      - save_cache:
+          key: layers-{{ checksum "Gemfile.lock" }}
+          paths:
+            - ~/project/layer.zip
+  deploy_lambda_dev:
+    executor: aws-cli/default
+    steps:
+      - checkout
+      - attach_workspace:
+            # Must be absolute path or relative path from working_directory
+            at: .
+      - restore_cache:
+          key: layers-{{ checksum "Gemfile.lock" }}
+      - aws-cli/setup:
+          aws-access-key-id: CIRCLE_ACCESS_KEY_ID
+          aws-secret-access-key: CIRCLE_SECRET_KEY
+          aws-region: AWS_DEFAULT_REGION
+      - run:
+          name: Deploy layer and lambda
+          command: |
+            unset AWS_SESSION_TOKEN
+            aws configure set output json
+            temp_creds=$(aws sts assume-role --role-session-name DevelopersRole --role-arn $DEV_ROLE_ARN --profile default | jq .Credentials)
+            export AWS_ACCESS_KEY_ID=$(echo "$temp_creds" | jq .AccessKeyId | xargs)
+            export AWS_SECRET_ACCESS_KEY=$(echo "$temp_creds" | jq .SecretAccessKey | xargs)
+            export AWS_SESSION_TOKEN=$(echo "$temp_creds" | jq .SessionToken | xargs)
+            layer_version=$(aws lambda list-layer-versions --layer-name rdf2marcDeps --max-items 1 | jq .LayerVersions[0].Version)
+            code_sha_256=$(aws lambda get-layer-version --layer-name rdf2marcDeps --version-number $layer_version | jq -r .Content.CodeSha256)
+            new_code_sha_256=$(openssl dgst -sha256 -binary layer.zip | openssl enc -base64)
+            if [[ "${code_sha_256}" != "${new_code_sha_256}" ]] ; then
+                new_layer_version = $(aws lambda publish-layer-version --layer-name rdf2marcDeps --zip-file fileb://layer.zip | jq .Version)
+
+            else
+                echo "Layer unchanged"
+            fi
+            aws lambda update-function-code --function-name sinopia-rdf2marc-development --zip-file fileb://lambda.zip
+            aws lambda publish-version --function-name sinopia-rdf2marc-development
 workflows:
   version: 2
   build:
@@ -59,3 +120,18 @@ workflows:
       - test:
           requires:
             - build
+      - build_lambda:
+          requires:
+            - test
+            - linting
+      - deploy_lambda_dev:
+          context: ld4p
+          requires:
+            - build_lambda
+#          filters:
+#            branches:
+#              only:
+#                - main
+#            tags:
+#              ignore:
+#                - /v.*/

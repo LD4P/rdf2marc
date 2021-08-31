@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/LD4P/rdf2marc.svg?style=svg)](https://circleci.com/gh/LD4P/rdf2marc)
+[![CircleCI](https://circleci.com/gh/LD4P/rdf2marc/tree/main.svg?style=svg)](https://circleci.com/gh/LD4P/rdf2marc/tree/main)
 
 # rdf2marc
 A proof-of-concept RDF to MARC converter for use within the Sinopia ecosystem.
@@ -16,7 +16,7 @@ When the RDF references an external resource, rdf2marc will attempt to resolve t
 ## Usage
 Mapping to the model:
 ```
-$ exe/rdf2model 
+$ exe/rdf2model
 Usage: rdf2model <instance ttl file> <work ttl file?> <admin metadata ttl file?>
 Usage: rdf2model <instance uri>
 $ exe/rdf2model instance.ttl work.ttl admin_metadata.ttl

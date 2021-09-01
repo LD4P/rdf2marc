@@ -3,7 +3,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ca0cdca6df5ec474e3f0/test_coverage)](https://codeclimate.com/github/LD4P/rdf2marc/test_coverage)
 
 # rdf2marc
-A proof-of-concept RDF to MARC converter for use within the Sinopia ecosystem.
+A proof-of-concept RDF to MARC converter for use within the Sinopia ecosystem.  (It's a lambda.)
 
 
 ## Overview

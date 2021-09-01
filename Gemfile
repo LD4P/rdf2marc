@@ -14,11 +14,12 @@ gem 'sparql'
 gem 'zeitwerk'
 
 group :development, :test do
-  gem 'byebug'
+  gem 'pry-byebug'
   gem 'rspec'
   gem 'rspec_junit_formatter' # used by CircleCI
   gem 'rubocop'
   gem 'rubocop-rspec'
+  gem 'simplecov', '~> 0.21'
   gem 'vcr'
   gem 'webmock'
 end

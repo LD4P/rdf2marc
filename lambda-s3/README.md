@@ -1,6 +1,8 @@
 # rdf2marc as an AWS Lambda
 
-The following are some notes on preparing to deploy rdf2marc as an AWS Lambda.
+The following are some notes on preparing to deploy rdf2marc as an AWS Lambda locally.
+
+See `.circleci/config.yml` for automated deployment from CircleCI.
 
 All instructions are to be run from the root of the project.
 

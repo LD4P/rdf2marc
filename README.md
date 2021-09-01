@@ -3,8 +3,9 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ca0cdca6df5ec474e3f0/test_coverage)](https://codeclimate.com/github/LD4P/rdf2marc/test_coverage)
 
 # rdf2marc
-A proof-of-concept RDF to MARC converter for use within the Sinopia ecosystem.
+An RDF to MARC conversion library for use within the Sinopia ecosystem.
 
+rdf2marc is currently available as a commandline utility and deployed within Sinopia as an AWS lamda (see CircleCI configuration).
 
 ## Overview
 In rdf2marc, the RDF is mapped to a model that represents the data found in a MARC record. The model is then mapped to a MARC record.

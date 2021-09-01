@@ -40,6 +40,7 @@ commands:
           new_code_sha_256=$(openssl dgst -sha256 -binary layer.zip | openssl enc -base64)
           if [[ "${code_sha_256}" != "${new_code_sha_256}" ]] ; then
               new_layer_version_arn=$(aws lambda publish-layer-version --layer-name rdf2marcDeps --zip-file fileb://layer.zip | jq .LayerVersionArn)
+              echo "Updating << parameters.function-name >> to layer $new_layer_version_arn"
               aws lambda update-function-configuration --function-name << parameters.function-name >> --layers $new_layer_version_arn
           else
               echo "Layer unchanged"

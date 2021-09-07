@@ -23,12 +23,10 @@ module Rdf2marc
 
         def place
           place_uri = item.instance.query.path_first_uri([[BF.provisionActivity, BF.Publication], BF.place])
+          # Look up the MARC record for this place and return the marc geographicAreas code (e.g.: an-cn-on).
+          code = Resolver.resolve_geographic_area_code(place_uri)
 
-          gac = Resolver.resolve_geographic_area_code(place_uri)
-          # For example, an-cn-on
-          return nil if gac.nil?
-
-          gac.split('-')[1]
+          Resolver::CountryCode.resolve_from_geographic_area_code(code)
         end
 
         def control_number

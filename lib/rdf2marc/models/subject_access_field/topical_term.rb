@@ -5,7 +5,8 @@ module Rdf2marc
     module SubjectAccessField
       # Model for 650 - Topical Term.
       class TopicalTerm < Struct
-        attribute :subject_level, Types::String.default('not_specified').enum('not_specified', 'primary', 'secondary')
+        attribute :subject_level,
+                  Types::String.default('not_provided').enum('not_provided', 'not_specified', 'primary', 'secondary')
         attribute :thesaurus, Types::String.default('not_specified').enum('lcsh',
                                                                           'lcsh_childrens_literature',
                                                                           'mesh',

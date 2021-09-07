@@ -32,17 +32,16 @@ module Rdf2marc
 
       private
 
+      # See https://www.loc.gov/marc/bibliographic/bd650.html
+      SUBJECT_LEVEL = {
+        'not_provided' => ' ',
+        'not_specified' => '0',
+        'primary' => '1',
+        'secondary' => '2'
+      }.freeze
+
       def subject_level
-        case model.subject_level
-        when 'not_specified'
-          '0'
-        when 'primary'
-          '1'
-        when 'secondary'
-          '2'
-        else
-          ' '
-        end
+        SUBJECT_LEVEL.fetch(model.subject_level)
       end
 
       def thesaurus

@@ -12,7 +12,7 @@ Is this a new mapping, change to existing mapping, or a defect?
 
 
 **Example RDF records**
-Please provide URIs or RDF. If providing RDF, Turtle is preferred.
+Please provide URIs or RDF of the `bf:Instance`. If providing RDF, Turtle is preferred.
 
 
 

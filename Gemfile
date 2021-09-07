@@ -8,13 +8,14 @@ gem 'dry-struct'
 gem 'dry-types'
 gem 'faraday'
 gem 'faraday_middleware'
-gem 'linkeddata'
+gem 'json-ld'
 gem 'marc'
 gem 'sparql'
 gem 'zeitwerk'
 
 group :development, :test do
   gem 'pry-byebug'
+  gem 'rdf-turtle'
   gem 'rspec'
   gem 'rspec_junit_formatter' # used by CircleCI
   gem 'rubocop'

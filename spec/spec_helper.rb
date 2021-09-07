@@ -10,6 +10,7 @@ end
 require 'vcr'
 require 'webmock/rspec'
 require 'pry-byebug'
+require 'rdf/turtle'
 
 WebMock.disable_net_connect!
 

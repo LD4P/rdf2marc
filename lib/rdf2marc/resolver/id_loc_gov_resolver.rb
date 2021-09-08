@@ -99,20 +99,7 @@ module Rdf2marc
       end
 
       def mapper_class_for(model_class)
-        case model_class.name
-        when Rdf2marc::Models::General::PersonalName.name
-          IdLocGovResolvers::PersonalName
-        when Rdf2marc::Models::General::CorporateName.name
-          IdLocGovResolvers::CorporateName
-        when Rdf2marc::Models::General::MeetingName.name
-          IdLocGovResolvers::MeetingName
-        when Rdf2marc::Models::SubjectAccessField::GeographicName.name
-          IdLocGovResolvers::GeographicName
-        when Rdf2marc::Models::SubjectAccessField::GenreForm.name
-          IdLocGovResolvers::GenreForm
-        when Rdf2marc::Models::SubjectAccessField::TopicalTerm.name
-          IdLocGovResolvers::TopicalTerm
-        end
+        "Rdf2marc::Resolver::IdLocGovResolvers::#{model_class.name.demodulize}".constantize
       end
 
       def types_for(model_class)

@@ -17,10 +17,6 @@ RSpec.shared_examples 'mapper' do |mapper_class|
 
   let(:graph) { RDF::Graph.new.from_ttl(ttl) }
 
-  before do
-    Rdf2marc::Cache.configure(Rdf2marc::Caches::NullCache.new)
-  end
-
   it 'maps to model' do
     # puts subject.generate.deep_compact
     expect(subject.generate.deep_compact).to eq model

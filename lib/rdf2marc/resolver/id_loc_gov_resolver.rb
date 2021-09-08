@@ -55,18 +55,19 @@ module Rdf2marc
       end
 
       def http_get(url)
-        body = Cache.get_cache(url)
-        if body.nil?
-          conn = Faraday.new do |faraday|
-            faraday.use FaradayMiddleware::FollowRedirects
-          end
-          resp = conn.get(url)
-          raise Error, "Error getting #{url}." unless resp.success?
+        resp = connection.get(url)
+        raise Error, "Error getting #{url}." unless resp.success?
 
-          body = resp.body
-          Cache.set_cache(url, body)
+        resp.body
+      end
+
+      def connection
+        @connection ||= Faraday.new do |builder|
+          builder.use :http_cache, store: Rdf2marc.cache
+          builder.use FaradayMiddleware::FollowRedirects
+          builder.response :encoding # use Faraday::Encoding middleware
+          builder.adapter Faraday.default_adapter
         end
-        body
       end
 
       def get_marc(uri)

@@ -9,7 +9,7 @@ module Rdf2marc
       end
 
       def build
-        field.indicator1 = entity_function
+        field.indicator2 = entity_function
         append_repeatable('a', model.publication_distribution_places)
         append_repeatable('b', model.publisher_distributor_names)
         append_repeatable('c', model.publication_distribution_dates)

@@ -22,8 +22,8 @@ RSpec.describe Rdf2marc::Model2marc::Field264 do
 
   let(:expected_fields) do
     [
-      '264 1  $a place1 $a place2 $b name1 $b name2 $c date1 $c date2',
-      '264 0  $b name3 $b name4'
+      '264  1 $a place1 $a place2 $b name1 $b name2 $c date1 $c date2',
+      '264  0 $b name3 $b name4'
     ]
   end
 

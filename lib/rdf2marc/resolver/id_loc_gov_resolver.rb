@@ -12,7 +12,7 @@ module Rdf2marc
           return nil
         end
 
-        expect_type(uri, types_for(model_class))
+        expect_type(uri, EXPECTED_TYPES.fetch(model_class))
         marc_record = get_marc(uri)
         mapper_class.new(uri, marc_record).map
       end
@@ -115,22 +115,14 @@ module Rdf2marc
         end
       end
 
-      def types_for(model_class)
-        case model_class.name
-        when Rdf2marc::Models::General::PersonalName.name
-          %w[personal_name family_name]
-        when Rdf2marc::Models::General::CorporateName.name
-          ['corporate_name']
-        when Rdf2marc::Models::General::MeetingName.name
-          ['meeting_name']
-        when Rdf2marc::Models::SubjectAccessField::GeographicName.name
-          ['geographic_name']
-        when Rdf2marc::Models::SubjectAccessField::GenreForm.name
-          ['genre_form']
-        when Rdf2marc::Models::SubjectAccessField::TopicalTerm.name
-          ['topic']
-        end
-      end
+      EXPECTED_TYPES = {
+        Rdf2marc::Models::General::PersonalName => %w[personal_name family_name],
+        Rdf2marc::Models::General::CorporateName => ['corporate_name'],
+        Rdf2marc::Models::General::MeetingName => ['meeting_name'],
+        Rdf2marc::Models::SubjectAccessField::GeographicName => ['geographic_name'],
+        Rdf2marc::Models::SubjectAccessField::GenreForm => ['genre_form'],
+        Rdf2marc::Models::SubjectAccessField::TopicalTerm => ['topic']
+      }.freeze
     end
   end
 end

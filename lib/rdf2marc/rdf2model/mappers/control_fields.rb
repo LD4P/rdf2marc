@@ -7,7 +7,6 @@ module Rdf2marc
       class ControlFields < BaseMapper
         def generate
           {
-            control_number: control_number,
             control_number_id: control_number_id,
             latest_transaction: latest_transaction,
             general_info: {
@@ -27,10 +26,6 @@ module Rdf2marc
           code = Resolver.resolve_geographic_area_code(place_uri)
 
           Resolver::CountryCode.resolve_from_geographic_area_code(code)
-        end
-
-        def control_number
-          item.admin_metadata.query.path_first_literal([[BF.identifiedBy, BF.Local], [RDF::RDFV.value]])
         end
 
         def control_number_id

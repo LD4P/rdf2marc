@@ -17,27 +17,6 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
     include_examples 'mapper', described_class
   end
 
-  describe 'control number' do
-    let(:ttl) do
-      <<~TTL
-                  <#{admin_metadata_term}> <http://id.loc.gov/ontologies/bibframe/identifiedBy> _:b7.
-        _:b7 a <http://id.loc.gov/ontologies/bibframe/Local>;
-            <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "abc123"@eng.
-      TTL
-    end
-
-    let(:model) do
-      {
-        general_info: {
-          place: 'xx'
-        },
-        control_number: 'abc123'
-      }
-    end
-
-    include_examples 'mapper', described_class
-  end
-
   describe 'control number id' do
     let(:ttl) do
       <<~TTL

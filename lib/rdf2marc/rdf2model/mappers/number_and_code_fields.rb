@@ -7,6 +7,7 @@ module Rdf2marc
       class NumberAndCodeFields < BaseMapper
         def generate
           {
+            oclc_record_number: oclc_record_number,
             lccn: lccn,
             isbns: isbns,
             cataloging_source: cataloging_source,
@@ -16,6 +17,10 @@ module Rdf2marc
         end
 
         private
+
+        def oclc_record_number
+          item.admin_metadata.query.path_first_literal([[BF.identifiedBy, BF.Local], [RDF::RDFV.value]])
+        end
 
         def lccn
           # Can be multiple non-cancelled LCCNs. However, only using one.

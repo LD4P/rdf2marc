@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# rubocop:disable RSpec/MultipleMemoizedHelpers
 RSpec.shared_examples 'mapper' do |mapper_class|
   let(:subject) { mapper_class.new(context) }
 
@@ -26,4 +25,3 @@ RSpec.shared_examples 'mapper' do |mapper_class|
     expect(subject.generate.deep_compact).to eq model
   end
 end
-# rubocop:enable RSpec/MultipleMemoizedHelpers

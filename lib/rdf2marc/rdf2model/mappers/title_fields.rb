@@ -5,10 +5,15 @@ module Rdf2marc
     module Mappers
       # Mapping to Title Fields model.
       class TitleFields < BaseMapper
+        def initialize(item_context, has_100_field:)
+          super(item_context)
+          @has_100_field = has_100_field
+        end
+
         def generate
           {
             translated_titles: translated_titles,
-            title_statement: title_statement,
+            title_statement: title_statement(@has_100_field),
             variant_titles: variant_titles,
             former_titles: former_titles
           }
@@ -32,12 +37,13 @@ module Rdf2marc
           end
         end
 
-        def title_statement
+        def title_statement(has_100_field)
           # Record may contain multiple bf:Title. Only using one and which is selected is indeterminate.
           title_term = item.instance.query.path_first([[BF.title, BF.Title]])
           return nil if title_term.nil?
 
           {
+            added_entry: has_100_field ? 'added' : 'no_added',
             title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
             remainder_of_title: item.instance.query.path_first_literal([BF.subtitle], subject_term: title_term),
             # May be multiple bf.responsibilityStatement, but only using one.

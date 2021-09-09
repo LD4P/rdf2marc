@@ -17,7 +17,8 @@ def lambda_handler(event:, context:)
   delete_from_s3(bucket_name, error_path)
   graph, instance_term, work_term, admin_metadata_term = Rdf2marc::GraphsLoader.from_instance_uri(instance_uri)
 
-  Rdf2marc::Cache.configure(Rdf2marc::Caches::S3Cache.new(bucket_name))
+  Rdf2marc.s3_cache = { bucket_name: event['bucket'] }
+  Rdf2marc.cache_implementation = 'Rdf2marc::Caches::S3Cache'
 
   record_model = Rdf2marc::Rdf2model.to_model(graph, instance_term, work_term, admin_metadata_term)
   marc_record = Rdf2marc::Model2marc::Record.new(record_model)
@@ -29,6 +30,8 @@ rescue Rdf2marc::BadRequestError => e
   write_to_s3("There is a problem with the supplied RDF: #{e.message}", bucket_name, error_path)
 rescue StandardError => e
   write_to_s3("Ooops, something went wrong: #{e.message}", bucket_name, error_path)
+  # Log to cloudwatch too:
+  raise e
 end
 
 def write_to_s3(value, bucket_name, path)

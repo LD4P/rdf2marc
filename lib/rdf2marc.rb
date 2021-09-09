@@ -6,13 +6,20 @@ require 'dry-types'
 require 'marc'
 require 'sparql'
 require 'json/ld'
-require 'byebug'
+
 require 'hash'
 require 'array'
+
+require 'active_support'
 require 'active_support/core_ext/hash'
 require 'active_support/core_ext/module/delegation'
+require 'active_support/core_ext/module/attribute_accessors'
+
 require 'faraday'
 require 'faraday_middleware'
+require 'faraday-http-cache'
+require 'faraday/encoding'
+
 require 'logger'
 require 'fileutils'
 require 'aws-sdk-s3'
@@ -38,4 +45,11 @@ module Rdf2marc
   GraphContext = Struct.new(:graph, :term, :query)
 
   ItemContext = Struct.new(:instance, :work, :admin_metadata)
+
+  def self.cache
+    @cache ||= cache_implementation.constantize.new
+  end
+
+  mattr_accessor :cache_implementation, default: 'ActiveSupport::Cache::FileStore'
+  mattr_accessor :s3_cache, default: {}
 end

@@ -21,6 +21,7 @@ VCR.configure do |c|
 end
 
 require 'rdf2marc'
+Rdf2marc.cache_implementation = 'ActiveSupport::Cache::NullStore'
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|

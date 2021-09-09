@@ -4,23 +4,33 @@ module Rdf2marc
   module Caches
     # Cache backed by S3
     # See https://github.com/aws/aws-sdk-ruby#configuration for configuration.
-    class S3Cache
-      def initialize(bucket_name, path = 'cache')
-        @bucket_name = bucket_name
-        @path = path
+    class S3Cache < ActiveSupport::Cache::Store
+      def initialize(options = nil)
+        super
+        @bucket_name = Rdf2marc.s3_cache.fetch(:bucket_name)
+        @path = Rdf2marc.s3_cache.fetch(:path, 'cache')
       end
 
-      def set_cache(key, value)
-        bucket.object(objpath_from(key)).put(body: value)
+      private
+
+      # @param [ActiveSupport::Cache::Entry] entry the cache entry
+      def write_entry(key, entry, **options)
+        write_serialized_entry(key, serialize_entry(entry, **options), **options)
       end
 
-      def get_cache(key)
+      def read_entry(key, **options)
+        deserialize_entry(read_serialized_entry(key, **options))
+      end
+
+      def write_serialized_entry(key, payload, **_options)
+        bucket.object(objpath_from(key)).put(body: payload)
+      end
+
+      def read_serialized_entry(key, **_options)
         bucket.object(objpath_from(key)).get.body.string
       rescue Aws::S3::Errors::NoSuchKey
         nil
       end
-
-      private
 
       attr_reader :bucket_name, :path
 

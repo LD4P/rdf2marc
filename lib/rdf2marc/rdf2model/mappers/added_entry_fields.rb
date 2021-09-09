@@ -15,13 +15,14 @@ module Rdf2marc
 
         private
 
+        def contributions
+          @contributions ||= Queries::Contributions.new(item.work.query)
+        end
+
         def added_personal_names
           # Person or family
-          person_terms = item.work.query.path_all([[BF.contribution, BF.Contribution],
-                                                   [BF.agent, BF.Person], [RDF::RDFV.value]]) +
-                         item.work.query.path_all([[BF.contribution, BF.Contribution],
-                                                   [BF.agent, BF.Family],
-                                                   [RDF::RDFV.value]]) || []
+          person_terms = contributions.with_type(BF.Person, BF.Family)
+
           person_terms.sort.map do |person_term|
             if person_term.is_a?(RDF::Literal)
               { thesaurus: 'not_specified', personal_name: person_term.value }
@@ -32,8 +33,8 @@ module Rdf2marc
         end
 
         def added_corporate_names
-          corporate_terms = item.work.query.path_all([[BF.contribution, BF.Contribution],
-                                                      [BF.agent, BF.Organization], [RDF::RDFV.value]])
+          corporate_terms = contributions.with_type(BF.Organization)
+
           corporate_terms.sort.map do |corporate_term|
             if corporate_term.is_a?(RDF::Literal)
               { thesaurus: 'not_specified', corporate_name: corporate_term.value }
@@ -45,8 +46,8 @@ module Rdf2marc
         end
 
         def added_meeting_names
-          meeting_terms = item.work.query.path_all([[BF.contribution, BF.Contribution],
-                                                    [BF.agent, BF.Meeting], [RDF::RDFV.value]])
+          meeting_terms = contributions.with_type(BF.Meeting)
+
           meeting_terms.sort.map do |meeting_term|
             if meeting_term.is_a?(RDF::Literal)
               { thesaurus: 'not_specified', meeting_name: meeting_term.value }

@@ -47,9 +47,19 @@ module Rdf2marc
   ItemContext = Struct.new(:instance, :work, :admin_metadata)
 
   def self.cache
-    @cache ||= cache_implementation.constantize.new
+    @cache ||= lookup_store(cache_implementation)
   end
 
-  mattr_accessor :cache_implementation, default: 'ActiveSupport::Cache::FileStore'
-  mattr_accessor :s3_cache, default: {}
+  def self.lookup_store(store, *parameters)
+    case store
+    when String
+      store.constantize.new(*parameters)
+    when Array
+      lookup_store(*store)
+    else
+      raise 'Unknow type of cache store'
+    end
+  end
+
+  mattr_accessor :cache_implementation, default: ['ActiveSupport::Cache::FileStore', 'cache']
 end

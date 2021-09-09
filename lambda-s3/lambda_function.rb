@@ -17,8 +17,7 @@ def lambda_handler(event:, context:)
   delete_from_s3(bucket_name, error_path)
   graph, instance_term, work_term, admin_metadata_term = Rdf2marc::GraphsLoader.from_instance_uri(instance_uri)
 
-  Rdf2marc.s3_cache = { bucket_name: event['bucket'] }
-  Rdf2marc.cache_implementation = 'Rdf2marc::Caches::S3Cache'
+  Rdf2marc.cache_implementation = ['Rdf2marc::Caches::S3Cache', event['bucket'], 'cache']
 
   record_model = Rdf2marc::Rdf2model.to_model(graph, instance_term, work_term, admin_metadata_term)
   marc_record = Rdf2marc::Model2marc::Record.new(record_model)

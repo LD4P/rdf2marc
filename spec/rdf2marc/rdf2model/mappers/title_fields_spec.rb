@@ -3,6 +3,20 @@
 require 'rdf2marc/rdf2model/mappers/mappers_shared_examples'
 
 RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
+  subject { mapper.generate.deep_compact }
+
+  let(:item_context) do
+    Rdf2marc::Rdf2model.item_context_for(graph, RDF::URI(instance_term), RDF::URI(work_term),
+                                         RDF::URI(admin_metadata_term))
+  end
+  let(:graph) { RDF::Graph.new.from_ttl(ttl) }
+
+  let(:instance_term) { 'https://api.sinopia.io/resource/test_instance' }
+  let(:work_term) { 'https://api.sinopia.io/resource/test_work' }
+  let(:admin_metadata_term) { 'https://api.sinopia.io/resource/test_admin_metadata' }
+
+  let(:mapper) { described_class.new(item_context, has_100_field: true) }
+
   context 'with minimal graph' do
     let(:ttl) { '' }
 
@@ -10,7 +24,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
       {}
     end
 
-    include_examples 'mapper', described_class
+    it { is_expected.to eq model }
   end
 
   describe 'translated titles' do
@@ -35,7 +49,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
       }
     end
 
-    include_examples 'mapper', described_class
+    it { is_expected.to eq model }
   end
 
   describe 'title statement' do
@@ -56,18 +70,39 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
       TTL
     end
 
-    let(:model) do
-      {
-        title_statement: {
-          part_names: ['Student handbook', 'Supplement'],
-          part_numbers: ['Part B', 'Part one'],
-          remainder_of_title: 'orders, suborders, and great groups : National Soil Survey Classification of 1967',
-          title: 'Distribution of the principal kinds of soil'
+    context 'with a 1XX field' do
+      let(:model) do
+        {
+          title_statement: {
+            added_entry: 'added',
+            part_names: ['Student handbook', 'Supplement'],
+            part_numbers: ['Part B', 'Part one'],
+            remainder_of_title: 'orders, suborders, and great groups : National Soil Survey Classification of 1967',
+            title: 'Distribution of the principal kinds of soil'
+          }
         }
-      }
+      end
+
+      it { is_expected.to eq model }
     end
 
-    include_examples 'mapper', described_class
+    context 'without a 1XX field' do
+      let(:mapper) { described_class.new(item_context, has_100_field: false) }
+
+      let(:model) do
+        {
+          title_statement: {
+            added_entry: 'no_added',
+            part_names: ['Student handbook', 'Supplement'],
+            part_numbers: ['Part B', 'Part one'],
+            remainder_of_title: 'orders, suborders, and great groups : National Soil Survey Classification of 1967',
+            title: 'Distribution of the principal kinds of soil'
+          }
+        }
+      end
+
+      it { is_expected.to eq model }
+    end
   end
 
   describe 'variant titles' do
@@ -104,7 +139,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
       }
     end
 
-    include_examples 'mapper', described_class
+    it { is_expected.to eq model }
   end
 
   describe 'former titles' do
@@ -129,6 +164,6 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
       }
     end
 
-    include_examples 'mapper', described_class
+    it { is_expected.to eq model }
   end
 end

@@ -5,10 +5,10 @@ module Rdf2marc
     # Cache backed by S3
     # See https://github.com/aws/aws-sdk-ruby#configuration for configuration.
     class S3Cache < ActiveSupport::Cache::Store
-      def initialize(options = nil)
-        super
-        @bucket_name = Rdf2marc.s3_cache.fetch(:bucket_name)
-        @path = Rdf2marc.s3_cache.fetch(:path, 'cache')
+      def initialize(bucket_name, path, **options)
+        super(options)
+        @bucket_name = bucket_name
+        @path = path
       end
 
       private

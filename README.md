@@ -3,7 +3,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ca0cdca6df5ec474e3f0/test_coverage)](https://codeclimate.com/github/LD4P/rdf2marc/test_coverage)
 
 # rdf2marc
-An RDF to MARC conversion library for use within the Sinopia ecosystem.
+A Bibframe RDF to MARC conversion library for use within the Sinopia ecosystem.
 
 rdf2marc is currently available as a commandline utility and deployed within Sinopia as an AWS lamda (see CircleCI configuration).
 

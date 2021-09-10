@@ -1,28 +1,13 @@
 # frozen_string_literal: true
 
-require 'zeitwerk'
-require 'dry-struct'
-require 'dry-types'
-require 'marc'
-require 'sparql'
-require 'json/ld'
+require 'bundler'
+Bundler.require(:default)
 
+require 'active_support/core_ext/hash'
+
+# Add some monkeypatches
 require 'hash'
 require 'array'
-
-require 'active_support'
-require 'active_support/core_ext/hash'
-require 'active_support/core_ext/module/delegation'
-require 'active_support/core_ext/module/attribute_accessors'
-
-require 'faraday'
-require 'faraday_middleware'
-require 'faraday-http-cache'
-require 'faraday/encoding'
-
-require 'logger'
-require 'fileutils'
-require 'aws-sdk-s3'
 
 loader = Zeitwerk::Loader.new
 loader.push_dir(File.absolute_path("#{__FILE__}/.."))

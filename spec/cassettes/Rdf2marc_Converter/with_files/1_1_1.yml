@@ -4655,4 +4655,153 @@ http_interactions:
       string: !binary |-
         PG1hcmN4bWw6cmVjb3JkIHhtbG5zOm1hcmN4bWw9Imh0dHA6Ly93d3cubG9jLmdvdi9NQVJDMjEvc2xpbSIgeG1sbnM6bWV0cz0iaHR0cDovL3d3dy5sb2MuZ292L01FVFMvIiB4bWxuczpiZj0iaHR0cDovL2lkLmxvYy5nb3Yvb250b2xvZ2llcy9iaWJmcmFtZS8iIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgeG1sbnM6bWFkc3JkZj0iaHR0cDovL3d3dy5sb2MuZ292L21hZHMvcmRmL3YxIyIgeG1sbnM6YmZsYz0iaHR0cDovL2lkLmxvYy5nb3Yvb250b2xvZ2llcy9iZmxjLyIgeG1sbnM6cmk9Imh0dHA6Ly9pZC5sb2MuZ292L29udG9sb2dpZXMvUmVjb3JkSW5mbyMiIHhtbG5zOmlkeD0iaW5mbzpsYy94cS1tb2R1bGVzL2xjaW5kZXgiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4bWxuczpzZW10cmlwbGVzPSJodHRwOi8vbWFya2xvZ2ljLmNvbS9zZW1hbnRpYyIgeG1sbnM6c3RyZWFtcz0iaW5mbzpsYy9zdHJlYW1zIyI+CiAgPG1hcmN4bWw6bGVhZGVyPjAwNTc2bnogIGEyMjAwMTU3biAgNDUwMDwvbWFyY3htbDpsZWFkZXI+CiAgPG1hcmN4bWw6Y29udHJvbGZpZWxkIHRhZz0iMDAxIj5uMjAxODE4MzU1NzwvbWFyY3htbDpjb250cm9sZmllbGQ+CiAgPG1hcmN4bWw6Y29udHJvbGZpZWxkIHRhZz0iMDAzIj5ETEM8L21hcmN4bWw6Y29udHJvbGZpZWxkPgogIDxtYXJjeG1sOmNvbnRyb2xmaWVsZCB0YWc9IjAwNSI+MjAxODA1MDQwMzQ1MDQuMDwvbWFyY3htbDpjb250cm9sZmllbGQ+CiAgPG1hcmN4bWw6Y29udHJvbGZpZWxkIHRhZz0iMDA4Ij4xODA1MDRufCBhemFubmFhYm4gICAgICAgICAgfG4gYW5hICAgICAgPC9tYXJjeG1sOmNvbnRyb2xmaWVsZD4KICA8bWFyY3htbDpkYXRhZmllbGQgdGFnPSIwMTAiIGluZDE9IiAiIGluZDI9IiAiPgogICAgPG1hcmN4bWw6c3ViZmllbGQgY29kZT0iYSI+biAyMDE4MTgzNTU3PC9tYXJjeG1sOnN1YmZpZWxkPgogIDwvbWFyY3htbDpkYXRhZmllbGQ+CiAgPG1hcmN4bWw6ZGF0YWZpZWxkIHRhZz0iMDM1IiBpbmQxPSIgIiBpbmQyPSIgIj4KICAgIDxtYXJjeG1sOnN1YmZpZWxkIGNvZGU9ImEiPihETkxNKTY3OTc2MjwvbWFyY3htbDpzdWJmaWVsZD4KICA8L21hcmN4bWw6ZGF0YWZpZWxkPgogIDxtYXJjeG1sOmRhdGFmaWVsZCB0YWc9IjA0MCIgaW5kMT0iICIgaW5kMj0iICI+CiAgICA8bWFyY3htbDpzdWJmaWVsZCBjb2RlPSJhIj5ETkxNPC9tYXJjeG1sOnN1YmZpZWxkPgogICAgPG1hcmN4bWw6c3ViZmllbGQgY29kZT0iYiI+ZW5nPC9tYXJjeG1sOnN1YmZpZWxkPgogICAgPG1hcmN4bWw6c3ViZmllbGQgY29kZT0iZSI+cmRhPC9tYXJjeG1sOnN1YmZpZWxkPgogICAgPG1hcmN4bWw6c3ViZmllbGQgY29kZT0iYyI+RE5MTTwvbWFyY3htbDpzdWJmaWVsZD4KICA8L21hcmN4bWw6ZGF0YWZpZWxkPgogIDxtYXJjeG1sOmRhdGFmaWVsZCB0YWc9IjA0NiIgaW5kMT0iICIgaW5kMj0iICI+CiAgICA8bWFyY3htbDpzdWJmaWVsZCBjb2RlPSJzIj4xOTY5LTA5LTA4PC9tYXJjeG1sOnN1YmZpZWxkPgogICAgPG1hcmN4bWw6c3ViZmllbGQgY29kZT0idCI+MTk2OS0wOS0xMzwvbWFyY3htbDpzdWJmaWVsZD4KICAgIDxtYXJjeG1sOnN1YmZpZWxkIGNvZGU9IjIiPmVkdGY8L21hcmN4bWw6c3ViZmllbGQ+CiAgPC9tYXJjeG1sOmRhdGFmaWVsZD4KICA8bWFyY3htbDpkYXRhZmllbGQgdGFnPSIxMTEiIGluZDE9IjIiIGluZDI9IiAiPgogICAgPG1hcmN4bWw6c3ViZmllbGQgY29kZT0iYSI+SW50ZXJuYXRpb25hbCBDb25ncmVzcyBvbiBDbGluaWNhbCBDaGVtaXN0cnk8L21hcmN4bWw6c3ViZmllbGQ+CiAgICA8bWFyY3htbDpzdWJmaWVsZCBjb2RlPSJuIj4oN3RoIDo8L21hcmN4bWw6c3ViZmllbGQ+CiAgICA8bWFyY3htbDpzdWJmaWVsZCBjb2RlPSJkIj4xOTY5IDo8L21hcmN4bWw6c3ViZmllbGQ+CiAgICA8bWFyY3htbDpzdWJmaWVsZCBjb2RlPSJjIj5HZW5ldmEsIFN3aXR6ZXJsYW5kKTwvbWFyY3htbDpzdWJmaWVsZD4KICA8L21hcmN4bWw6ZGF0YWZpZWxkPgogIDxtYXJjeG1sOmRhdGFmaWVsZCB0YWc9IjM3MCIgaW5kMT0iICIgaW5kMj0iICI+CiAgICA8bWFyY3htbDpzdWJmaWVsZCBjb2RlPSJlIj5HZW5ldmEgKFN3aXR6ZXJsYW5kKTwvbWFyY3htbDpzdWJmaWVsZD4KICAgIDxtYXJjeG1sOnN1YmZpZWxkIGNvZGU9ImUiPkV2aWFuLWxlcy1CYWlucyAoRnJhbmNlKTwvbWFyY3htbDpzdWJmaWVsZD4KICAgIDxtYXJjeG1sOnN1YmZpZWxkIGNvZGU9IjIiPm5hZjwvbWFyY3htbDpzdWJmaWVsZD4KICA8L21hcmN4bWw6ZGF0YWZpZWxkPgogIDxtYXJjeG1sOmRhdGFmaWVsZCB0YWc9IjY3MCIgaW5kMT0iICIgaW5kMj0iICI+CiAgICA8bWFyY3htbDpzdWJmaWVsZCBjb2RlPSJhIj5WSUl0aCBJbnRlcm5hdGlvbmFsIENvbmdyZXNzIG9mIENsaW5pY2FsIENoZW1pc3RyeSwgMTk2OTo8L21hcmN4bWw6c3ViZmllbGQ+CiAgICA8bWFyY3htbDpzdWJmaWVsZCBjb2RlPSJiIj50aXRsZSBwYWdlIChHZW7DqHZlL0V2aWFuLCA4LTEzIFNlcHRlbWJlciAxOTY5KTwvbWFyY3htbDpzdWJmaWVsZD4KICA8L21hcmN4bWw6ZGF0YWZpZWxkPgo8L21hcmN4bWw6cmVjb3JkPgo=
   recorded_at: Wed, 01 Sep 2021 17:51:58 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/geographicAreas/n-us-va
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 303
+      message: SEE OTHER
+    headers:
+      Date:
+      - Tue, 07 Sep 2021 21:58:10 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Location:
+      - https://id.loc.gov/vocabulary/geographicAreas/n-us-va.jsonld
+      Vary:
+      - Accept
+      X-Uri:
+      - http://id.loc.gov/vocabulary/geographicAreas/n-us-va
+      X-Preflabel:
+      - Virginia
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '8507001'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 68b3326c0f442afe-ORD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 07 Sep 2021 21:58:10 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/geographicAreas/n-us-va.jsonld
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 07 Sep 2021 21:58:10 GMT
+      Content-Type:
+      - application/ld+json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Virginia
+      X-Uri:
+      - http://id.loc.gov/vocabulary/geographicAreas/n-us-va
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 8601785 8472750
+      Age:
+      - '953'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 68b3326cfc6e2b81-ORD
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        [  { "@id": "http://id.loc.gov/vocabulary/geographicAreas/n-us-va", "@type": [ "http://www.loc.gov/mads/rdf/v1#Geographic", "http://www.loc.gov/mads/rdf/v1#Authority", "http://id.loc.gov/vocabulary/geographicAreas/MARC_GeographicArea", "http://www.w3.org/2004/02/skos/core#Concept" ], "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": [ { "@language": "en",
+        "@value": "Virginia" } ], "http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority": [ { "@id": "http://id.loc.gov/vocabulary/geographicAreas/n-us" } ], "http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection": [ { "@id": "http://id.loc.gov/vocabulary/geographicAreas/collection_PastPresentGACSEntries" } ], "http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority": [ { "@id": "http://id.loc.gov/vocabulary/countries/vau" } ], "http://www.w3.org/2002/07/owl#sameAs": [ { "@id": "info:lc/vocabulary/gacs/n-us-va" } ], "http://www.loc.gov/mads/rdf/v1#code": [ { "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "n-us-va" } ], "http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme": [ { "@id": "http://id.loc.gov/vocabulary/geographicAreas" } ], "http://www.loc.gov/mads/rdf/v1#adminMetadata": [ { "@id": "_:b19iddOtlocdOtgovvocabularygeographicAreasn-us-va" } ], "http://www.w3.org/2004/02/skos/core#prefLabel": [ { "@language": "en",
+        "@value": "Virginia" } ], "http://www.w3.org/2004/02/skos/core#broader": [ { "@id": "http://id.loc.gov/vocabulary/geographicAreas/n-us" } ], "http://www.w3.org/2004/02/skos/core#exactMatch": [ { "@id": "http://id.loc.gov/vocabulary/countries/vau" } ], "http://www.w3.org/2004/02/skos/core#notation": [ { "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "n-us-va" } ], "http://www.w3.org/2004/02/skos/core#inScheme": [ { "@id": "http://id.loc.gov/vocabulary/geographicAreas" } ], "http://www.w3.org/2004/02/skos/core#changeNote": [ { "@id": "_:b43iddOtlocdOtgovvocabularygeographicAreasn-us-va" } ] },  { "@id": "_:b43iddOtlocdOtgovvocabularygeographicAreasn-us-va", "@type": [ "http://purl.org/vocab/changeset/schema#ChangeSet" ], "http://purl.org/vocab/changeset/schema#subjectOfChange": [ { "@id": "http://id.loc.gov/vocabulary/geographicAreas/n-us-va" } ], "http://purl.org/vocab/changeset/schema#creatorName": [ { "@id": "http://id.loc.gov/vocabulary/organizations/dlcmrc" } ], "http://purl.org/vocab/changeset/schema#createdDate": [ { "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "1970-01-01T00:00:00" } ], "http://purl.org/vocab/changeset/schema#changeReason": [ { "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "new" } ] },  { "@id": "_:b19iddOtlocdOtgovvocabularygeographicAreasn-us-va", "@type": [ "http://id.loc.gov/ontologies/RecordInfo#RecordInfo" ], "http://id.loc.gov/ontologies/RecordInfo#recordStatus": [ { "@type": "http://www.w3.org/2001/XMLSchema#string",
+        "@value": "new" } ], "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": [ { "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "1970-01-01T00:00:00" } ], "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": [ { "@id": "http://id.loc.gov/vocabulary/organizations/dlcmrc" } ] },  { "@id": "http://id.loc.gov/vocabulary/geographicAreas/n-us", "@type": [ "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/2004/02/skos/core#Concept" ], "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": [ { "@language": "en",
+        "@value": "United States" } ], "http://www.w3.org/2004/02/skos/core#prefLabel": [ { "@language": "en",
+        "@value": "United States" } ] } ]
+  recorded_at: Tue, 07 Sep 2021 21:58:10 GMT
 recorded_with: VCR 6.0.0

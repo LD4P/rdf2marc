@@ -15,6 +15,7 @@ require 'rdf/turtle'
 WebMock.disable_net_connect!
 
 VCR.configure do |c|
+  # c.debug_logger = $stderr
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
   c.configure_rspec_metadata!

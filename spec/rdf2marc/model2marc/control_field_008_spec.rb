@@ -28,14 +28,14 @@ RSpec.describe Rdf2marc::Model2marc::ControlField008 do
           general_info: {
             date_entered: Date.new(2020, 10, 15),
             date1: '202x',
-            place: 'us',
+            place: 'gau',
             language: 'ace'
           }
         }
       }
     end
 
-    let(:expected_fields) { ['008 201015s202u    us                  ace||'] }
+    let(:expected_fields) { ['008 201015s202u    gau                 ace||'] }
 
     before do
       allow(Date).to receive(:today).and_return(Date.new(2020, 10, 1))

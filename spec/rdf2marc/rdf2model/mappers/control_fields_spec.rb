@@ -8,7 +8,9 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
 
     let(:model) do
       {
-        general_info: {}
+        general_info: {
+          place: 'xx'
+        }
       }
     end
 
@@ -26,7 +28,9 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
 
     let(:model) do
       {
-        general_info: {},
+        general_info: {
+          place: 'xx'
+        },
         control_number: 'abc123'
       }
     end
@@ -43,7 +47,9 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
 
     let(:model) do
       {
-        general_info: {},
+        general_info: {
+          place: 'xx'
+        },
         control_number_id: 'cst'
       }
     end
@@ -60,7 +66,9 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
 
     let(:model) do
       {
-        general_info: {},
+        general_info: {
+          place: 'xx'
+        },
         latest_transaction: Date.new(2020, 10, 23)
       }
     end
@@ -81,7 +89,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
     let(:model) do
       {
         general_info: {
-          place: 'us'
+          place: 'msu'
         }
       }
     end
@@ -99,7 +107,8 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
     let(:model) do
       {
         general_info: {
-          date_entered: Date.new(2020, 10, 12)
+          date_entered: Date.new(2020, 10, 12),
+          place: 'xx'
         }
       }
     end
@@ -119,7 +128,8 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
     let(:model) do
       {
         general_info: {
-          date1: '2020-10-12'
+          date1: '2020-10-12',
+          place: 'xx'
         }
       }
     end
@@ -140,7 +150,8 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
     let(:model) do
       {
         general_info: {
-          language: 'ace'
+          language: 'ace',
+          place: 'xx'
         }
       }
     end

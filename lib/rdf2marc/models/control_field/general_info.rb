@@ -7,7 +7,7 @@ module Rdf2marc
       class GeneralInfo < Struct
         attribute? :date_entered, Types::Date
         attribute? :date1, Types::String
-        attribute? :place, Types::String
+        attribute? :place, Types::String.default('xx').constrained(min_size: 2, max_size: 3)
         attribute? :language, Types::String
       end
     end

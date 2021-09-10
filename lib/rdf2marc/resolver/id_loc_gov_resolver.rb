@@ -30,13 +30,13 @@ module Rdf2marc
       end
 
       def resolve_label(uri)
-        graph = graph_get("#{uri}.skos.nt")
+        graph = RDF::Graph.load("#{uri}.skos.nt")
         query = GraphQuery.new(graph)
         query.path_first_literal([SKOS.prefLabel], subject_term: RDF::URI.new(uri))
       end
 
       def resolve_type(uri)
-        graph = graph_get("#{uri}.madsrdf.nt")
+        graph = RDF::Graph.load("#{uri}.madsrdf.nt")
         query = GraphQuery.new(graph)
         mads_uris = query.path_all_uri([RDF::RDFV.type], subject_term: RDF::URI.new(uri))
         return resolve_complex_type(uri, query) if mads_uris.include?('http://www.loc.gov/mads/rdf/v1#ComplexSubject')
@@ -46,33 +46,11 @@ module Rdf2marc
 
       private
 
-      def graph_get(url)
-        data = StringIO.new(http_get(url))
-        graph = RDF::Repository.new
-        reader = RDF::Reader.for(:ntriples).new(data)
-        graph << reader
-        graph
-      end
-
-      def http_get(url)
-        resp = connection.get(url)
+      def get_marc(uri)
+        resp = Rdf2marc.http_adapter.get("#{uri}.marcxml.xml")
         raise Error, "Error getting #{url}." unless resp.success?
 
-        resp.body
-      end
-
-      def connection
-        @connection ||= Faraday.new do |builder|
-          builder.use :http_cache, store: Rdf2marc.cache
-          builder.use FaradayMiddleware::FollowRedirects
-          builder.response :encoding # use Faraday::Encoding middleware
-          builder.adapter Faraday.default_adapter
-        end
-      end
-
-      def get_marc(uri)
-        body = http_get("#{uri}.marcxml.xml")
-        MARC::XMLReader.new(StringIO.new(body)).first
+        MARC::XMLReader.new(StringIO.new(resp.body)).first
       end
 
       def type_for(mads_uri)

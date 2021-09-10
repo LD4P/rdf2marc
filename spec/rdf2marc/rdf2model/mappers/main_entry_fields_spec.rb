@@ -12,7 +12,35 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
   end
 
   describe 'personal names' do
-    context 'when mapping from multiple BF.Person and BF.Family URIs' do
+    context 'when mapping from multiple BF.Person and BF.Family URIs (preferred RDF)' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.
+          _:b1 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/no2005086644>;
+              <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/no2020066646>.
+          <http://id.loc.gov/authorities/names/no2005086644> a <http://id.loc.gov/ontologies/bibframe/Person>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "Jung, Carl".
+          <http://id.loc.gov/authorities/names/no2020066646> a <http://id.loc.gov/ontologies/bibframe/Family>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "Kennedy (Family : Covington, Ky.)".
+        TTL
+      end
+
+      let(:model) do
+        {
+          personal_name: {
+            thesaurus: 'lcsh',
+            type: 'surname',
+            personal_name: 'Jung, Carl',
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/no2005086644']
+          }
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
+    context 'when mapping from multiple BF.Person and BF.Family URIs (legacy RDF)' do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.

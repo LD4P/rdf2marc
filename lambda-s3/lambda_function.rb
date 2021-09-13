@@ -27,6 +27,8 @@ rescue Rdf2marc::UnhandledError => e
   write_to_s3("The conversion you requested is not yet supported: #{e.message}", bucket_name, error_path)
 rescue Rdf2marc::BadRequestError => e
   write_to_s3("There is a problem with the supplied RDF: #{e.message}", bucket_name, error_path)
+  # Log to cloudwatch too:
+  raise e
 rescue StandardError => e
   write_to_s3("Ooops, something went wrong: #{e.message}", bucket_name, error_path)
   # Log to cloudwatch too:

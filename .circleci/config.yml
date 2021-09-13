@@ -109,7 +109,7 @@ jobs:
       - run:
           name: Build lambda zip
           command: |
-            zip -r lambda.zip lib
+            zip -r lambda.zip lib Gemfile*
             zip -j lambda.zip lambda-s3/lambda_function.rb
       - persist_to_workspace:
           root: ~/project

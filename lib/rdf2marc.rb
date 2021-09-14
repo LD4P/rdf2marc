@@ -38,7 +38,7 @@ module Rdf2marc
 
     def open_url(base_uri, headers: {}, **_options)
       response = @conn.get(base_uri, nil, self.class.headers(headers: headers))
-      raise IOError, "<#{base_uri}>: #{response.code}" unless response.success?
+      raise IOError, "<#{base_uri}>: #{response.status}" unless response.success?
 
       # If a Location is returned, it defines the base resource for this file, not it's actual ending location
       document_options = {

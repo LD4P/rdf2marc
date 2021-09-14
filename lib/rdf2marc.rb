@@ -53,6 +53,20 @@ module Rdf2marc
     end
   end
 
+  # An adapter that delegates to the caching adapter if the conditions are met.
+  class ConditionalCacheAdapter
+    def initialize(caching_adapter, noncaching_adapter, only_host:)
+      @caching_adapter = caching_adapter
+      @noncaching_adapter = noncaching_adapter
+      @only_host = only_host
+    end
+
+    def get(uri, *stuff, **options)
+      adapter = uri.match?(@only_host) ? @caching_adapter : @noncaching_adapter
+      adapter.get(uri, *stuff, **options)
+    end
+  end
+
   # Base class for Exceptions
   class Error < StandardError; end
 
@@ -85,21 +99,29 @@ module Rdf2marc
   end
 
   def self.reset
-    @http_adapter = nil
+    @caching_http_adapter = nil
     @cache = nil
     setup
   end
 
   def self.setup
     # This has to be reset after the cache_implementation is changed
-    warn "Setting http_adapter to be #{http_adapter}, with cache: #{cache}"
-
-    RDF::Util::File.http_adapter = FaradayAdapter.new(http_adapter)
+    RDF::Util::File.http_adapter = FaradayAdapter.new(
+      ConditionalCacheAdapter.new(caching_http_adapter, noncaching_http_adapter, only_host: %r{https?://id\.loc\.gov/})
+    )
   end
 
-  def self.http_adapter
-    @http_adapter ||= Faraday.new do |builder|
+  def self.caching_http_adapter
+    @caching_http_adapter ||= Faraday.new do |builder|
       builder.use :http_cache, store: cache
+      builder.use FaradayMiddleware::FollowRedirects
+      builder.response :encoding # use Faraday::Encoding middleware
+      builder.adapter Faraday.default_adapter
+    end
+  end
+
+  def self.noncaching_http_adapter
+    @noncaching_http_adapter ||= Faraday.new do |builder|
       builder.use FaradayMiddleware::FollowRedirects
       builder.response :encoding # use Faraday::Encoding middleware
       builder.adapter Faraday.default_adapter
@@ -108,7 +130,6 @@ module Rdf2marc
 
   def self.cache_implementation=(value)
     @cache_implementation = value
-    warn "Setting cache impl to #{value}"
     reset
   end
 

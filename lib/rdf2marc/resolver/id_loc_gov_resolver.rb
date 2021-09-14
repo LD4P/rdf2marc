@@ -47,7 +47,7 @@ module Rdf2marc
       private
 
       def get_marc(uri)
-        resp = Rdf2marc.http_adapter.get("#{uri}.marcxml.xml")
+        resp = Rdf2marc.caching_http_adapter.get("#{uri}.marcxml.xml")
         raise Error, "Error getting #{url}." unless resp.success?
 
         MARC::XMLReader.new(StringIO.new(resp.body)).first

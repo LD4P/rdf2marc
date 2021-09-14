@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'activesupport', require: 'active_support'
+gem 'activesupport'
 gem 'aws-sdk-s3'
 gem 'dry-struct'
 gem 'dry-types'

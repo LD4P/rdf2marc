@@ -92,6 +92,8 @@ module Rdf2marc
 
   def self.setup
     # This has to be reset after the cache_implementation is changed
+    warn "Setting http_adapter to be #{http_adapter}, with cache: #{cache}"
+
     RDF::Util::File.http_adapter = FaradayAdapter.new(http_adapter)
   end
 
@@ -106,6 +108,7 @@ module Rdf2marc
 
   def self.cache_implementation=(value)
     @cache_implementation = value
+    warn "Setting cache impl to #{value}"
     reset
   end
 

@@ -1,10 +1,7 @@
 # frozen_string_literal: true
 
-load_paths = Dir['lib']
-$LOAD_PATH.unshift(*load_paths)
-
+$LOAD_PATH.unshift('lib')
 require 'rdf2marc'
-require 'aws-sdk-s3'
 
 def lambda_handler(event:, context:)
   instance_uri = event['instance_uri']

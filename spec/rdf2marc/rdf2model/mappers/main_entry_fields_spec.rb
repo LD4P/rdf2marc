@@ -127,7 +127,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
     context 'when mapping from multiple BF.Organzation literals' do
       let(:ttl) do
         <<~TTL
-                    <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b9.
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b9.
           _:b9 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b10.
           _:b10 a <http://id.loc.gov/ontologies/bibframe/Organization>;
@@ -152,7 +152,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
     context 'when mapping from multiple BF.Meeting URIs' do
       let(:ttl) do
         <<~TTL
-                    <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b11.
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b11.
           _:b11 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b12.
           _:b12 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
@@ -182,11 +182,11 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
     context 'when mapping from multiple BF.Meeting literals' do
       let(:ttl) do
         <<~TTL
-                                        <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b13.
-                    _:b13 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
-                        <http://id.loc.gov/ontologies/bibframe/agent> _:b14.
-                    _:b14 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
-                        <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Women and National Health Insurance Meeting", "Van Cliburn International Piano Competition".
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b13.
+          _:b13 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> _:b14.
+          _:b14 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Women and National Health Insurance Meeting", "Van Cliburn International Piano Competition".
           #{'          '}
         TTL
       end

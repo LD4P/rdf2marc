@@ -34,29 +34,26 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::EditionImprintFields, :vcr do
         _:b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Publication> .
         _:b11 <http://id.loc.gov/ontologies/bibframe/place> <http://id.loc.gov/authorities/names/n82070796> .
         <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2000/01/rdf-schema#label> "Freehold (N.J.)" .
-        _:b11 <http://id.loc.gov/ontologies/bibframe/agent> _:b12 .
-        _:b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Agent> .
-        _:b12 <http://id.loc.gov/ontologies/bibframe/Agent> <http://id.loc.gov/authorities/names/n82158730> .
+        _:b11 <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/n82158730> .
+        <http://id.loc.gov/authorities/names/n82158730> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Agent> .
         <http://id.loc.gov/authorities/names/n82158730> <http://www.w3.org/2000/01/rdf-schema#label> "ABC-Clio Information Services" .
-        _:b12 <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/pbl> .
+        <http://id.loc.gov/authorities/names/n82158730> <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/pbl> .
         <http://id.loc.gov/vocabulary/relators/pbl> <http://www.w3.org/2000/01/rdf-schema#label> "Publisher" .
         _:b11 <http://id.loc.gov/ontologies/bibframe/date> "2020"@eng .
         <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/provisionActivity> _:b13 .
         _:b13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Distribution> .
         _:b13 <http://id.loc.gov/ontologies/bibframe/place> <http://id.loc.gov/authorities/names/n00068607> .
         <http://id.loc.gov/authorities/names/n00068607> <http://www.w3.org/2000/01/rdf-schema#label> "West Seattle (Wash.)" .
-        _:b13 <http://id.loc.gov/ontologies/bibframe/agent> _:b14 .
-        _:b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Agent> .
-        _:b14 <http://id.loc.gov/ontologies/bibframe/Agent> <http://id.loc.gov/authorities/names/no2003107987> .
+        _:b13 <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/no2003107987> .
+        <http://id.loc.gov/authorities/names/no2003107987> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Agent> .
         <http://id.loc.gov/authorities/names/no2003107987> <http://www.w3.org/2000/01/rdf-schema#label> "Wood and Iverson Lumber Company" .
         _:b13 <http://id.loc.gov/ontologies/bibframe/date> "2019"@eng .
         <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/provisionActivity> _:b15 .
         _:b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Manufacture> .
         _:b15 <http://id.loc.gov/ontologies/bibframe/place> <http://id.loc.gov/authorities/names/n79061258> .
         <http://id.loc.gov/authorities/names/n79061258> <http://www.w3.org/2000/01/rdf-schema#label> "Cambridge (Mass.)" .
-        _:b15 <http://id.loc.gov/ontologies/bibframe/agent> _:b16 .
-        _:b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Agent> .
-        _:b16 <http://id.loc.gov/ontologies/bibframe/Agent> <http://id.loc.gov/authorities/names/nr92038535> .
+        _:b15 <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/nr92038535> .
+        <http://id.loc.gov/authorities/names/nr92038535> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Agent> .
         <http://id.loc.gov/authorities/names/nr92038535> <http://www.w3.org/2000/01/rdf-schema#label> "Cambridge Press (Cambridge, Mass.)" .
         _:b15 <http://id.loc.gov/ontologies/bibframe/date> "2017"@eng .
       TTL

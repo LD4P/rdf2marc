@@ -55,8 +55,7 @@ _:b13_c14n17 a <http://id.loc.gov/ontologies/bibframe/Extent>;
 _:b13_c14n18 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Translated variant1"@eng;
     <http://id.loc.gov/ontologies/bibframe/variantType> "translated"@eng;
     a <http://id.loc.gov/ontologies/bibframe/VariantTitle>.
-_:b13_c14n19 <http://id.loc.gov/ontologies/bibframe/Agent> <http://id.loc.gov/authorities/names/n81038616>;
-    a <http://id.loc.gov/ontologies/bibframe/Agent>.
+<http://id.loc.gov/authorities/names/n81038616> a <http://id.loc.gov/ontologies/bibframe/Agent>.
 _:b13_c14n2 a <http://id.loc.gov/ontologies/bibframe/Note>;
     <http://www.w3.org/2000/01/rdf-schema#label> "Instance note2"@eng.
 _:b13_c14n20 a <http://id.loc.gov/ontologies/bibframe/Lccn>;
@@ -73,15 +72,14 @@ _:b13_c14n22 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Instance1, main 
     a <http://id.loc.gov/ontologies/bibframe/Title>.
 _:b13_c14n23 a <http://id.loc.gov/ontologies/bibframe/Isbn>;
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "0914378260"@eng.
-_:b13_c14n3 <http://id.loc.gov/ontologies/bibframe/agent> _:b13_c14n5;
+_:b13_c14n3 <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/nr2005022094>;
     <http://id.loc.gov/ontologies/bibframe/date> "2020"@eng;
     <http://id.loc.gov/ontologies/bibframe/place> <http://id.loc.gov/authorities/names/n79021759>;
     a <http://id.loc.gov/ontologies/bibframe/Distribution>.
 _:b13_c14n4 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Instance2, main title"@eng;
     a <http://id.loc.gov/ontologies/bibframe/Title>.
-_:b13_c14n5 <http://id.loc.gov/ontologies/bibframe/Agent> <http://id.loc.gov/authorities/names/nr2005022094>;
-    a <http://id.loc.gov/ontologies/bibframe/Agent>.
-_:b13_c14n6 <http://id.loc.gov/ontologies/bibframe/agent> _:b13_c14n19;
+<http://id.loc.gov/authorities/names/nr2005022094> a <http://id.loc.gov/ontologies/bibframe/Agent>.
+_:b13_c14n6 <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/n81038616>;
     <http://id.loc.gov/ontologies/bibframe/date> "202X"@eng;
     <http://id.loc.gov/ontologies/bibframe/place> <http://id.loc.gov/authorities/names/n79022909>;
     a <http://id.loc.gov/ontologies/bibframe/Publication>.

@@ -15,6 +15,7 @@ module Rdf2marc
                                                                           'répertoire_de_vedettes-matière',
                                                                           'subfield2')
         attribute? :personal_name, Types::String
+        # ordered in marc subfield order
         attribute? :numeration, Types::String
         attribute? :title_and_words, Types::Array.of(Types::String)
         attribute? :dates, Types::String

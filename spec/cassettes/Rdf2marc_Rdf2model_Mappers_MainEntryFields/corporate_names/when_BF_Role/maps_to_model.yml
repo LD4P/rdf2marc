@@ -1,0 +1,537 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/nb2007013471.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 21 Sep 2021 16:28:16 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 21 Sep 2021 17:28:16 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/nb2007013471.madsrdf.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6924aa6898002542-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 21 Sep 2021 16:28:16 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/nb2007013471.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Sep 2021 16:28:16 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Iranian Chemical Society
+      X-Uri:
+      - http://id.loc.gov/authorities/names/nb2007013471
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '20084823'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6924aa68dd251fb9-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Iranian Chemical Society" .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesnb2007013471 .
+        _:b7iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesnb2007013471 .
+        _:b7iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://www.loc.gov/mads/rdf/v1#elementValue> "Iranian Chemical Society" .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/1677217> .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cnb2007013471#skos:Concept> .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/1677217> .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/nb2007013471> .
+        <http://id.loc.gov/rwo/agents/nb2007013471> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/nb2007013471> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Organization> .
+        <http://id.loc.gov/rwo/agents/nb2007013471> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+        <http://id.loc.gov/rwo/agents/nb2007013471> <http://www.w3.org/2000/01/rdf-schema#label> "Iranian Chemical Society" .
+        <http://id.loc.gov/rwo/agents/nb2007013471> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/20133720> .
+        <http://id.loc.gov/resources/works/20133720> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/20133720> <http://id.loc.gov/ontologies/bflc/aap> "Journal of the Iranian Chemical Society" .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://id.loc.gov/vocabulary/identifiers/lccn> "nb2007013471" .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://id.loc.gov/vocabulary/identifiers/local> "(Uk)006821290" .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b31iddOtlocdOtgovauthoritiesnamesnb2007013471 .
+        _:b31iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b31iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://www.loc.gov/mads/rdf/v1#citationSource> "Journal of the Iranian Chemical Society, Sept. 2004" .
+        _:b31iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b37iddOtlocdOtgovauthoritiesnamesnb2007013471 .
+        _:b37iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b37iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2007-06-08T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b37iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b37iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/uk> .
+        _:b37iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/nb2007013471> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b45iddOtlocdOtgovauthoritiesnamesnb2007013471 .
+        _:b45iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b45iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2007-06-09T06:31:07"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b45iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b45iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/uk> .
+        _:b45iddOtlocdOtgovauthoritiesnamesnb2007013471 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Tue, 21 Sep 2021 16:28:16 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/nb2007013471.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 21 Sep 2021 16:28:16 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 21 Sep 2021 17:28:16 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/nb2007013471.marcxml.xml
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6924aa6d2ad00fc3-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 21 Sep 2021 16:28:16 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/nb2007013471.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Sep 2021 16:28:17 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Uri:
+      - http://id.loc.gov/authorities/names/nb2007013471
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '20419724'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6924aa6d8e5c0fb3-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+          <marcxml:leader>00340nz  a2200133n  4500</marcxml:leader>
+          <marcxml:controlfield tag="001">nb2007013471</marcxml:controlfield>
+          <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+          <marcxml:controlfield tag="005">20070609063107.0</marcxml:controlfield>
+          <marcxml:controlfield tag="008">070608n| acannaabn          |n ana      </marcxml:controlfield>
+          <marcxml:datafield tag="010" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">nb2007013471</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="035" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">(Uk)006821290</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="040" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">Uk</marcxml:subfield>
+            <marcxml:subfield code="b">eng</marcxml:subfield>
+            <marcxml:subfield code="c">Uk</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="110" ind1="2" ind2=" ">
+            <marcxml:subfield code="a">Iranian Chemical Society</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="670" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">Journal of the Iranian Chemical Society, Sept. 2004</marcxml:subfield>
+          </marcxml:datafield>
+        </marcxml:record>
+  recorded_at: Tue, 21 Sep 2021 16:28:17 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/aut.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 21 Sep 2021 16:28:17 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 21 Sep 2021 17:28:17 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/aut.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6924aa6fad25ed0b-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 21 Sep 2021 16:28:17 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/aut.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Sep 2021 16:28:17 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Author
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/aut
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 20084827 19930323
+      Age:
+      - '64512'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6924aa6ff8ba3ae6-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#prefLabel> "Author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b7iddOtlocdOtgovvocabularyrelatorsaut .
+        _:b7iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+        _:b7iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/2008/05/skos-xl#literalForm> "Joint author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/lbt> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aus> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aft> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/scl> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aqt> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/lyr> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aud> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aui> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization responsible for creating a work that is primarily textual in content, regardless of media type (e.g., printed text, spoken word, electronic text, tactile text) or genre (e.g., poems, novels, screenplays, blogs). Use also for persons, etc., creating a new work by paraphrasing, rewriting, or adapting works by another creator such that the modification has substantially changed the nature and content of the original or changed the medium of expression"@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#editorial> "changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#notation> "aut" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#altLabel> "Joint author" .
+  recorded_at: Tue, 21 Sep 2021 16:28:17 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/aut.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 21 Sep 2021 16:28:17 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 21 Sep 2021 17:28:17 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/aut.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6924aa721dcb252d-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 21 Sep 2021 16:28:17 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/aut.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Sep 2021 16:28:17 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Author
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/aut
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 20292581 15426250
+      Age:
+      - '65913'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6924aa725ed592f8-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#prefLabel> "Author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b7iddOtlocdOtgovvocabularyrelatorsaut .
+        _:b7iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+        _:b7iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/2008/05/skos-xl#literalForm> "Joint author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/lbt> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aus> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aft> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/scl> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aqt> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/lyr> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aud> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aui> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization responsible for creating a work that is primarily textual in content, regardless of media type (e.g., printed text, spoken word, electronic text, tactile text) or genre (e.g., poems, novels, screenplays, blogs). Use also for persons, etc., creating a new work by paraphrasing, rewriting, or adapting works by another creator such that the modification has substantially changed the nature and content of the original or changed the medium of expression"@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#editorial> "changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#notation> "aut" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#altLabel> "Joint author" .
+  recorded_at: Tue, 21 Sep 2021 16:28:18 GMT
+recorded_with: VCR 6.0.0

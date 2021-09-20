@@ -92,6 +92,60 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
 
       include_examples 'mapper', described_class
     end
+
+    context 'when BF.Role' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.
+          _:b1 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/nb2004311516>;
+              <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
+          <http://id.loc.gov/authorities/names/nb2004311516> a <http://id.loc.gov/ontologies/bibframe/Person>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "Laws, John Muir@en".
+          <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2000/01/rdf-schema#label> "Author but it will be looked up".
+        TTL
+      end
+
+      let(:model) do
+        {
+          personal_name: {
+            thesaurus: 'lcsh',
+            type: 'surname',
+            personal_name: 'Laws, John Muir',
+            relator_terms: ['Author'],
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/nb2004311516']
+          }
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
+    context 'when mapping from literal and BF.Role' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b7.
+          _:b7 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> _:b8;
+              <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
+          _:b8 a <http://id.loc.gov/ontologies/bibframe/Person>;
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Jung, Carl", "Kennedy Family".
+          <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2000/01/rdf-schema#label> "Author but it will be looked up".
+        TTL
+      end
+
+      let(:model) do
+        {
+          personal_name: {
+            thesaurus: 'not_specified',
+            personal_name: 'Jung, Carl',
+            relator_terms: ['Author']
+          }
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
   end
 
   describe 'corporate names' do
@@ -140,6 +194,61 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
           corporate_name: {
             thesaurus: 'not_specified',
             corporate_name: 'Iranian Chemical Society'
+          }
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
+    context 'when BF.Role' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.
+          _:b1 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> _:b5;
+              <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
+          _:b5 a <http://id.loc.gov/ontologies/bibframe/Organization>;
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://id.loc.gov/authorities/names/nb2007013471>.
+          <http://id.loc.gov/authorities/names/nb2007013471> <http://www.w3.org/2000/01/rdf-schema#label> "Iranian Chemical Society".
+          <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2000/01/rdf-schema#label> "Author but it will be looked up".
+        TTL
+      end
+
+      let(:model) do
+        {
+          corporate_name: {
+            type: 'direct',
+            thesaurus: 'lcsh',
+            corporate_name: 'Iranian Chemical Society',
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/nb2007013471'],
+            relator_terms: ['Author']
+          }
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
+    context 'when mapping from literal and BF.Role' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b9.
+          _:b9 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> _:b10;
+              <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
+          _:b10 a <http://id.loc.gov/ontologies/bibframe/Organization>;
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Iranian Chemical Society".
+          <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2000/01/rdf-schema#label> "Author but it will be looked up".
+        TTL
+      end
+
+      let(:model) do
+        {
+          corporate_name: {
+            thesaurus: 'not_specified',
+            corporate_name: 'Iranian Chemical Society',
+            relator_terms: ['Author']
           }
         }
       end
@@ -196,6 +305,61 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
           meeting_name: {
             thesaurus: 'not_specified',
             meeting_name: 'Van Cliburn International Piano Competition'
+          }
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
+    context 'when BF.Role' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b11.
+          _:b11 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> _:b12;
+              <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
+          _:b12 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://id.loc.gov/authorities/names/n81133545>.
+          <http://id.loc.gov/authorities/names/n81133545> <http://www.w3.org/2000/01/rdf-schema#label> "Van Cliburn International Piano Competition".
+          <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2000/01/rdf-schema#label> "Author but it will be looked up".
+        TTL
+      end
+
+      let(:model) do
+        {
+          meeting_name: {
+            type: 'direct',
+            thesaurus: 'lcsh',
+            meeting_name: 'Van Cliburn International Piano Competition',
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n81133545'],
+            relator_terms: ['Author']
+          }
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
+    context 'when mapping from literal and BF.Role' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b13.
+          _:b13 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> _:b14;
+              <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
+          _:b14 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Van Cliburn International Piano Competition".
+          <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2000/01/rdf-schema#label> "Author but it will be looked up".
+        TTL
+      end
+
+      let(:model) do
+        {
+          meeting_name: {
+            thesaurus: 'not_specified',
+            meeting_name: 'Van Cliburn International Piano Competition',
+            relator_terms: ['Author']
           }
         }
       end

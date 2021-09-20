@@ -59,7 +59,7 @@ module Rdf2marc
 
     def self.resolver_class_for(uri)
       # Additional resolvers can be added here.
-      return Resolver::IdLocGovResolver if uri.start_with?(%r{https?://id.loc.gov/authorities/})
+      return Resolver::IdLocGovResolver if uri.start_with?(%r{https?://id.loc.gov/(authorities|vocabulary)})
 
       nil
     end

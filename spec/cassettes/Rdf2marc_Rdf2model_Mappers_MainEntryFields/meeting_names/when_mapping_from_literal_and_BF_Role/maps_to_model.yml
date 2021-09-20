@@ -1,0 +1,259 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/aut.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 21 Sep 2021 16:22:45 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 21 Sep 2021 17:22:45 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/aut.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6924a256ab40025a-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 21 Sep 2021 16:22:45 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/aut.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Sep 2021 16:22:45 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Author
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/aut
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 3258836 19930323
+      Age:
+      - '64180'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6924a256e9ef6440-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#prefLabel> "Author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b7iddOtlocdOtgovvocabularyrelatorsaut .
+        _:b7iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+        _:b7iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/2008/05/skos-xl#literalForm> "Joint author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/lbt> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aus> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aft> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/scl> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aqt> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/lyr> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aud> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aui> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization responsible for creating a work that is primarily textual in content, regardless of media type (e.g., printed text, spoken word, electronic text, tactile text) or genre (e.g., poems, novels, screenplays, blogs). Use also for persons, etc., creating a new work by paraphrasing, rewriting, or adapting works by another creator such that the modification has substantially changed the nature and content of the original or changed the medium of expression"@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#editorial> "changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#notation> "aut" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#altLabel> "Joint author" .
+  recorded_at: Tue, 21 Sep 2021 16:22:45 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/aut.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 21 Sep 2021 16:22:45 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 21 Sep 2021 17:22:45 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/aut.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6924a2590ec3211b-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 21 Sep 2021 16:22:45 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/aut.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 21 Sep 2021 16:22:46 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Author
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/aut
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 20207459 15426250
+      Age:
+      - '65581'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6924a2595bf73b33-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#prefLabel> "Author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b7iddOtlocdOtgovvocabularyrelatorsaut .
+        _:b7iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+        _:b7iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/2008/05/skos-xl#literalForm> "Joint author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/lbt> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aus> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aft> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/scl> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aqt> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/lyr> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aud> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aui> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization responsible for creating a work that is primarily textual in content, regardless of media type (e.g., printed text, spoken word, electronic text, tactile text) or genre (e.g., poems, novels, screenplays, blogs). Use also for persons, etc., creating a new work by paraphrasing, rewriting, or adapting works by another creator such that the modification has substantially changed the nature and content of the original or changed the medium of expression"@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#editorial> "changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#notation> "aut" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#altLabel> "Joint author" .
+  recorded_at: Tue, 21 Sep 2021 16:22:46 GMT
+recorded_with: VCR 6.0.0

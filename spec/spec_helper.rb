@@ -11,6 +11,7 @@ require 'vcr'
 require 'webmock/rspec'
 require 'pry-byebug'
 require 'rdf/turtle'
+require 'rdf2marc/model2marc/fields_shared_examples'
 
 WebMock.disable_net_connect!
 

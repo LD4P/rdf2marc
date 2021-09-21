@@ -13,12 +13,12 @@ module Rdf2marc
       def marc_record
         @marc_record ||= MARC::Record.new.tap do |marc_record|
           Leader.new(marc_record, record_model.leader).generate
-          add_control_field('001', record_model.control_fields.control_number, marc_record)
           add_control_field('003', record_model.control_fields.control_number_id, marc_record)
           add_field(ControlField005, record_model.control_fields, marc_record)
           add_field(ControlField008, record_model.control_fields.general_info, marc_record)
           add_field(Field010, record_model.number_and_code_fields.lccn, marc_record)
           add_repeating_field(Field020, record_model.number_and_code_fields.isbns, marc_record)
+          add_field(Field035, record_model.number_and_code_fields.oclc_record_number, marc_record)
           add_field(Field040, record_model.number_and_code_fields.cataloging_source, marc_record)
           add_field(Field043, record_model.number_and_code_fields.geographic_area_code, marc_record)
           add_repeating_field(Field050, record_model.number_and_code_fields.lc_call_numbers, marc_record)

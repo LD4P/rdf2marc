@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'rdf2marc/model2marc/fields_shared_examples'
-
 RSpec.describe Rdf2marc::Model2marc::ControlField008 do
   context 'with minimal model' do
     let(:model) do

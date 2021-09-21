@@ -46,6 +46,18 @@ Note when using Instance uri:
 * The Instance must contain a `bf:instanceOf` that references the Work or nests the Work via a blank node.
 * The Instance must contain a `bf:adminMetadata` that references the Admin Metadata or nests the Admin Metadata via a blank node.
 
+## Usage (Docker)
+
+Build the docker image:
+```
+docker build . -f Dockerfile -t ld4p/rdf2marc:latest
+```
+
+Run the above commands using the docker image:
+```
+docker run ld4p/rdf2marc <instance uri>
+```
+
 ## Caching
 Resolving external resources is slow. To speed this up, responses can be cached. The following caches are supported.
 * `Rdf2marc::Caches::NullCache`: No caching (the default).

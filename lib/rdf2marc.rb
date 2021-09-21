@@ -113,7 +113,7 @@ module Rdf2marc
 
   def self.caching_http_adapter
     @caching_http_adapter ||= Faraday.new do |builder|
-      builder.use :http_cache, store: cache
+      builder.use :http_cache, store: cache, serializer: Marshal
       builder.use FaradayMiddleware::FollowRedirects
       builder.response :encoding # use Faraday::Encoding middleware
       builder.adapter Faraday.default_adapter

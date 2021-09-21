@@ -1,0 +1,1244 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n98031191.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:36 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:36 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n98031191.madsrdf.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8862f11644a-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:36 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n98031191.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:36 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Throop, Priscilla, 1946-
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n98031191
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21856591 17430184
+      Age:
+      - '103918'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8866b3d2584-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/n98031191> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+        <http://id.loc.gov/authorities/names/n98031191> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/n98031191> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Throop, Priscilla, 1946-" .
+        <http://id.loc.gov/authorities/names/n98031191> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesn98031191 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn98031191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesn98031191 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn98031191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b010 .
+        _:b8iddOtlocdOtgovauthoritiesnamesn98031191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn98031191 <http://www.loc.gov/mads/rdf/v1#elementValue> "Throop, Priscilla," .
+        _:b010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b11iddOtlocdOtgovauthoritiesnamesn98031191 .
+        _:b010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn98031191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn98031191 <http://www.loc.gov/mads/rdf/v1#elementValue> "1946-" .
+        <http://id.loc.gov/authorities/names/n98031191> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/n98031191> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/n98031191> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cn++98031191#skos:Concept> .
+        <http://id.loc.gov/authorities/names/n98031191> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n98031191> .
+        <http://id.loc.gov/rwo/agents/n98031191> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/n98031191> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+        <http://id.loc.gov/rwo/agents/n98031191> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+        <http://id.loc.gov/rwo/agents/n98031191> <http://www.w3.org/2000/01/rdf-schema#label> "Throop, Priscilla, 1946-" .
+        <http://id.loc.gov/rwo/agents/n98031191> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/2141868> .
+        <http://id.loc.gov/resources/works/2141868> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/2141868> <http://id.loc.gov/ontologies/bflc/aap> "Hildegard, Saint, 1098-1179. Hildegard von Bingen's Physica : the complete English translation of her classic work on health and healing" .
+        <http://id.loc.gov/authorities/names/n98031191> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/n98031191> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 98031191" .
+        <http://id.loc.gov/authorities/names/n98031191> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b30iddOtlocdOtgovauthoritiesnamesn98031191 .
+        _:b30iddOtlocdOtgovauthoritiesnamesn98031191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b30iddOtlocdOtgovauthoritiesnamesn98031191 <http://www.loc.gov/mads/rdf/v1#citationSource> "Hildegard von Bingen's Physica, 1998:" .
+        _:b30iddOtlocdOtgovauthoritiesnamesn98031191 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Priscilla Throop) data sheet (b. 2-14-46)" .
+        _:b30iddOtlocdOtgovauthoritiesnamesn98031191 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+        <http://id.loc.gov/authorities/names/n98031191> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b38iddOtlocdOtgovauthoritiesnamesn98031191 .
+        _:b38iddOtlocdOtgovauthoritiesnamesn98031191 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b38iddOtlocdOtgovauthoritiesnamesn98031191 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1998-04-02T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b38iddOtlocdOtgovauthoritiesnamesn98031191 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b38iddOtlocdOtgovauthoritiesnamesn98031191 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+  recorded_at: Wed, 22 Sep 2021 21:34:36 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n98031191.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:36 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:36 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n98031191.marcxml.xml
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8887a9c1ee4-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:36 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n98031191.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:37 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n98031191
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 1920883 16191396
+      Age:
+      - '596555'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea888af6e2584-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+          <marcxml:leader>00397nz  a2200145n  4500</marcxml:leader>
+          <marcxml:controlfield tag="001">n98031191</marcxml:controlfield>
+          <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+          <marcxml:controlfield tag="005">19980402081501.2</marcxml:controlfield>
+          <marcxml:controlfield tag="008">980402n| acannaab           |n aaa      </marcxml:controlfield>
+          <marcxml:datafield tag="010" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">n  98031191 </marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="035" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">(DLC)n  98031191</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="040" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">DLC</marcxml:subfield>
+            <marcxml:subfield code="c">DLC</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="100" ind1="1" ind2="0">
+            <marcxml:subfield code="a">Throop, Priscilla,</marcxml:subfield>
+            <marcxml:subfield code="d">1946-</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="670" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">Hildegard von Bingen's Physica, 1998:</marcxml:subfield>
+            <marcxml:subfield code="b">t.p. (Priscilla Throop) data sheet (b. 2-14-46)</marcxml:subfield>
+          </marcxml:datafield>
+        </marcxml:record>
+  recorded_at: Wed, 22 Sep 2021 21:34:37 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/etr.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:37 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:37 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/etr.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea88ab8390262-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:37 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/etr.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:37 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Etcher
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/etr
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21856592 20510403
+      Age:
+      - '79231'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea88afaf96462-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/etr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/etr> <http://www.w3.org/2004/02/skos/core#prefLabel> "Etcher" .
+        <http://id.loc.gov/vocabulary/relators/etr> <http://www.w3.org/2004/02/skos/core#definition> "A person or organization who produces text or images for printing by subjecting metal, glass, or some other surface to acid or the corrosive action of some other substance"@en .
+        <http://id.loc.gov/vocabulary/relators/etr> <http://www.w3.org/2004/02/skos/core#notation> "etr" .
+        <http://id.loc.gov/vocabulary/relators/etr> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:37 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/trl.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:37 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:37 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/trl.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea88cfa7aed83-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:37 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/trl.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:37 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Translator
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/trl
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21506352 17315301
+      Age:
+      - '201639'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea88d3fd72554-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/trl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/trl> <http://www.w3.org/2004/02/skos/core#prefLabel> "Translator" .
+        <http://id.loc.gov/vocabulary/relators/trl> <http://www.w3.org/2004/02/skos/core#definition> "A person or organization who renders a text from one language into another, or from an older form of a language into the modern form"@en .
+        <http://id.loc.gov/vocabulary/relators/trl> <http://www.w3.org/2004/02/skos/core#notation> "trl" .
+        <http://id.loc.gov/vocabulary/relators/trl> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:37 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/etr.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:37 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:37 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/etr.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea88f3d7a6c32-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:38 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/etr.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:38 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Etcher
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/etr
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21506353 12869521
+      Age:
+      - '887558'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea88f7cb2641c-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/etr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/etr> <http://www.w3.org/2004/02/skos/core#prefLabel> "Etcher" .
+        <http://id.loc.gov/vocabulary/relators/etr> <http://www.w3.org/2004/02/skos/core#definition> "A person or organization who produces text or images for printing by subjecting metal, glass, or some other surface to acid or the corrosive action of some other substance"@en .
+        <http://id.loc.gov/vocabulary/relators/etr> <http://www.w3.org/2004/02/skos/core#notation> "etr" .
+        <http://id.loc.gov/vocabulary/relators/etr> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:38 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/trl.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:38 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:38 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/trl.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8918da22139-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:38 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/trl.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:38 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Translator
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/trl
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21797367 12312621
+      Age:
+      - '950676'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea891cd286bb4-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/trl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/trl> <http://www.w3.org/2004/02/skos/core#prefLabel> "Translator" .
+        <http://id.loc.gov/vocabulary/relators/trl> <http://www.w3.org/2004/02/skos/core#definition> "A person or organization who renders a text from one language into another, or from an older form of a language into the modern form"@en .
+        <http://id.loc.gov/vocabulary/relators/trl> <http://www.w3.org/2004/02/skos/core#notation> "trl" .
+        <http://id.loc.gov/vocabulary/relators/trl> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:38 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/no2012148249.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:38 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:38 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/no2012148249.madsrdf.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8946aeb643e-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:38 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/no2012148249.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:39 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Jacobsen, Mary Elder
+      X-Uri:
+      - http://id.loc.gov/authorities/names/no2012148249
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 16609799 19201299
+      Age:
+      - '195281'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea894a86ced97-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/no2012148249> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+        <http://id.loc.gov/authorities/names/no2012148249> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/no2012148249> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Jacobsen, Mary Elder" .
+        <http://id.loc.gov/authorities/names/no2012148249> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesno2012148249 .
+        _:b7iddOtlocdOtgovauthoritiesnamesno2012148249 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesno2012148249 .
+        _:b7iddOtlocdOtgovauthoritiesnamesno2012148249 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesno2012148249 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesno2012148249 <http://www.loc.gov/mads/rdf/v1#elementValue> "Jacobsen, Mary Elder" .
+        <http://id.loc.gov/authorities/names/no2012148249> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/no2012148249> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/no2012148249> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cno2012148249#skos:Concept> .
+        <http://id.loc.gov/authorities/names/no2012148249> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/no2012148249> .
+        <http://id.loc.gov/rwo/agents/no2012148249> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/no2012148249> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+        <http://id.loc.gov/rwo/agents/no2012148249> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+        <http://id.loc.gov/rwo/agents/no2012148249> <http://www.w3.org/2000/01/rdf-schema#label> "Jacobsen, Mary Elder" .
+        <http://id.loc.gov/authorities/names/no2012148249> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/no2012148249> <http://id.loc.gov/vocabulary/identifiers/lccn> "no2012148249" .
+        <http://id.loc.gov/authorities/names/no2012148249> <http://id.loc.gov/vocabulary/identifiers/local> "(OCoLC)oca09349436" .
+        <http://id.loc.gov/authorities/names/no2012148249> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b25iddOtlocdOtgovauthoritiesnamesno2012148249 .
+        _:b25iddOtlocdOtgovauthoritiesnamesno2012148249 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b25iddOtlocdOtgovauthoritiesnamesno2012148249 <http://www.loc.gov/mads/rdf/v1#citationSource> "Hildegard von Bingen's Physica, c1998:" .
+        _:b25iddOtlocdOtgovauthoritiesnamesno2012148249 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Mary Elder Jacobsen; illustrator)" .
+        _:b25iddOtlocdOtgovauthoritiesnamesno2012148249 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+        <http://id.loc.gov/authorities/names/no2012148249> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b33iddOtlocdOtgovauthoritiesnamesno2012148249 .
+        _:b33iddOtlocdOtgovauthoritiesnamesno2012148249 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b33iddOtlocdOtgovauthoritiesnamesno2012148249 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2012-11-19T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b33iddOtlocdOtgovauthoritiesnamesno2012148249 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b33iddOtlocdOtgovauthoritiesnamesno2012148249 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/ilmchbwi> .
+        _:b33iddOtlocdOtgovauthoritiesnamesno2012148249 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/no2012148249> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b41iddOtlocdOtgovauthoritiesnamesno2012148249 .
+        _:b41iddOtlocdOtgovauthoritiesnamesno2012148249 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b41iddOtlocdOtgovauthoritiesnamesno2012148249 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2012-11-20T07:35:17"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b41iddOtlocdOtgovauthoritiesnamesno2012148249 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b41iddOtlocdOtgovauthoritiesnamesno2012148249 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/ilmchbwi> .
+        _:b41iddOtlocdOtgovauthoritiesnamesno2012148249 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Wed, 22 Sep 2021 21:34:39 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/no2012148249.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:39 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:39 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/no2012148249.marcxml.xml
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea896ce723b27-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:39 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/no2012148249.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:39 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Uri:
+      - http://id.loc.gov/authorities/names/no2012148249
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21856594 14838607
+      Age:
+      - '195281'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea896ff2a3ada-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+          <marcxml:leader>00381nz  a2200133n  4500</marcxml:leader>
+          <marcxml:controlfield tag="001">no2012148249</marcxml:controlfield>
+          <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+          <marcxml:controlfield tag="005">20121120073517.0</marcxml:controlfield>
+          <marcxml:controlfield tag="008">121119n| acannaabn          |n aaa     c</marcxml:controlfield>
+          <marcxml:datafield tag="010" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">no2012148249</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="035" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">(OCoLC)oca09349436</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="040" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">IlMchBWI</marcxml:subfield>
+            <marcxml:subfield code="b">eng</marcxml:subfield>
+            <marcxml:subfield code="c">IlMchBWI</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="100" ind1="1" ind2=" ">
+            <marcxml:subfield code="a">Jacobsen, Mary Elder</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="670" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">Hildegard von Bingen's Physica, c1998:</marcxml:subfield>
+            <marcxml:subfield code="b">t.p. (Mary Elder Jacobsen; illustrator)</marcxml:subfield>
+          </marcxml:datafield>
+        </marcxml:record>
+  recorded_at: Wed, 22 Sep 2021 21:34:39 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:39 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:39 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/ill.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8991a6d92f8-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:39 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:39 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Illustrator
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/ill
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21545736 19687483
+      Age:
+      - '168181'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea89959086459-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#prefLabel> "Illustrator" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization contributing to a resource by supplementing the primary content with drawings, diagrams, photographs, etc. If the work is primarily the artistic content created by this entity, use artist or photographer"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#editorial> "Changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#notation> "ill" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:39 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:39 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:39 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/ill.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea89b8f762566-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:39 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:40 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Illustrator
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/ill
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21856597 19687483
+      Age:
+      - '168181'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea89bdaa32133-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#prefLabel> "Illustrator" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization contributing to a resource by supplementing the primary content with drawings, diagrams, photographs, etc. If the work is primarily the artistic content created by this entity, use artist or photographer"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#editorial> "Changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#notation> "ill" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:40 GMT
+recorded_with: VCR 6.0.0

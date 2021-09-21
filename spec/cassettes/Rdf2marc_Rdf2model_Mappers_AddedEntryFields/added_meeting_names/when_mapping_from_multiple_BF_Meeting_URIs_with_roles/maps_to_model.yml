@@ -1,0 +1,1594 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n81027412.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:05 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 23 Sep 2021 17:24:05 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n81027412.madsrdf.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f0cbad124e8-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 23 Sep 2021 16:24:05 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n81027412.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:06 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - 'Women and National Health Insurance Meeting (1980 : Washington, D.C.)'
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n81027412
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '21041803'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f0d0c3a3ae6-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ConferenceName> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Women and National Health Insurance Meeting (1980 : Washington, D.C.)" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b010 .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#elementValue> "Women and National Health Insurance Meeting" .
+        _:b010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b11iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b010 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b013 .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#elementValue> "(1980 :" .
+        _:b013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b14iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b14iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GeographicElement> .
+        _:b14iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#elementValue> "Washington, D.C.)" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cn++81027412#skos:Concept> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n81027412> .
+        <http://id.loc.gov/rwo/agents/n81027412> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/n81027412> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Meeting> .
+        <http://id.loc.gov/rwo/agents/n81027412> <http://www.w3.org/2000/01/rdf-schema#label> "Women and National Health Insurance Meeting (1980 : Washington, D.C.)" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#editorialNote> "[THIS 1XX FIELD CANNOT BE USED UNDER RDA UNTIL THIS RECORD HAS BEEN REVIEWED AND/OR UPDATED]" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 81027412" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b30iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b30iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b30iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#citationSource> "Kasper, A. Women and national health ... 1980 (a.e.)" .
+        _:b30iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#citationNote> "p. 14 (Women and National Health Insurance Meeting, 5/2/80)" .
+        _:b30iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b38iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b38iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b38iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#citationSource> "Phone call to Secretary's Advisory Committee on the Rights and Responsibilities of Women" .
+        _:b38iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#citationNote> "(Meeting held in Washington, D.C.)" .
+        _:b38iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b46iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b46iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b46iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1981-04-09T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b46iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b46iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dgpo> .
+        _:b46iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/n81027412> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b54iddOtlocdOtgovauthoritiesnamesn81027412 .
+        _:b54iddOtlocdOtgovauthoritiesnamesn81027412 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b54iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2012-08-10T10:18:44"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b54iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b54iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b54iddOtlocdOtgovauthoritiesnamesn81027412 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Thu, 23 Sep 2021 16:24:06 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n81027412.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:06 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 23 Sep 2021 17:24:06 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n81027412.marcxml.xml
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f119e4392f2-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 23 Sep 2021 16:24:06 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n81027412.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:07 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n81027412
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '3121682'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f11dc906447-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+          <marcxml:leader>00729cz  a2200169n  4500</marcxml:leader>
+          <marcxml:controlfield tag="001">n81027412</marcxml:controlfield>
+          <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+          <marcxml:controlfield tag="005">20120810101844.0</marcxml:controlfield>
+          <marcxml:controlfield tag="008">810409n| acannaab           |n ana     c</marcxml:controlfield>
+          <marcxml:datafield tag="010" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">n  81027412 </marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="035" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">(DLC)n  81027412</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="040" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">DGPO</marcxml:subfield>
+            <marcxml:subfield code="b">eng</marcxml:subfield>
+            <marcxml:subfield code="c">DLC</marcxml:subfield>
+            <marcxml:subfield code="d">DLC</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="111" ind1="2" ind2=" ">
+            <marcxml:subfield code="a">Women and National Health Insurance Meeting</marcxml:subfield>
+            <marcxml:subfield code="d">(1980 :</marcxml:subfield>
+            <marcxml:subfield code="c">Washington, D.C.)</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="667" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">THIS 1XX FIELD CANNOT BE USED UNDER RDA UNTIL THIS RECORD HAS BEEN REVIEWED AND/OR UPDATED</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="670" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">Kasper, A. Women and national health ... 1980 (a.e.)</marcxml:subfield>
+            <marcxml:subfield code="b">p. 14 (Women and National Health Insurance Meeting, 5/2/80)</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="670" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">Phone call to Secretary's Advisory Committee on the Rights and Responsibilities of Women</marcxml:subfield>
+            <marcxml:subfield code="b">(Meeting held in Washington, D.C.)</marcxml:subfield>
+          </marcxml:datafield>
+        </marcxml:record>
+  recorded_at: Thu, 23 Sep 2021 16:24:07 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:07 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 23 Sep 2021 17:24:07 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/fds.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f142d223b33-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 23 Sep 2021 16:24:07 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:07 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Film distributor
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/fds
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 22482251 16153951
+      Age:
+      - '67765'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f1488f03b46-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#prefLabel> "Film distributor" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/vocabulary/relators/dst> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization involved in distributing a moving image resource to theatres or other distribution channels"@en .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#notation> "fds" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Thu, 23 Sep 2021 16:24:07 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:07 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 23 Sep 2021 17:24:07 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/ill.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f168ff8645c-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 23 Sep 2021 16:24:07 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:07 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Illustrator
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/ill
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 22395885 19687483
+      Age:
+      - '235949'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f16cbdd6c9e-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#prefLabel> "Illustrator" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization contributing to a resource by supplementing the primary content with drawings, diagrams, photographs, etc. If the work is primarily the artistic content created by this entity, use artist or photographer"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#editorial> "Changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#notation> "ill" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Thu, 23 Sep 2021 16:24:07 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:07 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 23 Sep 2021 17:24:07 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/fds.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f18cff93b33-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 23 Sep 2021 16:24:07 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:08 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Film distributor
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/fds
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 19927230 16153951
+      Age:
+      - '67765'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f18fafa3b46-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#prefLabel> "Film distributor" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/vocabulary/relators/dst> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization involved in distributing a moving image resource to theatres or other distribution channels"@en .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#notation> "fds" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Thu, 23 Sep 2021 16:24:08 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:08 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 23 Sep 2021 17:24:08 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/ill.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f1b1e88255a-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 23 Sep 2021 16:24:08 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:08 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Illustrator
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/ill
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 7118451 19687483
+      Age:
+      - '235949'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f1b5dee2524-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#prefLabel> "Illustrator" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization contributing to a resource by supplementing the primary content with drawings, diagrams, photographs, etc. If the work is primarily the artistic content created by this entity, use artist or photographer"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#editorial> "Changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#notation> "ill" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Thu, 23 Sep 2021 16:24:08 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n81133545.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:08 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 23 Sep 2021 17:24:08 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n81133545.madsrdf.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f1d7f1a1fad-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 23 Sep 2021 16:24:08 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n81133545.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:08 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Van Cliburn International Piano Competition
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n81133545
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 16569873 3258544
+      Age:
+      - '173018'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f1dcfa7ed17-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ConferenceName> .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Van Cliburn International Piano Competition" .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b7iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#elementValue> "Van Cliburn International Piano Competition" .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b11iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ConferenceName> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Cliburn International Piano Competition" .
+        _:b11iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#elementList> _:b16iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b16iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b16iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b17iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b17iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#elementValue> "Cliburn International Piano Competition" .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b20iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b20iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ConferenceName> .
+        _:b20iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b20iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Cliburn (Van) International Piano Competition" .
+        _:b20iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#elementList> _:b25iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b25iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b26iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b25iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b26iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#elementValue> "Cliburn (Van) International Piano Competition" .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b29iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b29iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ConferenceName> .
+        _:b29iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b29iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Fort Worth, Tex. Van Cliburn International Piano Competition" .
+        _:b29iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#elementList> _:b34iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b34iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b35iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b34iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b35iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b35iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#elementValue> "Fort Worth, Tex." .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b38iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b38iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ConferenceName> .
+        _:b38iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b38iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#variantLabel> "International Piano Competition, Van Cliburn" .
+        _:b38iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#elementList> _:b43iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b43iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b44iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b43iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b44iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b44iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#elementValue> "International Piano Competition, Van Cliburn" .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b47iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b47iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ConferenceName> .
+        _:b47iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b47iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Piano Competition, Van Cliburn International" .
+        _:b47iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#elementList> _:b52iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b52iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b53iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b52iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b53iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b53iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#elementValue> "Piano Competition, Van Cliburn International" .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#hasEarlierEstablishedForm> _:b56iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b56iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ConferenceName> .
+        _:b56iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b56iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Fort Worth, Tex. Van Cliburn International Piano Competition" .
+        _:b56iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#elementList> _:b61iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b61iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b62iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b61iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b62iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameElement> .
+        _:b62iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#elementValue> "Fort Worth, Tex." .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/1405918> .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cn++81133545#skos:Concept> .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/1405918> .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n81133545> .
+        <http://id.loc.gov/rwo/agents/n81133545> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/n81133545> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Meeting> .
+        <http://id.loc.gov/rwo/agents/n81133545> <http://www.w3.org/2000/01/rdf-schema#label> "Van Cliburn International Piano Competition" .
+        <http://id.loc.gov/rwo/agents/n81133545> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/579823> .
+        <http://id.loc.gov/resources/works/579823> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/579823> <http://id.loc.gov/ontologies/bflc/aap> "Horowitz, Joseph, 1948- ivory trade : music and the business of music at the Van Cliburn International Piano Competition" .
+        <http://id.loc.gov/rwo/agents/n81133545> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/3905523> .
+        <http://id.loc.gov/resources/works/3905523> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/3905523> <http://id.loc.gov/ontologies/bflc/aap> "Horowitz, Joseph, 1948- ivory trade : piano competitions and the business of music" .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/n81133545> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 81133545" .
+        <http://id.loc.gov/authorities/names/n81133545> <http://id.loc.gov/vocabulary/identifiers/local> "(OCoLC)oca00678410" .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b88iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b88iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b88iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#citationSource> "Horowitz, J. The ivory trade, c1990:" .
+        _:b88iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (the Van Cliburn International Piano Competition)" .
+        _:b88iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b96iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b96iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b96iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#citationSource> "Van Cliburn Foundation WWW site, Sept. 23, 2008:" .
+        _:b96iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#citationNote> "competition archives (1962, First Van Cliburn International Piano Competition ... 2005, Twelfth Van Cliburn International Piano Competition)" .
+        _:b96iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b104iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b104iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b104iddOtlocdOtgovauthoritiesnamesn81133545 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1982-01-08T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b104iddOtlocdOtgovauthoritiesnamesn81133545 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b104iddOtlocdOtgovauthoritiesnamesn81133545 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b104iddOtlocdOtgovauthoritiesnamesn81133545 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/n81133545> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b112iddOtlocdOtgovauthoritiesnamesn81133545 .
+        _:b112iddOtlocdOtgovauthoritiesnamesn81133545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b112iddOtlocdOtgovauthoritiesnamesn81133545 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2014-07-17T17:50:09"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b112iddOtlocdOtgovauthoritiesnamesn81133545 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b112iddOtlocdOtgovauthoritiesnamesn81133545 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b112iddOtlocdOtgovauthoritiesnamesn81133545 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Thu, 23 Sep 2021 16:24:08 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/n81133545.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:09 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 23 Sep 2021 17:24:09 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/n81133545.marcxml.xml
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f207924645f-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 23 Sep 2021 16:24:09 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/n81133545.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:09 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Uri:
+      - http://id.loc.gov/authorities/names/n81133545
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 7118454 20332045
+      Age:
+      - '173018'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f20bd38ed73-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+          <marcxml:leader>01003cz  a2200229n  4500</marcxml:leader>
+          <marcxml:controlfield tag="001">n81133545</marcxml:controlfield>
+          <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+          <marcxml:controlfield tag="005">20140717175009.0</marcxml:controlfield>
+          <marcxml:controlfield tag="008">820108n| azannaabn          |a ana      </marcxml:controlfield>
+          <marcxml:datafield tag="010" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">n  81133545 </marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="035" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">(OCoLC)oca00678410</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="040" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">DLC</marcxml:subfield>
+            <marcxml:subfield code="b">eng</marcxml:subfield>
+            <marcxml:subfield code="e">rda</marcxml:subfield>
+            <marcxml:subfield code="c">DLC</marcxml:subfield>
+            <marcxml:subfield code="d">OrU</marcxml:subfield>
+            <marcxml:subfield code="d">PPi-MA</marcxml:subfield>
+            <marcxml:subfield code="d">DLC</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="111" ind1="2" ind2=" ">
+            <marcxml:subfield code="a">Van Cliburn International Piano Competition</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="411" ind1="2" ind2=" ">
+            <marcxml:subfield code="a">Cliburn International Piano Competition</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="411" ind1="0" ind2=" ">
+            <marcxml:subfield code="a">Cliburn (Van) International Piano Competition</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="411" ind1="1" ind2=" ">
+            <marcxml:subfield code="w">nnaa</marcxml:subfield>
+            <marcxml:subfield code="a">Fort Worth, Tex.</marcxml:subfield>
+            <marcxml:subfield code="q">Van Cliburn International Piano Competition</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="411" ind1="2" ind2=" ">
+            <marcxml:subfield code="a">International Piano Competition, Van Cliburn</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="411" ind1="2" ind2=" ">
+            <marcxml:subfield code="a">Piano Competition, Van Cliburn International</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="670" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">Horowitz, J. The ivory trade, c1990:</marcxml:subfield>
+            <marcxml:subfield code="b">t.p. (the Van Cliburn International Piano Competition)</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="670" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">Van Cliburn Foundation WWW site, Sept. 23, 2008:</marcxml:subfield>
+            <marcxml:subfield code="b">competition archives (1962, First Van Cliburn International Piano Competition ... 2005, Twelfth Van Cliburn International Piano Competition)</marcxml:subfield>
+          </marcxml:datafield>
+        </marcxml:record>
+  recorded_at: Thu, 23 Sep 2021 16:24:09 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:09 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 23 Sep 2021 17:24:09 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/fds.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f22bed10252-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 23 Sep 2021 16:24:09 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:09 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Film distributor
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/fds
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 7118455 5515248
+      Age:
+      - '1700486'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f22fc8d645c-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#prefLabel> "Film distributor" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/vocabulary/relators/dst> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization involved in distributing a moving image resource to theatres or other distribution channels"@en .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#notation> "fds" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Thu, 23 Sep 2021 16:24:09 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:09 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 23 Sep 2021 17:24:09 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/ill.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f251b62ed67-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 23 Sep 2021 16:24:09 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:10 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Illustrator
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/ill
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 22395897 19687483
+      Age:
+      - '235951'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f25881d023f-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#prefLabel> "Illustrator" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization contributing to a resource by supplementing the primary content with drawings, diagrams, photographs, etc. If the work is primarily the artistic content created by this entity, use artist or photographer"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#editorial> "Changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#notation> "ill" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Thu, 23 Sep 2021 16:24:10 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:10 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 23 Sep 2021 17:24:10 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/fds.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f27ac53641d-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 23 Sep 2021 16:24:10 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:10 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Film distributor
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/fds
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 7118458 5515248
+      Age:
+      - '1700486'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f27fe506446-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#prefLabel> "Film distributor" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/vocabulary/relators/dst> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization involved in distributing a moving image resource to theatres or other distribution channels"@en .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#notation> "fds" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Thu, 23 Sep 2021 16:24:10 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:10 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 23 Sep 2021 17:24:10 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/ill.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f2a1950255c-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 23 Sep 2021 16:24:10 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 Sep 2021 16:24:10 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Illustrator
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/ill
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 22482264 19809825
+      Age:
+      - '235951'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 69351f2a6d746462-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#prefLabel> "Illustrator" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization contributing to a resource by supplementing the primary content with drawings, diagrams, photographs, etc. If the work is primarily the artistic content created by this entity, use artist or photographer"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#editorial> "Changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#notation> "ill" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Thu, 23 Sep 2021 16:24:10 GMT
+recorded_with: VCR 6.0.0

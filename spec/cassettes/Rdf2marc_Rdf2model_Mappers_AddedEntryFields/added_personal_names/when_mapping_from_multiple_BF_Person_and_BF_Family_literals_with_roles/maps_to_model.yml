@@ -1,0 +1,931 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:40 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:40 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/fds.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea89e18276444-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:40 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:40 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Film distributor
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/fds
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21856598 5515248
+      Age:
+      - '1632716'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea89e5b343b0a-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#prefLabel> "Film distributor" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/vocabulary/relators/dst> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization involved in distributing a moving image resource to theatres or other distribution channels"@en .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#notation> "fds" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:40 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:40 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:40 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/ill.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8a04c50ed83-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:40 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:41 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Illustrator
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/ill
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21506361 19809825
+      Age:
+      - '168181'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8a07bd0644a-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#prefLabel> "Illustrator" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization contributing to a resource by supplementing the primary content with drawings, diagrams, photographs, etc. If the work is primarily the artistic content created by this entity, use artist or photographer"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#editorial> "Changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#notation> "ill" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:41 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:41 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:41 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/fds.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8a27f03026c-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:41 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:41 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Film distributor
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/fds
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21856601 5515248
+      Age:
+      - '1632717'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8a2a8986428-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#prefLabel> "Film distributor" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/vocabulary/relators/dst> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization involved in distributing a moving image resource to theatres or other distribution channels"@en .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#notation> "fds" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:41 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:41 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:41 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/ill.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8a49d0e02ab-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:41 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:41 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Illustrator
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/ill
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21856604 19687483
+      Age:
+      - '168183'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8a4dd1eed6b-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#prefLabel> "Illustrator" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization contributing to a resource by supplementing the primary content with drawings, diagrams, photographs, etc. If the work is primarily the artistic content created by this entity, use artist or photographer"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#editorial> "Changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#notation> "ill" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:41 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:41 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:41 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/fds.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8a6dfee6465-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:41 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:42 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Film distributor
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/fds
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '16153950'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8a71e40643a-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#prefLabel> "Film distributor" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/vocabulary/relators/dst> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization involved in distributing a moving image resource to theatres or other distribution channels"@en .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#notation> "fds" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:42 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:42 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:42 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/ill.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8ab1ab2ed07-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:42 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:42 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Illustrator
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/ill
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21856608 19687483
+      Age:
+      - '168184'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8ab5cf03b2d-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#prefLabel> "Illustrator" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization contributing to a resource by supplementing the primary content with drawings, diagrams, photographs, etc. If the work is primarily the artistic content created by this entity, use artist or photographer"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#editorial> "Changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#notation> "ill" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:42 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:42 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:42 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/fds.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8ad6d783b34-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:42 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/fds.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:43 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Film distributor
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/fds
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 21856614 5515248
+      Age:
+      - '1632719'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8adad8c255c-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#prefLabel> "Film distributor" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/vocabulary/relators/dst> .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization involved in distributing a moving image resource to theatres or other distribution channels"@en .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#notation> "fds" .
+        <http://id.loc.gov/vocabulary/relators/fds> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:43 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:43 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Wed, 22 Sep 2021 22:34:43 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/ill.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8afbf78ed73-SJC
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 22 Sep 2021 21:34:43 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/ill.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/n-triples, text/plain;q=0.2,
+        application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Sep 2021 21:34:43 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Illustrator
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/ill
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 16609812 19809825
+      Age:
+      - '168184'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 692ea8aff8f72544-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#prefLabel> "Illustrator" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization contributing to a resource by supplementing the primary content with drawings, diagrams, photographs, etc. If the work is primarily the artistic content created by this entity, use artist or photographer"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#editorial> "Changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#notation> "ill" .
+        <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+  recorded_at: Wed, 22 Sep 2021 21:34:43 GMT
+recorded_with: VCR 6.0.0

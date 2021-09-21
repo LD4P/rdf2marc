@@ -151,6 +151,38 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       include_examples 'mapper', described_class
     end
 
+    context 'when same person main and added entry with diff roles' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1, _:b2.
+          _:b1 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/nb2004311516>;
+              <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
+          <http://id.loc.gov/authorities/names/nb2004311516> a <http://id.loc.gov/ontologies/bibframe/Person>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "Laws, John Muir@en".
+          <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2000/01/rdf-schema#label> "Author but it will be looked up".
+          _:b2 a <http://id.loc.gov/ontologies/bibframe/Contribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/nb2004311516>;
+              <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/ill>.
+          <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2000/01/rdf-schema#label> "Illustrator but it will be looked up".
+        TTL
+      end
+
+      let(:model) do
+        {
+          personal_name: {
+            thesaurus: 'lcsh',
+            type: 'surname',
+            personal_name: 'Laws, John Muir',
+            relator_terms: ['Author'],
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/nb2004311516']
+          }
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
     context 'when mapping from literal and BF.Role' do
       let(:ttl) do
         <<~TTL

@@ -15,6 +15,7 @@ module Rdf2marc
                                                                           'répertoire_de_vedettes-matière',
                                                                           'subfield2')
         attribute? :corporate_name, Types::String
+        # in marc subfield order:
         attribute? :subordinate_units, Types::Array.of(Types::String)
         attribute? :meeting_locations, Types::Array.of(Types::String)
         attribute? :meeting_dates, Types::Array.of(Types::String)

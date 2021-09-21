@@ -15,33 +15,38 @@ module Rdf2marc
 
         private
 
-        def primary_contributions
-          @primary_contributions ||= Queries::PrimaryContributions.new(item.work.query)
-        end
-
         def main_personal_name
           person_term = primary_contributions.first_with_type(BF.Person, BF.Family)
-          return { thesaurus: 'not_specified', personal_name: person_term.value } if person_term.is_a?(RDF::Literal)
-
-          Resolver.resolve_model(person_term&.value, Models::General::PersonalName)
+          main_entry_name(person_term, :personal_name, Models::General::PersonalName)
         end
 
         def main_corporate_name
           corporate_term = primary_contributions.first_with_type(BF.Organization)
-
-          if corporate_term.is_a?(RDF::Literal)
-            return { thesaurus: 'not_specified', corporate_name: corporate_term.value }
-          end
-
-          Resolver.resolve_model(corporate_term&.value, Models::General::CorporateName)
+          main_entry_name(corporate_term, :corporate_name, Models::General::CorporateName)
         end
 
         def main_meeting_name
           meeting_term = primary_contributions.first_with_type(BF.Meeting)
+          main_entry_name(meeting_term, :meeting_name, Models::General::MeetingName)
+        end
 
-          return { thesaurus: 'not_specified', meeting_name: meeting_term.value } if meeting_term.is_a?(RDF::Literal)
+        def primary_contributions
+          @primary_contributions ||= Queries::PrimaryContributions.new(item.work.query)
+        end
 
-          Resolver.resolve_model(meeting_term&.value, Models::General::MeetingName)
+        def main_entry_name(term, key_symbol, model_class)
+          result = if term.is_a?(RDF::Literal)
+                     { thesaurus: 'not_specified', key_symbol => term.value }
+                   else
+                     Resolver.resolve_model(term&.value, model_class)
+                   end
+          result[:relator_terms] = main_relator_terms if result && main_relator_terms.present?
+          result
+        end
+
+        def main_relator_terms
+          role_uris = item.work.query.path_all([[BF.contribution, BFLC.PrimaryContribution], [BF.role]])
+          role_uris.map { |uri| Resolver.resolve_label(uri.value) }
         end
       end
     end

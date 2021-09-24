@@ -358,7 +358,6 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
               <http://id.loc.gov/ontologies/bibframe/agent> _:b14.
           _:b14 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
               <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Women and National Health Insurance Meeting", "Van Cliburn International Piano Competition".
-          #{'          '}
         TTL
       end
 

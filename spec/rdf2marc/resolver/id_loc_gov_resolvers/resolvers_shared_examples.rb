@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 RSpec.shared_examples 'resolver_mapper' do |mapper_class, tag, model_class|
+  # rubocop:disable RSpec/SubjectDeclaration
   let(:subject) { mapper.map.deep_compact }
+  # rubocop:enable RSpec/SubjectDeclaration
 
   let(:mapper) { mapper_class.new(uri, marc_record) }
 

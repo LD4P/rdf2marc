@@ -12,6 +12,7 @@ gem 'faraday-http-cache'
 gem 'faraday_middleware'
 gem 'json-ld'
 gem 'marc'
+gem 'rdf-rdfxml'
 gem 'sparql'
 gem 'zeitwerk'
 

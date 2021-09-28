@@ -42,7 +42,7 @@ RSpec.describe Rdf2marc::Model2marc::Field650 do
   let(:expected_fields) do
     [
       '650  0 $1 uri1',
-      '650 04 $a topical_term1 $b topical_term2 $c event_location1 $d date1 $e term1 $e term2 $g misc_info1 $g misc_info2 $v form_subdivision1 $v form_subdivision2 $x general_subdivision1 $x general_subdivision2 $y chronological_subdivision1 $y chronological_subdivision2 $z geographic_subdivision1 $z geographic_subdivision2 $0 control_number1 $0 control_number2 $1 uri1 $1 uri2 $2 heading_source1 $3 materials_specified $6 linkage1 $8 field_link1 $8 field_link2',
+      '650 04 $a topical_term1 $b topical_term2 $c event_location1 $d date1 $e term1 $e term2 $g misc_info1 $g misc_info2 $v form_subdivision1 $v form_subdivision2 $x general_subdivision1 $x general_subdivision2 $y chronological_subdivision1 $y chronological_subdivision2 $z geographic_subdivision1 $z geographic_subdivision2 $2 heading_source1 $0 control_number1 $0 control_number2 $1 uri1 $1 uri2 $3 materials_specified $6 linkage1 $8 field_link1 $8 field_link2',
       '650 20 $a topical_term3'
     ]
   end

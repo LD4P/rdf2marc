@@ -6,6 +6,7 @@ require 'dry-types'
 require 'marc'
 require 'sparql'
 require 'json/ld'
+require 'rdf/rdfxml' # For FAST resolver
 
 require 'hash'
 require 'array'

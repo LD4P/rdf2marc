@@ -60,6 +60,7 @@ module Rdf2marc
     def self.resolver_class_for(uri)
       # Additional resolvers can be added here.
       return Resolver::IdLocGovResolver if uri.start_with?(%r{https?://id.loc.gov/(authorities|vocabulary)})
+      return Resolver::FastResolver if uri.start_with?('http://id.worldcat.org/fast')
 
       nil
     end

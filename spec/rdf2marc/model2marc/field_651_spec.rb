@@ -29,7 +29,7 @@ RSpec.describe Rdf2marc::Model2marc::Field651 do
 
   let(:expected_fields) do
     [
-      '651  2 $a geographic_name1 $v form_subdivision1 $v form_subdivision2 $x general_subdivision1 $x general_subdivision2 $y chronological_subdivision1 $y chronological_subdivision2 $z geographic_subdivision1 $z geographic_subdivision2 $0 control_number1 $0 control_number2 $1 uri1 $1 uri2 $2 source1 $3 materials_specified1 $6 linkage1 $8 field_link1 $8 field_link2',
+      '651  2 $a geographic_name1 $v form_subdivision1 $v form_subdivision2 $x general_subdivision1 $x general_subdivision2 $y chronological_subdivision1 $y chronological_subdivision2 $z geographic_subdivision1 $z geographic_subdivision2 $2 source1 $0 control_number1 $0 control_number2 $1 uri1 $1 uri2 $3 materials_specified1 $6 linkage1 $8 field_link1 $8 field_link2',
       '651  4 $a geographic_name2'
     ]
   end

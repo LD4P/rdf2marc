@@ -90,33 +90,59 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
   end
 
   describe 'geographic names' do
-    let(:ttl) do
-      <<~TTL
-                    <#{work_term}> <http://id.loc.gov/ontologies/bibframe/subject> <http://id.loc.gov/authorities/names/n85186120>.
-        <http://id.loc.gov/authorities/names/n85186120> <http://www.w3.org/2000/01/rdf-schema#label> "East Palo Alto (Calif.)".
-        <#{work_term}> <http://id.loc.gov/ontologies/bibframe/subject> <http://id.loc.gov/authorities/names/n81024722>.
-        <http://id.loc.gov/authorities/names/n81024722> <http://www.w3.org/2000/01/rdf-schema#label> "Menlo Park (Calif.)".
-      TTL
+    context 'when loading from LOC' do
+      let(:ttl) do
+        <<~TTL
+                      <#{work_term}> <http://id.loc.gov/ontologies/bibframe/subject> <http://id.loc.gov/authorities/names/n85186120>.
+          <http://id.loc.gov/authorities/names/n85186120> <http://www.w3.org/2000/01/rdf-schema#label> "East Palo Alto (Calif.)".
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/subject> <http://id.loc.gov/authorities/names/n81024722>.
+          <http://id.loc.gov/authorities/names/n81024722> <http://www.w3.org/2000/01/rdf-schema#label> "Menlo Park (Calif.)".
+        TTL
+      end
+
+      let(:model) do
+        {
+          geographic_names: [
+            {
+              thesaurus: 'lcsh',
+              geographic_name: 'Menlo Park (Calif.)',
+              authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n81024722']
+            },
+            {
+              thesaurus: 'lcsh',
+              geographic_name: 'East Palo Alto (Calif.)',
+              authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n85186120']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
     end
 
-    let(:model) do
-      {
-        geographic_names: [
-          {
-            thesaurus: 'lcsh',
-            geographic_name: 'Menlo Park (Calif.)',
-            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n81024722']
-          },
-          {
-            thesaurus: 'lcsh',
-            geographic_name: 'East Palo Alto (Calif.)',
-            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n85186120']
-          }
-        ]
-      }
-    end
+    context 'when loading from FAST' do
+      let(:ttl) do
+        <<~TTL
+                      <#{work_term}> <http://id.loc.gov/ontologies/bibframe/subject> <http://id.worldcat.org/fast/1210272>.
+          <http://id.worldcat.org/fast/1210272> <http://www.w3.org/2000/01/rdf-schema#label> "Ger.".
+        TTL
+      end
 
-    include_examples 'mapper', described_class
+      let(:model) do
+        {
+          geographic_names: [
+            {
+              thesaurus: 'subfield2',
+              source: 'fast',
+              geographic_name: 'Germany',
+              authority_record_control_numbers: ['http://id.worldcat.org/fast/1210272']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
   end
 
   describe 'meeting names' do
@@ -152,33 +178,59 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
   end
 
   describe 'topical terms' do
-    let(:ttl) do
-      <<~TTL
-                    <#{work_term}> <http://id.loc.gov/ontologies/bibframe/subject> <http://id.loc.gov/authorities/subjects/sh85061211>.
-        <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.w3.org/2000/01/rdf-schema#label> "Historiography".
-        <#{work_term}> <http://id.loc.gov/ontologies/bibframe/subject> <http://id.loc.gov/authorities/subjects/sh85090384>.
-        <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.w3.org/2000/01/rdf-schema#label> "Naval history".
-      TTL
+    context 'when loading from LOC' do
+      let(:ttl) do
+        <<~TTL
+                      <#{work_term}> <http://id.loc.gov/ontologies/bibframe/subject> <http://id.loc.gov/authorities/subjects/sh85061211>.
+          <http://id.loc.gov/authorities/subjects/sh85061211> <http://www.w3.org/2000/01/rdf-schema#label> "Historiography".
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/subject> <http://id.loc.gov/authorities/subjects/sh85090384>.
+          <http://id.loc.gov/authorities/subjects/sh85090384> <http://www.w3.org/2000/01/rdf-schema#label> "Naval history".
+        TTL
+      end
+
+      let(:model) do
+        {
+          topical_terms: [
+            {
+              thesaurus: 'lcsh',
+              topical_term_or_geo_name: 'Historiography',
+              authority_record_control_numbers: ['http://id.loc.gov/authorities/subjects/sh85061211']
+            },
+            {
+              thesaurus: 'lcsh',
+              topical_term_or_geo_name: 'Naval history',
+              authority_record_control_numbers: ['http://id.loc.gov/authorities/subjects/sh85090384']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
     end
 
-    let(:model) do
-      {
-        topical_terms: [
-          {
-            thesaurus: 'lcsh',
-            topical_term_or_geo_name: 'Historiography',
-            authority_record_control_numbers: ['http://id.loc.gov/authorities/subjects/sh85061211']
-          },
-          {
-            thesaurus: 'lcsh',
-            topical_term_or_geo_name: 'Naval history',
-            authority_record_control_numbers: ['http://id.loc.gov/authorities/subjects/sh85090384']
-          }
-        ]
-      }
-    end
+    context 'when loading from FAST' do
+      let(:ttl) do
+        <<~TTL
+                      <#{work_term}> <http://id.loc.gov/ontologies/bibframe/subject> <http://id.worldcat.org/fast/1015277>.
+          <http://id.worldcat.org/fast/1015277> <http://www.w3.org/2000/01/rdf-schema#label> "med.".
+        TTL
+      end
 
-    include_examples 'mapper', described_class
+      let(:model) do
+        {
+          topical_terms: [
+            {
+              thesaurus: 'subfield2',
+              heading_source: 'fast',
+              topical_term_or_geo_name: 'Medicine, Medieval',
+              authority_record_control_numbers: ['http://id.worldcat.org/fast/1015277']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
   end
 
   describe 'complex subjects' do

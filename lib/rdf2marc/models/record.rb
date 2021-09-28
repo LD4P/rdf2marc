@@ -16,6 +16,7 @@ module Rdf2marc
       attribute :subject_access_fields, SubjectAccessFields
       attribute :added_entry_fields, AddedEntryFields
       attribute :holdings_etc_fields, HoldingsEtcFields
+      attribute :work, RelatedWorkFields
     end
   end
 end

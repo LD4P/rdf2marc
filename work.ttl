@@ -4,6 +4,7 @@
     <http://id.loc.gov/ontologies/bibframe/genreForm> <http://id.loc.gov/authorities/genreForms/gf2014026281>;
     <http://id.loc.gov/ontologies/bibframe/geographicCoverage> <http://id.loc.gov/authorities/names/n80046086>, <http://id.loc.gov/authorities/names/n81097141>;
     <http://id.loc.gov/ontologies/bibframe/language> <http://id.loc.gov/vocabulary/languages/hsb>;
+    <http://id.loc.gov/ontologies/bibframe/title> _:b18, _:b19;
     <http://id.loc.gov/ontologies/bibframe/note> _:b25_c14n0, _:b25_c14n5;
     <http://id.loc.gov/ontologies/bibframe/subject> <http://id.loc.gov/authorities/names/n80027795>, <http://id.loc.gov/authorities/names/no2007089310>, <http://id.loc.gov/authorities/subjects/sh85115949>;
     <http://sinopia.io/vocabulary/hasResourceTemplate> "ld4p:RT:bf2:Monograph:Work:Un-nested";
@@ -61,3 +62,7 @@ _:b25_c14n8 <http://id.loc.gov/ontologies/bibframe/classificationPortion> "lcc2,
     a <http://id.loc.gov/ontologies/bibframe/ClassificationLcc>.
 _:b25_c14n9 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://id.loc.gov/authorities/names/n85347766>.
+_:b18 a <http://id.loc.gov/ontologies/bibframe/VariantTitle>;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://id.loc.gov/authorities/names/n85347766>.
+_:b19 a <http://id.loc.gov/ontologies/bibframe/Title>;
+    <http://id.loc.gov/ontologies/bibframe/mainTitle> "Physica".

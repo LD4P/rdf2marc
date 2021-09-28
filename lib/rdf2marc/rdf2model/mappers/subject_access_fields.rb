@@ -24,25 +24,26 @@ module Rdf2marc
 
             subject_uri = subject_term.value
             subject_type = Resolver.resolve_type(subject_uri)
-            if subject_type == 'corporate_name'
+            case subject_type
+            when 'corporate_name'
               subj_fields[:corporate_names] << Resolver.resolve_model(subject_uri,
                                                                       Rdf2marc::Models::General::CorporateName)
-            elsif %w[personal_name family_name].include?(subject_type)
+            when 'personal_name', 'family_name'
               subj_fields[:personal_names] << Resolver.resolve_model(subject_uri,
                                                                      Rdf2marc::Models::General::PersonalName)
-            elsif subject_type == 'meeting_name'
+            when 'meeting_name'
               subj_fields[:meeting_names] << Resolver.resolve_model(subject_uri,
                                                                     Rdf2marc::Models::General::MeetingName)
-            elsif subject_type == 'geographic_name'
+            when 'geographic_name'
               subj_fields[:geographic_names] << Resolver.resolve_model(
                 subject_uri,
                 Rdf2marc::Models::SubjectAccessField::GeographicName
               )
-            elsif subject_type == 'topic'
+            when 'topic'
               subj_fields[:topical_terms] << Resolver.resolve_model(subject_uri,
                                                                     Rdf2marc::Models::SubjectAccessField::TopicalTerm)
-            elsif subject_type
-              Logger.warn("Resolving subject for #{subject_uri} not supported.")
+            else
+              Logger.warn("Resolving subject for #{subject_uri} (#{subject_type}) not supported.")
             end
           end
           subj_fields

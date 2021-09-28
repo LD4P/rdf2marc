@@ -25,7 +25,8 @@ RSpec.describe Rdf2marc::Model2marc::Leader do
       note_fields: {},
       subject_access_fields: {},
       added_entry_fields: {},
-      holdings_etc_fields: {}
+      holdings_etc_fields: {},
+      work: { title: 'test title', uri: 'https://dev-api.sinopia.org' }
     }
   end
 

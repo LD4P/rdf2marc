@@ -5,7 +5,6 @@ module Rdf2marc
   module Rdf2model
     def self.to_model(graph, instance_term, work_term, admin_metadata_term)
       item_context = item_context_for(graph, instance_term, work_term, admin_metadata_term)
-
       record_params = Mapper.new(item_context).generate
       Rdf2marc::Models::Record.new(record_params.deep_compact)
     end

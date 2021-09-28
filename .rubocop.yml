@@ -39,7 +39,10 @@ RSpec/FilePath:
     - 'spec/rdf2marc/model2marc/*field_*_spec.rb'
 RSpec/MultipleMemoizedHelpers:
   Max: 10
-  
+
+RSpec/MultipleExpectations:
+  Max: 10
+
 Security/Eval:
   Exclude:
     - 'lib/rdf2marc/model2marc/field.rb'

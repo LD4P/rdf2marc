@@ -8,6 +8,7 @@ module Rdf2marc
         main_entry = Mappers::MainEntryFields.new(item).generate
         has_100_field = main_entry.compact.keys.present?
         {
+          work: Mappers::RelatedWorkFields.new(item).generate,
           leader: Mappers::Leader.new(item).generate,
           control_fields: Mappers::ControlFields.new(item).generate,
           number_and_code_fields: Mappers::NumberAndCodeFields.new(item).generate,

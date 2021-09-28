@@ -18,7 +18,11 @@ RSpec.shared_examples 'fields' do |tag|
       note_fields: {},
       subject_access_fields: {},
       added_entry_fields: {},
-      holdings_etc_fields: {}
+      holdings_etc_fields: {},
+      work: {
+        title: 'work title',
+        uri: 'https://dev-api.sinopia.org/1234'
+      }
     }
   end
 

@@ -155,21 +155,478 @@ http_interactions:
       - W/"1abb-BvjFyx23t0eb3GJBYjvaHxn16Qs"
     body:
       encoding: UTF-8
-      string: '[{"@id":"_:b0","@type":["http://id.loc.gov/ontologies/bibframe/ClassificationLcc"],"http://id.loc.gov/ontologies/bibframe/classificationPortion":[{"@value":"lcc1,
-        number2","@language":"eng"},{"@value":"lcc1, number1","@language":"eng"}],"http://id.loc.gov/ontologies/bibframe/itemPortion":[{"@value":"lcc1,
-        item2","@language":"eng"},{"@value":"lcc1, item1","@language":"eng"}]},{"@id":"_:b1","@type":["http://id.loc.gov/ontologies/bibframe/Note"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Work
-        note1","@language":"eng"}]},{"@id":"_:b10","@type":["http://id.loc.gov/ontologies/bflc/PrimaryContribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b11"}]},{"@id":"_:b11","@type":["http://id.loc.gov/ontologies/bibframe/Meeting"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/n85347766"}]},{"@id":"_:b12","@type":["http://id.loc.gov/ontologies/bibframe/Contribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b13"}]},{"@id":"_:b13","@type":["http://id.loc.gov/ontologies/bibframe/Meeting"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/n2018183557"}]},{"@id":"_:b14","@type":["http://id.loc.gov/ontologies/bflc/PrimaryContribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b15"}]},{"@id":"_:b15","@type":["http://id.loc.gov/ontologies/bibframe/Organization"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/n83157379"}]},{"@id":"_:b16","@type":["http://id.loc.gov/ontologies/bibframe/ClassificationLcc"],"http://id.loc.gov/ontologies/bibframe/classificationPortion":[{"@value":"lcc2,
-        number1","@language":"eng"}]},{"@id":"_:b17","@type":["http://id.loc.gov/ontologies/bibframe/Note"],"http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Work
-        note2","@language":"eng"}]},{"@id":"_:b2","@type":["http://id.loc.gov/ontologies/bibframe/Contribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b3"}]},{"@id":"_:b3","@type":["http://id.loc.gov/ontologies/bibframe/Organization"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/n84191112"}]},{"@id":"_:b4","@type":["http://id.loc.gov/ontologies/bibframe/Contribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b5"}]},{"@id":"_:b5","@type":["http://id.loc.gov/ontologies/bibframe/Person"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/n79055656"}]},{"@id":"_:b6","@type":["http://id.loc.gov/ontologies/bibframe/Family"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/no2020066646"}]},{"@id":"_:b7","@type":["http://id.loc.gov/ontologies/bflc/PrimaryContribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b6"}]},{"@id":"_:b8","@type":["http://id.loc.gov/ontologies/bflc/PrimaryContribution"],"http://id.loc.gov/ontologies/bibframe/agent":[{"@id":"_:b9"}]},{"@id":"_:b9","@type":["http://id.loc.gov/ontologies/bibframe/Person"],"http://www.w3.org/1999/02/22-rdf-syntax-ns#value":[{"@id":"http://id.loc.gov/authorities/names/n79032058"}]},{"@id":"http://id.loc.gov/authorities/genreForms/gf2014026281","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Detective
-        and mystery plays"}]},{"@id":"http://id.loc.gov/authorities/names/n2018183557","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"http://id.loc.gov/authorities/names/n2018183557"}]},{"@id":"http://id.loc.gov/authorities/names/n79032058","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Wittgenstein,
-        Ludwig, 1889-1951"}]},{"@id":"http://id.loc.gov/authorities/names/n79055656","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Searle,
-        John R."}]},{"@id":"http://id.loc.gov/authorities/names/n80027795","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"IBM
-        Europe"}]},{"@id":"http://id.loc.gov/authorities/names/n80046086","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"http://id.loc.gov/authorities/names/n80046086"}]},{"@id":"http://id.loc.gov/authorities/names/n81097141","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Shetland
-        (Scotland)"}]},{"@id":"http://id.loc.gov/authorities/names/n83157379","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"New
-        York City Public Schools"}]},{"@id":"http://id.loc.gov/authorities/names/n84191112","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Amherst
-        Associates"}]},{"@id":"http://id.loc.gov/authorities/names/n85347766","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"http://id.loc.gov/authorities/names/n85347766"}]},{"@id":"http://id.loc.gov/authorities/names/no2007089310","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"http://id.loc.gov/authorities/names/no2007089310"}]},{"@id":"http://id.loc.gov/authorities/names/no2020066646","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"http://id.loc.gov/authorities/names/no2020066646"}]},{"@id":"http://id.loc.gov/authorities/subjects/sh85115949","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Russell
-        family"}]},{"@id":"http://id.loc.gov/vocabulary/contentTypes/snd","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"sounds"}]},{"@id":"http://id.loc.gov/vocabulary/contentTypes/txt","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"text"}]},{"@id":"http://id.loc.gov/vocabulary/languages/hsb","http://www.w3.org/2000/01/rdf-schema#label":[{"@value":"Upper
-        Sorbian"}]},{"@id":"https://api.stage.sinopia.io/resource/ce0376a8-e01b-4829-95c2-c7aa4fa9568c","@type":["http://id.loc.gov/ontologies/bibframe/Work"],"http://id.loc.gov/ontologies/bibframe/classification":[{"@id":"_:b0"},{"@id":"_:b16"}],"http://id.loc.gov/ontologies/bibframe/content":[{"@id":"http://id.loc.gov/vocabulary/contentTypes/snd"},{"@id":"http://id.loc.gov/vocabulary/contentTypes/txt"}],"http://id.loc.gov/ontologies/bibframe/contribution":[{"@id":"_:b10"},{"@id":"_:b12"},{"@id":"_:b14"},{"@id":"_:b2"},{"@id":"_:b4"},{"@id":"_:b7"},{"@id":"_:b8"}],"http://id.loc.gov/ontologies/bibframe/genreForm":[{"@id":"http://id.loc.gov/authorities/genreForms/gf2014026281"}],"http://id.loc.gov/ontologies/bibframe/geographicCoverage":[{"@id":"http://id.loc.gov/authorities/names/n80046086"},{"@id":"http://id.loc.gov/authorities/names/n81097141"}],"http://id.loc.gov/ontologies/bibframe/language":[{"@id":"http://id.loc.gov/vocabulary/languages/hsb"}],"http://id.loc.gov/ontologies/bibframe/note":[{"@id":"_:b1"},{"@id":"_:b17"}],"http://id.loc.gov/ontologies/bibframe/subject":[{"@id":"http://id.loc.gov/authorities/names/n80027795"},{"@id":"http://id.loc.gov/authorities/names/no2007089310"},{"@id":"http://id.loc.gov/authorities/subjects/sh85115949"}],"http://sinopia.io/vocabulary/hasResourceTemplate":[{"@value":"ld4p:RT:bf2:Monograph:Work:Un-nested"}]}]'
+      string: |-
+        [
+          {
+            "@id": "http://id.loc.gov/authorities/names/n80046086",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "http://id.loc.gov/authorities/names/n80046086"
+              }
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/vocabulary/contentTypes/txt",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "text"
+              }
+            ]
+          },
+          {
+            "@id": "_:b10",
+            "http://id.loc.gov/ontologies/bibframe/agent": [
+              {
+                "@id": "_:b11"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bflc/PrimaryContribution"
+            ]
+          },
+          {
+            "@id": "_:b11",
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@id": "http://id.loc.gov/authorities/names/n85347766"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Meeting"
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/names/no2020066646",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "http://id.loc.gov/authorities/names/no2020066646"
+              }
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/names/n2018183557",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "http://id.loc.gov/authorities/names/n2018183557"
+              }
+            ]
+          },
+          {
+            "@id": "_:b18",
+            "http://id.loc.gov/ontologies/bibframe/mainTitle": [
+              {
+                "@language": "eng",
+                "@value": "Hildegard von Bingen's Physica"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/VariantTitle"
+            ]
+          },
+          {
+            "@id": "_:b16",
+            "http://id.loc.gov/ontologies/bibframe/classificationPortion": [
+              {
+                "@language": "eng",
+                "@value": "lcc2, number1"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/ClassificationLcc"
+            ]
+          },
+          {
+            "@id": "_:b3",
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@id": "http://id.loc.gov/authorities/names/n84191112"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Organization"
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/names/n84191112",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Amherst Associates"
+              }
+            ]
+          },
+          {
+            "@id": "_:b1",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@language": "eng",
+                "@value": "Work note1"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Note"
+            ]
+          },
+          {
+            "@id": "_:b0",
+            "http://id.loc.gov/ontologies/bibframe/itemPortion": [
+              {
+                "@language": "eng",
+                "@value": "lcc1, item2"
+              },
+              {
+                "@language": "eng",
+                "@value": "lcc1, item1"
+              }
+            ],
+            "http://id.loc.gov/ontologies/bibframe/classificationPortion": [
+              {
+                "@language": "eng",
+                "@value": "lcc1, number2"
+              },
+              {
+                "@language": "eng",
+                "@value": "lcc1, number1"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/ClassificationLcc"
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/subjects/sh85115949",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Russell family"
+              }
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/names/n79032058",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Wittgenstein, Ludwig, 1889-1951"
+              }
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/names/n85347766",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "http://id.loc.gov/authorities/names/n85347766"
+              }
+            ]
+          },
+          {
+            "@id": "_:b6",
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@id": "http://id.loc.gov/authorities/names/no2020066646"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Family"
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/names/n80027795",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "IBM Europe"
+              }
+            ]
+          },
+          {
+            "@id": "_:b4",
+            "http://id.loc.gov/ontologies/bibframe/agent": [
+              {
+                "@id": "_:b5"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Contribution"
+            ]
+          },
+          {
+            "@id": "_:b5",
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@id": "http://id.loc.gov/authorities/names/n79055656"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Person"
+            ]
+          },
+          {
+            "@id": "_:b2",
+            "http://id.loc.gov/ontologies/bibframe/agent": [
+              {
+                "@id": "_:b3"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Contribution"
+            ]
+          },
+          {
+            "@id": "_:b15",
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@id": "http://id.loc.gov/authorities/names/n83157379"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Organization"
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/names/n83157379",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "New York City Public Schools"
+              }
+            ]
+          },
+          {
+            "@id": "_:b7",
+            "http://id.loc.gov/ontologies/bibframe/agent": [
+              {
+                "@id": "_:b6"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bflc/PrimaryContribution"
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/names/no2007089310",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "http://id.loc.gov/authorities/names/no2007089310"
+              }
+            ]
+          },
+          {
+            "@id": "https://api.stage.sinopia.io/resource/ce0376a8-e01b-4829-95c2-c7aa4fa9568c",
+            "http://id.loc.gov/ontologies/bibframe/content": [
+              {
+                "@id": "http://id.loc.gov/vocabulary/contentTypes/txt"
+              },
+              {
+                "@id": "http://id.loc.gov/vocabulary/contentTypes/snd"
+              }
+            ],
+            "http://id.loc.gov/ontologies/bibframe/subject": [
+              {
+                "@id": "http://id.loc.gov/authorities/subjects/sh85115949"
+              },
+              {
+                "@id": "http://id.loc.gov/authorities/names/n80027795"
+              },
+              {
+                "@id": "http://id.loc.gov/authorities/names/no2007089310"
+              }
+            ],
+            "http://id.loc.gov/ontologies/bibframe/contribution": [
+              {
+                "@id": "_:b10"
+              },
+              {
+                "@id": "_:b4"
+              },
+              {
+                "@id": "_:b2"
+              },
+              {
+                "@id": "_:b7"
+              },
+              {
+                "@id": "_:b14"
+              },
+              {
+                "@id": "_:b8"
+              },
+              {
+                "@id": "_:b12"
+              }
+            ],
+            "http://id.loc.gov/ontologies/bibframe/language": [
+              {
+                "@id": "http://id.loc.gov/vocabulary/languages/hsb"
+              }
+            ],
+            "http://id.loc.gov/ontologies/bibframe/title": [
+              {
+                "@id": "_:b18"
+              },
+              {
+                "@id": "_:b19"
+              }
+            ],
+            "http://id.loc.gov/ontologies/bibframe/genreForm": [
+              {
+                "@id": "http://id.loc.gov/authorities/genreForms/gf2014026281"
+              }
+            ],
+            "http://sinopia.io/vocabulary/hasResourceTemplate": [
+              {
+                "@value": "ld4p:RT:bf2:Monograph:Work:Un-nested"
+              }
+            ],
+            "http://id.loc.gov/ontologies/bibframe/geographicCoverage": [
+              {
+                "@id": "http://id.loc.gov/authorities/names/n80046086"
+              },
+              {
+                "@id": "http://id.loc.gov/authorities/names/n81097141"
+              }
+            ],
+            "http://id.loc.gov/ontologies/bibframe/classification": [
+              {
+                "@id": "_:b16"
+              },
+              {
+                "@id": "_:b0"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Work"
+            ],
+            "http://id.loc.gov/ontologies/bibframe/note": [
+              {
+                "@id": "_:b1"
+              },
+              {
+                "@id": "_:b17"
+              }
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/vocabulary/contentTypes/snd",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "sounds"
+              }
+            ]
+          },
+          {
+            "@id": "_:b14",
+            "http://id.loc.gov/ontologies/bibframe/agent": [
+              {
+                "@id": "_:b15"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bflc/PrimaryContribution"
+            ]
+          },
+          {
+            "@id": "_:b8",
+            "http://id.loc.gov/ontologies/bibframe/agent": [
+              {
+                "@id": "_:b9"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bflc/PrimaryContribution"
+            ]
+          },
+          {
+            "@id": "_:b12",
+            "http://id.loc.gov/ontologies/bibframe/agent": [
+              {
+                "@id": "_:b13"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Contribution"
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/vocabulary/languages/hsb",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Upper Sorbian"
+              }
+            ]
+          },
+          {
+            "@id": "_:b19",
+            "http://id.loc.gov/ontologies/bibframe/mainTitle": [
+              {
+                "@language": "eng",
+                "@value": "Physica. English"
+              }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@language": "eng",
+                "@value": "Physica. English"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Title"
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/genreForms/gf2014026281",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Detective and mystery plays"
+              }
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/names/n81097141",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Shetland (Scotland)"
+              }
+            ]
+          },
+          {
+            "@id": "_:b17",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@language": "eng",
+                "@value": "Work note2"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Note"
+            ]
+          },
+          {
+            "@id": "_:b9",
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@id": "http://id.loc.gov/authorities/names/n79032058"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Person"
+            ]
+          },
+          {
+            "@id": "http://id.loc.gov/authorities/names/n79055656",
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+              {
+                "@value": "Searle, John R."
+              }
+            ]
+          },
+          {
+            "@id": "_:b13",
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": [
+              {
+                "@id": "http://id.loc.gov/authorities/names/n2018183557"
+              }
+            ],
+            "@type": [
+              "http://id.loc.gov/ontologies/bibframe/Meeting"
+            ]
+          }
+        ]
   recorded_at: Wed, 01 Sep 2021 17:51:07 GMT
 - request:
     method: get

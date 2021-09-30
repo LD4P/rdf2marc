@@ -29,6 +29,10 @@ module Rdf2marc
           dimensions = {
             dimensions: item.instance.query.path_all_literal([BF.dimensions]).sort
           }
+          if extent_physical_description.length == 1 && dimensions[:dimensions].length == 1
+            return [extent_physical_description.first.merge(dimensions)]
+          end
+
           extent_physical_description + [dimensions]
         end
 

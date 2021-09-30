@@ -16,39 +16,65 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
   end
 
   describe 'physical descriptions' do
-    let(:ttl) do
-      <<~TTL
-                                  <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/extent> _:b38.
-        _:b38 a <http://id.loc.gov/ontologies/bibframe/Extent>;
-            <http://www.w3.org/2000/01/rdf-schema#label> "149 pages"@eng, "1 score (16 p.)"@eng;
-            <http://id.loc.gov/ontologies/bibframe/note> _:b39.
-        _:b39 a <http://id.loc.gov/ontologies/bibframe/Note>;
-            <http://www.w3.org/2000/01/rdf-schema#label> "dupe neg nitrate (copy 2)"@eng.
-        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/extent> _:b40.
-        _:b40 a <http://id.loc.gov/ontologies/bibframe/Extent>;
-            <http://www.w3.org/2000/01/rdf-schema#label> "1 sound disc (20 min.)"@eng.
-        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/dimensions> "10 x 27 cm"@eng, "7 1/4 x 3 1/2 in., 1/4 in. tape"@eng.
-      TTL
+    context 'with multiple extents' do
+      let(:ttl) do
+        <<~TTL
+                                    <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/extent> _:b38.
+          _:b38 a <http://id.loc.gov/ontologies/bibframe/Extent>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "149 pages"@eng, "1 score (16 p.)"@eng;
+              <http://id.loc.gov/ontologies/bibframe/note> _:b39.
+          _:b39 a <http://id.loc.gov/ontologies/bibframe/Note>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "dupe neg nitrate (copy 2)"@eng.
+          <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/extent> _:b40.
+          _:b40 a <http://id.loc.gov/ontologies/bibframe/Extent>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "1 sound disc (20 min.)"@eng.
+          <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/dimensions> "10 x 27 cm"@eng, "7 1/4 x 3 1/2 in., 1/4 in. tape"@eng.
+        TTL
+      end
+
+      let(:model) do
+        {
+          physical_descriptions: [
+            {
+              extents: ['1 score (16 p.)', '149 pages'],
+              materials_specified: 'dupe neg nitrate (copy 2)'
+            },
+            {
+              extents: ['1 sound disc (20 min.)']
+            },
+            {
+              dimensions: ['10 x 27 cm', '7 1/4 x 3 1/2 in., 1/4 in. tape']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
     end
 
-    let(:model) do
-      {
-        physical_descriptions: [
-          {
-            extents: ['1 score (16 p.)', '149 pages'],
-            materials_specified: 'dupe neg nitrate (copy 2)'
-          },
-          {
-            extents: ['1 sound disc (20 min.)']
-          },
-          {
-            dimensions: ['10 x 27 cm', '7 1/4 x 3 1/2 in., 1/4 in. tape']
-          }
-        ]
-      }
-    end
+    context 'with a single extent and a single dimension' do
+      let(:ttl) do
+        <<~TTL
+          <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/extent> _:b38.
+          _:b38 a <http://id.loc.gov/ontologies/bibframe/Extent>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "250 pages"@eng.
+          <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/dimensions> "24 cm"@eng.
+        TTL
+      end
 
-    include_examples 'mapper', described_class
+      let(:model) do
+        {
+          physical_descriptions: [
+            {
+              extents: ['250 pages'],
+              dimensions: ['24 cm']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
   end
 
   describe 'media types' do

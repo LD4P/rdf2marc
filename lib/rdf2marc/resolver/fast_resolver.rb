@@ -22,6 +22,7 @@ module Rdf2marc
 
       TYPES = {
         'http://schema.org/Place' => 'geographic_name',
+        'http://schema.org/Event' => 'event_name',
         'http://schema.org/Intangible' => 'topic'
       }.freeze
 

@@ -10,7 +10,7 @@ module Rdf2marc
 
       def build
         field.indicator1 = subject_level
-        field.indicator2 = thesaurus
+        field.indicator2 = Thesaurus.code_for(model.thesaurus)
         append('a', model.topical_term_or_geo_name)
         append('b', model.topical_term_following_geo_name)
         append('c', model.event_location)
@@ -42,27 +42,6 @@ module Rdf2marc
 
       def subject_level
         SUBJECT_LEVEL.fetch(model.subject_level)
-      end
-
-      def thesaurus
-        case model.thesaurus
-        when 'lcsh'
-          '0'
-        when 'lcsh_childrens_literature'
-          '1'
-        when 'mesh'
-          '2'
-        when 'nal_subject_authority'
-          '3'
-        when 'canadian_subject_headings'
-          '5'
-        when 'répertoire_de_vedettes-matière'
-          '6'
-        when 'subfield2'
-          '7'
-        else
-          '4'
-        end
       end
     end
   end

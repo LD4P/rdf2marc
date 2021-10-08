@@ -6,14 +6,7 @@ module Rdf2marc
       # General model for Personal Name.
       class PersonalName < Struct
         attribute :type, Types::String.default('surname').enum('forename', 'surname', 'family_name')
-        attribute :thesaurus, Types::String.default('not_specified').enum('lcsh',
-                                                                          'lcsh_childrens_literature',
-                                                                          'mesh',
-                                                                          'nal_subject_authority',
-                                                                          'not_specified',
-                                                                          'canadian_subject_headings',
-                                                                          'répertoire_de_vedettes-matière',
-                                                                          'subfield2')
+        attribute :thesaurus, Types::Thesaurus
         attribute? :personal_name, Types::String
         # ordered in marc subfield order
         attribute? :numeration, Types::String

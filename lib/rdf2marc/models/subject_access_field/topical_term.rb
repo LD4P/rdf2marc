@@ -7,14 +7,7 @@ module Rdf2marc
       class TopicalTerm < Struct
         attribute :subject_level,
                   Types::String.default('not_provided').enum('not_provided', 'not_specified', 'primary', 'secondary')
-        attribute :thesaurus, Types::String.default('not_specified').enum('lcsh',
-                                                                          'lcsh_childrens_literature',
-                                                                          'mesh',
-                                                                          'nal_subject_authority',
-                                                                          'not_specified',
-                                                                          'canadian_subject_headings',
-                                                                          'répertoire_de_vedettes-matière',
-                                                                          'subfield2')
+        attribute :thesaurus, Types::Thesaurus
         attribute? :topical_term_or_geo_name, Types::String
         attribute? :topical_term_following_geo_name, Types::String
         attribute? :event_location, Types::String

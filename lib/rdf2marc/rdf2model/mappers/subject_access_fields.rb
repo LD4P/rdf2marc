@@ -12,6 +12,7 @@ module Rdf2marc
             corporate_names: [],
             meeting_names: [],
             geographic_names: [],
+            event_names: [],
             topical_terms: [],
             genre_forms: genre_forms
           }
@@ -38,6 +39,11 @@ module Rdf2marc
               subj_fields[:geographic_names] << Resolver.resolve_model(
                 subject_uri,
                 Rdf2marc::Models::SubjectAccessField::GeographicName
+              )
+            when 'event_name'
+              subj_fields[:event_names] << Resolver.resolve_model(
+                subject_uri,
+                Rdf2marc::Models::SubjectAccessField::EventName
               )
             when 'topic'
               subj_fields[:topical_terms] << Resolver.resolve_model(subject_uri,

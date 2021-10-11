@@ -9,6 +9,7 @@ module Rdf2marc
       attribute? :meeting_names, Types::Array.of(General::MeetingName)
       attribute? :topical_terms, Types::Array.of(SubjectAccessField::TopicalTerm)
       attribute? :geographic_names, Types::Array.of(SubjectAccessField::GeographicName)
+      attribute? :event_names, Types::Array.of(SubjectAccessField::EventName)
       attribute? :genre_forms, Types::Array.of(SubjectAccessField::GenreForm)
     end
   end

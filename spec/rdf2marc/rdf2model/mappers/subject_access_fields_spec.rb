@@ -145,6 +145,32 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
     end
   end
 
+  describe 'event names' do
+    context 'when loading from FAST' do
+      let(:ttl) do
+        <<~TTL
+                      <#{work_term}> <http://id.loc.gov/ontologies/bibframe/subject> <http://id.worldcat.org/fast/1181267>.
+          <http://id.worldcat.org/fast/1181267> <http://www.w3.org/2000/01/rdf-schema#label> "Ger.".
+        TTL
+      end
+
+      let(:model) do
+        {
+          event_names: [
+            {
+              thesaurus: 'subfield2',
+              source: 'fast',
+              name: 'World War (1939-1945)--Sounds',
+              uris: ['http://id.worldcat.org/fast/1181267']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+  end
+
   describe 'meeting names' do
     let(:ttl) do
       <<~TTL

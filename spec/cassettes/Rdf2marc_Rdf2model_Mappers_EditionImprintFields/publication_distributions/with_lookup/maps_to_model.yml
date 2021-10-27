@@ -8,18 +8,20 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.1
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 301
       message: Moved Permanently
     headers:
       Date:
-      - Tue, 13 Oct 2020 01:39:02 GMT
+      - Wed, 27 Oct 2021 16:49:04 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -27,21 +29,19 @@ http_interactions:
       Cache-Control:
       - max-age=3600
       Expires:
-      - Tue, 13 Oct 2020 02:39:02 GMT
+      - Wed, 27 Oct 2021 17:49:04 GMT
       Location:
       - https://id.loc.gov/authorities/names/n82070796.skos.nt
-      Cf-Request-Id:
-      - 05c13576ab00001fbf7782d200000001
       Vary:
       - Accept-Encoding
       Server:
       - cloudflare
       Cf-Ray:
-      - 5e1558377f811fbf-SJC
+      - 6a4d6a602ebf62fd-ORD
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 13 Oct 2020 01:39:03 GMT
+  recorded_at: Wed, 27 Oct 2021 16:49:03 GMT
 - request:
     method: get
     uri: https://id.loc.gov/authorities/names/n82070796.skos.nt
@@ -50,53 +50,62 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.1
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 13 Oct 2020 01:39:13 GMT
+      - Wed, 27 Oct 2021 16:49:04 GMT
       Content-Type:
       - text/plain; charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=df40db51e8e504f52dc512a575a0ecf901602553143; expires=Thu, 12-Nov-20
-        01:39:03 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Freehold (N.J.)
       X-Uri:
       - http://id.loc.gov/authorities/names/n82070796
       Cache-Control:
       - public, max-age=2419200
       X-Varnish:
-      - '48790209'
+      - 153562566 153562562
       Age:
-      - '0'
+      - '1'
       Via:
       - 1.1 varnish (Varnish/6.0)
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - HEAD, POST, GET, OPTIONS
-      Access-Control-Allow-Headers:
-      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
       Cf-Cache-Status:
       - DYNAMIC
-      Cf-Request-Id:
-      - 05c135779a00006d28ff824200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 5e155838f9796d28-SJC
+      - 6a4d6a608c4b61e6-ORD
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -104,7 +113,7 @@ http_interactions:
         <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#prefLabel> "Freehold (N.J.)" .
         <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b7iddOtlocdOtgovauthoritiesnamesn82070796 .
         _:b7iddOtlocdOtgovauthoritiesnamesn82070796 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
-        _:b7iddOtlocdOtgovauthoritiesnamesn82070796 <http://www.w3.org/2008/05/skos-xl#literalForm> "Freehold, N.J" .
+        _:b7iddOtlocdOtgovauthoritiesnamesn82070796 <http://www.w3.org/2008/05/skos-xl#literalForm> "Freehold, N.J." .
         <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b12iddOtlocdOtgovauthoritiesnamesn82070796 .
         _:b12iddOtlocdOtgovauthoritiesnamesn82070796 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
         _:b12iddOtlocdOtgovauthoritiesnamesn82070796 <http://www.w3.org/2008/05/skos-xl#literalForm> "Freehold Borough (N.J.)" .
@@ -112,22 +121,25 @@ http_interactions:
         <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/1347819> .
         <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/1220041> .
         <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q691237> .
+        <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/1220041> .
+        <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/1347819> .
+        <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q691237> .
         <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/authorities/names> .
-        <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#altLabel> "Freehold, N.J" .
+        <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#altLabel> "Freehold, N.J." .
         <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#altLabel> "Freehold Borough (N.J.)" .
-        <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#changeNote> _:b26iddOtlocdOtgovauthoritiesnamesn82070796 .
-        _:b26iddOtlocdOtgovauthoritiesnamesn82070796 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
-        _:b26iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n82070796> .
-        _:b26iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlc> .
-        _:b26iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#createdDate> "1982-06-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-        _:b26iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
-        <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#changeNote> _:b34iddOtlocdOtgovauthoritiesnamesn82070796 .
-        _:b34iddOtlocdOtgovauthoritiesnamesn82070796 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
-        _:b34iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n82070796> .
-        _:b34iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/wau> .
-        _:b34iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#createdDate> "2019-09-09T07:31:18"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-        _:b34iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#changeReason> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
-  recorded_at: Tue, 13 Oct 2020 01:39:13 GMT
+        <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#changeNote> _:b29iddOtlocdOtgovauthoritiesnamesn82070796 .
+        _:b29iddOtlocdOtgovauthoritiesnamesn82070796 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b29iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n82070796> .
+        _:b29iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b29iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#createdDate> "1982-06-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b29iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        <http://id.loc.gov/authorities/names/n82070796> <http://www.w3.org/2004/02/skos/core#changeNote> _:b37iddOtlocdOtgovauthoritiesnamesn82070796 .
+        _:b37iddOtlocdOtgovauthoritiesnamesn82070796 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b37iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n82070796> .
+        _:b37iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/wau> .
+        _:b37iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#createdDate> "2019-09-09T07:31:18"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b37iddOtlocdOtgovauthoritiesnamesn82070796 <http://purl.org/vocab/changeset/schema#changeReason> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+  recorded_at: Wed, 27 Oct 2021 16:49:04 GMT
 - request:
     method: get
     uri: http://id.loc.gov/authorities/names/n82158730.skos.nt
@@ -136,18 +148,20 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.1
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 301
       message: Moved Permanently
     headers:
       Date:
-      - Tue, 13 Oct 2020 01:39:13 GMT
+      - Wed, 27 Oct 2021 16:49:04 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -155,21 +169,19 @@ http_interactions:
       Cache-Control:
       - max-age=3600
       Expires:
-      - Tue, 13 Oct 2020 02:39:13 GMT
+      - Wed, 27 Oct 2021 17:49:04 GMT
       Location:
       - https://id.loc.gov/authorities/names/n82158730.skos.nt
-      Cf-Request-Id:
-      - 05c135a19300001fb9e19f6200000001
       Vary:
       - Accept-Encoding
       Server:
       - cloudflare
       Cf-Ray:
-      - 5e15587c1b731fb9-SJC
+      - 6a4d6a618dab28f5-ORD
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 13 Oct 2020 01:39:14 GMT
+  recorded_at: Wed, 27 Oct 2021 16:49:04 GMT
 - request:
     method: get
     uri: https://id.loc.gov/authorities/names/n82158730.skos.nt
@@ -178,53 +190,62 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.1
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 13 Oct 2020 01:39:21 GMT
+      - Wed, 27 Oct 2021 16:49:04 GMT
       Content-Type:
       - text/plain; charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d443fa5e4d92cf393dd5463bd3ea2fd281602553154; expires=Thu, 12-Nov-20
-        01:39:14 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - ABC-Clio Information Services
       X-Uri:
       - http://id.loc.gov/authorities/names/n82158730
       Cache-Control:
       - public, max-age=2419200
       X-Varnish:
-      - '52301440'
+      - '151372562'
       Age:
       - '0'
       Via:
       - 1.1 varnish (Varnish/6.0)
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - HEAD, POST, GET, OPTIONS
-      Access-Control-Allow-Headers:
-      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
       Cf-Cache-Status:
       - DYNAMIC
-      Cf-Request-Id:
-      - 05c135a29c00000fbbfe871200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 5e15587dc8990fbb-SJC
+      - 6a4d6a61ebea2a06-ORD
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -241,23 +262,24 @@ http_interactions:
         _:b17iddOtlocdOtgovauthoritiesnamesn82158730 <http://www.w3.org/2008/05/skos-xl#literalForm> "A.B.C.-Clio, Inc." .
         <http://id.loc.gov/authorities/names/n82158730> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/sourceID/LC%7Cn++82158730#skos:Concept> .
         <http://id.loc.gov/authorities/names/n82158730> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/574795> .
+        <http://id.loc.gov/authorities/names/n82158730> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/574795> .
         <http://id.loc.gov/authorities/names/n82158730> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/authorities/names> .
         <http://id.loc.gov/authorities/names/n82158730> <http://www.w3.org/2004/02/skos/core#altLabel> "A.B.C.-Clio Information Services" .
         <http://id.loc.gov/authorities/names/n82158730> <http://www.w3.org/2004/02/skos/core#altLabel> "ABC-Clio, Inc." .
         <http://id.loc.gov/authorities/names/n82158730> <http://www.w3.org/2004/02/skos/core#altLabel> "A.B.C.-Clio, Inc." .
-        <http://id.loc.gov/authorities/names/n82158730> <http://www.w3.org/2004/02/skos/core#changeNote> _:b31iddOtlocdOtgovauthoritiesnamesn82158730 .
-        _:b31iddOtlocdOtgovauthoritiesnamesn82158730 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
-        _:b31iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n82158730> .
-        _:b31iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlc> .
-        _:b31iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#createdDate> "1982-12-01T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-        _:b31iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
-        <http://id.loc.gov/authorities/names/n82158730> <http://www.w3.org/2004/02/skos/core#changeNote> _:b39iddOtlocdOtgovauthoritiesnamesn82158730 .
-        _:b39iddOtlocdOtgovauthoritiesnamesn82158730 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
-        _:b39iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n82158730> .
-        _:b39iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/ocolc> .
-        _:b39iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#createdDate> "2009-01-08T06:20:18"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-        _:b39iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#changeReason> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
-  recorded_at: Tue, 13 Oct 2020 01:39:21 GMT
+        <http://id.loc.gov/authorities/names/n82158730> <http://www.w3.org/2004/02/skos/core#changeNote> _:b32iddOtlocdOtgovauthoritiesnamesn82158730 .
+        _:b32iddOtlocdOtgovauthoritiesnamesn82158730 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b32iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n82158730> .
+        _:b32iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b32iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#createdDate> "1982-12-01T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b32iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        <http://id.loc.gov/authorities/names/n82158730> <http://www.w3.org/2004/02/skos/core#changeNote> _:b40iddOtlocdOtgovauthoritiesnamesn82158730 .
+        _:b40iddOtlocdOtgovauthoritiesnamesn82158730 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b40iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n82158730> .
+        _:b40iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/icrlf> .
+        _:b40iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#createdDate> "2021-08-19T06:45:50"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b40iddOtlocdOtgovauthoritiesnamesn82158730 <http://purl.org/vocab/changeset/schema#changeReason> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+  recorded_at: Wed, 27 Oct 2021 16:49:04 GMT
 - request:
     method: get
     uri: http://id.loc.gov/authorities/names/n00068607.skos.nt
@@ -266,18 +288,20 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.1
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 301
       message: Moved Permanently
     headers:
       Date:
-      - Tue, 13 Oct 2020 01:39:21 GMT
+      - Wed, 27 Oct 2021 16:49:04 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -285,21 +309,19 @@ http_interactions:
       Cache-Control:
       - max-age=3600
       Expires:
-      - Tue, 13 Oct 2020 02:39:21 GMT
+      - Wed, 27 Oct 2021 17:49:04 GMT
       Location:
       - https://id.loc.gov/authorities/names/n00068607.skos.nt
-      Cf-Request-Id:
-      - 05c135c09d00001c8b31a38200000001
       Vary:
       - Accept-Encoding
       Server:
       - cloudflare
       Cf-Ray:
-      - 5e1558adcd581c8b-SJC
+      - 6a4d6a65a9a12a30-ORD
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 13 Oct 2020 01:39:21 GMT
+  recorded_at: Wed, 27 Oct 2021 16:49:04 GMT
 - request:
     method: get
     uri: https://id.loc.gov/authorities/names/n00068607.skos.nt
@@ -308,53 +330,62 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.1
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 13 Oct 2020 01:39:28 GMT
+      - Wed, 27 Oct 2021 16:49:05 GMT
       Content-Type:
       - text/plain; charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=db861caabcb43bdfffac0ac1702db76e71602553162; expires=Thu, 12-Nov-20
-        01:39:22 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - West Seattle (Wash.)
       X-Uri:
       - http://id.loc.gov/authorities/names/n00068607
       Cache-Control:
       - public, max-age=2419200
       X-Varnish:
-      - '52301445'
+      - '143527106'
       Age:
       - '0'
       Via:
       - 1.1 varnish (Varnish/6.0)
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - HEAD, POST, GET, OPTIONS
-      Access-Control-Allow-Headers:
-      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
       Cf-Cache-Status:
       - DYNAMIC
-      Cf-Request-Id:
-      - 05c135c18000001ebac3bd7200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 5e1558af388f1eba-SJC
+      - 6a4d6a660d132a5d-ORD
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -380,7 +411,7 @@ http_interactions:
         _:b24iddOtlocdOtgovauthoritiesnamesn00068607 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlc> .
         _:b24iddOtlocdOtgovauthoritiesnamesn00068607 <http://purl.org/vocab/changeset/schema#createdDate> "2005-08-05T15:24:07"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
         _:b24iddOtlocdOtgovauthoritiesnamesn00068607 <http://purl.org/vocab/changeset/schema#changeReason> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
-  recorded_at: Tue, 13 Oct 2020 01:39:28 GMT
+  recorded_at: Wed, 27 Oct 2021 16:49:05 GMT
 - request:
     method: get
     uri: http://id.loc.gov/authorities/names/no2003107987.skos.nt
@@ -389,18 +420,20 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.1
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 301
       message: Moved Permanently
     headers:
       Date:
-      - Tue, 13 Oct 2020 01:39:28 GMT
+      - Wed, 27 Oct 2021 16:49:05 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -408,21 +441,19 @@ http_interactions:
       Cache-Control:
       - max-age=3600
       Expires:
-      - Tue, 13 Oct 2020 02:39:28 GMT
+      - Wed, 27 Oct 2021 17:49:05 GMT
       Location:
       - https://id.loc.gov/authorities/names/no2003107987.skos.nt
-      Cf-Request-Id:
-      - 05c135dc330000965a45938200000001
       Vary:
       - Accept-Encoding
       Server:
       - cloudflare
       Cf-Ray:
-      - 5e1558d9eebf965a-SJC
+      - 6a4d6a698c1228f8-ORD
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 13 Oct 2020 01:39:29 GMT
+  recorded_at: Wed, 27 Oct 2021 16:49:05 GMT
 - request:
     method: get
     uri: https://id.loc.gov/authorities/names/no2003107987.skos.nt
@@ -431,53 +462,62 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.1
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 13 Oct 2020 01:39:36 GMT
+      - Wed, 27 Oct 2021 16:49:06 GMT
       Content-Type:
       - text/plain; charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d9ae3e0313bdb8936bb9422c36df008e31602553169; expires=Thu, 12-Nov-20
-        01:39:29 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Wood and Iverson Lumber Company
       X-Uri:
       - http://id.loc.gov/authorities/names/no2003107987
       Cache-Control:
       - public, max-age=2419200
       X-Varnish:
-      - '46132950'
+      - '153562571'
       Age:
       - '0'
       Via:
       - 1.1 varnish (Varnish/6.0)
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - HEAD, POST, GET, OPTIONS
-      Access-Control-Allow-Headers:
-      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
       Cf-Cache-Status:
       - DYNAMIC
-      Cf-Request-Id:
-      - 05c135dd260000930a8ea37200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 5e1558db7b51930a-SJC
+      - 6a4d6a69ebbf2928-ORD
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -491,22 +531,23 @@ http_interactions:
         _:b12iddOtlocdOtgovauthoritiesnamesno2003107987 <http://www.w3.org/2008/05/skos-xl#literalForm> "Wood & Iverson" .
         <http://id.loc.gov/authorities/names/no2003107987> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/sourceID/LC%7Cno2003107987#skos:Concept> .
         <http://id.loc.gov/authorities/names/no2003107987> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/784110> .
+        <http://id.loc.gov/authorities/names/no2003107987> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/784110> .
         <http://id.loc.gov/authorities/names/no2003107987> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/authorities/names> .
         <http://id.loc.gov/authorities/names/no2003107987> <http://www.w3.org/2004/02/skos/core#altLabel> "Wood & Iverson Lumber Company" .
         <http://id.loc.gov/authorities/names/no2003107987> <http://www.w3.org/2004/02/skos/core#altLabel> "Wood & Iverson" .
-        <http://id.loc.gov/authorities/names/no2003107987> <http://www.w3.org/2004/02/skos/core#changeNote> _:b24iddOtlocdOtgovauthoritiesnamesno2003107987 .
-        _:b24iddOtlocdOtgovauthoritiesnamesno2003107987 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
-        _:b24iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/no2003107987> .
-        _:b24iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/wau> .
-        _:b24iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#createdDate> "2003-10-27T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-        _:b24iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
-        <http://id.loc.gov/authorities/names/no2003107987> <http://www.w3.org/2004/02/skos/core#changeNote> _:b32iddOtlocdOtgovauthoritiesnamesno2003107987 .
-        _:b32iddOtlocdOtgovauthoritiesnamesno2003107987 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
-        _:b32iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/no2003107987> .
-        _:b32iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/wau> .
-        _:b32iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#createdDate> "2003-10-28T05:22:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-        _:b32iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#changeReason> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
-  recorded_at: Tue, 13 Oct 2020 01:39:36 GMT
+        <http://id.loc.gov/authorities/names/no2003107987> <http://www.w3.org/2004/02/skos/core#changeNote> _:b25iddOtlocdOtgovauthoritiesnamesno2003107987 .
+        _:b25iddOtlocdOtgovauthoritiesnamesno2003107987 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b25iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/no2003107987> .
+        _:b25iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/wau> .
+        _:b25iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#createdDate> "2003-10-27T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b25iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        <http://id.loc.gov/authorities/names/no2003107987> <http://www.w3.org/2004/02/skos/core#changeNote> _:b33iddOtlocdOtgovauthoritiesnamesno2003107987 .
+        _:b33iddOtlocdOtgovauthoritiesnamesno2003107987 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b33iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/no2003107987> .
+        _:b33iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/wau> .
+        _:b33iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#createdDate> "2003-10-28T05:22:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b33iddOtlocdOtgovauthoritiesnamesno2003107987 <http://purl.org/vocab/changeset/schema#changeReason> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+  recorded_at: Wed, 27 Oct 2021 16:49:06 GMT
 - request:
     method: get
     uri: http://id.loc.gov/authorities/names/n79061258.skos.nt
@@ -515,18 +556,20 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.1
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 301
       message: Moved Permanently
     headers:
       Date:
-      - Tue, 13 Oct 2020 01:39:37 GMT
+      - Wed, 27 Oct 2021 16:49:06 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -534,21 +577,19 @@ http_interactions:
       Cache-Control:
       - max-age=3600
       Expires:
-      - Tue, 13 Oct 2020 02:39:37 GMT
+      - Wed, 27 Oct 2021 17:49:06 GMT
       Location:
       - https://id.loc.gov/authorities/names/n79061258.skos.nt
-      Cf-Request-Id:
-      - 05c135fc1f00001fa7c535c200000001
       Vary:
       - Accept-Encoding
       Server:
       - cloudflare
       Cf-Ray:
-      - 5e15590cfae41fa7-SJC
+      - 6a4d6a6eaba26339-ORD
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 13 Oct 2020 01:39:37 GMT
+  recorded_at: Wed, 27 Oct 2021 16:49:06 GMT
 - request:
     method: get
     uri: https://id.loc.gov/authorities/names/n79061258.skos.nt
@@ -557,53 +598,62 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.1
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 13 Oct 2020 01:39:45 GMT
+      - Wed, 27 Oct 2021 16:49:06 GMT
       Content-Type:
       - text/plain; charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d174cd85dbeca032f720fc402f4eeba461602553177; expires=Thu, 12-Nov-20
-        01:39:37 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Cambridge (Mass.)
       X-Uri:
       - http://id.loc.gov/authorities/names/n79061258
       Cache-Control:
       - public, max-age=2419200
       X-Varnish:
-      - '45215178'
+      - '151372566'
       Age:
       - '0'
       Via:
       - 1.1 varnish (Varnish/6.0)
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - HEAD, POST, GET, OPTIONS
-      Access-Control-Allow-Headers:
-      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
       Cf-Cache-Status:
       - DYNAMIC
-      Cf-Request-Id:
-      - 05c135fcfc0000211b52990200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 5e15590e6a35211b-SJC
+      - 6a4d6a6efa4ec528-ORD
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -611,21 +661,22 @@ http_interactions:
         <http://id.loc.gov/authorities/names/n79061258> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cambridge (Mass.)" .
         <http://id.loc.gov/authorities/names/n79061258> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/sourceID/LC%7Cn++79061258#skos:Concept> .
         <http://id.loc.gov/authorities/names/n79061258> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/1205363> .
+        <http://id.loc.gov/authorities/names/n79061258> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/1205363> .
         <http://id.loc.gov/authorities/names/n79061258> <http://www.w3.org/2004/02/skos/core#editorial> "[Old catalog heading: Cambridge, Mass.]" .
         <http://id.loc.gov/authorities/names/n79061258> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/authorities/names> .
-        <http://id.loc.gov/authorities/names/n79061258> <http://www.w3.org/2004/02/skos/core#changeNote> _:b12iddOtlocdOtgovauthoritiesnamesn79061258 .
-        _:b12iddOtlocdOtgovauthoritiesnamesn79061258 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
-        _:b12iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n79061258> .
-        _:b12iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlc> .
-        _:b12iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#createdDate> "1979-07-30T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-        _:b12iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
-        <http://id.loc.gov/authorities/names/n79061258> <http://www.w3.org/2004/02/skos/core#changeNote> _:b20iddOtlocdOtgovauthoritiesnamesn79061258 .
-        _:b20iddOtlocdOtgovauthoritiesnamesn79061258 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
-        _:b20iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n79061258> .
-        _:b20iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/cou> .
-        _:b20iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#createdDate> "2013-08-29T07:37:44"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-        _:b20iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#changeReason> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
-  recorded_at: Tue, 13 Oct 2020 01:39:45 GMT
+        <http://id.loc.gov/authorities/names/n79061258> <http://www.w3.org/2004/02/skos/core#changeNote> _:b13iddOtlocdOtgovauthoritiesnamesn79061258 .
+        _:b13iddOtlocdOtgovauthoritiesnamesn79061258 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b13iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n79061258> .
+        _:b13iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b13iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#createdDate> "1979-07-30T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b13iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        <http://id.loc.gov/authorities/names/n79061258> <http://www.w3.org/2004/02/skos/core#changeNote> _:b21iddOtlocdOtgovauthoritiesnamesn79061258 .
+        _:b21iddOtlocdOtgovauthoritiesnamesn79061258 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b21iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n79061258> .
+        _:b21iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/cou> .
+        _:b21iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#createdDate> "2013-08-29T07:37:44"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b21iddOtlocdOtgovauthoritiesnamesn79061258 <http://purl.org/vocab/changeset/schema#changeReason> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+  recorded_at: Wed, 27 Oct 2021 16:49:06 GMT
 - request:
     method: get
     uri: http://id.loc.gov/authorities/names/nr92038535.skos.nt
@@ -634,18 +685,20 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.1
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 301
       message: Moved Permanently
     headers:
       Date:
-      - Tue, 13 Oct 2020 01:39:45 GMT
+      - Wed, 27 Oct 2021 16:49:06 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -653,21 +706,19 @@ http_interactions:
       Cache-Control:
       - max-age=3600
       Expires:
-      - Tue, 13 Oct 2020 02:39:45 GMT
+      - Wed, 27 Oct 2021 17:49:06 GMT
       Location:
       - https://id.loc.gov/authorities/names/nr92038535.skos.nt
-      Cf-Request-Id:
-      - 05c1361ddb0000212dd51ed200000001
       Vary:
       - Accept-Encoding
       Server:
       - cloudflare
       Cf-Ray:
-      - 5e155942ff67212d-SJC
+      - 6a4d6a727cc76287-ORD
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 13 Oct 2020 01:39:45 GMT
+  recorded_at: Wed, 27 Oct 2021 16:49:06 GMT
 - request:
     method: get
     uri: https://id.loc.gov/authorities/names/nr92038535.skos.nt
@@ -676,53 +727,62 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.0.1
+      - Ruby RDF.rb/3.1.15
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, */*;q=0.1
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 13 Oct 2020 01:39:53 GMT
+      - Wed, 27 Oct 2021 16:49:07 GMT
       Content-Type:
       - text/plain; charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d7c7b9ffc58964331e779a02f71dad5211602553185; expires=Thu, 12-Nov-20
-        01:39:45 GMT; path=/; domain=.id.loc.gov; HttpOnly; SameSite=Lax
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Cambridge Press (Cambridge, Mass.)
       X-Uri:
       - http://id.loc.gov/authorities/names/nr92038535
       Cache-Control:
       - public, max-age=2419200
       X-Varnish:
-      - '51110555'
+      - '153562574'
       Age:
       - '0'
       Via:
       - 1.1 varnish (Varnish/6.0)
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - HEAD, POST, GET, OPTIONS
-      Access-Control-Allow-Headers:
-      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
       Cf-Cache-Status:
       - DYNAMIC
-      Cf-Request-Id:
-      - 05c1361ec000001fc5d7377200000001
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Server:
       - cloudflare
       Cf-Ray:
-      - 5e1559446cc91fc5-SJC
+      - 6a4d6a72dfa9c534-ORD
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -730,18 +790,19 @@ http_interactions:
         <http://id.loc.gov/authorities/names/nr92038535> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cambridge Press (Cambridge, Mass.)" .
         <http://id.loc.gov/authorities/names/nr92038535> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/viaf/sourceID/LC%7Cnr+92038535#skos:Concept> .
         <http://id.loc.gov/authorities/names/nr92038535> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/683568> .
+        <http://id.loc.gov/authorities/names/nr92038535> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/683568> .
         <http://id.loc.gov/authorities/names/nr92038535> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/authorities/names> .
-        <http://id.loc.gov/authorities/names/nr92038535> <http://www.w3.org/2004/02/skos/core#changeNote> _:b10iddOtlocdOtgovauthoritiesnamesnr92038535 .
-        _:b10iddOtlocdOtgovauthoritiesnamesnr92038535 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
-        _:b10iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/nr92038535> .
-        _:b10iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/mwa> .
-        _:b10iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#createdDate> "1992-10-29T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-        _:b10iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
-        <http://id.loc.gov/authorities/names/nr92038535> <http://www.w3.org/2004/02/skos/core#changeNote> _:b18iddOtlocdOtgovauthoritiesnamesnr92038535 .
-        _:b18iddOtlocdOtgovauthoritiesnamesnr92038535 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
-        _:b18iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/nr92038535> .
-        _:b18iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/mwa> .
-        _:b18iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#createdDate> "1993-01-07T06:13:45"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-        _:b18iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#changeReason> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
-  recorded_at: Tue, 13 Oct 2020 01:39:53 GMT
+        <http://id.loc.gov/authorities/names/nr92038535> <http://www.w3.org/2004/02/skos/core#changeNote> _:b11iddOtlocdOtgovauthoritiesnamesnr92038535 .
+        _:b11iddOtlocdOtgovauthoritiesnamesnr92038535 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b11iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/nr92038535> .
+        _:b11iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/mwa> .
+        _:b11iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#createdDate> "1992-10-29T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b11iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        <http://id.loc.gov/authorities/names/nr92038535> <http://www.w3.org/2004/02/skos/core#changeNote> _:b19iddOtlocdOtgovauthoritiesnamesnr92038535 .
+        _:b19iddOtlocdOtgovauthoritiesnamesnr92038535 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b19iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/nr92038535> .
+        _:b19iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/mwa> .
+        _:b19iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#createdDate> "1993-01-07T06:13:45"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b19iddOtlocdOtgovauthoritiesnamesnr92038535 <http://purl.org/vocab/changeset/schema#changeReason> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+  recorded_at: Wed, 27 Oct 2021 16:49:07 GMT
 recorded_with: VCR 6.0.0

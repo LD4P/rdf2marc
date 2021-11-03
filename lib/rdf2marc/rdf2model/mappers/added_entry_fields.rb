@@ -61,7 +61,13 @@ module Rdf2marc
         end
 
         def relator_terms(role_uris)
-          role_uris.sort.map { |uri| Resolver.resolve_label(uri.value) }
+          role_uris.sort.map do |uri|
+            if uri.is_a?(RDF::Literal) || !Rdf2marc::Resolver.can_resolve?(uri.value, :label)
+              uri.value
+            else
+              Resolver.resolve_label(uri.value)
+            end
+          end
         end
       end
     end

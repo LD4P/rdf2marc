@@ -21,7 +21,7 @@ RSpec.describe Rdf2marc::Model2marc::Field337 do
 
   let(:expected_fields) do
     [
-      '337    $a term1 $a term2 $c code1 $c code2 $0 uri $2 source1',
+      '337    $a term1 $a term2 $b code1 $b code2 $0 uri $2 source1',
       '337    $a term3 $2 rdamedia'
     ]
   end

@@ -10,7 +10,7 @@ module Rdf2marc
 
       def build
         append_repeatable('a', model.carrier_type_terms)
-        append_repeatable('c', model.carrier_type_codes)
+        append_repeatable('b', model.carrier_type_codes)
         append('0', model.authority_control_number_uri)
         append('2', model.source)
       end

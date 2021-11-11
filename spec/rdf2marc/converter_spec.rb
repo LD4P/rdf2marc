@@ -19,4 +19,19 @@ RSpec.describe Rdf2marc::Converter, :vcr do
       expect(record.work.uri).to eq 'https://api.stage.sinopia.io/resource/ce0376a8-e01b-4829-95c2-c7aa4fa9568c'
     end
   end
+
+  context 'when repository load fails' do
+    let(:files) { %w[instance.ttl] }
+
+    before do
+      allow(RDF::Repository).to receive(:load).and_raise('uh oh!')
+    end
+
+    it 'raises a BadRequestError' do
+      expect { described_class.convert(files: files) }.to raise_error(
+        Rdf2marc::BadRequestError,
+        "Unable to load #{files.first}"
+      )
+    end
+  end
 end

@@ -24,6 +24,7 @@ Usage: rdf2model <instance ttl file> <work ttl file?> <admin metadata ttl file?>
 Usage: rdf2model <instance uri>
 $ exe/rdf2model instance.ttl work.ttl admin_metadata.ttl
 $ exe/rdf2model https://api.stage.sinopia.io/resource/70ac2ed7-95d0-492a-a300-050a40895b74
+$ exe/rdf2model https://api.development.sinopia.io/resource/83fe8c98-e34b-42aa-b6d3-07cc11c3faa6
 ```
 
 Mapping to MARC:
@@ -33,6 +34,7 @@ Usage: rdf2marc <instance ttl file> <work ttl file?> <admin metadata ttl file?>
 Usage: rdf2marc <instance uri>
 $ exe/rdf2marc instance.ttl work.ttl admin_metadata.ttl
 $ exe/rdf2marc https://api.stage.sinopia.io/resource/70ac2ed7-95d0-492a-a300-050a40895b74
+$ exe/rdf2marc https://api.development.sinopia.io/resource/83fe8c98-e34b-42aa-b6d3-07cc11c3faa6
 ```
 
 In addition to printing the MARC record, this will also output a binary MARC record (`record.mar`).

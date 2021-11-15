@@ -17,23 +17,47 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::Leader do
   end
 
   describe 'record status' do
-    let(:ttl) do
-      <<~TTL
-                          <#{admin_metadata_term}> <http://id.loc.gov/ontologies/bibframe/status> _:b17.
-        _:b17 a <http://id.loc.gov/ontologies/bibframe/Status>;
+    context 'when a literal' do
+      let(:ttl) do
+        <<~TTL
+          <#{admin_metadata_term}> <http://id.loc.gov/ontologies/bibframe/status> _:b17.
+          _:b17 a <http://id.loc.gov/ontologies/bibframe/Status>;
             <http://id.loc.gov/ontologies/bibframe/code> "a"@eng.
-      TTL
+        TTL
+      end
+
+      let(:model) do
+        {
+          bibliographic_level: 'item',
+          type: 'language_material'
+          # NOTE: It is not mapped; it is defaulted in the Leader struct
+          # record_status: 'a'
+        }
+      end
+
+      include_examples 'mapper', described_class
     end
 
-    let(:model) do
-      {
-        bibliographic_level: 'item',
-        type: 'language_material',
-        record_status: 'a'
-      }
-    end
+    context 'when an mstatus URI' do
+      let(:ttl) do
+        <<~TTL
+          <#{admin_metadata_term}> <http://id.loc.gov/ontologies/bibframe/status> _:b17.
+          _:b17 a <http://id.loc.gov/ontologies/bibframe/Status>;
+            <http://id.loc.gov/ontologies/bibframe/code> <http://id.loc.gov/vocabulary/mstatus/cancinv>.
+        TTL
+      end
 
-    include_examples 'mapper', described_class
+      let(:model) do
+        {
+          bibliographic_level: 'item',
+          type: 'language_material'
+          # NOTE: It is not mapped; it is defaulted in the Leader struct
+          # record_status: 'n'
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
   end
 
   describe 'type' do

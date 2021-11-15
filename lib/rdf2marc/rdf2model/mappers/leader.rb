@@ -7,7 +7,6 @@ module Rdf2marc
       class Leader < BaseMapper
         def generate
           {
-            record_status: item.admin_metadata.query.path_first_literal([[BF.status, BF.Status], BF.code]),
             type: type,
             bibliographic_level: bibliographic_level,
             encoding_level: encoding_level,

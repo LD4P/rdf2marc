@@ -95,8 +95,12 @@ jobs:
     executor: default
     steps:
       - checkout
-      - ruby/install-deps:
-          key: rdf2marc
+      - run:
+          name: Install dependencies
+          command: |
+            bundle config set --local deployment 'true'
+            bundle config set --local without 'test development'
+            bundler install
       - run:
           name: Build layer zip
           command: |

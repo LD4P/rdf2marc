@@ -18,38 +18,39 @@ module Rdf2marc
           }
           subject_terms = item.work.query.path_all([BF.subject])
           subject_terms.sort.each do |subject_term|
-            if subject_term.is_a?(RDF::Literal)
-              Logger.warn("Ignoring subject #{subject_term.value} since it is a literal.")
-              next
-            end
-
-            subject_uri = subject_term.value
-            subject_type = Resolver.resolve_type(subject_uri)
+            subject_type = Resolver.resolve_type(subject_term.value)
             case subject_type
             when 'corporate_name'
-              subj_fields[:corporate_names] << Resolver.resolve_model(subject_uri,
-                                                                      Rdf2marc::Models::General::CorporateName)
+              subj_fields[:corporate_names] <<
+                LiteralOrRemoteResolver.resolve(term: subject_term,
+                                                item: item, key_symbol: subject_type.to_sym,
+                                                model: Rdf2marc::Models::General::CorporateName)
             when 'personal_name', 'family_name'
-              subj_fields[:personal_names] << Resolver.resolve_model(subject_uri,
-                                                                     Rdf2marc::Models::General::PersonalName)
+              subj_fields[:personal_names] <<
+                LiteralOrRemoteResolver.resolve(term: subject_term,
+                                                item: item, key_symbol: :personal_name,
+                                                model: Rdf2marc::Models::General::PersonalName)
             when 'meeting_name'
-              subj_fields[:meeting_names] << Resolver.resolve_model(subject_uri,
-                                                                    Rdf2marc::Models::General::MeetingName)
+              subj_fields[:meeting_names] <<
+                LiteralOrRemoteResolver.resolve(term: subject_term,
+                                                item: item, key_symbol: subject_type.to_sym,
+                                                model: Rdf2marc::Models::General::MeetingName)
             when 'geographic_name'
-              subj_fields[:geographic_names] << Resolver.resolve_model(
-                subject_uri,
-                Rdf2marc::Models::SubjectAccessField::GeographicName
-              )
+              subj_fields[:geographic_names] <<
+                LiteralOrRemoteResolver.resolve(term: subject_term,
+                                                item: item, key_symbol: subject_type.to_sym,
+                                                model: Rdf2marc::Models::SubjectAccessField::GeographicName)
             when 'event_name'
-              subj_fields[:event_names] << Resolver.resolve_model(
-                subject_uri,
-                Rdf2marc::Models::SubjectAccessField::EventName
-              )
+              subj_fields[:event_names] <<
+                LiteralOrRemoteResolver.resolve(term: subject_term,
+                                                item: item,
+                                                key_symbol: subject_type.to_sym,
+                                                model: Rdf2marc::Models::SubjectAccessField::EventName)
             when 'topic'
-              subj_fields[:topical_terms] << Resolver.resolve_model(subject_uri,
-                                                                    Rdf2marc::Models::SubjectAccessField::TopicalTerm)
-            else
-              Logger.warn("Resolving subject for #{subject_uri} (#{subject_type}) not supported.")
+              subj_fields[:topical_terms] <<
+                LiteralOrRemoteResolver.resolve(term: subject_term,
+                                                item: item, key_symbol: :topic,
+                                                model: Rdf2marc::Models::SubjectAccessField::TopicalTerm)
             end
           end
           subj_fields

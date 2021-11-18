@@ -39,7 +39,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::EditionImprintFields, :vcr do
               publication_distribution_dates: ['2020']
             },
             {
-              entity_function: 'publication',
+              entity_function: 'distribution',
               publication_distribution_places: ['West Seattle (Wash.)'],
               publisher_distributor_names: ['Wood and Iverson Lumber Company'],
               publication_distribution_dates: ['2019']

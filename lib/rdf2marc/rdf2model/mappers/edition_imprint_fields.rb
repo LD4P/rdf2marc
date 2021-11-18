@@ -26,7 +26,7 @@ module Rdf2marc
                                                        'publication')
           distributions = publication_distributions_for(item.instance.query.path_all([[BF.provisionActivity,
                                                                                        BF.Distribution]]),
-                                                        'publication')
+                                                        'distribution')
           manufactures = publication_distributions_for(item.instance.query.path_all([[BF.provisionActivity,
                                                                                       BF.Manufacture]]),
                                                        'manufacture')

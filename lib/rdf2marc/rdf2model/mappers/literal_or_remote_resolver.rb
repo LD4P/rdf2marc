@@ -23,6 +23,21 @@ module Rdf2marc
           result[key_symbol] = label if label && label != term.to_s
           result
         end
+
+        # @param [RDF::Literal,RDF::URI] term
+        # @param [Rdf2marc::ItemContext] item
+        def self.resolve_label(term:, item:)
+          return term.value if term.is_a?(RDF::Literal)
+
+          resolved_label = Resolver.resolve_label(term.to_s)
+
+          return resolved_label if resolved_label
+
+          uri_label = item.work.query.path_first_literal([RDF::RDFS.label], subject_term: term)
+          return uri_label if uri_label != term.to_s
+
+          nil
+        end
       end
     end
   end

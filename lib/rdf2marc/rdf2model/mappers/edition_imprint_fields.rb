@@ -46,17 +46,14 @@ module Rdf2marc
 
         def publication_distributions_places(subject_term)
           item.instance.query.path_all([BF.place], subject_term: subject_term).map do |place_term|
-            place_term.is_a?(RDF::Literal) ? place_term.value : Resolver.resolve_label(place_term&.value)
+            LiteralOrRemoteResolver.resolve_label(term: place_term, item: item)
           end
         end
 
         def publication_distributions_names(subject_term)
           item.instance.query.path_all([[BF.agent, BF.Agent]],
                                        subject_term: subject_term).map do |agent_term|
-            next Resolver.resolve_label(agent_term&.value) unless agent_term.is_a?(RDF::Node)
-
-            item.instance.graph.query(subject: agent_term,
-                                      predicate: RDF::RDFS.label).map(&:object).map(&:value).join(', ')
+            LiteralOrRemoteResolver.resolve_label(term: agent_term, item: item)
           end
         end
       end

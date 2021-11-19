@@ -58,7 +58,7 @@ module Rdf2marc
         end
 
         def relator_terms(role_uris)
-          role_uris.sort.map { |uri| Resolver.resolve_label(uri.value) }
+          role_uris.sort.map { |uri| LiteralOrRemoteResolver.resolve_label(term: uri, item: item) }
         end
       end
     end

@@ -22,35 +22,35 @@ module Rdf2marc
             case subject_type
             when 'corporate_name'
               subj_fields[:corporate_names] <<
-                LiteralOrRemoteResolver.resolve(term: subject_term,
-                                                item: item, key_symbol: subject_type.to_sym,
-                                                model: Rdf2marc::Models::General::CorporateName)
+                LiteralOrRemoteResolver.resolve_model(term: subject_term,
+                                                      item: item, key_symbol: subject_type.to_sym,
+                                                      model: Rdf2marc::Models::General::CorporateName)
             when 'personal_name', 'family_name'
               subj_fields[:personal_names] <<
-                LiteralOrRemoteResolver.resolve(term: subject_term,
-                                                item: item, key_symbol: :personal_name,
-                                                model: Rdf2marc::Models::General::PersonalName)
+                LiteralOrRemoteResolver.resolve_model(term: subject_term,
+                                                      item: item, key_symbol: :personal_name,
+                                                      model: Rdf2marc::Models::General::PersonalName)
             when 'meeting_name'
               subj_fields[:meeting_names] <<
-                LiteralOrRemoteResolver.resolve(term: subject_term,
-                                                item: item, key_symbol: subject_type.to_sym,
-                                                model: Rdf2marc::Models::General::MeetingName)
+                LiteralOrRemoteResolver.resolve_model(term: subject_term,
+                                                      item: item, key_symbol: subject_type.to_sym,
+                                                      model: Rdf2marc::Models::General::MeetingName)
             when 'geographic_name'
               subj_fields[:geographic_names] <<
-                LiteralOrRemoteResolver.resolve(term: subject_term,
-                                                item: item, key_symbol: subject_type.to_sym,
-                                                model: Rdf2marc::Models::SubjectAccessField::GeographicName)
+                LiteralOrRemoteResolver.resolve_model(term: subject_term,
+                                                      item: item, key_symbol: subject_type.to_sym,
+                                                      model: Rdf2marc::Models::SubjectAccessField::GeographicName)
             when 'event_name'
               subj_fields[:event_names] <<
-                LiteralOrRemoteResolver.resolve(term: subject_term,
-                                                item: item,
-                                                key_symbol: subject_type.to_sym,
-                                                model: Rdf2marc::Models::SubjectAccessField::EventName)
+                LiteralOrRemoteResolver.resolve_model(term: subject_term,
+                                                      item: item,
+                                                      key_symbol: subject_type.to_sym,
+                                                      model: Rdf2marc::Models::SubjectAccessField::EventName)
             when 'topic'
               subj_fields[:topical_terms] <<
-                LiteralOrRemoteResolver.resolve(term: subject_term,
-                                                item: item, key_symbol: :topic,
-                                                model: Rdf2marc::Models::SubjectAccessField::TopicalTerm)
+                LiteralOrRemoteResolver.resolve_model(term: subject_term,
+                                                      item: item, key_symbol: :topic,
+                                                      model: Rdf2marc::Models::SubjectAccessField::TopicalTerm)
             end
           end
           subj_fields

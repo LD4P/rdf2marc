@@ -35,8 +35,8 @@ module Rdf2marc
         end
 
         def main_entry_name(term, key_symbol, model_class)
-          result = LiteralOrRemoteResolver.resolve(term: term, item: item, key_symbol: key_symbol,
-                                                   model: model_class)
+          result = LiteralOrRemoteResolver.resolve_model(term: term, item: item, key_symbol: key_symbol,
+                                                         model: model_class)
           result[:relator_terms] = main_relator_terms if result && main_relator_terms.present?
           result
         end

@@ -51,11 +51,8 @@ module Rdf2marc
         end
 
         def added_entry_name_with_roles(contrib_term, role_uris, key_symbol, model_class)
-          result = if contrib_term.is_a?(RDF::Literal)
-                     { thesaurus: 'not_specified', key_symbol => contrib_term.value }
-                   else
-                     Resolver.resolve_model(contrib_term&.value, model_class)
-                   end
+          result = LiteralOrRemoteResolver.resolve(term: contrib_term, item: item, key_symbol: key_symbol,
+                                                   model: model_class)
           result[:relator_terms] = relator_terms(role_uris) if result && relator_terms(role_uris).present?
           result
         end

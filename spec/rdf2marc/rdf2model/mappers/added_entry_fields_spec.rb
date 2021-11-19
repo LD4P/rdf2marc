@@ -107,6 +107,39 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
       include_examples 'mapper', described_class
     end
 
+    context 'when mapping from BF.Person URI with a non-resolvable model' do
+      before do
+        allow(Rdf2marc::Logger).to receive(:warn)
+      end
+
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.
+          _:b1 a <http://id.loc.gov/ontologies/bibframe/Contribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> <http://not.loc.gov/authorities/names/no2005086644>;
+              <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/ill>.
+          <http://not.loc.gov/authorities/names/no2005086644> a <http://id.loc.gov/ontologies/bibframe/Person>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "Jung, Carl".
+          <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2000/01/rdf-schema#label> "Illustrator but it will be looked up".
+        TTL
+      end
+
+      let(:model) do
+        {
+          personal_names: [
+            {
+              thesaurus: 'not_specified',
+              personal_name: 'Jung, Carl',
+              relator_terms: ['Illustrator'],
+              authority_record_control_numbers: ['http://not.loc.gov/authorities/names/no2005086644']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
     context 'when mapping from BF.Person URI with multiple roles' do
       let(:ttl) do
         <<~TTL

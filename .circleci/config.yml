@@ -49,6 +49,7 @@ commands:
           aws lambda update-function-configuration --function-name << parameters.function-name >> --layers $latest_layer_version_arn
 
           aws lambda update-function-code --function-name << parameters.function-name >> --zip-file fileb://lambda.zip
+          aws lambda wait function-updated --function-name << parameters.function-name >>
           aws lambda publish-version --function-name << parameters.function-name >>
 jobs:
   build:

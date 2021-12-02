@@ -296,7 +296,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
   end
 
   describe 'added corporate names' do
-    context 'when mapping from multiple BF.Organzation URIs' do
+    context 'when mapping from multiple BF.Organization URIs' do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b4.
@@ -333,7 +333,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
       include_examples 'mapper', described_class
     end
 
-    context 'when mapping from multiple BF.Organzation literals' do
+    context 'when mapping from multiple BF.Organization literals' do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b9.
@@ -362,7 +362,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
       include_examples 'mapper', described_class
     end
 
-    context 'when mapping from multiple BF.Organzation URIs with roles' do
+    context 'when mapping from multiple BF.Organization URIs with roles' do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b4.
@@ -405,7 +405,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
       include_examples 'mapper', described_class
     end
 
-    context 'when mapping from multiple BF.Organzation literals with roles' do
+    context 'when mapping from multiple BF.Organization literals with roles' do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b9.
@@ -580,6 +580,89 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
               thesaurus: 'not_specified',
               meeting_name: 'Women and National Health Insurance Meeting',
               relator_terms: ['Film distributor', 'Illustrator']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
+    context 'when mapping with a literal role' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b13.
+          _:b13 a <http://id.loc.gov/ontologies/bibframe/Contribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> _:b14;
+              <http://id.loc.gov/ontologies/bibframe/role> "Illustrator For Real".
+          _:b14 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Women and National Health Insurance Meeting".
+          <http://id.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2000/01/rdf-schema#label> "Illustrator but it will be looked up".
+        TTL
+      end
+
+      let(:model) do
+        {
+          meeting_names: [
+            {
+              thesaurus: 'not_specified',
+              meeting_name: 'Women and National Health Insurance Meeting',
+              relator_terms: ['Illustrator For Real']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
+    context 'when mapping with a non-resolvable role that has a label in the graph' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b13.
+          _:b13 a <http://id.loc.gov/ontologies/bibframe/Contribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> _:b14;
+              <http://id.loc.gov/ontologies/bibframe/role> <http://not.loc.gov/vocabulary/relators/ill>.
+          _:b14 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Women and National Health Insurance Meeting".
+          <http://not.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2000/01/rdf-schema#label> "Illustrator From The Graph".
+        TTL
+      end
+
+      let(:model) do
+        {
+          meeting_names: [
+            {
+              thesaurus: 'not_specified',
+              meeting_name: 'Women and National Health Insurance Meeting',
+              relator_terms: ['Illustrator From The Graph']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
+    context 'when mapping with a non-resolvable role that has a label in the graph matching the URI' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b13.
+          _:b13 a <http://id.loc.gov/ontologies/bibframe/Contribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> _:b14;
+              <http://id.loc.gov/ontologies/bibframe/role> <http://not.loc.gov/vocabulary/relators/ill>.
+          _:b14 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Women and National Health Insurance Meeting".
+          <http://not.loc.gov/vocabulary/relators/ill> <http://www.w3.org/2000/01/rdf-schema#label> "http://not.loc.gov/vocabulary/relators/ill".
+        TTL
+      end
+
+      let(:model) do
+        {
+          meeting_names: [
+            {
+              thesaurus: 'not_specified',
+              meeting_name: 'Women and National Health Insurance Meeting'
             }
           ]
         }

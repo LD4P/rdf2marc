@@ -6,8 +6,10 @@ module Rdf2marc
       # Mapping to Note Fields model.
       class NoteFields < BaseMapper
         def generate
+          notes = general_notes
+          notes << provision_activity_statement if provision_activity_statement
           {
-            general_notes: general_notes
+            general_notes: notes
           }
         end
 
@@ -21,6 +23,15 @@ module Rdf2marc
               general_note: note
             }
           end
+        end
+
+        def provision_activity_statement
+          value = item.instance.query.path_first_literal([BF.provisionActivityStatement])
+          return unless value.present?
+
+          {
+            general_note: "Transcribed publication statement: #{value}"
+          }
         end
       end
     end

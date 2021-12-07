@@ -17,25 +17,6 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
     include_examples 'mapper', described_class
   end
 
-  describe 'control number id' do
-    let(:ttl) do
-      <<~TTL
-        <#{admin_metadata_term}> <http://id.loc.gov/ontologies/bibframe/source> <http://id.loc.gov/vocabulary/organizations/cst>, <http://id.loc.gov/vocabulary/organizations/nsfvsfl>.
-      TTL
-    end
-
-    let(:model) do
-      {
-        general_info: {
-          place: 'xx'
-        },
-        control_number_id: 'cst'
-      }
-    end
-
-    include_examples 'mapper', described_class
-  end
-
   describe 'latest transaction' do
     let(:ttl) do
       <<~TTL

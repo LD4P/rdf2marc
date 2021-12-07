@@ -7,7 +7,6 @@ module Rdf2marc
       class ControlFields < BaseMapper
         def generate
           {
-            control_number_id: control_number_id,
             latest_transaction: latest_transaction,
             general_info: {
               place: place,
@@ -26,14 +25,6 @@ module Rdf2marc
           code = Resolver.resolve_geographic_area_code(place_uri)
 
           Resolver::CountryCode.resolve_from_geographic_area_code(code)
-        end
-
-        def control_number_id
-          # Can be multiple but only using first.
-          source_uri = item.admin_metadata.query.path_first_uri([BF.source])
-          return nil if source_uri.nil?
-
-          source_uri.sub(%r{^https?://id.loc.gov/vocabulary/organizations/}, '')
         end
 
         def latest_transaction

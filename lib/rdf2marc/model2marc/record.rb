@@ -13,6 +13,7 @@ module Rdf2marc
       def marc_record
         @marc_record ||= MARC::Record.new.tap do |marc_record|
           Leader.new(marc_record, record_model.leader).generate
+          # NOTE: no longer mapping from RDF for control_number_id per https://github.com/LD4P/rdf2marc/issues/137
           add_control_field('003', record_model.control_fields.control_number_id, marc_record)
           add_field(ControlField005, record_model.control_fields, marc_record)
           add_field(ControlField008, record_model.control_fields.general_info, marc_record)

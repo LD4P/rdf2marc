@@ -16,12 +16,13 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::NoteFields do
   describe 'general notes' do
     let(:ttl) do
       <<~TTL
-                          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/note> _:b1.
-            _:b1 a <http://id.loc.gov/ontologies/bibframe/Note>;
-        <http://www.w3.org/2000/01/rdf-schema#label> "Recast in bronze from artist's plaster original of 1903."@eng.
-                          <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/note> _:b2.
-            _:b2 a <http://id.loc.gov/ontologies/bibframe/Note>;
-        <http://www.w3.org/2000/01/rdf-schema#label> "Translated from German."@eng.
+        <#{work_term}> <http://id.loc.gov/ontologies/bibframe/note> _:b1.
+        _:b1 a <http://id.loc.gov/ontologies/bibframe/Note>;
+          <http://www.w3.org/2000/01/rdf-schema#label> "Recast in bronze from artist's plaster original of 1903."@eng.
+        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/note> _:b2;
+          <http://id.loc.gov/ontologies/bibframe/provisionActivityStatement> "provision activity statement!"@eng.
+        _:b2 a <http://id.loc.gov/ontologies/bibframe/Note>;
+          <http://www.w3.org/2000/01/rdf-schema#label> "Translated from German."@eng.
       TTL
     end
 
@@ -33,6 +34,9 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::NoteFields do
           },
           {
             general_note: 'Translated from German.'
+          },
+          {
+            general_note: 'Transcribed publication statement: provision activity statement!'
           }
         ]
       }

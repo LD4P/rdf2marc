@@ -6,7 +6,7 @@ module Rdf2marc
       # Mapper for topical terms.
       class TopicalTerm < BaseMapper
         def map
-          field = marc_record['150']
+          field = marc_record['150'] || marc_record['180']
           {
             thesaurus: 'lcsh',
             topical_term_or_geo_name: subfield_value(field, 'a'),

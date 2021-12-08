@@ -18,7 +18,7 @@ RSpec.describe Rdf2marc::Model2marc::Field245 do
   end
 
   let(:expected_fields) do
-    ['245 10 $a title1 $b remainder1 $c responsibility1 $n part_numbers1 $n part_numbers2 $p part_name1 $p part_name2']
+    ['245 10 $a title1 $b remainder1 $n part_numbers1 $n part_numbers2 $p part_name1 $p part_name2 $c responsibility1']
   end
 
   include_examples 'fields', '245'

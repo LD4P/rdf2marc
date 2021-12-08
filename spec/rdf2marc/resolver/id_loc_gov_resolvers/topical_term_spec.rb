@@ -42,4 +42,5 @@ RSpec.describe Rdf2marc::Resolver::IdLocGovResolvers::TopicalTerm do
   end
 
   include_examples 'resolver_mapper', described_class, '150', Rdf2marc::Models::SubjectAccessField::TopicalTerm
+  include_examples 'resolver_mapper', described_class, '180', Rdf2marc::Models::SubjectAccessField::TopicalTerm
 end

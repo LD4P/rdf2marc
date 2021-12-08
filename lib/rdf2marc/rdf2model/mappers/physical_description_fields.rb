@@ -26,14 +26,13 @@ module Rdf2marc
                                                                            RDF::RDFS.label], subject_term: extent_term)
             }
           end
-          dimensions = {
-            dimensions: item.instance.query.path_all_literal([BF.dimensions]).sort
-          }
-          if extent_physical_description.length == 1 && dimensions[:dimensions].length == 1
-            return [extent_physical_description.first.merge(dimensions)]
+          dimensions = item.instance.query.path_all_literal([BF.dimensions]).sort
+          if extent_physical_description.length == 1 && dimensions.length == 1
+            return [extent_physical_description.first.merge(dimensions: dimensions)]
           end
 
-          extent_physical_description + [dimensions]
+          extent_physical_description << { dimensions: dimensions } if dimensions.present?
+          extent_physical_description
         end
 
         def media_types

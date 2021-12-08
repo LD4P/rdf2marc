@@ -8,7 +8,6 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
 
     let(:model) do
       {
-        physical_descriptions: [{}]
       }
     end
 
@@ -89,7 +88,6 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
 
     let(:model) do
       {
-        physical_descriptions: [{}],
         media_types: [
           {
             authority_control_number_uri: 'http://id.loc.gov/vocabulary/mediaTypes/h',
@@ -120,7 +118,6 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
 
     let(:model) do
       {
-        physical_descriptions: [{}],
         carrier_types: [
           {
             authority_control_number_uri: 'http://id.loc.gov/vocabulary/carriers/nc',
@@ -151,7 +148,6 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
 
     let(:model) do
       {
-        physical_descriptions: [{}],
         content_types: [
           {
             authority_control_number_uri: 'http://id.loc.gov/vocabulary/contentTypes/sti',

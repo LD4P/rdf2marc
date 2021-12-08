@@ -2,7 +2,7 @@
 
 require 'rdf2marc/rdf2model/mappers/mappers_shared_examples'
 
-RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
+RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields, :vcr do
   context 'with minimal graph' do
     let(:ttl) { '' }
 
@@ -95,6 +95,30 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
             {
               extents: ['250 pages'],
               dimensions: ['24 cm']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
+    context 'with a single extent and illustrativeContent' do
+      let(:ttl) do
+        <<~TTL
+          <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/extent> _:b38.
+          _:b38 a <http://id.loc.gov/ontologies/bibframe/Extent>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "1 folded sheet (5 pages)"@eng.
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/illustrativeContent> <http://id.loc.gov/vocabulary/millus/ill> .
+        TTL
+      end
+
+      let(:model) do
+        {
+          physical_descriptions: [
+            {
+              extents: ['1 folded sheet (5 pages)'],
+              other_physical_details: 'Illustrations'
             }
           ]
         }

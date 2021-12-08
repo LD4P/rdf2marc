@@ -22,15 +22,11 @@ module Rdf2marc
         private
 
         def translated_titles
-          # VariantTitles where variantType='translated'
-          translated_title_terms = item.instance.query.path_all([[BF.title, BF.VariantTitle]])
-          translated_title_terms.keep_if do |title_term|
-            item.instance.query.path_all_literal([BF.variantType], subject_term: title_term).include?('translated')
-          end
-
+          translated_title_terms = item.instance.query.path_all([[BF.title, BFLC.TransliteratedTitle]])
           translated_title_terms.sort.map do |title_term|
             {
               title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
+              remainder_of_title: item.instance.query.path_first_literal([BF.subtitle], subject_term: title_term),
               part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term).sort,
               part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term).sort
             }
@@ -56,11 +52,11 @@ module Rdf2marc
         def variant_titles
           # VariantTitle and ParallelTitle
           variant_title_terms = item.instance.query.path_all([[BF.title, BF.VariantTitle]])
-          # Filter variant titles where variantType='translated' or 'former'
+          # Filter variant titles where variantType='former'
           variant_title_terms.delete_if do |title_term|
             variant_types = item.instance.query.path_all_literal([BF.variantType],
                                                                  subject_term: title_term)
-            variant_types.include?('translated') || variant_types.include?('former')
+            variant_types.include?('former')
           end
 
           parallel_title_terms = item.instance.query.path_all([[BF.title, BF.ParallelTitle]])

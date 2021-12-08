@@ -30,11 +30,11 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
   describe 'translated titles' do
     let(:ttl) do
       <<~TTL
-               <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/title> _:b41.
-        _:b41 a <http://id.loc.gov/ontologies/bibframe/VariantTitle>;
-          <http://id.loc.gov/ontologies/bibframe/mainTitle> "World of art"@eng;
-          <http://id.loc.gov/ontologies/bibframe/partName> "Selected Internet resources"@eng, "Student handbook"@eng;
-          <http://id.loc.gov/ontologies/bibframe/variantType> "translated"@eng, "acronym"@eng.
+        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/title> _:b666 .
+        _:b666 a <http://id.loc.gov/ontologies/bflc/TransliteratedTitle>;
+          <http://id.loc.gov/ontologies/bibframe/mainTitle> "Abḥathu ‘an Laylá"@ar-Latn-t-ar-m0-alaloc;
+          <http://id.loc.gov/ontologies/bibframe/subtitle> "riwāyah"@ar-Latn-t-ar-m0-alaloc;
+          <http://id.loc.gov/ontologies/bibframe/partName> "partName"@eng .
       TTL
     end
 
@@ -42,8 +42,9 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
       {
         translated_titles: [
           {
-            part_names: ['Selected Internet resources', 'Student handbook'],
-            title: 'World of art'
+            title: 'Abḥathu ‘an Laylá',
+            remainder_of_title: 'riwāyah',
+            part_names: ['partName']
           }
         ]
       }

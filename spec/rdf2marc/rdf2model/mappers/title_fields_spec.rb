@@ -57,17 +57,17 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
     # This contains an extra title, which is ignored.
     let(:ttl) do
       <<~TTL
-               <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/title> _:b43 .
-            _:b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Title> .
-        _:b43 <http://id.loc.gov/ontologies/bibframe/mainTitle> "Distribution of the principal kinds of soil"@eng .
-            _:b43 <http://id.loc.gov/ontologies/bibframe/subtitle> "orders, suborders, and great groups : National Soil Survey Classification of 1967"@eng .
-            _:b43 <http://id.loc.gov/ontologies/bibframe/partNumber> "Part one"@eng .
-            _:b43 <http://id.loc.gov/ontologies/bibframe/partNumber> "Part B"@eng .
-            _:b43 <http://id.loc.gov/ontologies/bibframe/partName> "Student handbook"@eng .
-            _:b43 <http://id.loc.gov/ontologies/bibframe/partName> "Supplement"@eng .
-            <> <http://id.loc.gov/ontologies/bibframe/title> _:b44 .
-            _:b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Title> .
-        _:b44 <http://id.loc.gov/ontologies/bibframe/mainTitle> "The royal gazette"@eng .
+        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/title> _:b43 .
+        _:b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Title>;
+          <http://id.loc.gov/ontologies/bibframe/mainTitle> "Distribution of the principal kinds of soil"@eng;
+          <http://id.loc.gov/ontologies/bibframe/subtitle> "orders, suborders, and great groups : National Soil Survey Classification of 1967"@eng;
+          <http://id.loc.gov/ontologies/bibframe/partNumber> "Part one"@eng;
+          <http://id.loc.gov/ontologies/bibframe/partNumber> "Part B"@eng;
+          <http://id.loc.gov/ontologies/bibframe/partName> "Student handbook"@eng;
+          <http://id.loc.gov/ontologies/bibframe/partName> "Supplement"@eng .
+        <> <http://id.loc.gov/ontologies/bibframe/title> _:b44 .
+        _:b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Title>;
+          <http://id.loc.gov/ontologies/bibframe/mainTitle> "The royal gazette"@eng .
       TTL
     end
 
@@ -109,16 +109,16 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
   describe 'variant titles' do
     let(:ttl) do
       <<~TTL
-               <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/title> _:b45 .
-        _:b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/ParallelTitle> .
-        _:b45 <http://id.loc.gov/ontologies/bibframe/mainTitle> "The Year book of medicine"@eng .
-        _:b45 <http://id.loc.gov/ontologies/bibframe/subtitle> "facts or fiction"@eng .
+        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/title> _:b45 .
+        _:b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/ParallelTitle>;
+          <http://id.loc.gov/ontologies/bibframe/mainTitle> "The Year book of medicine"@eng;
+          <http://id.loc.gov/ontologies/bibframe/subtitle> "facts or fiction"@eng .
         <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/title> _:b46 .
-        _:b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/VariantTitle> .
-        _:b46 <http://id.loc.gov/ontologies/bibframe/mainTitle> "World of art"@eng .
-        _:b46 <http://id.loc.gov/ontologies/bibframe/partName> "Selected Internet resources"@eng .
-        _:b46 <http://id.loc.gov/ontologies/bibframe/partName> "Student handbook"@eng .
-        _:b46 <http://id.loc.gov/ontologies/bibframe/variantType> "cover"@eng .
+        _:b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/VariantTitle>;
+          <http://id.loc.gov/ontologies/bibframe/mainTitle> "World of art"@eng;
+          <http://id.loc.gov/ontologies/bibframe/partName> "Selected Internet resources"@eng;
+          <http://id.loc.gov/ontologies/bibframe/partName> "Student handbook"@eng;
+          <http://id.loc.gov/ontologies/bibframe/variantType> "cover"@eng .
       TTL
     end
 

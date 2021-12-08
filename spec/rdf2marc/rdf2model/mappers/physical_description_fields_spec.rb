@@ -18,7 +18,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
     context 'with multiple extents' do
       let(:ttl) do
         <<~TTL
-                                    <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/extent> _:b38.
+          <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/extent> _:b38.
           _:b38 a <http://id.loc.gov/ontologies/bibframe/Extent>;
               <http://www.w3.org/2000/01/rdf-schema#label> "149 pages"@eng, "1 score (16 p.)"@eng;
               <http://id.loc.gov/ontologies/bibframe/note> _:b39.
@@ -79,7 +79,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
   describe 'media types' do
     let(:ttl) do
       <<~TTL
-                                  <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/media> <http://id.loc.gov/vocabulary/mediaTypes/n>.
+        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/media> <http://id.loc.gov/vocabulary/mediaTypes/n>.
         <http://id.loc.gov/vocabulary/mediaTypes/n> <http://www.w3.org/2000/01/rdf-schema#label> "unmediated".
         <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/media> <http://id.loc.gov/vocabulary/mediaTypes/h>.
         <http://id.loc.gov/vocabulary/mediaTypes/h> <http://www.w3.org/2000/01/rdf-schema#label> "microform".
@@ -109,7 +109,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
   describe 'carrier types' do
     let(:ttl) do
       <<~TTL
-                                  <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/carrier> <http://id.loc.gov/vocabulary/carriers/nc>.
+        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/carrier> <http://id.loc.gov/vocabulary/carriers/nc>.
         <http://id.loc.gov/vocabulary/carriers/nc> <http://www.w3.org/2000/01/rdf-schema#label> "volume".
         <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/carrier> <http://id.loc.gov/vocabulary/carriers/sg>.
         <http://id.loc.gov/vocabulary/carriers/sg> <http://www.w3.org/2000/01/rdf-schema#label> "audio cartridge".
@@ -139,7 +139,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
   describe 'content types' do
     let(:ttl) do
       <<~TTL
-                                  <#{work_term}> <http://id.loc.gov/ontologies/bibframe/content> <http://id.loc.gov/vocabulary/contentTypes/txt>.
+        <#{work_term}> <http://id.loc.gov/ontologies/bibframe/content> <http://id.loc.gov/vocabulary/contentTypes/txt>.
         <http://id.loc.gov/vocabulary/contentTypes/txt> <http://www.w3.org/2000/01/rdf-schema#label> "text".
         <#{work_term}> <http://id.loc.gov/ontologies/bibframe/content> <http://id.loc.gov/vocabulary/contentTypes/sti>.
         <http://id.loc.gov/vocabulary/contentTypes/sti> <http://www.w3.org/2000/01/rdf-schema#label> "still image".

@@ -41,4 +41,27 @@ RSpec.describe Rdf2marc::Model2marc::ControlField008 do
 
     include_examples 'fields', '008'
   end
+
+  context 'with model with illustrative_content' do
+    let(:model) do
+      {
+        control_fields: {
+          general_info: {
+            date_entered: Date.new(2020, 10, 15),
+            date1: '202x',
+            place: 'gau',
+            language: 'ace'
+          }
+        }
+      }
+    end
+
+    let(:expected_fields) { ['008 201015s202u    gaua                ace||'] }
+
+    before do
+      allow(Date).to receive(:today).and_return(Date.new(2020, 10, 1))
+    end
+
+    include_examples 'fields', '008'
+  end
 end

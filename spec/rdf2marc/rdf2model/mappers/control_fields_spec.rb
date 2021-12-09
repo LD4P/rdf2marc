@@ -39,7 +39,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
   describe 'general info place' do
     let(:ttl) do
       <<~TTL
-                  <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/provisionActivity> _:b9.
+        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/provisionActivity> _:b9.
         _:b9 a <http://id.loc.gov/ontologies/bibframe/Publication>;
             <http://id.loc.gov/ontologies/bibframe/place> <http://id.loc.gov/authorities/names/n78003886>.
         <http://id.loc.gov/authorities/names/n78003886> <http://www.w3.org/2000/01/rdf-schema#label> "Palo Alto (Miss.)".
@@ -79,7 +79,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
   describe 'general info date1' do
     let(:ttl) do
       <<~TTL
-                  <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/provisionActivity> _:b10.
+        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/provisionActivity> _:b10.
         _:b10 a <http://id.loc.gov/ontologies/bibframe/Publication>;
             <http://id.loc.gov/ontologies/bibframe/date> "2020-10-12"@eng.
       TTL
@@ -100,7 +100,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
   describe 'general info language' do
     let(:ttl) do
       <<~TTL
-                  <#{work_term}> <http://id.loc.gov/ontologies/bibframe/language> <http://id.loc.gov/vocabulary/languages/ace>.
+        <#{work_term}> <http://id.loc.gov/ontologies/bibframe/language> <http://id.loc.gov/vocabulary/languages/ace>.
         <http://id.loc.gov/vocabulary/languages/ace> <http://www.w3.org/2000/01/rdf-schema#label> "Achinese".
         <> <http://id.loc.gov/ontologies/bibframe/language> <http://id.loc.gov/vocabulary/languages/bug>.
         <http://id.loc.gov/vocabulary/languages/bug> <http://www.w3.org/2000/01/rdf-schema#label> "Bugis".
@@ -111,6 +111,25 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
       {
         general_info: {
           language: 'ace',
+          place: 'xx'
+        }
+      }
+    end
+
+    include_examples 'mapper', described_class
+  end
+
+  describe 'general info book illustrative content' do
+    let(:ttl) do
+      <<~TTL
+        <#{work_term}> <http://id.loc.gov/ontologies/bibframe/illustrativeContent> <http://id.loc.gov/vocabulary/millus/ill> .
+      TTL
+    end
+
+    let(:model) do
+      {
+        general_info: {
+          book_illustrative_content: 'Illustrations',
           place: 'xx'
         }
       }

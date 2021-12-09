@@ -12,7 +12,8 @@ module Rdf2marc
               place: place,
               date_entered: date_entered,
               date1: item.instance.query.path_first_literal([[BF.provisionActivity, BF.Publication], [BF.date]]),
-              language: language
+              language: language,
+              book_illustrative_content: book_illustrative_content
             }
           }
         end
@@ -50,6 +51,14 @@ module Rdf2marc
           return nil if language_uri.nil? || !language_uri.start_with?(%r{https?://id.loc.gov/vocabulary/languages/})
 
           language_uri.sub(%r{^https?://id.loc.gov/vocabulary/languages/}, '')
+        end
+
+        def book_illustrative_content
+          illustrative_content_uri = item.instance.query.path_first_uri([BF.illustrativeContent]) ||
+                                     item.work.query.path_first_uri([BF.illustrativeContent])
+          return nil if illustrative_content_uri.blank?
+
+          LiteralOrRemoteResolver.resolve_label(term: illustrative_content_uri, item: item)
         end
       end
     end

@@ -18,22 +18,29 @@ module Rdf2marc
 
         def physical_descriptions
           extent_terms = item.instance.query.path_all([[BF.extent, BF.Extent]])
-          extent_physical_description = extent_terms.sort.map do |extent_term|
+
+          # can have multiple illustrativeContent, but only using one
+          illustrative_content_uri = item.instance.query.path_first_uri([BF.illustrativeContent]) ||
+                                     item.work.query.path_first_uri([BF.illustrativeContent])
+          if illustrative_content_uri
+            other_physical_details = LiteralOrRemoteResolver.resolve_label(term: illustrative_content_uri, item: item)
+          end
+          extent_physical_descriptions = extent_terms.sort.map do |extent_term|
             {
               extents: item.instance.query.path_all_literal([RDF::RDFS.label], subject_term: extent_term).sort,
               # Can be multiple notes, but only using one.
               materials_specified: item.instance.query.path_first_literal([[BF.note, BF.Note],
-                                                                           RDF::RDFS.label], subject_term: extent_term)
+                                                                           RDF::RDFS.label], subject_term: extent_term),
+              other_physical_details: other_physical_details
             }
           end
-          dimensions = {
-            dimensions: item.instance.query.path_all_literal([BF.dimensions]).sort
-          }
-          if extent_physical_description.length == 1 && dimensions[:dimensions].length == 1
-            return [extent_physical_description.first.merge(dimensions)]
+          dimensions = item.instance.query.path_all_literal([BF.dimensions]).sort
+          if extent_physical_descriptions.length == 1 && dimensions.length == 1
+            return [extent_physical_descriptions.first.merge(dimensions: dimensions)]
           end
 
-          extent_physical_description + [dimensions]
+          extent_physical_descriptions << { dimensions: dimensions } if dimensions.present?
+          extent_physical_descriptions
         end
 
         def media_types

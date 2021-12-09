@@ -9,6 +9,7 @@ module Rdf2marc
         attribute? :date1, Types::String
         attribute? :place, Types::String.default('xx').constrained(min_size: 2, max_size: 3)
         attribute? :language, Types::String
+        attribute? :book_illustrative_content, Types::String
       end
     end
   end

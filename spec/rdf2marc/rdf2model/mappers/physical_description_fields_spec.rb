@@ -2,13 +2,12 @@
 
 require 'rdf2marc/rdf2model/mappers/mappers_shared_examples'
 
-RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
+RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields, :vcr do
   context 'with minimal graph' do
     let(:ttl) { '' }
 
     let(:model) do
       {
-        physical_descriptions: [{}]
       }
     end
 
@@ -19,7 +18,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
     context 'with multiple extents' do
       let(:ttl) do
         <<~TTL
-                                    <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/extent> _:b38.
+          <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/extent> _:b38.
           _:b38 a <http://id.loc.gov/ontologies/bibframe/Extent>;
               <http://www.w3.org/2000/01/rdf-schema#label> "149 pages"@eng, "1 score (16 p.)"@eng;
               <http://id.loc.gov/ontologies/bibframe/note> _:b39.
@@ -52,6 +51,34 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
       include_examples 'mapper', described_class
     end
 
+    context 'with a single extent and multiple dimensions' do
+      let(:ttl) do
+        <<~TTL
+          <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/extent> _:b40.
+          _:b40 a <http://id.loc.gov/ontologies/bibframe/Extent>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "1 sound disc (20 min.)"@eng.
+          <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/dimensions> "10 x 27 cm"@eng ;
+            <http://id.loc.gov/ontologies/bibframe/dimensions> "7 1/4 x 3 1/2 in."@eng ;
+            <http://id.loc.gov/ontologies/bibframe/dimensions> "1/4 in. tape"@eng.
+        TTL
+      end
+
+      let(:model) do
+        {
+          physical_descriptions: [
+            {
+              extents: ['1 sound disc (20 min.)']
+            },
+            {
+              dimensions: ['1/4 in. tape', '10 x 27 cm', '7 1/4 x 3 1/2 in.']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
     context 'with a single extent and a single dimension' do
       let(:ttl) do
         <<~TTL
@@ -75,12 +102,36 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
 
       include_examples 'mapper', described_class
     end
+
+    context 'with a single extent and illustrativeContent' do
+      let(:ttl) do
+        <<~TTL
+          <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/extent> _:b38.
+          _:b38 a <http://id.loc.gov/ontologies/bibframe/Extent>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "1 folded sheet (5 pages)"@eng.
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/illustrativeContent> <http://id.loc.gov/vocabulary/millus/ill> .
+        TTL
+      end
+
+      let(:model) do
+        {
+          physical_descriptions: [
+            {
+              extents: ['1 folded sheet (5 pages)'],
+              other_physical_details: 'Illustrations'
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
   end
 
   describe 'media types' do
     let(:ttl) do
       <<~TTL
-                                  <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/media> <http://id.loc.gov/vocabulary/mediaTypes/n>.
+        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/media> <http://id.loc.gov/vocabulary/mediaTypes/n>.
         <http://id.loc.gov/vocabulary/mediaTypes/n> <http://www.w3.org/2000/01/rdf-schema#label> "unmediated".
         <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/media> <http://id.loc.gov/vocabulary/mediaTypes/h>.
         <http://id.loc.gov/vocabulary/mediaTypes/h> <http://www.w3.org/2000/01/rdf-schema#label> "microform".
@@ -89,7 +140,6 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
 
     let(:model) do
       {
-        physical_descriptions: [{}],
         media_types: [
           {
             authority_control_number_uri: 'http://id.loc.gov/vocabulary/mediaTypes/h',
@@ -111,7 +161,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
   describe 'carrier types' do
     let(:ttl) do
       <<~TTL
-                                  <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/carrier> <http://id.loc.gov/vocabulary/carriers/nc>.
+        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/carrier> <http://id.loc.gov/vocabulary/carriers/nc>.
         <http://id.loc.gov/vocabulary/carriers/nc> <http://www.w3.org/2000/01/rdf-schema#label> "volume".
         <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/carrier> <http://id.loc.gov/vocabulary/carriers/sg>.
         <http://id.loc.gov/vocabulary/carriers/sg> <http://www.w3.org/2000/01/rdf-schema#label> "audio cartridge".
@@ -120,7 +170,6 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
 
     let(:model) do
       {
-        physical_descriptions: [{}],
         carrier_types: [
           {
             authority_control_number_uri: 'http://id.loc.gov/vocabulary/carriers/nc',
@@ -142,7 +191,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
   describe 'content types' do
     let(:ttl) do
       <<~TTL
-                                  <#{work_term}> <http://id.loc.gov/ontologies/bibframe/content> <http://id.loc.gov/vocabulary/contentTypes/txt>.
+        <#{work_term}> <http://id.loc.gov/ontologies/bibframe/content> <http://id.loc.gov/vocabulary/contentTypes/txt>.
         <http://id.loc.gov/vocabulary/contentTypes/txt> <http://www.w3.org/2000/01/rdf-schema#label> "text".
         <#{work_term}> <http://id.loc.gov/ontologies/bibframe/content> <http://id.loc.gov/vocabulary/contentTypes/sti>.
         <http://id.loc.gov/vocabulary/contentTypes/sti> <http://www.w3.org/2000/01/rdf-schema#label> "still image".
@@ -151,7 +200,6 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields do
 
     let(:model) do
       {
-        physical_descriptions: [{}],
         content_types: [
           {
             authority_control_number_uri: 'http://id.loc.gov/vocabulary/contentTypes/sti',

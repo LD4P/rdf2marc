@@ -19,6 +19,8 @@ module Rdf2marc
           field_value[6..14] = '|||||||||'
         end
         field_value[15..17] = model.place
+        # Book Illustrative Context
+        field_value[18] = 'a' if model.book_illustrative_content.present?
         # Language
         field_value[35..37] = model.language[0..2] if model.language
         # Modified record

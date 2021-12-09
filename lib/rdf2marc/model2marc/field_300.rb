@@ -10,6 +10,7 @@ module Rdf2marc
 
       def build
         append_repeatable('a', model.extents)
+        append('b', model.other_physical_details)
         append_repeatable('c', model.dimensions)
         append('3', model.materials_specified)
       end

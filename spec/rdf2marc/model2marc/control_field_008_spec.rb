@@ -50,7 +50,8 @@ RSpec.describe Rdf2marc::Model2marc::ControlField008 do
             date_entered: Date.new(2020, 10, 15),
             date1: '202x',
             place: 'gau',
-            language: 'ace'
+            language: 'ace',
+            book_illustrative_content: 'Illustrations'
           }
         }
       }

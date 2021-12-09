@@ -13,9 +13,10 @@ module Rdf2marc
         field.indicator2 = model.nonfile_characters.to_s
         append('a', model.title)
         append('b', model.remainder_of_title)
-        append('c', model.statement_of_responsibility)
+        # Subfields n and p should come before c.
         append_repeatable('n', model.part_numbers)
         append_repeatable('p', model.part_names)
+        append('c', model.statement_of_responsibility)
       end
     end
   end

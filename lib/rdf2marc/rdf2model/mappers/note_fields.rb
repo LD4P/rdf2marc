@@ -9,11 +9,16 @@ module Rdf2marc
           notes = general_notes
           notes << provision_activity_statement if provision_activity_statement
           {
-            general_notes: notes
+            general_notes: notes,
+            table_of_contents: table_of_contents
           }
         end
 
         private
+
+        def table_of_contents
+          item.work.query.path_all_literal([[BF.tableOfContents, BF.TableOfContents], RDF::RDFS.label])
+        end
 
         def general_notes
           notes = item.instance.query.path_all_literal([[BF.note, BF.Note], RDF::RDFS.label]) +

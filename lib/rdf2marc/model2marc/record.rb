@@ -38,6 +38,8 @@ module Rdf2marc
           add_repeating_field(Field338, record_model.physical_description_fields.carrier_types, marc_record)
           add_repeating_field(Field490, record_model.series_statement_fields.series_statements, marc_record)
           add_repeating_field(Field500, record_model.note_fields.general_notes, marc_record)
+          add_repeating_field(Field505, record_model.note_fields.table_of_contents, marc_record)
+
           add_repeating_field(Field600, record_model.subject_access_fields.personal_names, marc_record)
           add_repeating_field(Field610, record_model.subject_access_fields.corporate_names, marc_record)
           add_repeating_field(Field611, record_model.subject_access_fields.meeting_names, marc_record)

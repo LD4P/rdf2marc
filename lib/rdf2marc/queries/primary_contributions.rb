@@ -9,11 +9,13 @@ module Rdf2marc
         @path = [[BF.contribution, BFLC.PrimaryContribution]]
       end
 
-      # First we look for a b-node with RDF::RDFV.value (for backward compatability)
-      # otherwise we look for a resource that we can resolve.
+      # First look for a b-node with RDF::RDFV.value (for backward compatability)
+      # otherwise look for a resource that we can resolve.
+      # otherwise look for a literal
       def first_with_type(*agent_types)
         first_legacy_contribution_with_type(agent_types) ||
-          first_resource_contribution_with_type(agent_types)
+          first_resource_contribution_with_type(agent_types) ||
+          first_literal_contribution_with_type(agent_types)
       end
 
       private
@@ -32,6 +34,13 @@ module Rdf2marc
       def first_legacy_contribution_with_type(agent_types)
         agent_types.find do |agent_type|
           result = path_all(path + [[BF.agent, agent_type], [RDF::RDFV.value]]).sort
+          return result.first if result.present?
+        end
+      end
+
+      def first_literal_contribution_with_type(agent_types)
+        agent_types.find do |agent_type|
+          result = path_all(path + [[BF.agent, agent_type], [RDF::RDFS.label]]).sort
           return result.first if result.present?
         end
       end

@@ -77,7 +77,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
           _:b7 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b8.
           _:b8 a <http://id.loc.gov/ontologies/bibframe/Person>;
-              <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Jung, Carl", "Kennedy Family".
+              <http://www.w3.org/2000/01/rdf-schema#label> "Jung, Carl", "Kennedy Family".
         TTL
       end
 

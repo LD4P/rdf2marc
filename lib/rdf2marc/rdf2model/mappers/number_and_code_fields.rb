@@ -110,7 +110,7 @@ module Rdf2marc
             Resolver.resolve_geographic_area_code(gac_uri)
           end
           {
-            geographic_area_codes: gacs.sort
+            geographic_area_codes: gacs.compact.sort
           }
         end
 

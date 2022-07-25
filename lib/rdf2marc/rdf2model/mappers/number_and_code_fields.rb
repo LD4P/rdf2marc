@@ -77,7 +77,8 @@ module Rdf2marc
         end
 
         def agency
-          agency_uri = item.admin_metadata.query.path_first_uri([BF.source])
+          agency_uri = item.admin_metadata.query.path_first_uri([[BF.assigner, BF.Agent]]) ||
+                       item.admin_metadata.query.path_first_uri([BF.source])
 
           return if agency_uri.nil?
 

@@ -81,7 +81,7 @@ module Rdf2marc
 
           return if agency_uri.nil?
 
-          agency_uri.sub(%r{^https?://id.loc.gov/vocabulary/organizations/}, '')
+          Resolver::CulturalHeritageInstitution.resolve_code(agency_uri)
         end
 
         def cataloging_language
@@ -94,7 +94,7 @@ module Rdf2marc
 
         def modifying_agencies
           item.admin_metadata.query.path_all_uri([BF.descriptionModifier]).sort.map do |agency_uri|
-            agency_uri.sub(%r{^https?://id.loc.gov/vocabulary/organizations/}, '')
+            Resolver::CulturalHeritageInstitution.resolve_code(agency_uri)
           end
         end
 

@@ -5500,4 +5500,559 @@ http_interactions:
         "@value": "United States" } ], "http://www.w3.org/2004/02/skos/core#prefLabel": [ { "@language": "en",
         "@value": "United States" } ] } ]
   recorded_at: Tue, 07 Sep 2021 21:58:10 GMT
-recorded_with: VCR 6.0.0
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/organizations/cst.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.2.8
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, text/html;q=0.5,
+        application/xhtml+xml;q=0.7, image/svg+xml;q=0.4, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Mon, 25 Jul 2022 21:58:55 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Mon, 25 Jul 2022 22:58:55 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/organizations/cst.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 730828e748118292-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Mon, 25 Jul 2022 21:58:55 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/organizations/cst.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.2.8
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, text/html;q=0.5,
+        application/xhtml+xml;q=0.7, image/svg+xml;q=0.4, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 25 Jul 2022 21:58:55 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel, X-PrefLabel-Escaped, X-PrefLabel-Encoded
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Stanford University
+      X-Preflabel-Escaped:
+      - Stanford University
+      X-Preflabel-Encoded:
+      - Stanford%20University
+      X-Uri:
+      - http://id.loc.gov/vocabulary/organizations/cst
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 60002023 59968787
+      Age:
+      - '5229'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 730828e7aa309c5a-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#prefLabel> "Stanford University" .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/csth> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/csthc> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/cstes> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/cstbu> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/cstlaw> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/cstmus> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/cstv> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/csttc> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/cstl> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#notation> "CSt"^^<http://id.loc.gov/datatypes/orgs/code> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#notation> "cst"^^<http://id.loc.gov/datatypes/orgs/normalized> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#notation> "US-cst"^^<http://id.loc.gov/datatypes/orgs/iso15511> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/organizations> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#changeNote> _:b23iddOtlocdOtgovvocabularyorganizationscst .
+        _:b23iddOtlocdOtgovvocabularyorganizationscst <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b23iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/organizations/cst> .
+        _:b23iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> .
+        _:b23iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#createdDate> "1975-09-12T00:00:00.000-04:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b23iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#changeReason> "new"@en .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#changeNote> _:b31iddOtlocdOtgovvocabularyorganizationscst .
+        _:b31iddOtlocdOtgovvocabularyorganizationscst <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b31iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/organizations/cst> .
+        _:b31iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> .
+        _:b31iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#createdDate> "2015-04-07T09:13:26.000-04:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b31iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#changeReason> "modified"@en .
+  recorded_at: Mon, 25 Jul 2022 21:58:55 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/organizations/cst.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.2.8
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, text/html;q=0.5,
+        application/xhtml+xml;q=0.7, image/svg+xml;q=0.4, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Mon, 25 Jul 2022 21:58:56 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Mon, 25 Jul 2022 22:58:56 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/organizations/cst.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 730828e819746fd7-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Mon, 25 Jul 2022 21:58:55 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/organizations/cst.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.2.8
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, text/html;q=0.5,
+        application/xhtml+xml;q=0.7, image/svg+xml;q=0.4, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 25 Jul 2022 21:58:56 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel, X-PrefLabel-Escaped, X-PrefLabel-Encoded
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Stanford University
+      X-Preflabel-Escaped:
+      - Stanford University
+      X-Preflabel-Encoded:
+      - Stanford%20University
+      X-Uri:
+      - http://id.loc.gov/vocabulary/organizations/cst
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 59369383 59968787
+      Age:
+      - '5229'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 730828e88e76823f-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#prefLabel> "Stanford University" .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/csth> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/csthc> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/cstes> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/cstbu> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/cstlaw> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/cstmus> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/cstv> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/csttc> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/organizations/cstl> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#notation> "CSt"^^<http://id.loc.gov/datatypes/orgs/code> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#notation> "cst"^^<http://id.loc.gov/datatypes/orgs/normalized> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#notation> "US-cst"^^<http://id.loc.gov/datatypes/orgs/iso15511> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/organizations> .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#changeNote> _:b23iddOtlocdOtgovvocabularyorganizationscst .
+        _:b23iddOtlocdOtgovvocabularyorganizationscst <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b23iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/organizations/cst> .
+        _:b23iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> .
+        _:b23iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#createdDate> "1975-09-12T00:00:00.000-04:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b23iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#changeReason> "new"@en .
+        <http://id.loc.gov/vocabulary/organizations/cst> <http://www.w3.org/2004/02/skos/core#changeNote> _:b31iddOtlocdOtgovvocabularyorganizationscst .
+        _:b31iddOtlocdOtgovvocabularyorganizationscst <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b31iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/organizations/cst> .
+        _:b31iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> .
+        _:b31iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#createdDate> "2015-04-07T09:13:26.000-04:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b31iddOtlocdOtgovvocabularyorganizationscst <http://purl.org/vocab/changeset/schema#changeReason> "modified"@en .
+  recorded_at: Mon, 25 Jul 2022 21:58:55 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/organizations/ma.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.2.8
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, text/html;q=0.5,
+        application/xhtml+xml;q=0.7, image/svg+xml;q=0.4, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Mon, 25 Jul 2022 21:58:56 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Mon, 25 Jul 2022 22:58:56 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/organizations/ma.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 730828e8ee489c34-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Mon, 25 Jul 2022 21:58:55 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/organizations/ma.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.2.8
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, text/html;q=0.5,
+        application/xhtml+xml;q=0.7, image/svg+xml;q=0.4, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 25 Jul 2022 21:58:56 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel, X-PrefLabel-Escaped, X-PrefLabel-Encoded
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Amherst College
+      X-Preflabel-Escaped:
+      - Amherst College
+      X-Preflabel-Encoded:
+      - Amherst%20College
+      X-Uri:
+      - http://id.loc.gov/vocabulary/organizations/ma
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 60556527 60153882
+      Age:
+      - '3604'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 730828e96b737fed-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/organizations/ma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/organizations/ma> <http://www.w3.org/2004/02/skos/core#prefLabel> "Amherst College" .
+        <http://id.loc.gov/vocabulary/organizations/ma> <http://www.w3.org/2004/02/skos/core#notation> "MA"^^<http://id.loc.gov/datatypes/orgs/code> .
+        <http://id.loc.gov/vocabulary/organizations/ma> <http://www.w3.org/2004/02/skos/core#notation> "ma"^^<http://id.loc.gov/datatypes/orgs/normalized> .
+        <http://id.loc.gov/vocabulary/organizations/ma> <http://www.w3.org/2004/02/skos/core#notation> "US-ma"^^<http://id.loc.gov/datatypes/orgs/iso15511> .
+        <http://id.loc.gov/vocabulary/organizations/ma> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/organizations> .
+        <http://id.loc.gov/vocabulary/organizations/ma> <http://www.w3.org/2004/02/skos/core#changeNote> _:b14iddOtlocdOtgovvocabularyorganizationsma .
+        _:b14iddOtlocdOtgovvocabularyorganizationsma <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b14iddOtlocdOtgovvocabularyorganizationsma <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/organizations/ma> .
+        _:b14iddOtlocdOtgovvocabularyorganizationsma <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> .
+        _:b14iddOtlocdOtgovvocabularyorganizationsma <http://purl.org/vocab/changeset/schema#createdDate> "1975-10-06T00:00:00.000-04:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b14iddOtlocdOtgovvocabularyorganizationsma <http://purl.org/vocab/changeset/schema#changeReason> "new"@en .
+        <http://id.loc.gov/vocabulary/organizations/ma> <http://www.w3.org/2004/02/skos/core#changeNote> _:b22iddOtlocdOtgovvocabularyorganizationsma .
+        _:b22iddOtlocdOtgovvocabularyorganizationsma <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b22iddOtlocdOtgovvocabularyorganizationsma <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/organizations/ma> .
+        _:b22iddOtlocdOtgovvocabularyorganizationsma <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> .
+        _:b22iddOtlocdOtgovvocabularyorganizationsma <http://purl.org/vocab/changeset/schema#createdDate> "2015-04-07T09:13:26.000-04:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b22iddOtlocdOtgovvocabularyorganizationsma <http://purl.org/vocab/changeset/schema#changeReason> "modified"@en .
+  recorded_at: Mon, 25 Jul 2022 21:58:56 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/organizations/njrnl.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.2.8
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, text/html;q=0.5,
+        application/xhtml+xml;q=0.7, image/svg+xml;q=0.4, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Mon, 25 Jul 2022 21:58:56 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Mon, 25 Jul 2022 22:58:56 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/organizations/njrnl.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 730828e9bf35e09e-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Mon, 25 Jul 2022 21:58:56 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/organizations/njrnl.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.2.8
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        text/plain;q=0.2, application/n-quads, text/x-nquads;q=0.2, text/html;q=0.5,
+        application/xhtml+xml;q=0.7, image/svg+xml;q=0.4, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 25 Jul 2022 21:58:56 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel, X-PrefLabel-Escaped, X-PrefLabel-Encoded
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Rutgers, The State University of New Jersey, Law School, Library
+      X-Preflabel-Escaped:
+      - Rutgers, The State University of New Jersey, Law School, Library
+      X-Preflabel-Encoded:
+      - Rutgers%2C%20The%20State%20University%20of%20New%20Jersey%2C%20Law%20School%2C%20Library
+      X-Uri:
+      - http://id.loc.gov/vocabulary/organizations/njrnl
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 59841623 59969955
+      Age:
+      - '3604'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 730828ea4b1d5836-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/organizations/njrnl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/organizations/njrnl> <http://www.w3.org/2004/02/skos/core#prefLabel> "Rutgers, The State University of New Jersey, Law School, Library" .
+        <http://id.loc.gov/vocabulary/organizations/njrnl> <http://www.w3.org/2004/02/skos/core#broader> <http://id.loc.gov/vocabulary/organizations/njr> .
+        <http://id.loc.gov/vocabulary/organizations/njrnl> <http://www.w3.org/2004/02/skos/core#notation> "NjR-NL"^^<http://id.loc.gov/datatypes/orgs/code> .
+        <http://id.loc.gov/vocabulary/organizations/njrnl> <http://www.w3.org/2004/02/skos/core#notation> "njrnl"^^<http://id.loc.gov/datatypes/orgs/normalized> .
+        <http://id.loc.gov/vocabulary/organizations/njrnl> <http://www.w3.org/2004/02/skos/core#notation> "US-njrnl"^^<http://id.loc.gov/datatypes/orgs/iso15511> .
+        <http://id.loc.gov/vocabulary/organizations/njrnl> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/organizations> .
+        <http://id.loc.gov/vocabulary/organizations/njrnl> <http://www.w3.org/2004/02/skos/core#changeNote> _:b15iddOtlocdOtgovvocabularyorganizationsnjrnl .
+        _:b15iddOtlocdOtgovvocabularyorganizationsnjrnl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b15iddOtlocdOtgovvocabularyorganizationsnjrnl <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/organizations/njrnl> .
+        _:b15iddOtlocdOtgovvocabularyorganizationsnjrnl <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> .
+        _:b15iddOtlocdOtgovvocabularyorganizationsnjrnl <http://purl.org/vocab/changeset/schema#createdDate> "1980-02-28T00:00:00.000-04:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b15iddOtlocdOtgovvocabularyorganizationsnjrnl <http://purl.org/vocab/changeset/schema#changeReason> "new"@en .
+        <http://id.loc.gov/vocabulary/organizations/njrnl> <http://www.w3.org/2004/02/skos/core#changeNote> _:b23iddOtlocdOtgovvocabularyorganizationsnjrnl .
+        _:b23iddOtlocdOtgovvocabularyorganizationsnjrnl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b23iddOtlocdOtgovvocabularyorganizationsnjrnl <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/organizations/njrnl> .
+        _:b23iddOtlocdOtgovvocabularyorganizationsnjrnl <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> .
+        _:b23iddOtlocdOtgovvocabularyorganizationsnjrnl <http://purl.org/vocab/changeset/schema#createdDate> "2015-04-07T09:13:26.000-04:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b23iddOtlocdOtgovvocabularyorganizationsnjrnl <http://purl.org/vocab/changeset/schema#changeReason> "modified"@en .
+  recorded_at: Mon, 25 Jul 2022 21:58:56 GMT
+recorded_with: VCR 6.1.0

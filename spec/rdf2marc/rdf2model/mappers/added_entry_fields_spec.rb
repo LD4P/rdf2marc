@@ -293,6 +293,31 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::AddedEntryFields, :vcr do
 
       include_examples 'mapper', described_class
     end
+
+    context 'when mapping from multiple BF.Person and BF.Family literals with multiple classes' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b22.
+          _:b22 a <http://id.loc.gov/ontologies/bibframe/Contribution>;
+            <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/n85370390>.
+          <http://id.loc.gov/authorities/names/n85370390> a <http://id.loc.gov/ontologies/bibframe/Agent>, <http://id.loc.gov/ontologies/bibframe/Person>;
+          <http://www.w3.org/2000/01/rdf-schema#label> "Smith, Douglas Alton"@en.
+        TTL
+      end
+
+      let(:model) do
+        { personal_names: [
+          {
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/n85370390'],
+            thesaurus: 'lcsh',
+            personal_name: 'Smith, Douglas Alton',
+            type: 'surname'
+          }
+        ] }
+      end
+
+      include_examples 'mapper', described_class
+    end
   end
 
   describe 'added corporate names' do

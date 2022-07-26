@@ -13,7 +13,7 @@ module Rdf2marc
       def self.lookup_country_from_geoarea(code)
         code = code.chomp('---') # handle codes like e-gx---
         graph = RDF::Graph.load("https://id.loc.gov/vocabulary/geographicAreas/#{code}")
-        result = graph.query(predicate: RDF::URI('http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority'))
+        result = graph.query({ predicate: RDF::URI('http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority') })
         place = result.map(&:object).map(&:value).first
         return UNKNOWN unless place
 

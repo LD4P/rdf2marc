@@ -13,7 +13,7 @@ module Rdf2marc
         attr_reader :uri, :graph
 
         def title
-          graph.query(subject: RDF::URI(uri), predicate: SKOS.prefLabel).map(&:object).map(&:to_s).first
+          graph.query({ subject: RDF::URI(uri), predicate: SKOS.prefLabel }).map(&:object).map(&:to_s).first
         end
       end
     end

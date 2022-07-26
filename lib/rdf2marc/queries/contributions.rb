@@ -52,9 +52,13 @@ module Rdf2marc
         return if contributor_terms.blank?
 
         contributor_terms.map do |contrib_term|
-          contributor_type = path_first([[RDF.type]], subject_term: contrib_term)
-          agent_types.flatten.include?(contributor_type) ? contrib_term : nil
+          contributor_types = path_all([[RDF.type]], subject_term: contrib_term)
+          intersect?(agent_types.flatten, contributor_types) ? contrib_term : nil
         end.compact
+      end
+
+      def intersect?(array1, array2)
+        array1.intersection(array2).present?
       end
 
       # @return [Array] the "legacy" format contributor objects that correspond to the desired agent_types

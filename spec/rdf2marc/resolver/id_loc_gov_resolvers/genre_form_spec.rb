@@ -23,7 +23,7 @@ RSpec.describe Rdf2marc::Resolver::IdLocGovResolvers::GenreForm do
   end
   let(:model) do
     {
-      thesaurus: 'lcsh',
+      thesaurus: 'subfield2',
       genre_form_data: 'Horror films',
       form_subdivisions: %w[Periodicals Newspapers],
       general_subdivisions: ['Salaries, etc.', 'Buddhism, [Christianity, etc.]'],

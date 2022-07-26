@@ -298,13 +298,13 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
         {
           genre_forms: [
             {
-              thesaurus: 'lcsh',
+              thesaurus: 'subfield2',
               genre_form_data: 'Diaries',
               term_source: 'lcgft',
               authority_record_control_numbers: ['http://id.loc.gov/authorities/genreForms/gf2014026085']
             },
             {
-              thesaurus: 'lcsh',
+              thesaurus: 'subfield2',
               genre_form_data: 'Rosaries (Prayer books)',
               term_source: 'lcgft',
               authority_record_control_numbers: ['http://id.loc.gov/authorities/genreForms/gf2015026083']

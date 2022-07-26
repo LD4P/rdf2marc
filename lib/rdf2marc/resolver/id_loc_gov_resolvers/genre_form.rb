@@ -8,7 +8,7 @@ module Rdf2marc
         def map
           field = marc_record['155']
           {
-            thesaurus: 'lcsh',
+            thesaurus: 'subfield2',
             genre_form_data: subfield_value(field, 'a'),
             form_subdivisions: subfield_values(field, 'v'),
             general_subdivisions: subfield_values(field, 'x'),

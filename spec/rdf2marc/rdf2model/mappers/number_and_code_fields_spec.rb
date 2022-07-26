@@ -122,8 +122,8 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::NumberAndCodeFields, :vcr do
       {
         lccn: {},
         cataloging_source: {
-          cataloging_agency: 'cst',
-          transcribing_agency: 'cst'
+          cataloging_agency: 'CSt',
+          transcribing_agency: 'CSt'
         },
         geographic_area_code: {}
       }
@@ -146,7 +146,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::NumberAndCodeFields, :vcr do
       {
         lccn: {},
         cataloging_source: {
-          modifying_agencies: %w[ma njrnl]
+          modifying_agencies: %w[MA NjR-NL]
         },
         geographic_area_code: {}
       }

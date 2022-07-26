@@ -16,6 +16,9 @@ The mapping is based on Library of Congress's [BIBFRAME 2.0 to MARC 21 Conversio
 
 When the RDF references an external resource, rdf2marc will attempt to resolve that resource and extract data for populating the model.
 
+## Ruby version
+As [specified in the AWS lambda](https://github.com/sul-dlss/terraform-aws/blob/main/organizations/production/sinopia/sinopia-marc-lambda.tf#L70), rdf2marc used Ruby 2.7.
+
 ## Usage
 Mapping to the model:
 ```
@@ -63,4 +66,4 @@ Rdf2marc::Cache.configure(Rdf2marc::Caches::S3Cache.new('rdf2marc-development'))
 ## Current limitations
 * Only some fields are mapped.
 * Optimized for `ld4p:RT:bf2:*`resource templates, with a focus on Monographs.
-* Only `id.loc.gov` external resources are resolved.
+* Only `id.loc.gov` and FAST external resources are resolved.

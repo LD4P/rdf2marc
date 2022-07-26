@@ -6,7 +6,7 @@ module Rdf2marc
     class FastResolver
       def resolve_type(uri)
         graph = RDF::Graph.load(uri)
-        type_for(graph.query(subject: RDF::URI(uri), predicate: RDF::RDFV.type).map(&:object).first)
+        type_for(graph.query({ subject: RDF::URI(uri), predicate: RDF::RDFV.type }).map(&:object).first)
       end
 
       def resolve_model(uri, model_class)

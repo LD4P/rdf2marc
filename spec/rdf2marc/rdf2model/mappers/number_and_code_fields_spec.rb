@@ -108,7 +108,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::NumberAndCodeFields, :vcr do
     include_examples 'mapper', described_class
   end
 
-  describe 'cataloging source agency' do
+  describe 'legacy cataloging source agency' do
     let(:ttl) do
       <<~TTL
                                   <#{admin_metadata_term}> <http://id.loc.gov/ontologies/bibframe/source> <http://id.loc.gov/vocabulary/organizations/cst>.
@@ -124,6 +124,29 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::NumberAndCodeFields, :vcr do
         cataloging_source: {
           cataloging_agency: 'CSt',
           transcribing_agency: 'CSt'
+        },
+        geographic_area_code: {}
+      }
+    end
+
+    include_examples 'mapper', described_class
+  end
+
+  describe 'cataloging source agency' do
+    let(:ttl) do
+      <<~TTL
+        <#{admin_metadata_term}> <http://id.loc.gov/ontologies/bibframe/assigner> <http://id.loc.gov/vocabulary/organizations/cst>.
+        <http://id.loc.gov/vocabulary/organizations/cst> a <http://id.loc.gov/ontologies/bibframe/Agent>;
+        <http://www.w3.org/2000/01/rdf-schema#label> "Stanford University"@en.#{'                                  '}
+      TTL
+    end
+
+    let(:model) do
+      {
+        lccn: {},
+        cataloging_source: {
+          cataloging_agency: 'cst',
+          transcribing_agency: 'cst'
         },
         geographic_area_code: {}
       }

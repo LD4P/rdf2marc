@@ -59,7 +59,8 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
       <<~TTL
         <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/title> _:b43 .
         _:b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Title>;
-          <http://id.loc.gov/ontologies/bibframe/mainTitle> "Distribution of the principal kinds of soil"@eng;
+          <http://id.loc.gov/ontologies/bibframe/mainTitle> "The distribution of the principal kinds of soil"@eng;
+          <http://sinopia.io/vocabulary/bf/nonfiling> 4;
           <http://id.loc.gov/ontologies/bibframe/subtitle> "orders, suborders, and great groups : National Soil Survey Classification of 1967"@eng;
           <http://id.loc.gov/ontologies/bibframe/partNumber> "Part one"@eng;
           <http://id.loc.gov/ontologies/bibframe/partNumber> "Part B"@eng;
@@ -76,10 +77,11 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
         {
           title_statement: {
             added_entry: 'added',
+            nonfile_characters: 4,
             part_names: ['Student handbook', 'Supplement'],
             part_numbers: ['Part B', 'Part one'],
             remainder_of_title: 'orders, suborders, and great groups : National Soil Survey Classification of 1967',
-            title: 'Distribution of the principal kinds of soil'
+            title: 'The distribution of the principal kinds of soil'
           }
         }
       end
@@ -94,10 +96,11 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
         {
           title_statement: {
             added_entry: 'no_added',
+            nonfile_characters: 4,
             part_names: ['Student handbook', 'Supplement'],
             part_numbers: ['Part B', 'Part one'],
             remainder_of_title: 'orders, suborders, and great groups : National Soil Survey Classification of 1967',
-            title: 'Distribution of the principal kinds of soil'
+            title: 'The distribution of the principal kinds of soil'
           }
         }
       end

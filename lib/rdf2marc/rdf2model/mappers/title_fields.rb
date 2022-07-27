@@ -40,6 +40,8 @@ module Rdf2marc
 
           {
             added_entry: has_100_field ? 'added' : 'no_added',
+            nonfile_characters: item.instance.query.path_first_literal([SINOPIA['bf/nonfiling']],
+                                                                       subject_term: title_term)&.to_i,
             title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
             remainder_of_title: item.instance.query.path_first_literal([BF.subtitle], subject_term: title_term),
             # May be multiple bf.responsibilityStatement, but only using one.

@@ -6,7 +6,7 @@ module Rdf2marc
       # Mapper for geographic names.
       class GeographicName < BaseMapper
         def map
-          field = marc_record['151']
+          field = marc_record['151'] || marc_record['181']
           {
             thesaurus: 'lcsh',
             geographic_name: subfield_value(field, 'a'),

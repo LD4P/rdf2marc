@@ -29,7 +29,7 @@ RSpec.describe Rdf2marc::Model2marc::Field710 do
             issn: 'issn1',
             authority_record_control_numbers: %w[control_number1 control_number2],
             uris: %w[uri1 uri2],
-            heading_source: 'heading_source1',
+            source: 'source1',
             materials_specified: 'materials_specified',
             relationships: %w[relationship1 relationship2],
             linkage: 'linkage1',
@@ -46,7 +46,7 @@ RSpec.describe Rdf2marc::Model2marc::Field710 do
 
   let(:expected_fields) do
     [
-      '710 2  $a corporate_name1 $b subordinate_unit1 $b subordinate_unit2 $c meeting_location1 $c meeting_location2 $d meeting_date1 $d meeting_date2 $e relator_term1 $e relator_term2 $f work_date1 $g misc_info1 $g misc_info2 $h version1 $h version2 $i info1 $i info2 $k form_subheading1 $k form_subheading2 $l work_language1 $m medium1 $m medium2 $n part_number1 $n part_number2 $o statement1 $p part_name1 $p part_name2 $r music_key $s medium1 $t work_title1 $u affiliation1 $x issn1 $0 control_number1 $0 control_number2 $1 uri1 $1 uri2 $2 heading_source1 $3 materials_specified $4 relationship1 $4 relationship2 $6 linkage1 $8 field_link1 $8 field_link2',
+      '710 2  $a corporate_name1 $b subordinate_unit1 $b subordinate_unit2 $c meeting_location1 $c meeting_location2 $d meeting_date1 $d meeting_date2 $e relator_term1 $e relator_term2 $f work_date1 $g misc_info1 $g misc_info2 $h version1 $h version2 $i info1 $i info2 $k form_subheading1 $k form_subheading2 $l work_language1 $m medium1 $m medium2 $n part_number1 $n part_number2 $o statement1 $p part_name1 $p part_name2 $r music_key $s medium1 $t work_title1 $u affiliation1 $x issn1 $0 control_number1 $0 control_number2 $1 uri1 $1 uri2 $2 source1 $3 materials_specified $4 relationship1 $4 relationship2 $6 linkage1 $8 field_link1 $8 field_link2',
       '710 0  $a corporate_name2'
     ]
   end

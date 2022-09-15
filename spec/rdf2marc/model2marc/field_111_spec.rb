@@ -21,7 +21,7 @@ RSpec.describe Rdf2marc::Model2marc::Field111 do
           affiliation: 'affiliation1',
           authority_record_control_numbers: %w[control_number1 control_number2],
           uris: %w[uri1 uri2],
-          heading_source: 'heading_source1',
+          source: 'source1',
           relationships: %w[relationship1 relationship2],
           linkage: 'linkage1',
           field_links: %w[field_link1 field_link2]
@@ -30,7 +30,7 @@ RSpec.describe Rdf2marc::Model2marc::Field111 do
     }
   end
 
-  let(:expected_fields) { ['111 2  $a meeting_name1 $c meeting_location1 $c meeting_location2 $d meeting_date1 $d meeting_date2 $e subordinate_unit1 $e subordinate_unit2 $f work_date1 $g misc_info1 $g misc_info2 $j relator_term1 $j relator_term2 $k form_subheading1 $k form_subheading2 $l work_language1 $n part_number1 $n part_number2 $p part_name1 $p part_name2 $t work_title1 $u affiliation1 $0 control_number1 $0 control_number2 $1 uri1 $1 uri2 $2 heading_source1 $4 relationship1 $4 relationship2 $6 linkage1 $8 field_link1 $8 field_link2'] }
+  let(:expected_fields) { ['111 2  $a meeting_name1 $c meeting_location1 $c meeting_location2 $d meeting_date1 $d meeting_date2 $e subordinate_unit1 $e subordinate_unit2 $f work_date1 $g misc_info1 $g misc_info2 $j relator_term1 $j relator_term2 $k form_subheading1 $k form_subheading2 $l work_language1 $n part_number1 $n part_number2 $p part_name1 $p part_name2 $t work_title1 $u affiliation1 $0 control_number1 $0 control_number2 $1 uri1 $1 uri2 $2 source1 $4 relationship1 $4 relationship2 $6 linkage1 $8 field_link1 $8 field_link2'] }
 
   include_examples 'fields', '111'
 end

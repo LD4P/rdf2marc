@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'rdf2marc/resolver/id_loc_gov_resolvers/resolvers_shared_examples'
+require 'rdf2marc/resolver/marc_mappers/resolvers_shared_examples'
 
-RSpec.describe Rdf2marc::Resolver::IdLocGovResolvers::MeetingName do
+RSpec.describe Rdf2marc::Resolver::MarcMappers::MeetingName do
   let(:uri) { 'http://id.loc.gov/authorities/names/no2008005541' }
 
   let(:subfields) do
@@ -52,7 +52,6 @@ RSpec.describe Rdf2marc::Resolver::IdLocGovResolvers::MeetingName do
   let(:model) do
     {
       type: 'direct',
-      thesaurus: 'lcsh',
       meeting_name: 'International Bigfoot Symposium',
       meeting_locations: ['Rome, Italy', 'Waco'],
       meeting_dates: ['1950', '1682 Apr. 20'],

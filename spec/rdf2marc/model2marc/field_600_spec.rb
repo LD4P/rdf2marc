@@ -28,7 +28,7 @@ RSpec.describe Rdf2marc::Model2marc::Field600 do
             affiliation: 'affiliation1',
             authority_record_control_numbers: %w[control_number1 control_number2],
             uris: %w[uri1 uri2],
-            heading_source: 'heading_source1',
+            source: 'source1',
             materials_specified: 'materials_specified',
             relationships: %w[relationship1 relationship2],
             form_subdivisions: %w[form_subdivision1 form_subdivision2],
@@ -49,7 +49,7 @@ RSpec.describe Rdf2marc::Model2marc::Field600 do
 
   let(:expected_fields) do
     [
-      '600 1  $a personal_name1 $b numeration1 $c title_and_word01 $c title_and_word2 $d dates1 $e relator_term1 $e relator_term2 $f work_date1 $g misc_info1 $g misc_info2 $h version1 $h version2 $j qualifier1 $j qualifier2 $k form_subheading1 $k form_subheading2 $l work_language1 $m medium1 $m medium2 $n part_number1 $n part_number2 $o statement1 $p part_name1 $p part_name2 $q fuller_form1 $r music_key $t work_title1 $u affiliation1 $v form_subdivision1 $v form_subdivision2 $x general_subdivision1 $x general_subdivision2 $y chronological_subdivision1 $y chronological_subdivision2 $z geographic_subdivision1 $z geographic_subdivision2 $0 control_number1 $0 control_number2 $1 uri1 $1 uri2 $2 heading_source1 $3 materials_specified $4 relationship1 $4 relationship2 $6 linkage1 $8 field_link1 $8 field_link2',
+      '600 1  $a personal_name1 $b numeration1 $c title_and_word01 $c title_and_word2 $d dates1 $e relator_term1 $e relator_term2 $f work_date1 $g misc_info1 $g misc_info2 $h version1 $h version2 $j qualifier1 $j qualifier2 $k form_subheading1 $k form_subheading2 $l work_language1 $m medium1 $m medium2 $n part_number1 $n part_number2 $o statement1 $p part_name1 $p part_name2 $q fuller_form1 $r music_key $t work_title1 $u affiliation1 $v form_subdivision1 $v form_subdivision2 $x general_subdivision1 $x general_subdivision2 $y chronological_subdivision1 $y chronological_subdivision2 $z geographic_subdivision1 $z geographic_subdivision2 $0 control_number1 $0 control_number2 $1 uri1 $1 uri2 $2 source1 $3 materials_specified $4 relationship1 $4 relationship2 $6 linkage1 $8 field_link1 $8 field_link2',
       '600 0  $a personal_name2'
     ]
   end

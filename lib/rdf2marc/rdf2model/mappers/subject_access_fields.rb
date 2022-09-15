@@ -11,7 +11,7 @@ module Rdf2marc
             personal_names: [],
             corporate_names: [],
             meeting_names: [],
-            geographic_names: [],
+            geographic_names: fast_places,
             event_names: [],
             topical_terms: [],
             genre_forms: genre_forms
@@ -69,6 +69,13 @@ module Rdf2marc
             else
               Resolver.resolve_model(genre_form_term&.value, Models::SubjectAccessField::GenreForm)
             end
+          end
+        end
+
+        def fast_places
+          provision_activity_uris = item.instance.query.path_all_uri([BF.provisionActivity, BF.place])
+          provision_activity_uris.select { |uri| Resolver.fast?(uri) }.sort.map do |provision_activity_uri|
+            Resolver.resolve_model(provision_activity_uri, Models::SubjectAccessField::GeographicName)
           end
         end
       end

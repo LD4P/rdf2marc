@@ -42,6 +42,19 @@ module Rdf2marc
       resolver_class.new.resolve_gac(uri)
     end
 
+    def self.resolve_country_code(uri)
+      return nil if uri.nil?
+
+      resolver_class = resolver_class_for(uri)
+
+      if resolver_class.nil? || !resolver_class.method_defined?('resolve_country_code')
+        Logger.warn("Resolving country code for #{uri} not supported.")
+        return nil
+      end
+
+      resolver_class.new.resolve_country_code(uri)
+    end
+
     # personal_name, family_name, corporate_name, meeting_name, uniform_title, named_event,
     # chronological_term, topical_term, geographic_name
     def self.resolve_type(uri)
@@ -57,10 +70,18 @@ module Rdf2marc
       resolver_class.new.resolve_type(uri)
     end
 
+    def self.fast?(uri)
+      uri.start_with?('http://id.worldcat.org/fast')
+    end
+
+    def self.id_loc_gov?(uri)
+      uri.start_with?(%r{https?://id.loc.gov/(authorities|vocabulary)})
+    end
+
     def self.resolver_class_for(uri)
       # Additional resolvers can be added here.
-      return Resolver::IdLocGovResolver if uri.start_with?(%r{https?://id.loc.gov/(authorities|vocabulary)})
-      return Resolver::FastResolver if uri.start_with?('http://id.worldcat.org/fast')
+      return Resolver::IdLocGovResolver if id_loc_gov?(uri)
+      return Resolver::FastResolver if fast?(uri)
 
       nil
     end

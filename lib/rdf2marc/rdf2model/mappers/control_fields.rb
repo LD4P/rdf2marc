@@ -21,11 +21,10 @@ module Rdf2marc
         private
 
         def place
-          place_uri = item.instance.query.path_first_uri([[BF.provisionActivity, BF.Publication], BF.place])
-          # Look up the MARC record for this place and return the marc geographicAreas code (e.g.: an-cn-on).
-          code = Resolver.resolve_geographic_area_code(place_uri)
+          place_uris = item.instance.query.path_all_uri([[BF.provisionActivity, BF.Publication], BF.place])
+          place_uri = place_uris.find { |uri| Resolver.id_loc_gov?(uri) }
 
-          Resolver::CountryCode.resolve_from_geographic_area_code(code)
+          Resolver.resolve_country_code(place_uri) || 'xx'
         end
 
         def latest_transaction

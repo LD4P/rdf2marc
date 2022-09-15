@@ -26,7 +26,7 @@ module Rdf2marc
         append('u', model.affiliation)
         append_repeatable('0', model.authority_record_control_numbers)
         append_repeatable('1', model.uris)
-        append('2', model.heading_source)
+        append('2', model.source)
         append_repeatable('4', model.relationships)
         append('6', model.linkage)
         append_repeatable('8', model.field_links)

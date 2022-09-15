@@ -143,6 +143,32 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
 
       include_examples 'mapper', described_class
     end
+
+    context 'when loading from FAST from a BF.place' do
+      let(:ttl) do
+        <<~TTL
+                      <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/provisionActivity> _:b6.
+          _:b6 a <http://id.loc.gov/ontologies/bibframe/Publication>;
+            <http://id.loc.gov/ontologies/bibframe/place> <http://id.worldcat.org/fast/1204487>.
+        TTL
+      end
+
+      let(:model) do
+        {
+          geographic_names: [
+            {
+              thesaurus: 'subfield2',
+              source: 'fast',
+              geographic_name: 'Ontario',
+              geographic_subdivisions: ['London'],
+              authority_record_control_numbers: ['http://id.worldcat.org/fast/1204487']
+            }
+          ]
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
   end
 
   describe 'event names' do
@@ -160,8 +186,9 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
             {
               thesaurus: 'subfield2',
               source: 'fast',
-              name: 'World War (1939-1945)--Sounds',
-              uris: ['http://id.worldcat.org/fast/1181267']
+              name: 'World War (1939-1945)',
+              general_subdivisions: ['Sounds'],
+              authority_record_control_numbers: ['http://id.worldcat.org/fast/1181267']
             }
           ]
         }
@@ -247,7 +274,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
           topical_terms: [
             {
               thesaurus: 'subfield2',
-              heading_source: 'fast',
+              source: 'fast',
               topical_term_or_geo_name: 'Medicine, Medieval',
               authority_record_control_numbers: ['http://id.worldcat.org/fast/1015277']
             }
@@ -300,13 +327,13 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::SubjectAccessFields, :vcr do
             {
               thesaurus: 'subfield2',
               genre_form_data: 'Diaries',
-              term_source: 'lcgft',
+              source: 'lcgft',
               authority_record_control_numbers: ['http://id.loc.gov/authorities/genreForms/gf2014026085']
             },
             {
               thesaurus: 'subfield2',
               genre_form_data: 'Rosaries (Prayer books)',
-              term_source: 'lcgft',
+              source: 'lcgft',
               authority_record_control_numbers: ['http://id.loc.gov/authorities/genreForms/gf2015026083']
             }
           ]

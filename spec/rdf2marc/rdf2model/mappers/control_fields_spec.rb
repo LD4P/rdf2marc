@@ -41,15 +41,15 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
       <<~TTL
         <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/provisionActivity> _:b9.
         _:b9 a <http://id.loc.gov/ontologies/bibframe/Publication>;
-            <http://id.loc.gov/ontologies/bibframe/place> <http://id.loc.gov/authorities/names/n78003886>.
-        <http://id.loc.gov/authorities/names/n78003886> <http://www.w3.org/2000/01/rdf-schema#label> "Palo Alto (Miss.)".
+            <http://id.loc.gov/ontologies/bibframe/place> <http://id.loc.gov/vocabulary/countries/ae>.
+        <http://id.loc.gov/vocabulary/countries/ae> <http://www.w3.org/2000/01/rdf-schema#label> "Algeria".
       TTL
     end
 
     let(:model) do
       {
         general_info: {
-          place: 'msu'
+          place: 'ae'
         }
       }
     end

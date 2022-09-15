@@ -2,8 +2,8 @@
 
 module Rdf2marc
   module Resolver
-    module IdLocGovResolvers
-      # Base class for Mappers.
+    module MarcMappers
+      # Base class for MARC Mappers.
       class BaseMapper
         def initialize(uri, marc_record)
           @marc_record = marc_record

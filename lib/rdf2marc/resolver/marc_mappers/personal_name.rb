@@ -2,41 +2,42 @@
 
 module Rdf2marc
   module Resolver
-    module IdLocGovResolvers
-      # Mapper for meeting names.
-      class MeetingName < BaseMapper
+    module MarcMappers
+      # Mapper for personal names.
+      class PersonalName < BaseMapper
         def map
-          field = marc_record['111']
+          field = marc_record['100']
           {
-            type: name_type_for(field.indicator1),
-            thesaurus: 'lcsh',
-            meeting_name: subfield_value(field, 'a', clean: true),
-            meeting_locations: subfield_values(field, 'c', clean: true),
-            meeting_dates: subfield_values(field, 'd', clean: true),
-            subordinate_units: subfield_values(field, 'e'),
+            type: personal_name_type_for(field.indicator1),
+            personal_name: subfield_value(field, 'a', clean: true),
+            numeration: field['b'],
+            title_and_words: subfield_values(field, 'c'),
+            dates: field['d'],
+            relator_terms: subfield_values(field, 'e'),
             work_date: field['f'],
             misc_infos: subfield_values(field, 'g'),
             medium: field['h'],
-            # No relationship_info: subfield_values(field, 'i')
-            relator_terms: subfield_values(field, 'j'),
+            attribution_qualifiers: subfield_values(field, 'j'),
             form_subheadings: subfield_values(field, 'k'),
             work_language: field['l'],
-            part_numbers: subfield_values(field, 'n', clean: true),
+            music_performance_mediums: subfield_values(field, 'm'),
+            part_numbers: subfield_values(field, 'n'),
+            music_arranged_statement: field['o'],
             part_names: subfield_values(field, 'p'),
-            following_meeting_name: field['q'],
+            fuller_form: field['q'],
+            music_key: field['r'],
             versions: subfield_values(field, 's'),
             work_title: field['t'],
             # No affiliation: field['u'],
             form_subdivisions: subfield_values(field, 'v'),
             general_subdivisions: subfield_values(field, 'x'),
-            # No issn field['x']
             chronological_subdivisions: subfield_values(field, 'y'),
             geographic_subdivisions: subfield_values(field, 'z'),
             authority_record_control_numbers: [uri],
             # No uri: field['1'],
-            # No heading_source: field['2'],
+            # No source: field['2'],
             # No materials_specified: field['3'],
-            # No relationshipa: subfield_values(field, '4'),
+            # No relationships: subfield_values(field, '4'),
             linkage: field['6'],
             field_links: subfield_values(field, '8')
           }
@@ -44,15 +45,14 @@ module Rdf2marc
 
         private
 
-        def name_type_for(indicator1)
+        def personal_name_type_for(indicator1)
           case indicator1
           when '0'
-            'inverted'
+            'forename'
           when '1'
-            'jurisdiction'
-          when '2'
-            'direct'
-          else ' '
+            'surname'
+          else
+            'family_name'
           end
         end
       end

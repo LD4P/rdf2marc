@@ -14,7 +14,7 @@ RSpec.describe Rdf2marc::Model2marc::Field655 do
             geographic_subdivisions: %w[geographic_subdivision1 geographic_subdivision2],
             authority_record_control_numbers: %w[control_number1 control_number2],
             uris: %w[uri1 uri2],
-            term_source: 'heading_source1',
+            source: 'source1',
             materials_specified: 'materials_specified1',
             applies_to_institution: 'institution1',
             linkage: 'linkage1',
@@ -31,7 +31,7 @@ RSpec.describe Rdf2marc::Model2marc::Field655 do
 
   let(:expected_fields) do
     [
-      '655  4 $a genre_form_data1 $v form_subdivision1 $v form_subdivision2 $x general_subdivision1 $x general_subdivision2 $y chronological_subdivision1 $y chronological_subdivision2 $z geographic_subdivision1 $z geographic_subdivision2 $0 control_number1 $0 control_number2 $1 uri1 $1 uri2 $2 heading_source1 $3 materials_specified1 $5 institution1 $6 linkage1 $8 field_link1 $8 field_link2',
+      '655  4 $a genre_form_data1 $v form_subdivision1 $v form_subdivision2 $x general_subdivision1 $x general_subdivision2 $y chronological_subdivision1 $y chronological_subdivision2 $z geographic_subdivision1 $z geographic_subdivision2 $0 control_number1 $0 control_number2 $1 uri1 $1 uri2 $2 source1 $3 materials_specified1 $5 institution1 $6 linkage1 $8 field_link1 $8 field_link2',
       '655  0 $a genre_form_data1'
     ]
   end

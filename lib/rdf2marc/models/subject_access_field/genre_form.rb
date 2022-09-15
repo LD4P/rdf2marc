@@ -13,7 +13,7 @@ module Rdf2marc
         attribute? :geographic_subdivisions, Types::Array.of(Types::String)
         attribute? :authority_record_control_numbers, Types::Array.of(Types::String)
         attribute? :uris, Types::Array.of(Types::String)
-        attribute? :term_source, Types::String
+        attribute? :source, Types::String
         attribute? :materials_specified, Types::String
         attribute? :applies_to_institution, Types::String
         attribute? :linkage, Types::String

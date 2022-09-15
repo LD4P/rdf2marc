@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'rdf2marc/resolver/id_loc_gov_resolvers/resolvers_shared_examples'
+require 'rdf2marc/resolver/marc_mappers/resolvers_shared_examples'
 
-RSpec.describe Rdf2marc::Resolver::IdLocGovResolvers::TopicalTerm do
+RSpec.describe Rdf2marc::Resolver::MarcMappers::TopicalTerm do
   let(:uri) { 'http://id.loc.gov/authorities/subjects/sh85061211' }
 
   let(:subfields) do
@@ -27,7 +27,6 @@ RSpec.describe Rdf2marc::Resolver::IdLocGovResolvers::TopicalTerm do
 
   let(:model) do
     {
-      thesaurus: 'lcsh',
       topical_term_or_geo_name: 'Historiography',
       topical_term_following_geo_name: 'Lincoln Memorial',
       misc_infos: %w[Bodenkunde Politik],

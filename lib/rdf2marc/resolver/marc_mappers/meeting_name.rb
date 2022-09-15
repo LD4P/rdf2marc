@@ -2,41 +2,40 @@
 
 module Rdf2marc
   module Resolver
-    module IdLocGovResolvers
-      # Mapper for corporate names.
-      class CorporateName < BaseMapper
+    module MarcMappers
+      # Mapper for meeting names.
+      class MeetingName < BaseMapper
         def map
-          field = marc_record['110']
+          field = marc_record['111']
           {
             type: name_type_for(field.indicator1),
-            thesaurus: 'lcsh',
-            corporate_name: subfield_value(field, 'a', clean: true),
-            subordinate_units: subfield_values(field, 'b'),
-            meeting_locations: subfield_values(field, 'c'),
-            meeting_dates: subfield_values(field, 'd'),
-            relator_terms: subfield_values(field, 'e'),
+            meeting_name: subfield_value(field, 'a', clean: true),
+            meeting_locations: subfield_values(field, 'c', clean: true),
+            meeting_dates: subfield_values(field, 'd', clean: true),
+            subordinate_units: subfield_values(field, 'e'),
             work_date: field['f'],
             misc_infos: subfield_values(field, 'g'),
             medium: field['h'],
+            # No relationship_info: subfield_values(field, 'i')
+            relator_terms: subfield_values(field, 'j'),
             form_subheadings: subfield_values(field, 'k'),
             work_language: field['l'],
-            music_performance_mediums: subfield_values(field, 'm'),
-            part_numbers: subfield_values(field, 'n'),
-            music_arranged_statement: field['o'],
+            part_numbers: subfield_values(field, 'n', clean: true),
             part_names: subfield_values(field, 'p'),
-            music_key: field['r'],
+            following_meeting_name: field['q'],
             versions: subfield_values(field, 's'),
             work_title: field['t'],
             # No affiliation: field['u'],
             form_subdivisions: subfield_values(field, 'v'),
             general_subdivisions: subfield_values(field, 'x'),
+            # No issn field['x']
             chronological_subdivisions: subfield_values(field, 'y'),
             geographic_subdivisions: subfield_values(field, 'z'),
             authority_record_control_numbers: [uri],
             # No uri: field['1'],
-            # No heading_source: field['2'],
+            # No source: field['2'],
             # No materials_specified: field['3'],
-            # No relationship: subfield_values(field, '4'),
+            # No relationshipa: subfield_values(field, '4'),
             linkage: field['6'],
             field_links: subfield_values(field, '8')
           }

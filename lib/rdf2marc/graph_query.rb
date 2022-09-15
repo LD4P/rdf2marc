@@ -7,6 +7,7 @@ module Rdf2marc
   BFLC = RDF::Vocabulary.new('http://id.loc.gov/ontologies/bflc/')
   SKOS = RDF::Vocabulary.new('http://www.w3.org/2004/02/skos/core#')
   MADS = RDF::Vocabulary.new('http://www.loc.gov/mads/rdf/v1#')
+  FAST = RDF::Vocabulary.new('http://id.worldcat.org/fast/ontology/1.0/#')
   # Queries graph using graph patterns.
   class GraphQuery
     def initialize(graph, default_subject_term: nil)

@@ -37,23 +37,13 @@ module Rdf2marc
           terms.map do |term|
             {
               entity_function: entity_function,
-              publication_distribution_places: publication_distributions_places(term),
-              publisher_distributor_names: publication_distributions_names(term),
-              publication_distribution_dates: item.instance.query.path_all_literal([BF.date], subject_term: term)
+              publication_distribution_places: item.instance.query.path_all_literal([BFLC.simplePlace],
+                                                                                    subject_term: term),
+              publisher_distributor_names: item.instance.query.path_all_literal([BFLC.simpleAgent],
+                                                                                subject_term: term),
+              publication_distribution_dates: item.instance.query.path_all_literal([BFLC.simpleDate],
+                                                                                   subject_term: term)
             }
-          end
-        end
-
-        def publication_distributions_places(subject_term)
-          item.instance.query.path_all([BF.place], subject_term: subject_term).map do |place_term|
-            LiteralOrRemoteResolver.resolve_label(term: place_term, item: item)
-          end
-        end
-
-        def publication_distributions_names(subject_term)
-          item.instance.query.path_all([[BF.agent, BF.Agent]],
-                                       subject_term: subject_term).map do |agent_term|
-            LiteralOrRemoteResolver.resolve_label(term: agent_term, item: item)
           end
         end
       end

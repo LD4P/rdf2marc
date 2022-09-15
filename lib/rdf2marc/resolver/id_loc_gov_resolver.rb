@@ -14,7 +14,8 @@ module Rdf2marc
 
         expect_type(uri, EXPECTED_TYPES.fetch(model_class))
         marc_record = get_marc(uri)
-        mapper_class.new(uri, marc_record).map
+        model = mapper_class.new(uri, marc_record).map
+        adapt(model, mapper_class)
       end
 
       def resolve_gac(uri)
@@ -29,16 +30,20 @@ module Rdf2marc
         marc_record['043']['a']
       end
 
+      def resolve_country_code(uri)
+        query = query_for_skos(uri)
+        query.path_first_literal([SKOS.notation])
+      end
+
       def resolve_label(uri)
-        graph = RDF::Graph.load("#{uri}.skos.nt")
-        query = GraphQuery.new(graph)
-        query.path_first_literal([SKOS.prefLabel], subject_term: RDF::URI.new(uri))
+        query = query_for_skos(uri)
+        query.path_first_literal([SKOS.prefLabel])
       end
 
       def resolve_type(uri)
         graph = RDF::Graph.load("#{uri}.madsrdf.nt")
         query = GraphQuery.new(graph)
-        mads_uris = query.path_all_uri([RDF::RDFV.type], subject_term: RDF::URI.new(uri))
+        mads_uris = query.path_all_uri([RDF::RDFV.type], subject_term: RDF::URI(uri))
         return resolve_complex_type(uri, query) if mads_uris.include?('http://www.loc.gov/mads/rdf/v1#ComplexSubject')
 
         mads_uris.map { |mad_uri| type_for(mad_uri) }.compact.first
@@ -78,7 +83,7 @@ module Rdf2marc
       end
 
       def mapper_class_for(model_class)
-        "Rdf2marc::Resolver::IdLocGovResolvers::#{model_class.name.demodulize}".constantize
+        "Rdf2marc::Resolver::MarcMappers::#{model_class.name.demodulize}".constantize
       end
 
       EXPECTED_TYPES = {
@@ -89,6 +94,25 @@ module Rdf2marc
         Rdf2marc::Models::SubjectAccessField::GenreForm => ['genre_form'],
         Rdf2marc::Models::SubjectAccessField::TopicalTerm => ['topic']
       }.freeze
+
+      # Adapt a generic mapping to id.loc.gov.
+      def adapt(model, mapper_class)
+        if mapper_class == Rdf2marc::Resolver::MarcMappers::GenreForm
+          return model.merge(
+            thesaurus: 'subfield2',
+            source: 'lcgft'
+          )
+        end
+
+        model.merge({
+                      thesaurus: 'lcsh'
+                    })
+      end
+
+      def query_for_skos(uri)
+        graph = RDF::Graph.load("#{uri}.skos.nt")
+        GraphQuery.new(graph, default_subject_term: RDF::URI(uri))
+      end
     end
   end
 end

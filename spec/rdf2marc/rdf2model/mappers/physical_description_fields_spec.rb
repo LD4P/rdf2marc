@@ -7,8 +7,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::PhysicalDescriptionFields, :vcr do
     let(:ttl) { '' }
 
     let(:model) do
-      {
-      }
+      {}
     end
 
     include_examples 'mapper', described_class

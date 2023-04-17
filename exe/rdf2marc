@@ -19,7 +19,7 @@ record_model = if ARGV.length == 1 && ARGV[0].start_with?('http')
                end
 
 marc_record = Rdf2marc::Model2marc::Record.new(record_model)
-puts marc_record.to_s
+puts marc_record
 writer = MARC::Writer.new('record.mar')
 writer.write(marc_record.marc_record)
 writer.close

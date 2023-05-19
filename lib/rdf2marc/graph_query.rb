@@ -80,7 +80,7 @@ module Rdf2marc
     def to_literal(term)
       return nil if term.nil?
 
-      raise MappingError, "Not a literal: #{term.value}" unless term.is_a?(RDF::Literal)
+      raise MappingError, "Not a literal: #{term}" unless term.is_a?(RDF::Literal)
 
       term.value
     end
@@ -88,7 +88,7 @@ module Rdf2marc
     def to_uri(term)
       return nil if term.nil?
 
-      raise MappingError, "Not a URI: #{term.value}" unless term.is_a?(RDF::URI)
+      raise MappingError, "Not a URI: #{term}" unless term.is_a?(RDF::URI)
 
       term.value
     end

@@ -34,7 +34,7 @@ GEM
       rexml
     diff-lcs (1.5.0)
     docile (1.4.0)
-    dry-core (1.0.1)
+    dry-core (1.0.0)
       concurrent-ruby (~> 1.0)
       zeitwerk (~> 2.6)
     dry-inflector (1.0.0)
@@ -221,12 +221,10 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    zeitwerk (2.6.11)
+    zeitwerk (2.6.10)
 
 PLATFORMS
   ruby
-  x86_64-darwin-19
-  x86_64-linux
 
 DEPENDENCIES
   activesupport
@@ -250,7 +248,7 @@ DEPENDENCIES
   sparql
   vcr
   webmock
-  zeitwerk
+  zeitwerk (<= 2.6.10)
 
 BUNDLED WITH
-   2.4.13
+   2.1.4

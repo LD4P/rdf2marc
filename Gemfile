@@ -14,7 +14,7 @@ gem 'json-ld'
 gem 'marc'
 gem 'rdf-rdfxml'
 gem 'sparql'
-gem 'zeitwerk'
+gem 'zeitwerk', '<=2.6.10' # 2.6.11 requires ruby 3
 
 group :development, :test do
   gem 'pry-byebug'

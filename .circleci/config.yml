@@ -1,9 +1,9 @@
 version: 2.1
 orbs:
-  ruby: circleci/ruby@1.1.4
+  ruby: circleci/ruby@2.1.0
   aws-cli: circleci/aws-cli@2.0
 references:
-  default_ruby_version: &default_ruby_version "2.7"
+  default_ruby_version: &default_ruby_version "3.2"
   ruby_envs: &ruby_envs
     environment:
       BUNDLE_JOBS: 3

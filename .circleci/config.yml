@@ -3,6 +3,7 @@ orbs:
   ruby: circleci/ruby@2.1.0
   aws-cli: circleci/aws-cli@2.0
 references:
+  # if you change the default ruby version, update the references in the "build_lambda" run task below
   default_ruby_version: &default_ruby_version "3.2"
   ruby_envs: &ruby_envs
     environment:
@@ -106,9 +107,9 @@ jobs:
           name: Build layer zip
           command: |
             mkdir -p tmp/ruby/gems
-            cp -r vendor/bundle/ruby/2.7.0 tmp/ruby/gems
+            cp -r vendor/bundle/ruby/3.2.0 tmp/ruby/gems
             cd tmp
-            zip -r layer.zip ruby/gems/2.7.0/
+            zip -r layer.zip ruby/gems/3.2.0/
             cd ..
             mv tmp/layer.zip .
       - run:

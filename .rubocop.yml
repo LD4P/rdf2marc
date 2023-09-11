@@ -34,9 +34,10 @@ Metrics/MethodLength:
 Metrics/PerceivedComplexity:
   Enabled: false
 
-RSpec/FilePath:
+RSpec/SpecFilePathFormat:
   Exclude:
     - 'spec/rdf2marc/model2marc/*field_*_spec.rb'
+
 RSpec/MultipleMemoizedHelpers:
   Max: 10
 

@@ -6,7 +6,7 @@ AllCops:
 Layout/LineLength:
   Max: 120
   Exclude:
-    - 'spec/rdf2marc/model2marc/*field_*_spec.rb'
+    - 'spec/rdf2marc/model2marc/*field*_spec.rb'
 
 Lint/UnusedMethodArgument:
   Exclude:
@@ -34,9 +34,10 @@ Metrics/MethodLength:
 Metrics/PerceivedComplexity:
   Enabled: false
 
-RSpec/SpecFilePathFormat:
-  Exclude:
-    - 'spec/rdf2marc/model2marc/*field_*_spec.rb'
+RSpec/SpecFilePathFormat: # new in 2.24
+  Enabled: true
+RSpec/SpecFilePathSuffix: # new in 2.24
+  Enabled: true
 
 RSpec/MultipleMemoizedHelpers:
   Max: 10

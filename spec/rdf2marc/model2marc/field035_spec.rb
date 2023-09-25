@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe Rdf2marc::Model2marc::Field040 do
+RSpec.describe Rdf2marc::Model2marc::Field035 do
   let(:model) do
     {
       number_and_code_fields: {

@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.1.1)
+    activesupport (7.1.2)
       base64
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -15,7 +15,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.845.0)
+    aws-partitions (1.848.0)
     aws-sdk-core (3.186.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
@@ -30,7 +30,7 @@ GEM
       aws-sigv4 (~> 1.6)
     aws-sigv4 (1.6.1)
       aws-eventstream (~> 1, >= 1.0.2)
-    base64 (0.1.1)
+    base64 (0.2.0)
     bcp47_spec (0.2.1)
     bigdecimal (3.1.4)
     builder (3.2.4)
@@ -42,7 +42,7 @@ GEM
       rexml
     diff-lcs (1.5.0)
     docile (1.4.0)
-    drb (2.1.1)
+    drb (2.2.0)
       ruby2_keywords
     dry-core (1.0.1)
       concurrent-ruby (~> 1.0)
@@ -115,7 +115,7 @@ GEM
       rdf (~> 3.3)
     language_server-protocol (3.17.0.3)
     link_header (0.0.8)
-    logger (1.5.3)
+    logger (1.6.0)
     marc (1.2.0)
       rexml
       scrub_rb (>= 1.0.1, < 2)
@@ -125,7 +125,7 @@ GEM
     minitest (5.20.0)
     multi_json (1.15.0)
     multipart-post (2.3.0)
-    mutex_m (0.1.2)
+    mutex_m (0.2.0)
     net-http-persistent (4.0.2)
       connection_pool (~> 2.2)
     parallel (1.23.0)
@@ -225,7 +225,7 @@ GEM
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.8.2)
+    unf_ext (0.0.9)
     unicode-display_width (2.5.0)
     unicode-types (1.9.0)
     vcr (6.2.0)

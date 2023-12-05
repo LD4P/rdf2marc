@@ -56,7 +56,7 @@ module Rdf2marc
                           else
                             [path_part, nil]
                           end
-        obj = "var#{index + 1}".to_sym
+        obj = "var#{index + 1}".to_sym # rubocop:disable Lint/SymbolConversion
         patterns << RDF::Query::Pattern.new(subj, predicate, obj)
         patterns << RDF::Query::Pattern.new(obj,  RDF.type, type) if type
         subj = obj

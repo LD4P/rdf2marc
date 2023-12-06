@@ -7,10 +7,10 @@ module Rdf2marc
       class Leader < BaseMapper
         def generate
           {
-            type: type,
-            bibliographic_level: bibliographic_level,
-            encoding_level: encoding_level,
-            cataloging_form: cataloging_form
+            type:,
+            bibliographic_level:,
+            encoding_level:,
+            cataloging_form:
           }
         end
 

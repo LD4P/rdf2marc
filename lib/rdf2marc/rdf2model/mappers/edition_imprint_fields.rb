@@ -7,8 +7,8 @@ module Rdf2marc
       class EditionImprintFields < BaseMapper
         def generate
           {
-            editions: editions,
-            publication_distributions: publication_distributions
+            editions:,
+            publication_distributions:
           }
         end
 
@@ -36,7 +36,7 @@ module Rdf2marc
         def publication_distributions_for(terms, entity_function)
           terms.map do |term|
             {
-              entity_function: entity_function,
+              entity_function:,
               publication_distribution_places: item.instance.query.path_all_literal([BFLC.simplePlace],
                                                                                     subject_term: term),
               publisher_distributor_names: item.instance.query.path_all_literal([BFLC.simpleAgent],

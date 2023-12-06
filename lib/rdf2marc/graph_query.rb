@@ -16,30 +16,30 @@ module Rdf2marc
     end
 
     def path_first(path, subject_term: default_subject_term)
-      patterns, subj = patterns_for_path(path, subject_term: subject_term)
+      patterns, subj = patterns_for_path(path, subject_term:)
       query_first(patterns, subj)
     end
 
     def path_first_literal(path, subject_term: default_subject_term)
-      to_literal(path_first(path, subject_term: subject_term))
+      to_literal(path_first(path, subject_term:))
     end
 
     def path_first_uri(path, subject_term: default_subject_term)
-      to_uri(path_first(path, subject_term: subject_term))
+      to_uri(path_first(path, subject_term:))
     end
 
     def path_all(path, subject_term: default_subject_term)
-      patterns, subj = patterns_for_path(path, subject_term: subject_term)
+      patterns, subj = patterns_for_path(path, subject_term:)
       query_all(patterns, subj)
     end
 
     def path_all_literal(path, subject_term: default_subject_term)
-      patterns, subj = patterns_for_path(path, subject_term: subject_term)
+      patterns, subj = patterns_for_path(path, subject_term:)
       to_literals(query_all(patterns, subj))
     end
 
     def path_all_uri(path, subject_term: default_subject_term)
-      patterns, subj = patterns_for_path(path, subject_term: subject_term)
+      patterns, subj = patterns_for_path(path, subject_term:)
       to_uris(query_all(patterns, subj))
     end
 

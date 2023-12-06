@@ -13,7 +13,7 @@ module Rdf2marc
           control_fields: Mappers::ControlFields.new(item).generate,
           number_and_code_fields: Mappers::NumberAndCodeFields.new(item).generate,
           main_entry_fields: main_entry,
-          title_fields: Mappers::TitleFields.new(item, has_100_field: has_100_field).generate,
+          title_fields: Mappers::TitleFields.new(item, has_100_field:).generate,
           physical_description_fields: Mappers::PhysicalDescriptionFields.new(item).generate,
           series_statement_fields: Mappers::SeriesStatementFields.new(item).generate,
           note_fields: Mappers::NoteFields.new(item).generate,

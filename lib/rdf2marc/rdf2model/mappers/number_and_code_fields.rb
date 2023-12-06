@@ -7,12 +7,12 @@ module Rdf2marc
       class NumberAndCodeFields < BaseMapper
         def generate
           {
-            oclc_record_number: oclc_record_number,
-            lccn: lccn,
-            isbns: isbns,
-            cataloging_source: cataloging_source,
+            oclc_record_number:,
+            lccn:,
+            isbns:,
+            cataloging_source:,
             geographic_area_code: geographic_area_codes,
-            lc_call_numbers: lc_call_numbers
+            lc_call_numbers:
           }
         end
 
@@ -69,10 +69,10 @@ module Rdf2marc
         def cataloging_source
           {
             cataloging_agency: agency,
-            cataloging_language: cataloging_language,
+            cataloging_language:,
             transcribing_agency: agency,
-            modifying_agencies: modifying_agencies,
-            description_conventions: description_conventions
+            modifying_agencies:,
+            description_conventions:
           }
         end
 

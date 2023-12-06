@@ -7,7 +7,7 @@ module Rdf2marc
       class RelatedWorkFields < BaseMapper
         def generate
           {
-            title: title,
+            title:,
             uri: uri.to_s
           }
         end

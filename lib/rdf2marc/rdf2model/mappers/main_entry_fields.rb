@@ -35,7 +35,7 @@ module Rdf2marc
         end
 
         def main_entry_name(term, key_symbol, model_class)
-          result = LiteralOrRemoteResolver.resolve_model(term: term, item: item, key_symbol: key_symbol,
+          result = LiteralOrRemoteResolver.resolve_model(term:, item:, key_symbol:,
                                                          model: model_class)
           result[:relator_terms] = main_relator_terms if result && main_relator_terms.present?
           result
@@ -43,7 +43,7 @@ module Rdf2marc
 
         def main_relator_terms
           role_uris = item.work.query.path_all([[BF.contribution, BFLC.PrimaryContribution], [BF.role]])
-          role_uris.sort.map { |uri| LiteralOrRemoteResolver.resolve_label(term: uri, item: item) }
+          role_uris.sort.map { |uri| LiteralOrRemoteResolver.resolve_label(term: uri, item:) }
         end
       end
     end

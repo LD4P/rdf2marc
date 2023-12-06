@@ -38,7 +38,7 @@ module Rdf2marc
     end
 
     def open_url(base_uri, headers: {}, **_options)
-      response = @conn.get(base_uri, nil, self.class.headers(headers: headers))
+      response = @conn.get(base_uri, nil, self.class.headers(headers:))
       raise IOError, "<#{base_uri}>: #{response.status}" unless response.success?
 
       # If a Location is returned, it defines the base resource for this file, not it's actual ending location
@@ -62,9 +62,9 @@ module Rdf2marc
       @only_host = only_host
     end
 
-    def get(uri, *stuff, **options)
+    def get(uri, *stuff, **)
       adapter = uri.match?(@only_host) ? @caching_adapter : @noncaching_adapter
-      adapter.get(uri, *stuff, **options)
+      adapter.get(uri, *stuff, **)
     end
   end
 

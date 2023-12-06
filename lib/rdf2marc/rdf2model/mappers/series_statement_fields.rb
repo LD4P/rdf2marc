@@ -7,7 +7,7 @@ module Rdf2marc
       class SeriesStatementFields < BaseMapper
         def generate
           {
-            series_statements: series_statements
+            series_statements:
           }
         end
 

@@ -10,7 +10,7 @@ module Rdf2marc
           notes << provision_activity_statement if provision_activity_statement
           {
             general_notes: notes,
-            table_of_contents: table_of_contents
+            table_of_contents:
           }
         end
 

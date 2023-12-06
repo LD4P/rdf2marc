@@ -15,7 +15,7 @@ module Rdf2marc
                 uri: 'https://github.com/LD4P/rdf2marc'
               }
             ],
-            electronic_locations: electronic_locations
+            electronic_locations:
           }
         end
 

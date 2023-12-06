@@ -14,12 +14,12 @@ module Rdf2marc
       private
 
       # @param [ActiveSupport::Cache::Entry] entry the cache entry
-      def write_entry(key, entry, **options)
-        write_serialized_entry(key, serialize_entry(entry, **options), **options)
+      def write_entry(key, entry, **)
+        write_serialized_entry(key, serialize_entry(entry, **), **)
       end
 
-      def read_entry(key, **options)
-        deserialize_entry(read_serialized_entry(key, **options))
+      def read_entry(key, **)
+        deserialize_entry(read_serialized_entry(key, **))
       end
 
       def write_serialized_entry(key, payload, **_options)

@@ -22,7 +22,7 @@ module Rdf2marc
     end
 
     def query_first_literal(sparql, var_name: 'solut')
-      to_literal(query_first(sparql, var_name: var_name))
+      to_literal(query_first(sparql, var_name:))
     end
 
     def query_all(sparql, var_name: 'solut')
@@ -32,7 +32,7 @@ module Rdf2marc
     end
 
     def query_all_literal(sparql, var_name: 'solut')
-      to_literals(query_all(sparql, var_name: var_name))
+      to_literals(query_all(sparql, var_name:))
     end
 
     def query(sparql)
@@ -40,22 +40,22 @@ module Rdf2marc
     end
 
     def path_first(path, subject_uri: nil)
-      query_string, subj = query_string_for_path(path, subject_uri: subject_uri)
+      query_string, subj = query_string_for_path(path, subject_uri:)
       query_first(query_string, var_name: subj)
     end
 
     def path_first_literal(path, subject_uri: nil)
-      query_string, subj = query_string_for_path(path, subject_uri: subject_uri)
+      query_string, subj = query_string_for_path(path, subject_uri:)
       query_first_literal(query_string, var_name: subj)
     end
 
     def path_all(path, subject_uri: nil)
-      query_string, subj = query_string_for_path(path, subject_uri: subject_uri)
+      query_string, subj = query_string_for_path(path, subject_uri:)
       query_all(query_string, var_name: subj)
     end
 
     def path_all_literal(path, subject_uri: nil)
-      query_string, subj = query_string_for_path(path, subject_uri: subject_uri)
+      query_string, subj = query_string_for_path(path, subject_uri:)
       query_all_literal(query_string, var_name: subj)
     end
 

@@ -2,7 +2,7 @@
 
 RSpec.describe Rdf2marc::Converter, :vcr do
   context 'with files' do
-    subject { described_class.convert(files: files) }
+    subject { described_class.convert(files:) }
 
     let(:files) { %w[instance.ttl work.ttl admin_metadata.ttl] }
 
@@ -28,7 +28,7 @@ RSpec.describe Rdf2marc::Converter, :vcr do
     end
 
     it 'raises a BadRequestError' do
-      expect { described_class.convert(files: files) }.to raise_error(
+      expect { described_class.convert(files:) }.to raise_error(
         Rdf2marc::BadRequestError,
         "Unable to load #{files.first}"
       )

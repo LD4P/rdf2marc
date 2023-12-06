@@ -12,10 +12,10 @@ module Rdf2marc
 
         def generate
           {
-            translated_titles: translated_titles,
+            translated_titles:,
             title_statement: title_statement(@has_100_field),
-            variant_titles: variant_titles,
-            former_titles: former_titles
+            variant_titles:,
+            former_titles:
           }
         end
 
@@ -68,7 +68,7 @@ module Rdf2marc
             type = variant_title_type(title_term, parallel_title_terms.include?(title_term))
             {
               note_added_entry: note_added_entry(type),
-              type: type,
+              type:,
               title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),
               part_numbers: item.instance.query.path_all_literal([BF.partNumber], subject_term: title_term).sort,
               part_names: item.instance.query.path_all_literal([BF.partName], subject_term: title_term).sort

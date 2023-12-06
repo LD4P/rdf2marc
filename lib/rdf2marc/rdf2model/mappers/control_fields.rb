@@ -7,13 +7,13 @@ module Rdf2marc
       class ControlFields < BaseMapper
         def generate
           {
-            latest_transaction: latest_transaction,
+            latest_transaction:,
             general_info: {
-              place: place,
-              date_entered: date_entered,
+              place:,
+              date_entered:,
               date1: item.instance.query.path_first_literal([[BF.provisionActivity, BF.Publication], [BF.date]]),
-              language: language,
-              book_illustrative_content: book_illustrative_content
+              language:,
+              book_illustrative_content:
             }
           }
         end
@@ -57,7 +57,7 @@ module Rdf2marc
                                      item.work.query.path_first_uri([BF.illustrativeContent])
           return nil if illustrative_content_uri.blank?
 
-          LiteralOrRemoteResolver.resolve_label(term: illustrative_content_uri, item: item)
+          LiteralOrRemoteResolver.resolve_label(term: illustrative_content_uri, item:)
         end
       end
     end

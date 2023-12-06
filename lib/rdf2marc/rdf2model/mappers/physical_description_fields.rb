@@ -7,10 +7,10 @@ module Rdf2marc
       class PhysicalDescriptionFields < BaseMapper
         def generate
           {
-            physical_descriptions: physical_descriptions,
-            media_types: media_types,
-            carrier_types: carrier_types,
-            content_types: content_types
+            physical_descriptions:,
+            media_types:,
+            carrier_types:,
+            content_types:
           }
         end
 
@@ -23,7 +23,7 @@ module Rdf2marc
           illustrative_content_uri = item.instance.query.path_first_uri([BF.illustrativeContent]) ||
                                      item.work.query.path_first_uri([BF.illustrativeContent])
           if illustrative_content_uri
-            other_physical_details = LiteralOrRemoteResolver.resolve_label(term: illustrative_content_uri, item: item)
+            other_physical_details = LiteralOrRemoteResolver.resolve_label(term: illustrative_content_uri, item:)
           end
           extent_physical_descriptions = extent_terms.sort.map do |extent_term|
             {
@@ -31,15 +31,15 @@ module Rdf2marc
               # Can be multiple notes, but only using one.
               materials_specified: item.instance.query.path_first_literal([[BF.note, BF.Note],
                                                                            RDF::RDFS.label], subject_term: extent_term),
-              other_physical_details: other_physical_details
+              other_physical_details:
             }
           end
           dimensions = item.instance.query.path_all_literal([BF.dimensions]).sort
           if extent_physical_descriptions.length == 1 && dimensions.length == 1
-            return [extent_physical_descriptions.first.merge(dimensions: dimensions)]
+            return [extent_physical_descriptions.first.merge(dimensions:)]
           end
 
-          extent_physical_descriptions << { dimensions: dimensions } if dimensions.present?
+          extent_physical_descriptions << { dimensions: } if dimensions.present?
           extent_physical_descriptions
         end
 

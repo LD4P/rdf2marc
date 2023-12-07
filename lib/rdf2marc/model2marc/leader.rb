@@ -35,6 +35,8 @@ module Rdf2marc
           'd'
         when 'cartographic'
           'e'
+        when 'manuscript_cartographic'
+          'f'
         when 'projected_medium'
           'g'
         when 'nonmusical_sound_recording'

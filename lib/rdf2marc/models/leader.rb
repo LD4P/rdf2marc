@@ -4,9 +4,9 @@ module Rdf2marc
   module Models
     # Model for Leader.
     class Leader < Struct
-      TYPES = %w[language_material notated_music manuscript_notated_music cartographic projected_medium
-                 nonmusical_sound_recording musical_sound_recording 2d_nonprojectable_graphic computer_file
-                 kit mixed_materials 3d manuscript].freeze
+      TYPES = %w[language_material notated_music manuscript_notated_music cartographic manuscript_cartographic
+                 projected_medium nonmusical_sound_recording musical_sound_recording 2d_nonprojectable_graphic
+                 computer_file kit mixed_materials 3d manuscript].freeze
       BIBLIOGRAPHIC_LEVELS = %w[monographic_component serial_component collection subunit
                                 integrating_resource item serial].freeze
       ENCODING_LEVELS = %w[full full_not_examined less_full_not_examined abbreviated core partial

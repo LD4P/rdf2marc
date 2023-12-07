@@ -17,34 +17,47 @@ module Rdf2marc
         private
 
         def type
-          # Mapping from instance resource template id
-          resource_template_id = item.instance.query.path_first_literal([SINOPIA.hasResourceTemplate])
-          case resource_template_id&.downcase
-          when /cartographic/
-            'cartographic'
-          when /35mmfeaturefilm/
-            'projected_medium'
-          when /notatedmusic/
-            'notated_music'
-          when /analog/, /soundrecording/, /soundcdr/
-            'nonmusical_sound_recording'
-          when /printphoto/
-            '2d_nonprojectable_graphic'
-          else
-            'language_material'
-          end
+          type = type_map.find do |type_map_entry|
+            type_map_types = Array(type_map_entry.first)
+            (type_map_types - work_types).empty?
+          end&.last
+          type || 'language_material'
+        end
+
+        def work_types
+          @work_types ||= item.work.query.path_all_uri([RDF.type])
+        end
+
+        def type_map
+          @type_map ||= [
+            [[BF.Text.value, BF.Manuscript.value], 'manuscript'],
+            [BF.Text.value, 'language_material'],
+            [[BF.NotatedMusic.value, BF.Manuscript.value], 'manuscript_notated_music'],
+            [BF.NotatedMusic.value, 'notated_music'],
+            [[BF.Cartography.value, BF.Manuscript.value], 'cartographic'],
+            [BF.Cartography.value, 'cartographic'],
+            [BF.MovingImage.value, 'projected_medium'],
+            [BF.NonMusicAudio.value, 'nonmusical_sound_recording'],
+            [BF.MusicAudio.value, 'musical_sound_recording'],
+            [BF.StillImage.value, '2d_nonprojectable_graphic'],
+            [BF.Multimedia.value, 'computer_file'],
+            [BF.MixedMaterial.value, 'mixed_materials'],
+            [BF.Object.value, '3d']
+          ]
         end
 
         def bibliographic_level
-          # Record may contain multiple. Only using one and which is selected is indeterminate.
-          case item.instance.query.path_first([BF.issuance])
-          when LC_VOCAB['issuance/intg']
-            'integrating_resource'
-          when LC_VOCAB['issuance/serl']
-            'serial'
-          else
-            'item'
-          end
+          first_level = work_types.map { |work_type| bibliographic_level_map[work_type] }.compact.first
+          first_level || 'monographic_component'
+        end
+
+        def bibliographic_level_map
+          @bibliographic_level_map ||= {
+            BF.Collection.value => 'collection',
+            BF.Integrating.value => 'integrating_resource',
+            BF.Serial.value => 'serial',
+            BF.Monograph.value => 'monographic_component'
+          }
         end
 
         def encoding_level

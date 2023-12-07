@@ -8,7 +8,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::Leader do
 
     let(:model) do
       {
-        bibliographic_level: 'item',
+        bibliographic_level: 'monographic_component',
         type: 'language_material'
       }
     end
@@ -28,7 +28,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::Leader do
 
       let(:model) do
         {
-          bibliographic_level: 'item',
+          bibliographic_level: 'monographic_component',
           type: 'language_material'
           # NOTE: It is not mapped; it is defaulted in the Leader struct
           # record_status: 'a'
@@ -49,7 +49,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::Leader do
 
       let(:model) do
         {
-          bibliographic_level: 'item',
+          bibliographic_level: 'monographic_component',
           type: 'language_material'
           # NOTE: It is not mapped; it is defaulted in the Leader struct
           # record_status: 'n'
@@ -61,38 +61,92 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::Leader do
   end
 
   describe 'type' do
-    let(:ttl) do
-      <<~TTL
-        <#{instance_term}> <http://sinopia.io/vocabulary/hasResourceTemplate> "ld4p:RT:bf2:Cartographic:Instance".
-      TTL
+    context 'when no subclasses' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> a <http://id.loc.gov/ontologies/bibframe/Work>.
+        TTL
+      end
+
+      let(:model) do
+        {
+          bibliographic_level: 'monographic_component',
+          type: 'language_material'
+        }
+      end
+
+      include_examples 'mapper', described_class
     end
 
-    let(:model) do
-      {
-        bibliographic_level: 'item',
-        type: 'cartographic'
-      }
+    context 'when single subclass required for match' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> a <http://id.loc.gov/ontologies/bibframe/Work>, <http://id.loc.gov/ontologies/bibframe/NotatedMusic>.
+        TTL
+      end
+
+      let(:model) do
+        {
+          bibliographic_level: 'monographic_component',
+          type: 'notated_music'
+        }
+      end
+
+      include_examples 'mapper', described_class
     end
 
-    include_examples 'mapper', described_class
+    context 'when multiple subclasses required for match' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> a <http://id.loc.gov/ontologies/bibframe/Work>, <http://id.loc.gov/ontologies/bibframe/Manuscript>, <http://id.loc.gov/ontologies/bibframe/NotatedMusic>.
+        TTL
+      end
+
+      let(:model) do
+        {
+          bibliographic_level: 'monographic_component',
+          type: 'manuscript_notated_music'
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
   end
 
   describe 'bibliographic level' do
-    let(:ttl) do
-      <<~TTL
-        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/issuance> <http://id.loc.gov/vocabulary/issuance/serl> .
-        <http://id.loc.gov/vocabulary/issuance/serl> <http://www.w3.org/2000/01/rdf-schema#label> "serial" .
-      TTL
+    context 'when no subclasses' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> a <http://id.loc.gov/ontologies/bibframe/Work>, <http://id.loc.gov/ontologies/bibframe/Collection>.
+        TTL
+      end
+
+      let(:model) do
+        {
+          bibliographic_level: 'collection',
+          type: 'language_material'
+        }
+      end
+
+      include_examples 'mapper', described_class
     end
 
-    let(:model) do
-      {
-        bibliographic_level: 'serial',
-        type: 'language_material'
-      }
-    end
+    context 'when matching subclass' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> a <http://id.loc.gov/ontologies/bibframe/Work>.
+        TTL
+      end
 
-    include_examples 'mapper', described_class
+      let(:model) do
+        {
+          bibliographic_level: 'monographic_component',
+          type: 'language_material'
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
   end
 
   describe 'encoding level' do
@@ -105,7 +159,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::Leader do
 
     let(:model) do
       {
-        bibliographic_level: 'item',
+        bibliographic_level: 'monographic_component',
         type: 'language_material',
         encoding_level: 'full'
       }
@@ -126,7 +180,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::Leader do
 
     let(:model) do
       {
-        bibliographic_level: 'item',
+        bibliographic_level: 'monographic_component',
         type: 'language_material',
         cataloging_form: 'aacr2'
       }

@@ -16,6 +16,34 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.
+          _:b1 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/no2005086644>;
+              <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/no2020066646>.
+          <http://id.loc.gov/authorities/names/no2005086644> a <http://id.loc.gov/ontologies/bibframe/Person>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "Jung, Carl".
+          <http://id.loc.gov/authorities/names/no2020066646> a <http://id.loc.gov/ontologies/bibframe/Family>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "Kennedy (Family : Covington, Ky.)".
+        TTL
+      end
+
+      let(:model) do
+        {
+          personal_name: {
+            thesaurus: 'lcsh',
+            type: 'surname',
+            personal_name: 'Jung, Carl',
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/no2005086644']
+          }
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
+    context 'when mapping from multiple BF.Person and BF.Family URIs (deprecated BFLC:PrimaryContribution)' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.
           _:b1 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/no2005086644>;
               <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/no2020066646>.
@@ -44,7 +72,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.
-          _:b1 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+          _:b1 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b2.
           _:b2 a <http://id.loc.gov/ontologies/bibframe/Person>;
               <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://id.loc.gov/authorities/names/no2005086644>.
@@ -74,7 +102,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b7.
-          _:b7 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+          _:b7 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b8.
           _:b8 a <http://id.loc.gov/ontologies/bibframe/Person>;
               <http://www.w3.org/2000/01/rdf-schema#label> "Jung, Carl", "Kennedy Family".
@@ -94,6 +122,34 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
     end
 
     context 'when BF.Role' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.
+          _:b1 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
+              <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/nb2004311516>;
+              <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
+          <http://id.loc.gov/authorities/names/nb2004311516> a <http://id.loc.gov/ontologies/bibframe/Person>;
+              <http://www.w3.org/2000/01/rdf-schema#label> "Laws, John Muir@en".
+          <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2000/01/rdf-schema#label> "Author but it will be looked up".
+        TTL
+      end
+
+      let(:model) do
+        {
+          personal_name: {
+            thesaurus: 'lcsh',
+            type: 'surname',
+            personal_name: 'Laws, John Muir',
+            relator_terms: ['Author'],
+            authority_record_control_numbers: ['http://id.loc.gov/authorities/names/nb2004311516']
+          }
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
+
+    context 'when BF.Role (deprecated BFLC.PrimaryContribution)' do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.
@@ -125,7 +181,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.
-          _:b1 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+          _:b1 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/nb2004311516>;
               <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>;
               <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/ill>.
@@ -155,7 +211,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1, _:b2.
-          _:b1 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+          _:b1 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> <http://id.loc.gov/authorities/names/nb2004311516>;
               <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
           <http://id.loc.gov/authorities/names/nb2004311516> a <http://id.loc.gov/ontologies/bibframe/Person>;
@@ -187,7 +243,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b7.
-          _:b7 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+          _:b7 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b8;
               <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
           _:b8 a <http://id.loc.gov/ontologies/bibframe/Person>;
@@ -215,7 +271,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b4.
-          _:b4 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+          _:b4 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b5.
           _:b5 a <http://id.loc.gov/ontologies/bibframe/Organization>;
               <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://id.loc.gov/authorities/names/nb2007013471>.
@@ -244,7 +300,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b9.
-          _:b9 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+          _:b9 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b10.
           _:b10 a <http://id.loc.gov/ontologies/bibframe/Organization>;
               <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Iranian Chemical Society", "United States. Army Map Service".
@@ -267,7 +323,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b1.
-          _:b1 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+          _:b1 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b5;
               <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
           _:b5 a <http://id.loc.gov/ontologies/bibframe/Organization>;
@@ -296,7 +352,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b9.
-          _:b9 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+          _:b9 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b10;
               <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
           _:b10 a <http://id.loc.gov/ontologies/bibframe/Organization>;
@@ -324,7 +380,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b11.
-          _:b11 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+          _:b11 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b12.
           _:b12 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
               <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> <http://id.loc.gov/authorities/names/n81133545>.
@@ -354,7 +410,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b13.
-          _:b13 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+          _:b13 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b14.
           _:b14 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
               <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Women and National Health Insurance Meeting", "Van Cliburn International Piano Competition".
@@ -377,7 +433,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b11.
-          _:b11 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+          _:b11 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b12;
               <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
           _:b12 a <http://id.loc.gov/ontologies/bibframe/Meeting>;
@@ -406,7 +462,7 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::MainEntryFields, :vcr do
       let(:ttl) do
         <<~TTL
           <#{work_term}> <http://id.loc.gov/ontologies/bibframe/contribution> _:b13.
-          _:b13 a <http://id.loc.gov/ontologies/bflc/PrimaryContribution>;
+          _:b13 a <http://id.loc.gov/ontologies/bibframe/PrimaryContribution>;
               <http://id.loc.gov/ontologies/bibframe/agent> _:b14;
               <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/aut>.
           _:b14 a <http://id.loc.gov/ontologies/bibframe/Meeting>;

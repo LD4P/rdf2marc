@@ -22,7 +22,8 @@ module Rdf2marc
         private
 
         def translated_titles
-          translated_title_terms = item.instance.query.path_all([[BF.title, BFLC.TransliteratedTitle]])
+          translated_title_terms = item.instance.query.path_all([[BF.title, BF.TransliteratedTitle]]) \
+            + item.instance.query.path_all([[BF.title, BFLC.TransliteratedTitle]])
           translated_title_terms.sort.map do |title_term|
             {
               title: item.instance.query.path_first_literal([BF.mainTitle], subject_term: title_term),

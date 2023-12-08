@@ -31,6 +31,32 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::TitleFields do
     let(:ttl) do
       <<~TTL
         <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/title> _:b666 .
+        _:b666 a <http://id.loc.gov/ontologies/bibframe/TransliteratedTitle>;
+          <http://id.loc.gov/ontologies/bibframe/mainTitle> "Abḥathu ‘an Laylá"@ar-Latn-t-ar-m0-alaloc;
+          <http://id.loc.gov/ontologies/bibframe/subtitle> "riwāyah"@ar-Latn-t-ar-m0-alaloc;
+          <http://id.loc.gov/ontologies/bibframe/partName> "partName"@eng .
+      TTL
+    end
+
+    let(:model) do
+      {
+        translated_titles: [
+          {
+            title: 'Abḥathu ‘an Laylá',
+            remainder_of_title: 'riwāyah',
+            part_names: ['partName']
+          }
+        ]
+      }
+    end
+
+    it { is_expected.to eq model }
+  end
+
+  describe 'translated titles (deprecated BFLC:Transliterated Title)' do
+    let(:ttl) do
+      <<~TTL
+        <#{instance_term}> <http://id.loc.gov/ontologies/bibframe/title> _:b666 .
         _:b666 a <http://id.loc.gov/ontologies/bflc/TransliteratedTitle>;
           <http://id.loc.gov/ontologies/bibframe/mainTitle> "Abḥathu ‘an Laylá"@ar-Latn-t-ar-m0-alaloc;
           <http://id.loc.gov/ontologies/bibframe/subtitle> "riwāyah"@ar-Latn-t-ar-m0-alaloc;

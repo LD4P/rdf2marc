@@ -42,7 +42,9 @@ module Rdf2marc
         end
 
         def main_relator_terms
-          role_uris = item.work.query.path_all([[BF.contribution, BFLC.PrimaryContribution], [BF.role]])
+          # Query both BFLC (deprecated) and BF PrimaryContribution.
+          role_uris = item.work.query.path_all([[BF.contribution, BF.PrimaryContribution], [BF.role]]) \
+            + item.work.query.path_all([[BF.contribution, BFLC.PrimaryContribution], [BF.role]])
           role_uris.sort.map { |uri| LiteralOrRemoteResolver.resolve_label(term: uri, item:) }
         end
       end

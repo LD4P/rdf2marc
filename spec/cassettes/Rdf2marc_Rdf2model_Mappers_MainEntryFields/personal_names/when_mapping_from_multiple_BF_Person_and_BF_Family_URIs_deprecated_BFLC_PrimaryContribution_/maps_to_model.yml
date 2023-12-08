@@ -1,0 +1,289 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/no2005086644.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.3.1
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        application/n-quads, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 07 Dec 2023 20:58:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 07 Dec 2023 21:58:00 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/no2005086644.madsrdf.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 831faf26ebfe3afa-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 07 Dec 2023 20:57:59 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/no2005086644.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.3.1
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        application/n-quads, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Dec 2023 20:58:01 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel, X-PrefLabel-Escaped, X-PrefLabel-Encoded
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Jung, Carl
+      X-Preflabel-Escaped:
+      - Jung, Carl
+      X-Preflabel-Encoded:
+      - Jung%2C%20Carl
+      X-Uri:
+      - http://id.loc.gov/authorities/names/no2005086644
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '597891203'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 831faf274925064a-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Jung, Carl" .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesno2005086644 .
+        _:b7iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesno2005086644 .
+        _:b7iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.loc.gov/mads/rdf/v1#elementValue> "Jung, Carl" .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://id.loc.gov/ontologies/bflc/marcKey> "1001 $aJung, Carl" .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/1622894> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cno2005086644#skos:Concept> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/no2005086644> .
+        <http://id.loc.gov/rwo/agents/no2005086644> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/no2005086644> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+        <http://id.loc.gov/rwo/agents/no2005086644> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+        <http://id.loc.gov/rwo/agents/no2005086644> <http://www.w3.org/2000/01/rdf-schema#label> "Jung, Carl" .
+        <http://id.loc.gov/rwo/agents/no2005086644> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15125042> .
+        <http://id.loc.gov/resources/works/15125042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/15125042> <http://id.loc.gov/ontologies/bflc/aap> "International journal of Jungian studies" .
+        <http://id.loc.gov/rwo/agents/no2005086644> <http://id.loc.gov/ontologies/bflc/subjectOf> <http://id.loc.gov/resources/works/15125040> .
+        <http://id.loc.gov/resources/works/15125040> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/15125040> <http://id.loc.gov/ontologies/bflc/aap> "The international journal of Jungian studies" .
+        <http://id.loc.gov/rwo/agents/no2005086644> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/13130744> .
+        <http://id.loc.gov/resources/works/13130744> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/13130744> <http://id.loc.gov/ontologies/bflc/aap> "Jung, Carl Kaross und Kimono" .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://id.loc.gov/vocabulary/identifiers/lccn> "no2005086644" .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://id.loc.gov/vocabulary/identifiers/local> "(OCoLC)oca06734775" .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b40iddOtlocdOtgovauthoritiesnamesno2005086644 .
+        _:b40iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b40iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.loc.gov/mads/rdf/v1#citationSource> "Kaross und Kimono, 2002:" .
+        _:b40iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Carl Jung)" .
+        _:b40iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b48iddOtlocdOtgovauthoritiesnamesno2005086644 .
+        _:b48iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b48iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2005-09-09T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b48iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b48iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/njp> .
+        _:b48iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/no2005086644> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b56iddOtlocdOtgovauthoritiesnamesno2005086644 .
+        _:b56iddOtlocdOtgovauthoritiesnamesno2005086644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b56iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2005-09-17T07:11:19"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b56iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b56iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/njp> .
+        _:b56iddOtlocdOtgovauthoritiesnamesno2005086644 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Thu, 07 Dec 2023 20:58:00 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/no2005086644.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Thu, 07 Dec 2023 20:58:01 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Thu, 07 Dec 2023 21:58:01 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/no2005086644.marcxml.xml
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 831faf2d0fb329b2-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 07 Dec 2023 20:58:00 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/no2005086644.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 07 Dec 2023 20:58:01 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel, X-PrefLabel-Escaped, X-PrefLabel-Encoded
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Uri:
+      - http://id.loc.gov/authorities/names/no2005086644
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '597891205'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 831faf2d8abe5a69-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:semtriples="http://marklogic.com/semantic" xmlns:streams="info:lc/streams#">
+          <marcxml:leader>00324nz  a2200133n  4500</marcxml:leader>
+          <marcxml:controlfield tag="001">no2005086644</marcxml:controlfield>
+          <marcxml:controlfield tag="003">DLC</marcxml:controlfield>
+          <marcxml:controlfield tag="005">20050917071119.0</marcxml:controlfield>
+          <marcxml:controlfield tag="008">050909n| acannaabn          |n aaa     c</marcxml:controlfield>
+          <marcxml:datafield tag="010" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">no2005086644</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="035" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">(OCoLC)oca06734775</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="040" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">NjP</marcxml:subfield>
+            <marcxml:subfield code="b">eng</marcxml:subfield>
+            <marcxml:subfield code="c">NjP</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="100" ind1="1" ind2=" ">
+            <marcxml:subfield code="a">Jung, Carl</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="670" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">Kaross und Kimono, 2002:</marcxml:subfield>
+            <marcxml:subfield code="b">t.p. (Carl Jung)</marcxml:subfield>
+          </marcxml:datafield>
+        </marcxml:record>
+  recorded_at: Thu, 07 Dec 2023 20:58:01 GMT
+recorded_with: VCR 6.2.0

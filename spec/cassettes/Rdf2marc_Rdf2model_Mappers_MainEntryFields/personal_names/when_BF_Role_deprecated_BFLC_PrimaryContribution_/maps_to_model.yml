@@ -1,0 +1,621 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/nb2004311516.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.3.1
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        application/n-quads, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Fri, 08 Dec 2023 13:20:05 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Fri, 08 Dec 2023 14:20:05 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/nb2004311516.madsrdf.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 83254dc208a03ade-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 08 Dec 2023 13:20:05 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/nb2004311516.madsrdf.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.3.1
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        application/n-quads, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2023 13:20:05 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel, X-PrefLabel-Escaped, X-PrefLabel-Encoded
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Laws, John Muir
+      X-Preflabel-Escaped:
+      - Laws, John Muir
+      X-Preflabel-Encoded:
+      - Laws%2C%20John%20Muir
+      X-Uri:
+      - http://id.loc.gov/authorities/names/nb2004311516
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '598214902'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 83254dc26f5057eb-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Laws, John Muir" .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7iddOtlocdOtgovauthoritiesnamesnb2004311516 .
+        _:b7iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8iddOtlocdOtgovauthoritiesnamesnb2004311516 .
+        _:b7iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b8iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b8iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.loc.gov/mads/rdf/v1#elementValue> "Laws, John Muir" .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b11iddOtlocdOtgovauthoritiesnamesnb2004311516 .
+        _:b11iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+        _:b11iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+        _:b11iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Laws, Jack" .
+        _:b11iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.loc.gov/mads/rdf/v1#elementList> _:b16iddOtlocdOtgovauthoritiesnamesnb2004311516 .
+        _:b16iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17iddOtlocdOtgovauthoritiesnamesnb2004311516 .
+        _:b16iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+        _:b17iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+        _:b17iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.loc.gov/mads/rdf/v1#elementValue> "Laws, Jack" .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://id.loc.gov/ontologies/bflc/marcKey> "1001 $aLaws, John Muir" .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/viaf/sourceID/LC%7Cnb2004311516#skos:Concept> .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/nb2004311516> .
+        <http://id.loc.gov/rwo/agents/nb2004311516> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+        <http://id.loc.gov/rwo/agents/nb2004311516> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+        <http://id.loc.gov/rwo/agents/nb2004311516> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+        <http://id.loc.gov/rwo/agents/nb2004311516> <http://www.w3.org/2000/01/rdf-schema#label> "Laws, John Muir" .
+        <http://id.loc.gov/rwo/agents/nb2004311516> <http://www.loc.gov/mads/rdf/v1#associatedLanguage> <http://id.loc.gov/vocabulary/languages/eng> .
+        <http://id.loc.gov/vocabulary/languages/eng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Language> .
+        <http://id.loc.gov/vocabulary/languages/eng> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "English"@en .
+        <http://id.loc.gov/rwo/agents/nb2004311516> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/13408730> .
+        <http://id.loc.gov/resources/works/13408730> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/13408730> <http://id.loc.gov/ontologies/bflc/aap> "Laws, John Muir Sierra birds" .
+        <http://id.loc.gov/rwo/agents/nb2004311516> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/14668960> .
+        <http://id.loc.gov/resources/works/14668960> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/14668960> <http://id.loc.gov/ontologies/bflc/aap> "Laws, John Muir. Laws field guide to the Sierra Nevada" .
+        <http://id.loc.gov/rwo/agents/nb2004311516> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/17137790> .
+        <http://id.loc.gov/resources/works/17137790> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/17137790> <http://id.loc.gov/ontologies/bflc/aap> "Laws, John Muir. Laws guide to drawing birds" .
+        <http://id.loc.gov/rwo/agents/nb2004311516> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/18731036> .
+        <http://id.loc.gov/resources/works/18731036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/18731036> <http://id.loc.gov/ontologies/bflc/aap> "Laws, John Muir. Laws guide to nature drawing and journaling" .
+        <http://id.loc.gov/rwo/agents/nb2004311516> <http://id.loc.gov/ontologies/bflc/contributorTo> <http://id.loc.gov/resources/works/15723259> .
+        <http://id.loc.gov/resources/works/15723259> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Work> .
+        <http://id.loc.gov/resources/works/15723259> <http://id.loc.gov/ontologies/bflc/aap> "Sierra Nevada Alliance. Sierra Nevada yard & garden" .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://id.loc.gov/vocabulary/identifiers/lccn> "nb2004311516" .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://id.loc.gov/vocabulary/identifiers/local> "(Uk)006085588" .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://id.loc.gov/vocabulary/identifiers/local> "(OCoLC)oca06538349" .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b62iddOtlocdOtgovauthoritiesnamesnb2004311516 .
+        _:b62iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b62iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.loc.gov/mads/rdf/v1#citationSource> "Sierra birds, c2004:" .
+        _:b62iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (John Muir Laws) p. 4 of cover (research and education associate, Calif. Academy of Sciences)" .
+        _:b62iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b70iddOtlocdOtgovauthoritiesnamesnb2004311516 .
+        _:b70iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b70iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.loc.gov/mads/rdf/v1#citationSource> "An introduction to the San Francisco Estuary, 2000:" .
+        _:b70iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Jack Laws, illustrator)" .
+        _:b70iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b78iddOtlocdOtgovauthoritiesnamesnb2004311516 .
+        _:b78iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+        _:b78iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.loc.gov/mads/rdf/v1#citationSource> "The nature of Yosemite, 2019:" .
+        _:b78iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (John Muir Laws) page xi (wildlife biologist; educator)" .
+        _:b78iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b86iddOtlocdOtgovauthoritiesnamesnb2004311516 .
+        _:b86iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b86iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2005-01-14T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b86iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b86iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/uk> .
+        _:b86iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+        <http://id.loc.gov/authorities/names/nb2004311516> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b94iddOtlocdOtgovauthoritiesnamesnb2004311516 .
+        _:b94iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+        _:b94iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2021-05-13T12:16:06"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b94iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+        _:b94iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b94iddOtlocdOtgovauthoritiesnamesnb2004311516 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+  recorded_at: Fri, 08 Dec 2023 13:20:05 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/authorities/names/nb2004311516.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Fri, 08 Dec 2023 13:20:05 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Fri, 08 Dec 2023 14:20:05 GMT
+      Location:
+      - https://id.loc.gov/authorities/names/nb2004311516.marcxml.xml
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 83254dc509a20633-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 08 Dec 2023 13:20:05 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/authorities/names/nb2004311516.marcxml.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2023 13:20:06 GMT
+      Content-Type:
+      - application/xml; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel, X-PrefLabel-Escaped, X-PrefLabel-Encoded
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Uri:
+      - http://id.loc.gov/authorities/names/nb2004311516
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '598182912'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 83254dc56f021fd3-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <marcxml:record xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:mets="http://www.loc.gov/METS/" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#" xmlns:idx="info:lc/xq-modules/lcindex" xmlns:semtriples="http://marklogic.com/semantic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <marcxml:leader xmlns:streams="info:lc/streams#">00705cz  a2200193n  4500</marcxml:leader>
+          <marcxml:controlfield tag="001">nb2004311516</marcxml:controlfield>
+          <marcxml:controlfield tag="003" xmlns:streams="info:lc/streams#">DLC</marcxml:controlfield>
+          <marcxml:controlfield tag="005" xmlns:streams="info:lc/streams#">20210513121606.0</marcxml:controlfield>
+          <marcxml:controlfield tag="008" xmlns:streams="info:lc/streams#">050114n| azannaabn          |a aaa      </marcxml:controlfield>
+          <marcxml:datafield tag="010" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">nb2004311516</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="035" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">(Uk)006085588</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="035" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">(OCoLC)oca06538349</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="040" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">Uk</marcxml:subfield>
+            <marcxml:subfield code="b">eng</marcxml:subfield>
+            <marcxml:subfield code="e">rda</marcxml:subfield>
+            <marcxml:subfield code="c">Uk</marcxml:subfield>
+            <marcxml:subfield code="d">CSfA</marcxml:subfield>
+            <marcxml:subfield code="d">DLC</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="100" ind1="1" ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">Laws, John Muir</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="377" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">eng</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="400" ind1="1" ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">Laws, Jack</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="670" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">Sierra birds, c2004:</marcxml:subfield>
+            <marcxml:subfield code="b">t.p. (John Muir Laws) p. 4 of cover (research and education associate, Calif. Academy of Sciences)</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="670" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">An introduction to the San Francisco Estuary, 2000:</marcxml:subfield>
+            <marcxml:subfield code="b">t.p. (Jack Laws, illustrator)</marcxml:subfield>
+          </marcxml:datafield>
+          <marcxml:datafield tag="670" ind1=" " ind2=" " xmlns:streams="info:lc/streams#">
+            <marcxml:subfield code="a">The nature of Yosemite, 2019:</marcxml:subfield>
+            <marcxml:subfield code="b">t.p. (John Muir Laws) page xi (wildlife biologist; educator)</marcxml:subfield>
+          </marcxml:datafield>
+        </marcxml:record>
+  recorded_at: Fri, 08 Dec 2023 13:20:05 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/aut.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.3.1
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        application/n-quads, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Fri, 08 Dec 2023 13:20:06 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Fri, 08 Dec 2023 14:20:06 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/aut.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 83254dc5fb863b74-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 08 Dec 2023 13:20:05 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/aut.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.3.1
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        application/n-quads, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2023 13:20:06 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel, X-PrefLabel-Escaped, X-PrefLabel-Encoded
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Author
+      X-Preflabel-Escaped:
+      - Author
+      X-Preflabel-Encoded:
+      - Author
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/aut
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - '642940968'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 83254dc65e5a829e-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#prefLabel> "Author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b7iddOtlocdOtgovvocabularyrelatorsaut .
+        _:b7iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+        _:b7iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/2008/05/skos-xl#literalForm> "Joint author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/lbt> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aus> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aft> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aqt> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/lyr> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aud> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aui> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization responsible for creating a work that is primarily textual in content, regardless of media type (e.g., printed text, spoken word, electronic text, tactile text) or genre (e.g., poems, novels, screenplays, blogs). Use also for persons, etc., creating a new work by paraphrasing, rewriting, or adapting works by another creator such that the modification has substantially changed the nature and content of the original or changed the medium of expression."@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#editorialNote> "changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#historyNote> "MARC bib: 1XX/7XX/8XX $4"@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#notation> "aut" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#altLabel> "Joint author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#changeNote> _:b30iddOtlocdOtgovvocabularyrelatorsaut .
+        _:b30iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b30iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/relators/aut> .
+        _:b30iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#creatorName> <https://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b30iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#createdDate> "2021-08-02T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b30iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#changeNote> _:b38iddOtlocdOtgovvocabularyrelatorsaut .
+        _:b38iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b38iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/relators/aut> .
+        _:b38iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#creatorName> <https://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b38iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#createdDate> "2022-11-29T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b38iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#changeReason> "modified"^^<http://www.w3.org/2001/XMLSchema#string> .
+  recorded_at: Fri, 08 Dec 2023 13:20:06 GMT
+- request:
+    method: get
+    uri: http://id.loc.gov/vocabulary/relators/aut.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.3.1
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        application/n-quads, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Fri, 08 Dec 2023 13:20:06 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Fri, 08 Dec 2023 14:20:06 GMT
+      Location:
+      - https://id.loc.gov/vocabulary/relators/aut.skos.nt
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 83254dc8ed870850-IAD
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 08 Dec 2023 13:20:06 GMT
+- request:
+    method: get
+    uri: https://id.loc.gov/vocabulary/relators/aut.skos.nt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby RDF.rb/3.3.1
+      Accept:
+      - text/turtle, text/rdf+turtle, application/turtle;q=0.2, application/x-turtle;q=0.2,
+        application/ld+json, application/x-ld+json, application/rdf+xml, application/n-triples,
+        application/n-quads, */*;q=0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 08 Dec 2023 13:20:06 GMT
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - '1'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - HEAD, POST, GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, X-URI, X-PrefLabel, X-PrefLabel-Escaped, X-PrefLabel-Encoded
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Preflabel:
+      - Author
+      X-Preflabel-Escaped:
+      - Author
+      X-Preflabel-Encoded:
+      - Author
+      X-Uri:
+      - http://id.loc.gov/vocabulary/relators/aut
+      Cache-Control:
+      - public, max-age=2419200
+      X-Varnish:
+      - 642940970 642940969
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish (Varnish/6.0)
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 83254dc94a0105bb-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#prefLabel> "Author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b7iddOtlocdOtgovvocabularyrelatorsaut .
+        _:b7iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+        _:b7iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/2008/05/skos-xl#literalForm> "Joint author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/lbt> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aus> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aft> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aqt> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/lyr> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aud> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#narrower> <http://id.loc.gov/vocabulary/relators/aui> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or organization responsible for creating a work that is primarily textual in content, regardless of media type (e.g., printed text, spoken word, electronic text, tactile text) or genre (e.g., poems, novels, screenplays, blogs). Use also for persons, etc., creating a new work by paraphrasing, rewriting, or adapting works by another creator such that the modification has substantially changed the nature and content of the original or changed the medium of expression."@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#editorialNote> "changed MARC def"@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#historyNote> "MARC bib: 1XX/7XX/8XX $4"@en .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#notation> "aut" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/vocabulary/relators> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#altLabel> "Joint author" .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#changeNote> _:b30iddOtlocdOtgovvocabularyrelatorsaut .
+        _:b30iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b30iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/relators/aut> .
+        _:b30iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#creatorName> <https://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b30iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#createdDate> "2021-08-02T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b30iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+        <http://id.loc.gov/vocabulary/relators/aut> <http://www.w3.org/2004/02/skos/core#changeNote> _:b38iddOtlocdOtgovvocabularyrelatorsaut .
+        _:b38iddOtlocdOtgovvocabularyrelatorsaut <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+        _:b38iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/relators/aut> .
+        _:b38iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#creatorName> <https://id.loc.gov/vocabulary/organizations/dlc> .
+        _:b38iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#createdDate> "2022-11-29T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+        _:b38iddOtlocdOtgovvocabularyrelatorsaut <http://purl.org/vocab/changeset/schema#changeReason> "modified"^^<http://www.w3.org/2001/XMLSchema#string> .
+  recorded_at: Fri, 08 Dec 2023 13:20:06 GMT
+recorded_with: VCR 6.2.0

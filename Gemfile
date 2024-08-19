@@ -12,6 +12,7 @@ gem 'faraday-http-cache'
 gem 'faraday_middleware'
 gem 'json-ld'
 gem 'marc'
+gem 'rake'
 gem 'rdf-rdfxml'
 gem 'sparql'
 gem 'zeitwerk', '<=2.6.10' # 2.6.11 requires ruby 3

@@ -1,10 +1,10 @@
 version: 2.1
 orbs:
-  ruby: circleci/ruby@2.1.0
+  ruby: circleci/ruby@2.1.4
   aws-cli: circleci/aws-cli@2.0
 references:
   # if you change the default ruby version, update the references in the "build_lambda" run task below
-  default_ruby_version: &default_ruby_version "3.2"
+  default_ruby_version: &default_ruby_version "3.3"
   ruby_envs: &ruby_envs
     environment:
       BUNDLE_JOBS: 3

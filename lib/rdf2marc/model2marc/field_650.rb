@@ -39,6 +39,7 @@ module Rdf2marc
         'primary' => '1',
         'secondary' => '2'
       }.freeze
+      private_constant :SUBJECT_LEVEL
 
       def subject_level
         SUBJECT_LEVEL.fetch(model.subject_level)

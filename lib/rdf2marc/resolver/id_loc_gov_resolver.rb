@@ -94,6 +94,7 @@ module Rdf2marc
         Rdf2marc::Models::SubjectAccessField::GenreForm => ['genre_form'],
         Rdf2marc::Models::SubjectAccessField::TopicalTerm => ['topic']
       }.freeze
+      private_constant :EXPECTED_TYPES
 
       # Adapt a generic mapping to id.loc.gov.
       def adapt(model, mapper_class)

@@ -38,6 +38,7 @@ module Rdf2marc
         FAST['facet-Event'] => 'event_name',
         FAST['facet-Topical'] => 'topic'
       }.freeze
+      private_constant :TYPES
 
       def type_term_from(graph, uri)
         query = GraphQuery.new(graph)

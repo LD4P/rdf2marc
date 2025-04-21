@@ -17,6 +17,9 @@ Lint/InterpolationCheck:
   Exclude:
     - 'lib/rdf2marc/model2marc/*.rb'
 
+RSpec/IncludeExamples:
+  Enabled: false
+
 Metrics/AbcSize:
   Enabled: false
 

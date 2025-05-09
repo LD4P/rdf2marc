@@ -98,25 +98,58 @@ RSpec.describe Rdf2marc::Rdf2model::Mappers::ControlFields, :vcr do
   end
 
   describe 'general info language' do
-    let(:ttl) do
-      <<~TTL
-        <#{work_term}> <http://id.loc.gov/ontologies/bibframe/language> <http://id.loc.gov/vocabulary/languages/ace>.
-        <http://id.loc.gov/vocabulary/languages/ace> <http://www.w3.org/2000/01/rdf-schema#label> "Achinese".
-        <> <http://id.loc.gov/ontologies/bibframe/language> <http://id.loc.gov/vocabulary/languages/bug>.
-        <http://id.loc.gov/vocabulary/languages/bug> <http://www.w3.org/2000/01/rdf-schema#label> "Bugis".
-      TTL
-    end
+    context 'when language part is text' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/language> _:b29, _:b30.
+          _:b29 a <http://id.loc.gov/ontologies/bibframe/Language>;
+            <http://www.w3.org/2000/01/rdf-schema#label> <http://id.loc.gov/vocabulary/languages/eng>;
+            <http://id.loc.gov/ontologies/bibframe/part> "Original"@en.
+          <http://id.loc.gov/vocabulary/languages/eng> <http://www.w3.org/2000/01/rdf-schema#label> "English".
+          _:b30 a <http://id.loc.gov/ontologies/bibframe/Language>;
+            <http://www.w3.org/2000/01/rdf-schema#label> <http://id.loc.gov/vocabulary/languages/ukr>;
+            <http://id.loc.gov/ontologies/bibframe/part> "Text"@en.
+          <http://id.loc.gov/vocabulary/languages/ukr> <http://www.w3.org/2000/01/rdf-schema#label> "Ukrainian".
+        TTL
+      end
 
-    let(:model) do
-      {
-        general_info: {
-          language: 'ace',
-          place: 'xx'
+      let(:model) do
+        {
+          general_info: {
+            language: 'ukr',
+            place: 'xx'
+          }
         }
-      }
+      end
+
+      include_examples 'mapper', described_class
     end
 
-    include_examples 'mapper', described_class
+    context 'when no language part' do
+      let(:ttl) do
+        <<~TTL
+          <#{work_term}> <http://id.loc.gov/ontologies/bibframe/language> _:b29, _:b30.
+          _:b29 a <http://id.loc.gov/ontologies/bibframe/Language>;
+            <http://www.w3.org/2000/01/rdf-schema#label> <http://id.loc.gov/vocabulary/languages/eng>;
+            <http://id.loc.gov/ontologies/bibframe/part> "Original"@en.
+          <http://id.loc.gov/vocabulary/languages/eng> <http://www.w3.org/2000/01/rdf-schema#label> "English".
+          _:b30 a <http://id.loc.gov/ontologies/bibframe/Language>;
+            <http://www.w3.org/2000/01/rdf-schema#label> <http://id.loc.gov/vocabulary/languages/ukr>.
+          <http://id.loc.gov/vocabulary/languages/ukr> <http://www.w3.org/2000/01/rdf-schema#label> "Ukrainian".
+        TTL
+      end
+
+      let(:model) do
+        {
+          general_info: {
+            language: 'eng',
+            place: 'xx'
+          }
+        }
+      end
+
+      include_examples 'mapper', described_class
+    end
   end
 
   describe 'general info book illustrative content' do

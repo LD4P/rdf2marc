@@ -1,6 +1,4 @@
 [![CircleCI Build](https://circleci.com/gh/LD4P/rdf2marc/tree/main.svg?style=svg)](https://circleci.com/gh/LD4P/rdf2marc/tree/main)
-[![Maintainability](https://api.codeclimate.com/v1/badges/ca0cdca6df5ec474e3f0/maintainability)](https://codeclimate.com/github/LD4P/rdf2marc/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/ca0cdca6df5ec474e3f0/test_coverage)](https://codeclimate.com/github/LD4P/rdf2marc/test_coverage)
 
 # rdf2marc
 A Bibframe RDF to MARC conversion library for use within the Sinopia ecosystem.

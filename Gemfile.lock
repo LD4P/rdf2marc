@@ -259,7 +259,7 @@ GEM
     unicode-types (1.11.0)
     uri (1.1.1)
     vcr (6.4.0)
-    webmock (3.26.2)
+    webmock (3.26.3)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
@@ -294,4 +294,4 @@ DEPENDENCIES
   zeitwerk (<= 2.6.10)
 
 BUNDLED WITH
-  4.0.18
+  4.0.19

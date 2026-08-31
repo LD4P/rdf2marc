@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 RSpec.shared_examples 'mapper' do |mapper_class|
-  # rubocop:disable RSpec/SubjectDeclaration
+  # rubocop:disable-next RSpec/SubjectDeclaration
   let(:subject) { mapper_class.new(context) }
-  # rubocop:enable RSpec/SubjectDeclaration
 
   let(:context) do
     Rdf2marc::Rdf2model.item_context_for(graph, RDF::URI(instance_term), RDF::URI(work_term),

@@ -44,9 +44,8 @@ module Rdf2marc
       def formatted_value(value, pattern)
         return value if pattern.nil?
 
-        # rubocop:disable Style/EvalWithLocation
+        # rubocop:disable-next Style/EvalWithLocation
         eval("\"#{pattern}\"")
-        # rubocop:enable Style/EvalWithLocation
       end
     end
   end

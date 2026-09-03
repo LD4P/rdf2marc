@@ -45,8 +45,22 @@ module Rdf2marc
           raise BadRequestError, "#{date_literal} is an invalid date."
         end
 
+        LANGUAGE_PARTS = ['text', 'sung or spoken text'].freeze
+
         def language
-          language_uri = item.work.query.path_first_uri([BF.language])
+          language_nodes = item.work.query.path_all([BF.language])
+          preferred_nodes = language_nodes.select do |node|
+            LANGUAGE_PARTS.include?(item.work.query.path_first_literal([BF.part], subject_term: node)&.downcase)
+          end
+
+          language_blank_node = preferred_nodes.first || language_nodes.first
+          return nil if language_blank_node.nil?
+
+          language_node = item.work.query.path_first([RDF::RDFS.label], subject_term: language_blank_node)
+          return nil unless language_node.is_a?(RDF::URI)
+
+          language_uri = language_node.value
+
           return nil if language_uri.nil? || !language_uri.start_with?(%r{https?://id.loc.gov/vocabulary/languages/})
 
           language_uri.sub(%r{^https?://id.loc.gov/vocabulary/languages/}, '')

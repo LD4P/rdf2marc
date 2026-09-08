@@ -10,6 +10,7 @@ gem 'faraday'
 gem 'faraday-encoding'
 gem 'faraday-http-cache'
 gem 'faraday_middleware'
+gem 'json', '~> 2.0' # Pinned until Faraday updated. https://github.com/lostisland/faraday/pull/1687
 gem 'json-ld'
 gem 'marc'
 gem 'rake'

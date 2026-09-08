@@ -116,7 +116,7 @@ GEM
     ice_nine (0.11.2)
     io-console (0.9.2)
     jmespath (1.6.2)
-    json (3.0.0)
+    json (2.21.2)
     json-canonicalization (1.0.0)
     json-ld (3.3.2)
       htmlentities (~> 4.3)
@@ -277,6 +277,7 @@ DEPENDENCIES
   faraday-encoding
   faraday-http-cache
   faraday_middleware
+  json (~> 2.0)
   json-ld
   marc
   pry-byebug

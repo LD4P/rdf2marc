@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (8.1.4)
+    activesupport (8.1.4.1)
       base64
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.3.1)
@@ -18,8 +18,8 @@ GEM
       public_suffix (>= 2.0.2, < 8.0)
     ast (2.4.3)
     aws-eventstream (1.4.1)
-    aws-partitions (1.1300.0)
-    aws-sdk-core (3.263.0)
+    aws-partitions (1.1303.0)
+    aws-sdk-core (3.265.0)
       aws-eventstream (~> 1, >= 1.4.1)
       aws-partitions (~> 1, >= 1.992.0)
       aws-sigv4 (~> 1.9)
@@ -28,11 +28,11 @@ GEM
       jmespath (~> 1, >= 1.6.1)
       logger
       rexml (~> 3.4, >= 3.4.2)
-    aws-sdk-kms (1.138.0)
-      aws-sdk-core (~> 3, >= 3.263.0)
+    aws-sdk-kms (1.140.0)
+      aws-sdk-core (~> 3, >= 3.265.0)
       aws-sigv4 (~> 1.5)
-    aws-sdk-s3 (1.237.0)
-      aws-sdk-core (~> 3, >= 3.263.0)
+    aws-sdk-s3 (1.239.0)
+      aws-sdk-core (~> 3, >= 3.265.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.5)
     aws-sigv4 (1.12.1)
@@ -110,7 +110,7 @@ GEM
     faraday-retry (1.0.4)
     faraday_middleware (1.2.1)
       faraday (~> 1.0)
-    hashdiff (1.2.1)
+    hashdiff (1.2.2)
     htmlentities (4.4.2)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
@@ -137,14 +137,14 @@ GEM
     matrix (0.4.3)
     method_source (1.1.0)
     mini_portile2 (2.8.9)
-    minitest (6.0.6)
+    minitest (6.1.0)
       drb (~> 2.0)
-      prism (~> 1.5)
+      prism (>= 1.5, < 3)
     multi_json (1.21.2)
     multipart-post (2.4.1)
     net-http-persistent (4.0.8)
       connection_pool (>= 2.2.4, < 4)
-    nokogiri (1.19.6)
+    nokogiri (1.19.7)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     ostruct (0.6.3)
@@ -197,15 +197,15 @@ GEM
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
       rspec-mocks (~> 3.13.0)
-    rspec-core (3.13.6)
+    rspec-core (3.13.7)
       rspec-support (~> 3.13.0)
-    rspec-expectations (3.13.5)
+    rspec-expectations (3.13.6)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-mocks (3.13.8)
+    rspec-mocks (3.13.9)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-support (3.13.7)
+    rspec-support (3.13.8)
     rspec_junit_formatter (0.8.0)
       rspec-core (>= 3.13, < 4)
     rubocop (1.92.2)
@@ -296,4 +296,4 @@ DEPENDENCIES
   zeitwerk (<= 2.6.10)
 
 BUNDLED WITH
-  4.0.23
+  4.0.24
